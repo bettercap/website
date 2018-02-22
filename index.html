@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>bettercap</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="The state of the art network attack and monitoring framework.">
+    <meta property="og:image" content="https://bettercap.org/img/logo.png"/>
+
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+  </head>
+
+  <body id="page-top">
+
+     <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-5 my-auto">
+              <img src="/img/logo_full.png"/>
+          </div>
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto" style="padding-left:25px">
+              <h1 class="mb-5">bettercap 2.0</h1>
+              <div id="count">......</div>
+              <br/>
+              <small style="color:white">
+                Click <a style="color:white; font-weight:bold" href="/legacy/">here</a> for the legacy website,
+                <a href="https://twitter.com/bettercap?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @bettercap</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> or 
+              
+<a class="github-button" href="https://github.com/evilsocket/bettercap/subscription" data-size="small" aria-label="Watch evilsocket/bettercap on GitHub">Watch</a>
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+        var countDownDate = new Date("Feb 28, 2018 20:00:00").getTime();
+        var x = setInterval(function() {
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
+
+          if (distance < 0) {
+            clearInterval(x);
+            $('#count').html('');
+          } else {
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            $("#count").html(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
+          }
+        }, 1000);
+    </script>
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-65617603-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
