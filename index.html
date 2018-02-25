@@ -1,71 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>bettercap</title>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="/img/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="shortcut icon" href="/img/favicon.png" />
     <meta name="description" content="The state of the art network attack and monitoring framework.">
     <meta property="og:image" content="https://bettercap.org/img/logo.png"/>
 
-    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/vendor/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link rel="stylesheet" href="/style.css">
   </head>
 
-  <body id="page-top">
+  <body class="text-center">
 
-     <header class="masthead">
-      <div class="container h-100">
-        <div class="row h-100">
-          <div class="col-lg-5 my-auto">
-              <img src="/img/logo_full.png"/>
-          </div>
-          <div class="col-lg-7 my-auto">
-            <div class="header-content mx-auto" style="padding-left:25px">
-              <h1 class="mb-5">bettercap 2.0</h1>
-              <div id="count">......</div>
-              <br/>
-              <small style="color:white">
-                Click <a style="color:white; font-weight:bold" href="/legacy/">here</a> for the legacy website,
-                <a href="https://twitter.com/bettercap?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @bettercap</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> or 
-              
-<a class="github-button" href="https://github.com/bettercap/bettercap/subscription" data-size="small" aria-label="Watch bettercap/bettercap on GitHub">Watch</a>
-              </small>
-            </div>
-          </div>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">
+            <img src="/img/favicon.png"/ class="head"> <div class="jap">ベッターキャップ！</div>
+          </h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="/">Home</a>
+            <a class="nav-link" target="_blank" href="https://github.com/bettercap/bettercap/wiki">Doc</a>
+            <a class="nav-link" target="_blank" href="https://github.com/bettercap/bettercap/releases">Download</a>
+            <a class="nav-link" target="_blank" href="https://github.com/bettercap/bettercap/issues">Bug Report</a>
+          </nav>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <main role="main" class="inner cover">
+        <center>
+          <p class="lead">
+              <h1 class="inline">bettercap</h1> is the Swiss army knife for network attacks and monitoring.
+              <img src="/img/logo_full.png" style="margin-left:-70px; width:450px;"/> 
+              <br/>
+              <pre><code>$ go get github.com/bettercap/bettercap</code></pre>
+              <br/>
+              <div id="support" class="row">
+                <div class="col"><i class="fab fa-linux"></i></div>
+                <div class="col"><i class="fab fa-apple"></i></div>
+                <div class="col"><i class="fab fa-windows"></i></div>
+                <div class="col"><i class="fab fa-android"></i></div>
+                <div class="col"><i class="fab fa-docker"></i></div>
+              </div>
+              <br/>
+              <br/>
+              <a href="https://twitter.com/bettercap?ref_src=twsrc%5Etfw" class="nav-link twitter-follow-button" data-show-count="true">
+                Follow @bettercap
+              </a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              &nbsp;
+              &nbsp;
+              <a class="github-button" href="https://github.com/bettercap/bettercap" data-show-count="true" aria-label="Star bettercap/bettercap on GitHub">Star</a>
+          </p>
+        </center>
+      </main>
 
-    <script type="text/javascript">
-        var countDownDate = new Date("Feb 28, 2018 20:00:00").getTime();
-        var x = setInterval(function() {
-          var now = new Date().getTime();
-          var distance = countDownDate - now;
-
-          if (distance < 0) {
-            clearInterval(x);
-            $('#count').html('');
-          } else {
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            $("#count").html(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
-          }
-        }, 1000);
-    </script>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>
+            <small>Click <a href="/legacy">here</a> for the legacy documentation.</small>
+          </p>
+        </div>
+      </footer>
+    </div>
 
     <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -76,6 +77,10 @@
     var pageTracker = _gat._getTracker("UA-65617603-1");
     pageTracker._trackPageview();
     } catch(err) {}</script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
