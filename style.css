@@ -8,7 +8,7 @@ a:hover {
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+  text-shadow: none;
   background-color: #fff;
   border: .05rem solid #fff;
 }
@@ -30,6 +30,12 @@ body {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 
+
+}
+
+html, 
+.cover-container {
+  width: 100%;
   background:url(/img/bg-pattern.png),#253642;
   background:url(/img/bg-pattern.png),-webkit-linear-gradient(to left,#000, #253642);
   background:url(/img/bg-pattern.png),linear-gradient(to left,#000, #253642);
@@ -37,7 +43,7 @@ body {
   background-repeat: repeat;
 }
 
-.cover-container {
+.main-column {
   max-width: 42em; 
 }
 
@@ -53,11 +59,10 @@ main p.lead {
     font-size: 1rem;
 }
 
-pre {
+div.code {
     background: black;
     color: gray;
     padding: 10px;
-    padding-top: 20px;
     font-family: monospace;
 }
 
@@ -91,7 +96,8 @@ h1.inline {
 
 @media (min-width: 48em) {
   .masthead-brand {
-    float: left;
+    display: inline;
+    text-align:center;
   }
   .nav-masthead {
     float: right;
@@ -111,12 +117,12 @@ i.fab {
 }
 
 .head {
-    float: left;
+    margin-left: auto;
 }
 
 .jap {
-    margin-left: 10px;
-    float: left;
+
+    margin-right: auto;
     font-size: 1.1rem !important;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }

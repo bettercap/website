@@ -16,11 +16,13 @@
 
   <body class="text-center">
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <div class="cover-container">
+
+      <div class="main-column d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
-          <h3 class="masthead-brand">
-            <img src="/img/favicon.png"/ class="head"> <div class="jap">ベッターキャップ！</div>
+          <h3 class="nav masthead-brand">
+            <img src="/img/favicon.png"/ class="head"> <span class="jap">ベッターキャップ！</span>
           </h3>
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="/">Home</a>
@@ -35,9 +37,9 @@
         <center>
           <p class="lead">
               <h1 class="inline">bettercap</h1> is the Swiss army knife for network attacks and monitoring.
-              <img src="/img/logo_full.png" style="margin-left:-70px; width:450px;"/> 
+              <img src="/img/logo_full.png" style="width:300px;"/> 
               <br/>
-              <pre><code>$ go get github.com/bettercap/bettercap</code></pre>
+              <div class="code">$ go get github.com/bettercap/bettercap</div>
               <br/>
               <div id="support" class="row">
                 <div class="col"><i class="fab fa-linux"></i></div>
@@ -66,6 +68,9 @@
           </p>
         </div>
       </footer>
+
+      </div> <!-- main-column -->
+
     </div>
 
     <script type="text/javascript">
