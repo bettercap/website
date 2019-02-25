@@ -1,0 +1,60 @@
+---
+title: "Installation"
+date: 2019-02-25T10:57:57+01:00
+draft: false
+weight: 3
+---
+
+## Precompiled Binaries
+
+For every new release, we distribute bettercap's [precompiled binaries for several operating systems](https://github.com/bettercap/bettercap/releases), in order to be able to use them, you'll need the following dependencies on your system:
+
+* libpcap
+* libusb-1.0 (required by the [HID module](/modules/hid/))
+* libnetfilter-queue (on Linux only, required by the [packet.proxy module](/modules/ethernet/proxies/packet.proxy/))
+
+## Snap Store
+
+Alternatively, you can install bettercap from the [Snap Store](https://snapcraft.io/bettercap):
+
+    sudo snap install bettercap
+
+## Using Docker
+
+BetterCAP is containerized using [Alpine Linux](https://alpinelinux.org/) -  a security-oriented, lightweight Linux distribution based on musl libc and busybox. The resulting Docker image is relatively small and easy to manage the dependencies. Since it is using a multi-stage build, **a Docker version greater than 17.05 is required**.
+
+To pull latest stable version of the image:
+
+    docker pull bettercap/bettercap
+
+To pull latest source code build of the image:
+
+    docker pull bettercap/dev
+
+To run:
+
+    docker run -it --privileged --net=host bettercap/bettercap -h
+
+## Compiling from Sources
+
+In order to compile bettercap from sources, make sure that:
+
+* You have a correctly configured **Go >= 1.8** environment.
+* `$GOPATH` is defined and `$GOPATH/bin` is in `$PATH`.
+
+You'll also need to install the dependencies:
+
+* libpcap-dev
+* libusb-1.0-dev (required by the [HID module](/modules/hid/))
+* libnetfilter-queue-dev (on Linux only, required by the [packet.proxy module](/modules/ethernet/proxies/packet.proxy/))
+
+Once you've met this conditions, you can run the following commands to compile and install bettercap in `/usr/local/bin/bettercap`:
+
+    go get github.com/bettercap/bettercap
+    cd $GOPATH/src/github.com/bettercap/bettercap
+    make build 
+    sudo make install
+
+
+
+

@@ -1,0 +1,27 @@
+baseURL = "https://bettercap.org/"
+languageCode = "en-us"
+title = "bettercap is the Swiss army knife for network attacks and monitoring."
+
+theme = "hugo-theme-learn"
+# For search functionality
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[params]
+themeVariant = "green"
+disableShortcutsTitle=true
+
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> Github"
+url = "https://github.com/bettercap/bettercap"
+weight = 1
+
+[[menu.shortcuts]] 
+name = "<i class='fas fa-bullhorn'></i> Blog"
+url = "https://www.evilsocket.net/tags/bettercap/"
+weight = 2
+
+[[menu.shortcuts]] 
+name = "<i class='fas fa-bookmark'></i> Legacy Doc"
+url = "/legacy/"
+weight = 3
