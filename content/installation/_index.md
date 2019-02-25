@@ -5,9 +5,11 @@ draft: false
 weight: 3
 ---
 
+**bettercap supports GNU/Linux, BSD, Android, Apple macOS and the Microsoft Windows** operating systems - depending if you want to install the latest stable release or the bleeding edge from the [GitHub repository](https://github.com/bettercap/bettercap), you have several choices.
+
 ## Precompiled Binaries
 
-For every new release, we distribute bettercap's [precompiled binaries for several operating systems](https://github.com/bettercap/bettercap/releases), in order to be able to use them, you'll need the following dependencies on your system:
+For every new release, we distribute bettercap's [precompiled binaries](https://github.com/bettercap/bettercap/releases). In order to be able to use them, you'll need the following dependencies on your system:
 
 * libpcap
 * libusb-1.0 (required by the [HID module](/modules/hid/))
