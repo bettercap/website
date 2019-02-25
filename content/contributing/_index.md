@@ -7,11 +7,11 @@ draft: false
 
 As any other open source projects, there're many ways you can contribute to bettercap depending on your skills as a developer or will to help as a user.
 
-### Improving the Documentation
+## Improving the Documentation
 
 You can improve this documentation by [forking its repository](https://github.com/bettercap/website), updating the contents and sending a pull request.
 
-### Reporting Bugs
+## Reporting Bugs
 
 If you find bugs or inconsistencies while using bettercap, you can create an Issue using the GitHub Issue tracker, but before doing that please make sure that:
 
@@ -29,7 +29,7 @@ Once you've gone through this list, open an issue and please give us as much as 
 * **Full debug output** while reproducing the issue ( `bettercap -debug ...` ).
 * The steps to reproduce the bug.
 
-### Sending a Pull Request
+## Sending a Pull Request
 
 If you know how to code in Go and have ideas to improve bettercap, you're very welcome to send us pull requests, we'll be happy to merge them whenever they comply to the following rules:
 
