@@ -5,7 +5,7 @@ draft: false
 weight: 4
 ---
 
-This module, which is a port of [Bastille's mousejack attack](https://www.mousejack.com/), performs scanning and frames injection module for HID devices on the 2.4Ghz spectrum, using Nordic Semiconductor nRF24LU1+ based USB dongles and Bastille's [RFStorm firmware](https://github.com/BastilleResearch/nrf-research-firmware).
+This module, which is a port of [Bastille's mousejack attack](https://www.mousejack.com/), performs scanning and frames injection for HID devices on the 2.4Ghz spectrum, using Nordic Semiconductor nRF24LU1+ based USB dongles and Bastille's [RFStorm firmware](https://github.com/BastilleResearch/nrf-research-firmware).
 
 The module will work with one of the devices supported by RFStorm:
 

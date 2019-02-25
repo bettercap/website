@@ -22,6 +22,6 @@ url = "https://www.evilsocket.net/tags/bettercap/"
 weight = 2
 
 [[menu.shortcuts]] 
-name = "<i class='fas fa-bookmark'></i> Legacy Doc"
+name = "<i class='fas fa-bookmark'></i> Legacy v1.x Doc"
 url = "/legacy/"
 weight = 3
