@@ -5,16 +5,19 @@ draft: false
 weight: 5
 ---
 
-A RESTful API server to script and/or interact with the session, starts on HTTP and unauthenticated by default, can be switched to HTTPS and basic auth by using the proper parameters.
+A RESTful API server to orchestrate and interact with the current interactive session, starts on HTTP and unauthenticated by default, can be switched to HTTPS and basic auth by using the proper parameters.
 
-**Commands**
+### Commands
 
-| command | description |
-|---------|-------------|
-| `api.rest on` | Start the REST API server. |
-| `api.rest off` | Stop the REST API server. |
+#### `api.rest on`
 
-**Parameters**
+Start the REST API server.
+
+#### `api.rest off` 
+
+Stop the REST API server.
+
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|
@@ -30,18 +33,18 @@ A RESTful API server to script and/or interact with the session, starts on HTTP 
 | `api.rest.port` | `8081` | Port to bind the API REST server to. | 
 | `api.rest.username` | | API HTTP basic auth username. | 
 | `api.rest.password` | | API HTTP basic auth password. | 
-| `api.rest.websocket` | `false` | If true the `/api/events` route will be available as a websocket endpoint instead of HTTPS. |
+| `api.rest.websocket` | `false` | If true the `/api/events` route will be available as a websocket endpoint instead of HTTP. |
 | `api.rest.alloworigin` | `*` | Value of the Access-Control-Allow-Origin header of the API server. |
 
-## Routes
+### Routes
 
 Clients can authenticate using HTTP basic authentication, these are the available API routes.
 
-### GET /api/session
+#### GET /api/session
 
 Get a JSON of the state of the current session, example response:
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 {
 	"options": {
 		"InterfaceName": "",
@@ -330,13 +333,12 @@ Get a JSON of the state of the current session, example response:
 	"started_at": "2018-02-23T06:28:43.650628576+01:00",
 	"active": true
 }
-```
-
-### GET /api/session/ble
+```{{% /expand %}}
+#### GET /api/session/ble
 
 Get a JSON of the BLE devices in the current session, example response:
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 {
     "devices": [{
         "last_seen": "2018-02-23T06:28:43.650628576+01:00",
@@ -352,17 +354,16 @@ Get a JSON of the BLE devices in the current session, example response:
         "rssi": -64
     }]
 }
-```
-
-#### optional args
+```{{% /expand %}}
+##### Optional Arguments
 
 - Mac address, eg. `GET /api/session/ble/00:AA:BB:CC:DD:33` - return information of a single ble endpoint with the mac address of 00:AA:BB:CC:DD:33 (the Adafruit Bluefruit LE client from the above output).
 
-### GET /api/session/env
+#### GET /api/session/env
 
 Get a JSON of the environment variables in the current session, example response:
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 {
     "data": {
         "$": "{by}{fw}{cidr} {fb}\u003e {env.iface.ipv4} {reset} {bold}» {reset}",
@@ -414,13 +415,12 @@ Get a JSON of the environment variables in the current session, example response
         "wifi.recon.channel": ""
     }
 }
-```
-
-### GET /api/session/gateway
+```{{% /expand %}}
+#### GET /api/session/gateway
 
 Get a JSON of the interface gateway of the current session, example response:
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 {
     "ipv4": "192.168.1.1",
     "ipv6": "",
@@ -434,13 +434,12 @@ Get a JSON of the interface gateway of the current session, example response:
         "values": {}
     }
 }
-```
-
-### GET /api/session/interface
+```{{% /expand %}}
+#### GET /api/session/interface
 
 Get a JSON of the main interface (wifi/lan) of the current session, example response:
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 {
     "ipv4": "192.168.1.17",
     "ipv6": "-",
@@ -454,13 +453,12 @@ Get a JSON of the main interface (wifi/lan) of the current session, example resp
         "values": {}
     }
 }
-```
-
-### GET /api/session/lan
+```{{% /expand %}}
+#### GET /api/session/lan
 
 Get a JSON of the lan devices in the current session, example response:
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 {
     "hosts": [{
         "ipv4": "192.168.1.33",
@@ -500,18 +498,16 @@ Get a JSON of the lan devices in the current session, example response:
         }
     }]
 }
-```
-
-#### optional args
+```{{% /expand %}}
+##### Optional Arguments
 
 - Mac address, eg. `GET /api/session/lan/00:AA:BB:CC:DD:11` - return information of a single lan endpoint with the mac address of 00:AA:BB:CC:DD:11 (the pihole from the above output).
 
-
-### GET /api/session/options
+#### GET /api/session/options
 
 Get a JSON of the options set for the current session, example response:
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 {
     "InterfaceName": "",
     "Caplet": "../caplets/netmon.cap",
@@ -522,13 +518,12 @@ Get a JSON of the options set for the current session, example response:
     "CpuProfile": "",
     "MemProfile": ""
 }
-```
-
-### GET /api/session/packets
+```{{% /expand %}}
+#### GET /api/session/packets
 
 Get a JSON of the packet traffic for the current session, example response:
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 {
     "Stats": {
         "Sent": 1080,
@@ -568,21 +563,19 @@ Get a JSON of the packet traffic for the current session, example response:
         }
     }
 }
-```
-
-### GET /api/session/started-at
+```{{% /expand %}}
+#### GET /api/session/started-at
 
 Get a JSON of the time the current session was started, example response:
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 "2018-02-23T06:28:43.650628576+01:00"
-```
-
-### GET /api/session/wifi
+```{{% /expand %}}
+#### GET /api/session/wifi
 
 Get a JSON of the wifi devices (clients and access points) in the current session, example response:
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 {
     "aps": [{
             "alias": "",
@@ -689,30 +682,27 @@ Get a JSON of the wifi devices (clients and access points) in the current sessio
         },
     ]
 }
-```
-
-#### optional args
+```{{% /expand %}}
+##### Optional Arguments
 
 - Mac address, eg. `GET /api/session/wifi/00:AA:BB:CC:DD:22` - return information of a single wifi endpoint with the mac address of 00:AA:BB:CC:DD:22 (the connected client from the above output).
 
-### POST /api/session
+#### POST /api/session
 
 Post a command to the interactive session, the JSON object being POSTed is expected to be:
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 {"cmd": "net.probe on"}
-```
-While the response will be:
+```{{% /expand %}}While the response will be:
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 {"success": true, "msg":""}
-```
-
-### GET /api/events
+```{{% /expand %}}
+#### GET /api/events
 
 Return a list of events ( the optional `n` GET parameter will limit the number ):
 
-```json
+{{% expand "Expand for the example JSON" %}}```json
 [{
 	"tag": "sys.log",
 	"time": "2018-02-22T16:57:39.449618552+01:00",
@@ -740,8 +730,7 @@ Return a list of events ( the optional `n` GET parameter will limit the number )
 		"clients": []
 	}
 }]
-```
-
-### DELETE /api/events
+```{{% /expand %}}
+#### DELETE /api/events
 
 Will clear the events buffer.
