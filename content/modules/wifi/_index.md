@@ -5,28 +5,109 @@ draft: false
 weight: 3
 ---
 
-The `wifi.*` modules work with a WiFi interface supporting monitor mode and packet injection and they are used to monitor and perform wireless attacks on 802.11.
+The WiFi modules use a WiFi interface supporting monitor mode and packet injection in order to:
 
-**The interface only needs to support monitor mode and packet injection, it'll be bettercap itself to switch it to the right mode, just make sure there aren't other processes using the same wifi interface.**
+- scan the [802.11 spectrum](https://en.wikipedia.org/wiki/IEEE_802.11)
+- perform deauthentication attacks on connected client stations
+- perform [RSN PMKID based](https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/) clientless attacks on vulnerable access points 
+- *automatically sniff and save key material* either from complete WPA/WPA2 handshakes or PMKID packets.
 
-**Commands**
+{{% notice note %}}
+The interface only needs to support monitor mode and packet injection, it'll be bettercap itself to switch it to the right mode, just make sure there aren't other processes using the same wifi interface.
+{{% /notice %}}
 
-| command | description |
-|---------|-------------|
-| `wifi.recon on` | Start 802.11 wireless base stations discovery and handshakes capture. |
-| `wifi.recon off` | Stop 802.11 wireless base stations discovery. |
-| `wifi.clear` | Clear all access points collected by the WiFi discovery module. |
-| `wifi.recon BSSID` | Set 802.11 base station address to filter for. |
-| `wifi.recon clear` | Remove the 802.11 base station filter. |
-| `wifi.assoc BSSID` | Send an association request to the selected BSSID in order to [receive a RSN PMKID](https://hashcat.net/forum/thread-7717.html) key (use `all`, `*` or `ff:ff:ff:ff:ff:ff` to iterate for every access point). |
-| `wifi.deauth BSSID` | Start a 802.11 deauth attack, if an access point BSSID is provided, every client will be deauthenticated, otherwise only the selected client (**use `all`, `*` or `ff:ff:ff:ff:ff:ff` to deauth everything**). |
-| `wifi.show` | Show current wireless stations list (default sorting by RSSI). |
-| `wifi.show.wps BSSID` | Show WPS information about a given station (use `all`, `*` or `ff:ff:ff:ff:ff:ff` to select all). |
-| `wifi.recon.channel CHANNEL` | Comma separated list of channels to hop on. |
-| `wifi.recon.channel clear` | Enable channel hopping on all supported channels. |
-| `wifi.ap` | Inject fake management beacons in order to create a rogue access point ( requires `wifi.recon` to run ). |
+{{% notice note %}}
+This modules are natively supported on macOS with the default interface `en0`. Just make sure the interface is not connected to any WiFi network and then start bettercap with:
+<br/>
+`sudo bettercap -iface en0`
+{{% /notice %}}
 
-**Parameters**
+### Commands
+
+#### `wifi.recon on` 
+
+Start 802.11 wireless base stations discovery and handshakes/PMKID capture.
+
+#### `wifi.recon off` 
+
+Stop 802.11 wireless base stations discovery.
+
+#### `wifi.clear`
+
+Clear all access points collected by the WiFi discovery module.
+
+#### `wifi.recon BSSID` 
+
+Set 802.11 base station address to filter for.
+
+#### `wifi.recon clear` 
+
+Remove the 802.11 base station filter.
+
+#### `wifi.assoc BSSID` 
+
+Send an association request to the selected BSSID in order to [receive a RSN PMKID](https://hashcat.net/forum/thread-7717.html) key (use `all`, `*` or `ff:ff:ff:ff:ff:ff` to iterate for every access point).
+
+#### `wifi.deauth BSSID` 
+
+Start a 802.11 deauth attack, if an access point BSSID is provided, every client will be deauthenticated, otherwise only the selected client (**use `all`, `*` or `ff:ff:ff:ff:ff:ff` to deauth everything**).
+
+{{% notice example %}}
+Keep deauthing clients from the access point with BSSID `DE:AD:BE:EF:DE:AD` every five seconds:
+`> set ticker.period 5; set ticker.commands "wifi.deauth DE:AD:BE:EF:DE:AD"; ticker on`
+{{% /notice %}}
+
+
+#### `wifi.show` 
+
+Show current wireless stations list (default sorting by RSSI).
+
+{{% notice example %}}
+Use the [ticker](/modules/core/ticker/) and `wifi.recon` modules to create a WiFi scanner (performing channel hopping on every supported frequency):
+`> set ticker.commands "clear; wifi.show"; wifi.recon on; ticker on`
+{{% /notice %}}
+
+{{% notice example %}}
+Sort by BSSID and filter for BSSIDs starting with `F4`:
+<br/>
+`> set wifi.show.sort bssid asc`<br/>
+`> set wifi.show.filter ^F4`<br/>
+`> wifi.show`
+{{% /notice %}}
+
+#### `wifi.show.wps BSSID`
+
+Show WPS information about a given station (use `all`, `*` or `ff:ff:ff:ff:ff:ff` to select all).
+
+#### `wifi.recon.channel CHANNEL` 
+
+Comma separated list of channels to hop on.
+
+{{% notice example %}}
+Only recon on channels 1, 2 and 3:
+<br/>
+`> wifi.recon.channel 1,2,3; wifi.recon on`
+{{% /notice %}}
+
+#### `wifi.recon.channel clear`
+
+Enable channel hopping on all supported channels.
+
+#### `wifi.ap`
+
+Inject fake management beacons in order to create a rogue access point ( requires `wifi.recon` to run ).
+
+{{% notice example %}}
+Will send management beacons as the fake access point "Banana" with BSSID `DE:AD:BE:EF:DE:AD` on channel 5 without encryption:
+<br/>
+`> set wifi.ap.ssid Banana`<br/>
+`> set wifi.ap.bssid DE:AD:BE:EF:DE:AD`<br/>
+`> set wifi.ap.channel 5`<br/>
+`> set wifi.ap.encryption false`<br/>
+`> wifi.recon on; wifi.ap`<br/>
+{{% /notice %}}
+
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|
@@ -52,44 +133,3 @@ The `wifi.*` modules work with a WiFi interface supporting monitor mode and pack
 | `wifi.ap.bssid` | `<random mac>` | BSSID of the fake access point. |
 | `wifi.ap.channel` | `1` | Channel of the fake access point. |
 | `wifi.ap.encryption` | `true` | If true, the fake access point will use WPA2, otherwise it'll result as an open AP. |
-
-**Examples**
-
-Starts bettercap on `wlan0`, use the [ticker](https://github.com/bettercap/bettercap/wiki/ticker) and `wifi.recon` modules to create a WiFi scanner (performing channel hopping on every supported frequency):
-    
-    ~/ sudo bettercap -iface wlan0
-
-    > set ticker.commands "clear; wifi.show"; wifi.recon on; ticker on
-
-Only recon on channels 1, 2 and 3:
-
-    > wifi.recon on; wifi.recon.channel 1,2,3
-
-Sort by BSSID and filter for BSSIDs starting with `F4`:
-
-    > set wifi.show.sort bssid asc
-    > set wifi.show.filter ^F4
-    > wifi.show
-
-Filter by access points starting with the string `AP` in their ESSID:
-
-    > set wifi.show.filter ^AP
-    > wifi.show
-
-Show top 10 access points sorted by last activity timestamp:
-
-    > set wifi.show.sort seen desc
-    > set wifi.show.limit 10
-    > wifi.show
-
-Keep deauthing clients from the access point with BSSID `DE:AD:BE:EF:DE:AD` every five seconds:
-
-    > set ticker.period 5; set ticker.commands "wifi.deauth DE:AD:BE:EF:DE:AD"; ticker on
-
-Will send management beacons as the fake access point "Banana" with BSSID `DE:AD:BE:EF:DE:AD` on channel 5 without encryption:
-
-    > set wifi.ap.ssid Banana
-    > set wifi.ap.bssid DE:AD:BE:EF:DE:AD
-    > set wifi.ap.channel 5
-    > set wifi.ap.encryption false
-    > wifi.recon on; wifi.ap
