@@ -5,5 +5,6 @@ weight: 5
 draft: false
 ---
 
-Modules are cool ...
+Session modules are organized in the following categories:
 
+{{% children depth="999" %}}

@@ -5,5 +5,7 @@ draft: false
 weight: 1
 ---
 
-core core
+Core modules used to instrument and perform basic interaction with bettercap and other modules:
+
+{{% children depth="999" %}}
 
