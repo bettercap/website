@@ -1,6 +1,6 @@
 **bettercap** is the Swiss Army knife for [WiFi](/modules/wifi/), [Bluetooth Low Energy](/modules/ble/), wireless [HID hijacking](/modules/hid/) and [Ethernet](/modules/ethernet) networks reconnaissance and MITM attacks.
 
-Read the [project introduction](/intro/) to get an idea of what bettercap can do for you, [install it](/installation/) and start **hacking all the things!!!**
+Read the [project introduction](/intro/) to get an idea of what bettercap can do for you, [install](/installation/) it, [RTFM](/basic-usage/) and start **hacking all the things!!!**
 
 <p align="center">
     <img src="/logo.png" width="250px" style="margin-bottom:10px"/>

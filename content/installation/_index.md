@@ -41,7 +41,7 @@ To run:
 
 In order to compile bettercap from sources, make sure that:
 
-* You have a correctly configured **Go >= 1.8** environment.
+* You have a correctly configured **[Go >= 1.8](https://golang.org/doc/install)** environment.
 * `$GOPATH` is defined and `$GOPATH/bin` is in `$PATH`.
 
 You'll also need to install the dependencies:
