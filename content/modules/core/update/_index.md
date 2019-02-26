@@ -7,8 +7,8 @@ weight: 4
 
 A module to check for bettercap's updates.
 
-**Commands**
+### Commands
 
-| command | description |
-|---------|-------------|
-| `update.check on` | Check latest available stable version and compare it with the one being used. |
+#### `update.check on` 
+
+Check latest available stable version and compare it with the one being used.
