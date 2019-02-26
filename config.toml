@@ -1,6 +1,6 @@
 baseURL = "https://bettercap.org/"
 languageCode = "en-us"
-title = "bettercap is the Swiss army knife for network attacks and monitoring."
+title = "bettercap"
 
 theme = "hugo-theme-learn"
 # For search functionality
