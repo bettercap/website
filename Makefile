@@ -1,8 +1,8 @@
 all: docs
 
 docs:
-	hugo
-	mv public docs
+	@hugo
+	@mv public docs
 
 clean:
-	rm -rf public docs
+	@rm -rf public docs
