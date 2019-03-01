@@ -10,7 +10,7 @@ home = [ "HTML", "RSS", "JSON"]
 [params]
 themeVariant = "green"
 disableShortcutsTitle=true
-editURL = "https://github.com/bettercap/website/edit/master/"
+editURL = "https://github.com/bettercap/website/edit/master/content/"
 
 [[menu.shortcuts]] 
 name = "<i class='fab fa-github'></i> Github"
