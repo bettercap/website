@@ -23,12 +23,7 @@ url = "https://www.evilsocket.net/tags/bettercap/"
 weight = 2
 
 [[menu.shortcuts]] 
-name = '<br/><img alt="Release" src="https://img.shields.io/github/release/bettercap/bettercap.svg?style=flat-square">'
-url = "https://github.com/bettercap/bettercap/releases/latest"
-weight = 3
-
-[[menu.shortcuts]] 
-name = '<img alt="Software License" src="https://img.shields.io/badge/license-GPL3-brightgreen.svg?style=flat-square">'
+name = '<br/><img alt="Software License" src="https://img.shields.io/badge/license-GPL3-brightgreen.svg?style=flat-square">'
 url = "https://github.com/bettercap/bettercap/blob/master/LICENSE.md"
 weight = 4
 
