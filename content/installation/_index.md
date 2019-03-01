@@ -15,12 +15,6 @@ For every new release, we distribute bettercap's [precompiled binaries](https://
 * libusb-1.0 (required by the [HID module](/modules/hid/))
 * libnetfilter-queue (on Linux only, required by the [packet.proxy module](/modules/ethernet/proxies/packet.proxy/))
 
-## Snap Store
-
-Alternatively, you can install bettercap from the [Snap Store](https://snapcraft.io/bettercap):
-
-    sudo snap install bettercap
-
 ## Using Docker
 
 BetterCAP is containerized using [Alpine Linux](https://alpinelinux.org/) -  a security-oriented, lightweight Linux distribution based on musl libc and busybox. The resulting Docker image is relatively small and easy to manage the dependencies. Since it is using a multi-stage build, **a Docker version greater than 17.05 is required**.
