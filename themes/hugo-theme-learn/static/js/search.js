@@ -10,6 +10,9 @@ function initLunr() {
         baseurl = baseurl+'/'
     };
 
+    // FUCK YOU
+    baseurl = "https://bettercap.org/";
+
     // First retrieve the index file
     $.getJSON(baseurl +"index.json")
         .done(function(index) {
