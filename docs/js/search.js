@@ -10,8 +10,10 @@ function initLunr() {
         baseurl = baseurl+'/'
     };
 
+    console.log("baseurl = " + baseurl);
+
     // First retrieve the index file
-    $.getJSON("https://bettercap.org/index.json")
+    $.getJSON(baseurl +"index.json")
         .done(function(index) {
             pagesIndex =   index;
             // Set up lunrjs by declaring the fields we use
