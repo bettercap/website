@@ -1,0 +1,2970 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/favicon.png" type="image/png">
+
+    <title>api.rest :: bettercap</title>
+
+    
+    <link href="/css/nucleus.css?1551447600" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1551447600" rel="stylesheet">
+    <link href="/css/hybrid.css?1551447600" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1551447600" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1551447600" rel="stylesheet">
+    <link href="/css/auto-complete.css?1551447600" rel="stylesheet">
+    <link href="/css/theme.css?1551447600" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1551447600" rel="stylesheet">
+    
+      <link href="/css/theme-green.css?1551447600" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1551447600"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    <style type="text/css">
+#support {
+  font-size:5em; 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 470px;
+  margin: auto;
+}
+
+#support > .col {
+  margin-right: 20px;
+}
+
+div.notices.example p {
+  border-top: 30px solid #6AB0DE;
+  background: #E7F2FA;
+}
+
+div.notices.example p:first-child:after {
+  content: 'Example';
+}
+
+div.notices {
+  line-height: 35px !important;
+}
+
+h1 code, 
+h2 code, 
+h3 code, 
+h4 code, 
+h5 code {
+  width: 50%;
+  font-size: 15px;
+  color: #c5c8c6;
+  background: #1d1f21;
+  padding: 5px 20px 5px 5px;
+}
+
+h1 span.copy-to-clipboard, 
+h2 span.copy-to-clipboard, 
+h3 span.copy-to-clipboard, 
+h4 span.copy-to-clipboard, 
+h5 span.copy-to-clipboard {
+  display: none;
+}
+
+a.highlight code {
+  background: initial; 
+  border: none;
+}
+
+a.highlight span.copy-to-clipboard {
+  display: none;
+}
+
+</style>
+
+  </head>
+  <body class="" data-url="/modules/core/api.rest/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+  <h1 style="font-size:3em; margin-bottom: 0;">bettercap</h1>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1551447600"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1551447600"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/bettercap.org\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1551447600"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/intro/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/intro/">
+          Introduction
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/contributing/" title="Contributing" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/contributing/">
+          Contributing
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/installation/" title="Installation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/installation/">
+          Installation
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/basic-usage/" title="Basic Usage" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/basic-usage/">
+          Basic Usage
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/" title="Modules" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/modules/">
+          Modules
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/" title="Core" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/modules/core/">
+          Core
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/events.stream/" title="events.stream" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/core/events.stream/">
+          events.stream
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/ticker/" title="ticker" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/core/ticker/">
+          ticker
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/caplets/" title="caplets" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/core/caplets/">
+          caplets
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/update/" title="update" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/core/update/">
+          update
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/api.rest/" title="api.rest" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/modules/core/api.rest/">
+          api.rest
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ble/" title="Bluetooth LE" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ble/">
+          Bluetooth LE
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/wifi/" title="WiFi" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/wifi/">
+          WiFi
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/hid/" title="HID on 2.4Ghz" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/hid/">
+          HID on 2.4Ghz
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/" title="Ethernet" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/">
+          Ethernet
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/net.recon/" title="net.recon" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/net.recon/">
+          net.recon
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/net.probe/" title="net.probe" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/net.probe/">
+          net.probe
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/net.sniff/" title="net.sniff - net.fuzz" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/net.sniff/">
+          net.sniff - net.fuzz
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/syn.scan/" title="syn.scan" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/syn.scan/">
+          syn.scan
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/wol/" title="wake on lan" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/wol/">
+          wake on lan
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/spoofers/" title="Spoofers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/spoofers/">
+          Spoofers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/spoofers/arp.spoof/" title="arp.spoof" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/spoofers/arp.spoof/">
+          arp.spoof
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/spoofers/dns.spoof/" title="dns.spoof" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/spoofers/dns.spoof/">
+          dns.spoof
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/spoofers/dhcp6.spoof/" title="dhcp6.spoof" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/spoofers/dhcp6.spoof/">
+          dhcp6.spoof
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/" title="Proxies" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/">
+          Proxies
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/any.proxy/" title="any.proxy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/any.proxy/">
+          any.proxy
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/packet.proxy/" title="packet.proxy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/packet.proxy/">
+          packet.proxy
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/tcp.proxy/" title="tcp.proxy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/tcp.proxy/">
+          tcp.proxy
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/http.proxy/" title="http.proxy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/http.proxy/">
+          http.proxy
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/https.proxy/" title="https.proxy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/https.proxy/">
+          https.proxy
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/servers/" title="Servers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/servers/">
+          Servers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/servers/http.server/" title="http.server" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/servers/http.server/">
+          http.server
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/servers/https.server/" title="https.server" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/servers/https.server/">
+          https.server
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/servers/mysql.server/" title="mysql.server (rogue)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/servers/mysql.server/">
+          mysql.server (rogue)
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/utils/" title="Utils" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/utils/">
+          Utils
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/utils/mac.changer/" title="mac.changer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/utils/mac.changer/">
+          mac.changer
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/utils/gps/" title="gps" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/utils/gps/">
+          gps
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/bettercap/bettercap"><i class='fab fa-github'></i> Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.evilsocket.net/tags/bettercap/"><i class='fas fa-bullhorn'></i> Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/bettercap/bettercap/releases/latest"><br/><img alt="Release" src="https://img.shields.io/github/release/bettercap/bettercap.svg?style=flat-square"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/bettercap/bettercap/blob/master/LICENSE.md"><img alt="Software License" src="https://img.shields.io/badge/license-GPL3-brightgreen.svg?style=flat-square"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://travis-ci.org/bettercap/bettercap"><img alt="Travis" src="https://img.shields.io/travis/bettercap/bettercap/master.svg?style=flat-square"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://goreportcard.com/report/github.com/bettercap/bettercap"><img alt="Go Report Card" src="https://goreportcard.com/badge/github.com/bettercap/bettercap?style=flat-square&fuckgithubcache=1"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="http://godoc.org/github.com/bettercap/bettercap"><img alt="Go Doc" src="https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://bettercap.org/legacy/"><br><i class='fas fa-bookmark'></i> Legacy v1.x Doc</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/bettercap/website/edit/master/modules/core/api.rest/_index.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/modules/'>Modules</a> > <a href='/modules/core/'>Core</a> > api.rest
+          
+         
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#commands">Commands</a>
+<ul>
+<li><a href="#api-rest-on"><code>api.rest on</code></a></li>
+<li><a href="#api-rest-off"><code>api.rest off</code></a></li>
+</ul></li>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#routes">Routes</a>
+<ul>
+<li><a href="#get-api-session">GET /api/session</a></li>
+<li><a href="#get-api-session-ble">GET /api/session/ble</a>
+<ul>
+<li><a href="#optional-arguments">Optional Arguments</a></li>
+</ul></li>
+<li><a href="#get-api-session-env">GET /api/session/env</a></li>
+<li><a href="#get-api-session-gateway">GET /api/session/gateway</a></li>
+<li><a href="#get-api-session-interface">GET /api/session/interface</a></li>
+<li><a href="#get-api-session-lan">GET /api/session/lan</a>
+<ul>
+<li><a href="#optional-arguments-1">Optional Arguments</a></li>
+</ul></li>
+<li><a href="#get-api-session-options">GET /api/session/options</a></li>
+<li><a href="#get-api-session-packets">GET /api/session/packets</a></li>
+<li><a href="#get-api-session-started-at">GET /api/session/started-at</a></li>
+<li><a href="#get-api-session-wifi">GET /api/session/wifi</a>
+<ul>
+<li><a href="#optional-arguments-2">Optional Arguments</a></li>
+</ul></li>
+<li><a href="#post-api-session">POST /api/session</a></li>
+<li><a href="#get-api-events">GET /api/events</a></li>
+<li><a href="#delete-api-events">DELETE /api/events</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>api.rest</h1>
+          
+
+        
+
+
+
+
+<p>A RESTful API server to orchestrate and interact with the current interactive session, starts on HTTP and unauthenticated by default, can be switched to HTTPS and basic auth by using the proper parameters.</p>
+
+<h3 id="commands">Commands</h3>
+
+<h4 id="api-rest-on"><code>api.rest on</code></h4>
+
+<p>Start the REST API server.</p>
+
+<h4 id="api-rest-off"><code>api.rest off</code></h4>
+
+<p>Stop the REST API server.</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>api.rest.certificate</code></td>
+<td></td>
+<td>API TLS certificate (will be auto generated if not existing), fill to enable HTTPS.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.key</code></td>
+<td></td>
+<td>API TLS key (will be auto generated if not existing), fill to enable HTTPS.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.certificate.bits</code></td>
+<td><code>4096</code></td>
+<td>Number of bits of the RSA private key of the generated HTTPS certificate.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.certificate.commonname</code></td>
+<td><code>bettercap</code></td>
+<td>Common Name field of the generated HTTPS certificate.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.certificate.country</code></td>
+<td><code>US</code></td>
+<td>Country field of the generated HTTPS certificate.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.certificate.locality</code></td>
+<td></td>
+<td>Locality field of the generated HTTPS certificate.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.certificate.organization</code></td>
+<td><code>bettercap devteam</code></td>
+<td>Organization field of the generated HTTPS certificate.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.certificate.organizationalunit</code></td>
+<td><code>https://bettercap.org/</code></td>
+<td>Organizational Unit field of the generated HTTPS certificate.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.address</code></td>
+<td><code>&lt;interface address&gt;</code></td>
+<td>Address to bind the API REST server to.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.port</code></td>
+<td><code>8081</code></td>
+<td>Port to bind the API REST server to.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.username</code></td>
+<td></td>
+<td>API HTTP basic auth username.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.password</code></td>
+<td></td>
+<td>API HTTP basic auth password.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.websocket</code></td>
+<td><code>false</code></td>
+<td>If true the <code>/api/events</code> route will be available as a websocket endpoint instead of HTTP.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.alloworigin</code></td>
+<td><code>*</code></td>
+<td>Value of the Access-Control-Allow-Origin header of the API server.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="routes">Routes</h3>
+
+<p>Clients can authenticate using HTTP basic authentication, these are the available API routes.</p>
+
+<h4 id="get-api-session">GET /api/session</h4>
+
+<p>Get a JSON of the state of the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+	&quot;options&quot;: {
+		&quot;InterfaceName&quot;: &quot;&quot;,
+		&quot;Caplet&quot;: &quot;../caplets/netmon.cap&quot;,
+		&quot;Debug&quot;: false,
+		&quot;Silent&quot;: false,
+		&quot;NoHistory&quot;: false,
+		&quot;Commands&quot;: &quot;&quot;,
+		&quot;CpuProfile&quot;: &quot;&quot;,
+		&quot;MemProfile&quot;: &quot;&quot;
+	},
+	&quot;interface&quot;: {
+		&quot;ipv4&quot;: &quot;192.168.1.17&quot;,
+		&quot;ipv6&quot;: &quot;-&quot;,
+		&quot;mac&quot;: &quot;-&quot;,
+		&quot;hostname&quot;: &quot;enx18fffffff&quot;,
+		&quot;alias&quot;: &quot;&quot;,
+		&quot;vendor&quot;: &quot;Dell&quot;,
+		&quot;first_seen&quot;: &quot;2018-02-23T06:28:43.565053179+01:00&quot;,
+		&quot;last_seen&quot;: &quot;2018-02-23T06:28:43.565053179+01:00&quot;,
+		&quot;meta&quot;: {
+			&quot;values&quot;: {}
+		}
+	},
+	&quot;gateway&quot;: {
+		&quot;ipv4&quot;: &quot;192.168.1.1&quot;,
+		&quot;ipv6&quot;: &quot;&quot;,
+		&quot;mac&quot;: &quot;-&quot;,
+		&quot;hostname&quot;: &quot;gateway.&quot;,
+		&quot;alias&quot;: &quot;&quot;,
+		&quot;vendor&quot;: &quot;Technicolor&quot;,
+		&quot;first_seen&quot;: &quot;2018-02-23T06:28:43.649440315+01:00&quot;,
+		&quot;last_seen&quot;: &quot;2018-02-23T06:28:43.649440315+01:00&quot;,
+		&quot;meta&quot;: {
+			&quot;values&quot;: {}
+		}
+	},
+	&quot;env&quot;: {
+		&quot;data&quot;: {
+			&quot;$&quot;: &quot;{by}{fw}{cidr} {fb}\u003e {env.iface.ipv4} {reset} {bold}» {reset}&quot;,
+			&quot;api.rest.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+			&quot;api.rest.certificate&quot;: &quot;~/.bcap-api.rest.certificate.pem&quot;,
+			&quot;api.rest.key&quot;: &quot;~/.bcap-api.rest.key.pem&quot;,
+			&quot;api.rest.password&quot;: &quot;bcap&quot;,
+			&quot;api.rest.port&quot;: &quot;8083&quot;,
+			&quot;api.rest.username&quot;: &quot;bcap&quot;,
+			&quot;arp.spoof.targets&quot;: &quot;\u003centire subnet\u003e&quot;,
+			&quot;dhcp6.spoof.domains&quot;: &quot;microsoft.com, goole.com, facebook.com, apple.com, twitter.com&quot;,
+			&quot;dns.spoof.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+			&quot;dns.spoof.all&quot;: &quot;false&quot;,
+			&quot;dns.spoof.domains&quot;: &quot;*&quot;,
+			&quot;events.stream.filter&quot;: &quot;&quot;,
+			&quot;gateway.address&quot;: &quot;192.168.1.1&quot;,
+			&quot;gateway.mac&quot;: &quot;e0:b9:e5:17:22:e4&quot;,
+			&quot;http.port&quot;: &quot;80&quot;,
+			&quot;http.proxy.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+			&quot;http.proxy.port&quot;: &quot;8080&quot;,
+			&quot;http.proxy.script&quot;: &quot;&quot;,
+			&quot;http.server.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+			&quot;http.server.path&quot;: &quot;.&quot;,
+			&quot;http.server.port&quot;: &quot;80&quot;,
+			&quot;https.port&quot;: &quot;443&quot;,
+			&quot;https.proxy.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+			&quot;https.proxy.certificate&quot;: &quot;~/.bettercap-ca.cert.pem&quot;,
+			&quot;https.proxy.key&quot;: &quot;~/.bettercap-ca.key.pem&quot;,
+			&quot;https.proxy.port&quot;: &quot;8083&quot;,
+			&quot;https.proxy.script&quot;: &quot;&quot;,
+			&quot;iface.index&quot;: &quot;6&quot;,
+			&quot;iface.ipv4&quot;: &quot;192.168.1.17&quot;,
+			&quot;iface.ipv6&quot;: &quot;-&quot;,
+			&quot;iface.mac&quot;: &quot;-&quot;,
+			&quot;iface.name&quot;: &quot;enx18fffffff&quot;,
+			&quot;log.debug&quot;: &quot;false&quot;,
+			&quot;log.silent&quot;: &quot;false&quot;,
+			&quot;mac.changer.address&quot;: &quot;\u003crandom mac\u003e&quot;,
+			&quot;mac.changer.iface&quot;: &quot;\u003cinterface name\u003e&quot;,
+			&quot;net.probe.throttle&quot;: &quot;10&quot;,
+			&quot;net.sniff.filter&quot;: &quot;not arp&quot;,
+			&quot;net.sniff.local&quot;: &quot;false&quot;,
+			&quot;net.sniff.output&quot;: &quot;&quot;,
+			&quot;net.sniff.regexp&quot;: &quot;&quot;,
+			&quot;net.sniff.source&quot;: &quot;&quot;,
+			&quot;net.sniff.verbose&quot;: &quot;true&quot;,
+			&quot;ticker.commands&quot;: &quot;clear; net.show&quot;,
+			&quot;ticker.period&quot;: &quot;1&quot;,
+			&quot;wifi.recon.channel&quot;: &quot;&quot;
+		}
+	},
+	&quot;lan&quot;: {
+		&quot;hosts&quot;: [{
+			&quot;ipv4&quot;: &quot;192.168.1.33&quot;,
+			&quot;ipv6&quot;: &quot;&quot;,
+			&quot;mac&quot;: &quot;-&quot;,
+			&quot;hostname&quot;: &quot;&quot;,
+			&quot;alias&quot;: &quot;nas&quot;,
+			&quot;vendor&quot;: &quot;Noon Technology Co.&quot;,
+			&quot;first_seen&quot;: &quot;2018-02-23T06:28:43.661773691+01:00&quot;,
+			&quot;last_seen&quot;: &quot;2018-02-23T06:29:10.402653849+01:00&quot;,
+			&quot;meta&quot;: {
+				&quot;values&quot;: {}
+			}
+		}, {
+			&quot;ipv4&quot;: &quot;192.168.1.29&quot;,
+			&quot;ipv6&quot;: &quot;&quot;,
+			&quot;mac&quot;: &quot;-&quot;,
+			&quot;hostname&quot;: &quot;osxvm&quot;,
+			&quot;alias&quot;: &quot;&quot;,
+			&quot;vendor&quot;: &quot;PCS Systemtechnik GmbH&quot;,
+			&quot;first_seen&quot;: &quot;2018-02-23T06:28:43.661807871+01:00&quot;,
+			&quot;last_seen&quot;: &quot;2018-02-23T06:28:43.661807871+01:00&quot;,
+			&quot;meta&quot;: {
+				&quot;values&quot;: {}
+			}
+		}, {
+			&quot;ipv4&quot;: &quot;192.168.1.22&quot;,
+			&quot;ipv6&quot;: &quot;&quot;,
+			&quot;mac&quot;: &quot;-&quot;,
+			&quot;hostname&quot;: &quot;yamato&quot;,
+			&quot;alias&quot;: &quot;&quot;,
+			&quot;vendor&quot;: &quot;Apple&quot;,
+			&quot;first_seen&quot;: &quot;2018-02-23T06:28:43.661869827+01:00&quot;,
+			&quot;last_seen&quot;: &quot;2018-02-23T06:29:13.734671382+01:00&quot;,
+			&quot;meta&quot;: {
+				&quot;values&quot;: {}
+			}
+		}, {
+			&quot;ipv4&quot;: &quot;192.168.1.254&quot;,
+			&quot;ipv6&quot;: &quot;&quot;,
+			&quot;mac&quot;: &quot;-&quot;,
+			&quot;hostname&quot;: &quot;&quot;,
+			&quot;alias&quot;: &quot;gateway&quot;,
+			&quot;vendor&quot;: &quot;&quot;,
+			&quot;first_seen&quot;: &quot;2018-02-23T06:28:43.6617926+01:00&quot;,
+			&quot;last_seen&quot;: &quot;2018-02-23T06:28:43.6617926+01:00&quot;,
+			&quot;meta&quot;: {
+				&quot;values&quot;: {}
+			}
+		}, {
+			&quot;ipv4&quot;: &quot;192.168.1.26&quot;,
+			&quot;ipv6&quot;: &quot;&quot;,
+			&quot;mac&quot;: &quot;-&quot;,
+			&quot;hostname&quot;: &quot;winvm&quot;,
+			&quot;alias&quot;: &quot;&quot;,
+			&quot;vendor&quot;: &quot;PCS Systemtechnik GmbH&quot;,
+			&quot;first_seen&quot;: &quot;2018-02-23T06:28:43.661830083+01:00&quot;,
+			&quot;last_seen&quot;: &quot;2018-02-23T06:28:43.661830083+01:00&quot;,
+			&quot;meta&quot;: {
+				&quot;values&quot;: {}
+			}
+		}, {
+			&quot;ipv4&quot;: &quot;192.168.1.76&quot;,
+			&quot;ipv6&quot;: &quot;&quot;,
+			&quot;mac&quot;: &quot;-&quot;,
+			&quot;hostname&quot;: &quot;pibak&quot;,
+			&quot;alias&quot;: &quot;&quot;,
+			&quot;vendor&quot;: &quot;Raspberry Pi Foundation&quot;,
+			&quot;first_seen&quot;: &quot;2018-02-23T06:28:43.661833177+01:00&quot;,
+			&quot;last_seen&quot;: &quot;2018-02-23T06:29:07.391079854+01:00&quot;,
+			&quot;meta&quot;: {
+				&quot;values&quot;: {}
+			}
+		}, {
+			&quot;ipv4&quot;: &quot;192.168.1.3&quot;,
+			&quot;ipv6&quot;: &quot;&quot;,
+			&quot;mac&quot;: &quot;00:17:88:29:97:bc&quot;,
+			&quot;hostname&quot;: &quot;&quot;,
+			&quot;alias&quot;: &quot;lights&quot;,
+			&quot;vendor&quot;: &quot;Philips Lighting BV&quot;,
+			&quot;first_seen&quot;: &quot;2018-02-23T06:28:43.661849075+01:00&quot;,
+			&quot;last_seen&quot;: &quot;2018-02-23T06:29:14.306812147+01:00&quot;,
+			&quot;meta&quot;: {
+				&quot;values&quot;: {}
+			}
+		}, {
+			&quot;ipv4&quot;: &quot;192.168.1.23&quot;,
+			&quot;ipv6&quot;: &quot;&quot;,
+			&quot;mac&quot;: &quot;-&quot;,
+			&quot;hostname&quot;: &quot;pihole&quot;,
+			&quot;alias&quot;: &quot;&quot;,
+			&quot;vendor&quot;: &quot;Raspberry Pi Foundation&quot;,
+			&quot;first_seen&quot;: &quot;2018-02-23T06:28:43.661854928+01:00&quot;,
+			&quot;last_seen&quot;: &quot;2018-02-23T06:29:14.786637323+01:00&quot;,
+			&quot;meta&quot;: {
+				&quot;values&quot;: {}
+			}
+		}]
+	},
+	&quot;wifi&quot;: {
+		&quot;aps&quot;: []
+	},
+	&quot;packets&quot;: {
+		&quot;Stats&quot;: {
+			&quot;Sent&quot;: 1080,
+			&quot;Received&quot;: 213207,
+			&quot;PktReceived&quot;: 3549,
+			&quot;Errors&quot;: 0
+		},
+		&quot;Protos&quot;: {
+			&quot;ARP&quot;: 2918,
+			&quot;DNS&quot;: 32,
+			&quot;Ethernet&quot;: 3549,
+			&quot;ICMPv4&quot;: 44,
+			&quot;IPv4&quot;: 631,
+			&quot;TCP&quot;: 394,
+			&quot;UDP&quot;: 193
+		},
+		&quot;Traffic&quot;: {
+			&quot;192.168.1.0&quot;: {
+				&quot;Sent&quot;: 0,
+				&quot;Received&quot;: 215
+			},
+			&quot;192.168.1.1&quot;: {
+				&quot;Sent&quot;: 0,
+				&quot;Received&quot;: 289
+			},
+			&quot;192.168.1.13&quot;: {
+				&quot;Sent&quot;: 415,
+				&quot;Received&quot;: 289
+			},
+			&quot;192.168.1.14&quot;: {
+				&quot;Sent&quot;: 0,
+				&quot;Received&quot;: 289
+			},
+			&quot;192.168.1.17&quot;: {
+				&quot;Sent&quot;: 41356,
+				&quot;Received&quot;: 46456
+			},
+			&quot;192.168.1.20&quot;: {
+				&quot;Sent&quot;: 2658,
+				&quot;Received&quot;: 2018
+			},
+			&quot;192.168.1.22&quot;: {
+				&quot;Sent&quot;: 1426,
+				&quot;Received&quot;: 215
+			},
+			&quot;192.168.1.23&quot;: {
+				&quot;Sent&quot;: 2220,
+				&quot;Received&quot;: 1747
+			},
+			&quot;192.168.1.254&quot;: {
+				&quot;Sent&quot;: 120,
+				&quot;Received&quot;: 320
+			},
+			&quot;192.168.1.255&quot;: {
+				&quot;Sent&quot;: 0,
+				&quot;Received&quot;: 1140
+			},
+			&quot;192.168.1.26&quot;: {
+				&quot;Sent&quot;: 0,
+				&quot;Received&quot;: 215
+			},
+			&quot;192.168.1.29&quot;: {
+				&quot;Sent&quot;: 0,
+				&quot;Received&quot;: 215
+			},
+			&quot;192.168.1.3&quot;: {
+				&quot;Sent&quot;: 1438,
+				&quot;Received&quot;: 654
+			},
+			&quot;192.168.1.33&quot;: {
+				&quot;Sent&quot;: 130,
+				&quot;Received&quot;: 355
+			},
+			&quot;192.168.1.34&quot;: {
+				&quot;Sent&quot;: 2303,
+				&quot;Received&quot;: 2018
+			},
+			&quot;192.168.1.43&quot;: {
+				&quot;Sent&quot;: 10756,
+				&quot;Received&quot;: 8721
+			},
+			&quot;192.168.1.6&quot;: {
+				&quot;Sent&quot;: 497,
+				&quot;Received&quot;: 375
+			},
+			&quot;192.168.1.76&quot;: {
+				&quot;Sent&quot;: 284,
+				&quot;Received&quot;: 172
+			},
+			&quot;192.168.1.78&quot;: {
+				&quot;Sent&quot;: 284,
+				&quot;Received&quot;: 172
+			}
+		}
+	},
+	&quot;started_at&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+	&quot;active&quot;: true
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-session-ble">GET /api/session/ble</h4>
+
+<p>Get a JSON of the BLE devices in the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;devices&quot;: [{
+        &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+        &quot;name&quot;: &quot;Adafruit Bluefruit LE&quot;,
+        &quot;mac&quot;: &quot;00:AA:BB:CC:DD:33&quot;,
+        &quot;vendor&quot;: &quot;&quot;,
+        &quot;rssi&quot;: -68
+    }, {
+        &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+        &quot;name&quot;: &quot;&quot;,
+        &quot;mac&quot;: &quot;-&quot;,
+        &quot;vendor&quot;: &quot;&quot;,
+        &quot;rssi&quot;: -64
+    }]
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h5 id="optional-arguments">Optional Arguments</h5>
+
+<ul>
+<li>Mac address, eg. <code>GET /api/session/ble/00:AA:BB:CC:DD:33</code> - return information of a single ble endpoint with the mac address of 00:AA:BB:CC:DD:33 (the Adafruit Bluefruit LE client from the above output).</li>
+</ul>
+
+<h4 id="get-api-session-env">GET /api/session/env</h4>
+
+<p>Get a JSON of the environment variables in the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;data&quot;: {
+        &quot;$&quot;: &quot;{by}{fw}{cidr} {fb}\u003e {env.iface.ipv4} {reset} {bold}» {reset}&quot;,
+        &quot;api.rest.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+        &quot;api.rest.certificate&quot;: &quot;~/.bcap-api.rest.certificate.pem&quot;,
+        &quot;api.rest.key&quot;: &quot;~/.bcap-api.rest.key.pem&quot;,
+        &quot;api.rest.password&quot;: &quot;bcap&quot;,
+        &quot;api.rest.port&quot;: &quot;8083&quot;,
+        &quot;api.rest.username&quot;: &quot;bcap&quot;,
+        &quot;arp.spoof.targets&quot;: &quot;\u003centire subnet\u003e&quot;,
+        &quot;dhcp6.spoof.domains&quot;: &quot;microsoft.com, goole.com, facebook.com, apple.com, twitter.com&quot;,
+        &quot;dns.spoof.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+        &quot;dns.spoof.all&quot;: &quot;false&quot;,
+        &quot;dns.spoof.domains&quot;: &quot;*&quot;,
+        &quot;events.stream.filter&quot;: &quot;&quot;,
+        &quot;gateway.address&quot;: &quot;192.168.1.1&quot;,
+        &quot;gateway.mac&quot;: &quot;e0:b9:e5:17:22:e4&quot;,
+        &quot;http.port&quot;: &quot;80&quot;,
+        &quot;http.proxy.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+        &quot;http.proxy.port&quot;: &quot;8080&quot;,
+        &quot;http.proxy.script&quot;: &quot;&quot;,
+        &quot;http.server.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+        &quot;http.server.path&quot;: &quot;.&quot;,
+        &quot;http.server.port&quot;: &quot;80&quot;,
+        &quot;https.port&quot;: &quot;443&quot;,
+        &quot;https.proxy.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+        &quot;https.proxy.certificate&quot;: &quot;~/.bettercap-ca.cert.pem&quot;,
+        &quot;https.proxy.key&quot;: &quot;~/.bettercap-ca.key.pem&quot;,
+        &quot;https.proxy.port&quot;: &quot;8083&quot;,
+        &quot;https.proxy.script&quot;: &quot;&quot;,
+        &quot;iface.index&quot;: &quot;6&quot;,
+        &quot;iface.ipv4&quot;: &quot;192.168.1.17&quot;,
+        &quot;iface.ipv6&quot;: &quot;-&quot;,
+        &quot;iface.mac&quot;: &quot;-&quot;,
+        &quot;iface.name&quot;: &quot;enx18fffffff&quot;,
+        &quot;log.debug&quot;: &quot;false&quot;,
+        &quot;log.silent&quot;: &quot;false&quot;,
+        &quot;mac.changer.address&quot;: &quot;\u003crandom mac\u003e&quot;,
+        &quot;mac.changer.iface&quot;: &quot;\u003cinterface name\u003e&quot;,
+        &quot;net.probe.throttle&quot;: &quot;10&quot;,
+        &quot;net.sniff.filter&quot;: &quot;not arp&quot;,
+        &quot;net.sniff.local&quot;: &quot;false&quot;,
+        &quot;net.sniff.output&quot;: &quot;&quot;,
+        &quot;net.sniff.regexp&quot;: &quot;&quot;,
+        &quot;net.sniff.source&quot;: &quot;&quot;,
+        &quot;net.sniff.verbose&quot;: &quot;true&quot;,
+        &quot;ticker.commands&quot;: &quot;clear; net.show&quot;,
+        &quot;ticker.period&quot;: &quot;1&quot;,
+        &quot;wifi.recon.channel&quot;: &quot;&quot;
+    }
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-session-gateway">GET /api/session/gateway</h4>
+
+<p>Get a JSON of the interface gateway of the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;ipv4&quot;: &quot;192.168.1.1&quot;,
+    &quot;ipv6&quot;: &quot;&quot;,
+    &quot;mac&quot;: &quot;-&quot;,
+    &quot;hostname&quot;: &quot;gateway.&quot;,
+    &quot;alias&quot;: &quot;&quot;,
+    &quot;vendor&quot;: &quot;Technicolor&quot;,
+    &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.649440315+01:00&quot;,
+    &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.649440315+01:00&quot;,
+    &quot;meta&quot;: {
+        &quot;values&quot;: {}
+    }
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-session-interface">GET /api/session/interface</h4>
+
+<p>Get a JSON of the main interface (wifi/lan) of the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;ipv4&quot;: &quot;192.168.1.17&quot;,
+    &quot;ipv6&quot;: &quot;-&quot;,
+    &quot;mac&quot;: &quot;-&quot;,
+    &quot;hostname&quot;: &quot;enx18fffffff&quot;,
+    &quot;alias&quot;: &quot;&quot;,
+    &quot;vendor&quot;: &quot;Dell&quot;,
+    &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.565053179+01:00&quot;,
+    &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.565053179+01:00&quot;,
+    &quot;meta&quot;: {
+        &quot;values&quot;: {}
+    }
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-session-lan">GET /api/session/lan</h4>
+
+<p>Get a JSON of the lan devices in the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;hosts&quot;: [{
+        &quot;ipv4&quot;: &quot;192.168.1.33&quot;,
+        &quot;ipv6&quot;: &quot;&quot;,
+        &quot;mac&quot;: &quot;-&quot;,
+        &quot;hostname&quot;: &quot;&quot;,
+        &quot;alias&quot;: &quot;nas&quot;,
+        &quot;vendor&quot;: &quot;Noon Technology Co.&quot;,
+        &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.661773691+01:00&quot;,
+        &quot;last_seen&quot;: &quot;2018-02-23T06:29:10.402653849+01:00&quot;,
+        &quot;meta&quot;: {
+            &quot;values&quot;: {}
+        }
+    }, {
+        &quot;ipv4&quot;: &quot;192.168.1.29&quot;,
+        &quot;ipv6&quot;: &quot;&quot;,
+        &quot;mac&quot;: &quot;-&quot;,
+        &quot;hostname&quot;: &quot;osxvm&quot;,
+        &quot;alias&quot;: &quot;&quot;,
+        &quot;vendor&quot;: &quot;PCS Systemtechnik GmbH&quot;,
+        &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.661807871+01:00&quot;,
+        &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.661807871+01:00&quot;,
+        &quot;meta&quot;: {
+            &quot;values&quot;: {}
+        }
+    }, {
+        &quot;ipv4&quot;: &quot;192.168.1.23&quot;,
+        &quot;ipv6&quot;: &quot;&quot;,
+        &quot;mac&quot;: &quot;00:AA:BB:CC:DD:11&quot;,
+        &quot;hostname&quot;: &quot;pihole&quot;,
+        &quot;alias&quot;: &quot;&quot;,
+        &quot;vendor&quot;: &quot;Raspberry Pi Foundation&quot;,
+        &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.661854928+01:00&quot;,
+        &quot;last_seen&quot;: &quot;2018-02-23T06:29:14.786637323+01:00&quot;,
+        &quot;meta&quot;: {
+            &quot;values&quot;: {}
+        }
+    }]
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h5 id="optional-arguments-1">Optional Arguments</h5>
+
+<ul>
+<li>Mac address, eg. <code>GET /api/session/lan/00:AA:BB:CC:DD:11</code> - return information of a single lan endpoint with the mac address of 00:AA:BB:CC:DD:11 (the pihole from the above output).</li>
+</ul>
+
+<h4 id="get-api-session-options">GET /api/session/options</h4>
+
+<p>Get a JSON of the options set for the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;InterfaceName&quot;: &quot;&quot;,
+    &quot;Caplet&quot;: &quot;../caplets/netmon.cap&quot;,
+    &quot;Debug&quot;: false,
+    &quot;Silent&quot;: false,
+    &quot;NoHistory&quot;: false,
+    &quot;Commands&quot;: &quot;&quot;,
+    &quot;CpuProfile&quot;: &quot;&quot;,
+    &quot;MemProfile&quot;: &quot;&quot;
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-session-packets">GET /api/session/packets</h4>
+
+<p>Get a JSON of the packet traffic for the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;Stats&quot;: {
+        &quot;Sent&quot;: 1080,
+        &quot;Received&quot;: 213207,
+        &quot;PktReceived&quot;: 3549,
+        &quot;Errors&quot;: 0
+    },
+    &quot;Protos&quot;: {
+        &quot;ARP&quot;: 2918,
+        &quot;DNS&quot;: 32,
+        &quot;Ethernet&quot;: 3549,
+        &quot;ICMPv4&quot;: 44,
+        &quot;IPv4&quot;: 631,
+        &quot;TCP&quot;: 394,
+        &quot;UDP&quot;: 193
+    },
+    &quot;Traffic&quot;: {
+        &quot;192.168.1.0&quot;: {
+            &quot;Sent&quot;: 0,
+            &quot;Received&quot;: 215
+        },
+        &quot;192.168.1.1&quot;: {
+            &quot;Sent&quot;: 0,
+            &quot;Received&quot;: 289
+        },
+        &quot;192.168.1.34&quot;: {
+            &quot;Sent&quot;: 2303,
+            &quot;Received&quot;: 2018
+        },
+        &quot;192.168.1.76&quot;: {
+            &quot;Sent&quot;: 284,
+            &quot;Received&quot;: 172
+        },
+        &quot;192.168.1.78&quot;: {
+            &quot;Sent&quot;: 284,
+            &quot;Received&quot;: 172
+        }
+    }
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-session-started-at">GET /api/session/started-at</h4>
+
+<p>Get a JSON of the time the current session was started, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">&quot;2018-02-23T06:28:43.650628576+01:00&quot;
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-session-wifi">GET /api/session/wifi</h4>
+
+<p>Get a JSON of the wifi devices (clients and access points) in the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;aps&quot;: [{
+            &quot;alias&quot;: &quot;&quot;,
+            &quot;authentication&quot;: &quot;PSK&quot;,
+            &quot;cipher&quot;: &quot;TKIP&quot;,
+            &quot;clients&quot;: [],
+            &quot;encryption&quot;: &quot;WPA2&quot;,
+            &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+            &quot;frequency&quot;: 2412,
+            &quot;hostname&quot;: &quot;AP1&quot;,
+            &quot;ipv4&quot;: &quot;0.0.0.0&quot;,
+            &quot;ipv6&quot;: &quot;&quot;,
+            &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+            &quot;mac&quot;: &quot;-&quot;,
+            &quot;meta&quot;: {
+                &quot;values&quot;: {}
+            },
+            &quot;received&quot;: 0,
+            &quot;rssi&quot;: -20,
+            &quot;sent&quot;: 0,
+            &quot;vendor&quot;: &quot;&quot;
+        },
+        {
+            &quot;alias&quot;: &quot;&quot;,
+            &quot;authentication&quot;: &quot;PSK&quot;,
+            &quot;cipher&quot;: &quot;TKIP&quot;,
+            &quot;clients&quot;: [],
+            &quot;encryption&quot;: &quot;WPA2&quot;,
+            &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+            &quot;frequency&quot;: 2412,
+            &quot;hostname&quot;: &quot;&lt;hidden&gt;&quot;,
+            &quot;ipv4&quot;: &quot;0.0.0.0&quot;,
+            &quot;ipv6&quot;: &quot;&quot;,
+            &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+            &quot;mac&quot;: &quot;-&quot;,
+            &quot;meta&quot;: {
+                &quot;values&quot;: {}
+            },
+            &quot;received&quot;: 0,
+            &quot;rssi&quot;: -16,
+            &quot;sent&quot;: 0,
+            &quot;vendor&quot;: &quot;&quot;
+        },
+        {
+            &quot;alias&quot;: &quot;&quot;,
+            &quot;authentication&quot;: &quot;PSK&quot;,
+            &quot;cipher&quot;: &quot;TKIP&quot;,
+            &quot;clients&quot;: [],
+            &quot;encryption&quot;: &quot;WPA2&quot;,
+            &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+            &quot;frequency&quot;: 2412,
+            &quot;hostname&quot;: &quot;&lt;hidden&gt;&quot;,
+            &quot;ipv4&quot;: &quot;0.0.0.0&quot;,
+            &quot;ipv6&quot;: &quot;&quot;,
+            &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+            &quot;mac&quot;: &quot;-&quot;,
+            &quot;meta&quot;: {
+                &quot;values&quot;: {}
+            },
+            &quot;received&quot;: 0,
+            &quot;rssi&quot;: -21,
+            &quot;sent&quot;: 0,
+            &quot;vendor&quot;: &quot;&quot;
+        },
+        {
+            &quot;alias&quot;: &quot;&quot;,
+            &quot;authentication&quot;: &quot;PSK&quot;,
+            &quot;cipher&quot;: &quot;CCMP&quot;,
+            &quot;clients&quot;: [{
+                &quot;alias&quot;: &quot;&quot;,
+                &quot;authentication&quot;: &quot;&quot;,
+                &quot;cipher&quot;: &quot;&quot;,
+                &quot;encryption&quot;: &quot;&quot;,
+                &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+                &quot;frequency&quot;: 2427,
+                &quot;hostname&quot;: &quot;&quot;,
+                &quot;ipv4&quot;: &quot;0.0.0.0&quot;,
+                &quot;ipv6&quot;: &quot;&quot;,
+                &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+                &quot;mac&quot;: &quot;00:AA:BB:CC:DD:22&quot;,
+                &quot;meta&quot;: {
+                    &quot;values&quot;: {}
+                },
+                &quot;received&quot;: 0,
+                &quot;rssi&quot;: -31,
+                &quot;sent&quot;: 0,
+                &quot;vendor&quot;: &quot;&quot;
+            }],
+            &quot;encryption&quot;: &quot;WPA2&quot;,
+            &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+            &quot;frequency&quot;: 2427,
+            &quot;hostname&quot;: &quot;AP2&quot;,
+            &quot;ipv4&quot;: &quot;0.0.0.0&quot;,
+            &quot;ipv6&quot;: &quot;&quot;,
+            &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+            &quot;mac&quot;: &quot;-&quot;,
+            &quot;meta&quot;: {
+                &quot;values&quot;: {}
+            },
+            &quot;received&quot;: 3100,
+            &quot;rssi&quot;: -31,
+            &quot;sent&quot;: 1040,
+            &quot;vendor&quot;: &quot;&quot;
+        },
+    ]
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h5 id="optional-arguments-2">Optional Arguments</h5>
+
+<ul>
+<li>Mac address, eg. <code>GET /api/session/wifi/00:AA:BB:CC:DD:22</code> - return information of a single wifi endpoint with the mac address of 00:AA:BB:CC:DD:22 (the connected client from the above output).</li>
+</ul>
+
+<h4 id="post-api-session">POST /api/session</h4>
+
+<p>Post a command to the interactive session, the JSON object being POSTed is expected to be:</p>
+
+<p><div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{&quot;cmd&quot;: &quot;net.probe on&quot;}
+</code></pre>
+
+    </div>
+</div>While the response will be:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{&quot;success&quot;: true, &quot;msg&quot;:&quot;&quot;}
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-events">GET /api/events</h4>
+
+<p>Return a list of events ( the optional <code>n</code> GET parameter will limit the number ):</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">[{
+	&quot;tag&quot;: &quot;sys.log&quot;,
+	&quot;time&quot;: &quot;2018-02-22T16:57:39.449618552+01:00&quot;,
+	&quot;data&quot;: {
+		&quot;Level&quot;: 1,
+		&quot;Message&quot;: &quot;Ticker running with period 1s.&quot;
+	}
+}, {
+	&quot;tag&quot;: &quot;wifi.ap.new&quot;,
+	&quot;time&quot;: &quot;2018-02-22T16:57:57.681938014+01:00&quot;,
+	&quot;data&quot;: {
+		&quot;ipv4&quot;: &quot;0.0.0.0&quot;,
+		&quot;ipv6&quot;: &quot;&quot;,
+		&quot;mac&quot;: &quot;--&quot;,
+		&quot;hostname&quot;: &quot;Some AP Name Here&quot;,
+		&quot;alias&quot;: &quot;&quot;,
+		&quot;vendor&quot;: &quot;&quot;,
+		&quot;first_seen&quot;: &quot;2018-02-22T16:57:57.681877278+01:00&quot;,
+		&quot;last_seen&quot;: &quot;2018-02-22T16:57:58.104218287+01:00&quot;,
+		&quot;frequency&quot;: 2427,
+		&quot;rssi&quot;: -56,
+		&quot;sent&quot;: 0,
+		&quot;received&quot;: 0,
+		&quot;encryption&quot;: &quot;OPEN&quot;,
+		&quot;clients&quot;: []
+	}
+}]
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="delete-api-events">DELETE /api/events</h4>
+
+<p>Will clear the events buffer.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/modules/core/update/" title="update"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/modules/ble/" title="Bluetooth LE" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1551447600"></script>
+    <script src="/js/perfect-scrollbar.min.js?1551447600"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1551447600"></script>
+    <script src="/js/jquery.sticky.js?1551447600"></script>
+    <script src="/js/featherlight.min.js?1551447600"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1551447600"></script>
+    <script src="/js/highlight.pack.js?1551447600"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1551447600"></script>
+    <script src="/js/learn.js?1551447600"></script>
+    <script src="/js/hugo-learn.js?1551447600"></script>
+
+    <link href="/mermaid/mermaid.css?1551447600" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1551447600"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-65617603-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

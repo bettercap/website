@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>http.server on bettercap</title>
+    <link>https://bettercap.org/modules/ethernet/servers/http.server/</link>
+    <description>Recent content in http.server on bettercap</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Feb 2019 13:25:15 +0100</lastBuildDate>
+    
+	<atom:link href="https://bettercap.org/modules/ethernet/servers/http.server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

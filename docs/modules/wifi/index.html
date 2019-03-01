@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/favicon.png" type="image/png">
+
+    <title>WiFi :: bettercap</title>
+
+    
+    <link href="/css/nucleus.css?1551447600" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1551447600" rel="stylesheet">
+    <link href="/css/hybrid.css?1551447600" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1551447600" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1551447600" rel="stylesheet">
+    <link href="/css/auto-complete.css?1551447600" rel="stylesheet">
+    <link href="/css/theme.css?1551447600" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1551447600" rel="stylesheet">
+    
+      <link href="/css/theme-green.css?1551447600" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1551447600"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    <style type="text/css">
+#support {
+  font-size:5em; 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 470px;
+  margin: auto;
+}
+
+#support > .col {
+  margin-right: 20px;
+}
+
+div.notices.example p {
+  border-top: 30px solid #6AB0DE;
+  background: #E7F2FA;
+}
+
+div.notices.example p:first-child:after {
+  content: 'Example';
+}
+
+div.notices {
+  line-height: 35px !important;
+}
+
+h1 code, 
+h2 code, 
+h3 code, 
+h4 code, 
+h5 code {
+  width: 50%;
+  font-size: 15px;
+  color: #c5c8c6;
+  background: #1d1f21;
+  padding: 5px 20px 5px 5px;
+}
+
+h1 span.copy-to-clipboard, 
+h2 span.copy-to-clipboard, 
+h3 span.copy-to-clipboard, 
+h4 span.copy-to-clipboard, 
+h5 span.copy-to-clipboard {
+  display: none;
+}
+
+a.highlight code {
+  background: initial; 
+  border: none;
+}
+
+a.highlight span.copy-to-clipboard {
+  display: none;
+}
+
+</style>
+
+  </head>
+  <body class="" data-url="/modules/wifi/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+  <h1 style="font-size:3em; margin-bottom: 0;">bettercap</h1>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1551447600"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1551447600"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/bettercap.org\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1551447600"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/intro/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/intro/">
+          Introduction
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/contributing/" title="Contributing" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/contributing/">
+          Contributing
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/installation/" title="Installation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/installation/">
+          Installation
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/basic-usage/" title="Basic Usage" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/basic-usage/">
+          Basic Usage
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/" title="Modules" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/modules/">
+          Modules
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/" title="Core" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/core/">
+          Core
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/events.stream/" title="events.stream" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/core/events.stream/">
+          events.stream
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/ticker/" title="ticker" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/core/ticker/">
+          ticker
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/caplets/" title="caplets" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/core/caplets/">
+          caplets
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/update/" title="update" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/core/update/">
+          update
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/api.rest/" title="api.rest" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/core/api.rest/">
+          api.rest
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ble/" title="Bluetooth LE" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ble/">
+          Bluetooth LE
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/wifi/" title="WiFi" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/modules/wifi/">
+          WiFi
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/hid/" title="HID on 2.4Ghz" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/hid/">
+          HID on 2.4Ghz
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/" title="Ethernet" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/">
+          Ethernet
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/net.recon/" title="net.recon" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/net.recon/">
+          net.recon
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/net.probe/" title="net.probe" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/net.probe/">
+          net.probe
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/net.sniff/" title="net.sniff - net.fuzz" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/net.sniff/">
+          net.sniff - net.fuzz
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/syn.scan/" title="syn.scan" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/syn.scan/">
+          syn.scan
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/wol/" title="wake on lan" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/wol/">
+          wake on lan
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/spoofers/" title="Spoofers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/spoofers/">
+          Spoofers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/spoofers/arp.spoof/" title="arp.spoof" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/spoofers/arp.spoof/">
+          arp.spoof
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/spoofers/dns.spoof/" title="dns.spoof" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/spoofers/dns.spoof/">
+          dns.spoof
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/spoofers/dhcp6.spoof/" title="dhcp6.spoof" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/spoofers/dhcp6.spoof/">
+          dhcp6.spoof
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/" title="Proxies" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/">
+          Proxies
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/any.proxy/" title="any.proxy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/any.proxy/">
+          any.proxy
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/packet.proxy/" title="packet.proxy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/packet.proxy/">
+          packet.proxy
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/tcp.proxy/" title="tcp.proxy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/tcp.proxy/">
+          tcp.proxy
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/http.proxy/" title="http.proxy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/http.proxy/">
+          http.proxy
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/https.proxy/" title="https.proxy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/https.proxy/">
+          https.proxy
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/servers/" title="Servers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/servers/">
+          Servers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/servers/http.server/" title="http.server" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/servers/http.server/">
+          http.server
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/servers/https.server/" title="https.server" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/servers/https.server/">
+          https.server
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/servers/mysql.server/" title="mysql.server (rogue)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/servers/mysql.server/">
+          mysql.server (rogue)
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/utils/" title="Utils" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/utils/">
+          Utils
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/utils/mac.changer/" title="mac.changer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/utils/mac.changer/">
+          mac.changer
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/utils/gps/" title="gps" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/utils/gps/">
+          gps
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/bettercap/bettercap"><i class='fab fa-github'></i> Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.evilsocket.net/tags/bettercap/"><i class='fas fa-bullhorn'></i> Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/bettercap/bettercap/releases/latest"><br/><img alt="Release" src="https://img.shields.io/github/release/bettercap/bettercap.svg?style=flat-square"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/bettercap/bettercap/blob/master/LICENSE.md"><img alt="Software License" src="https://img.shields.io/badge/license-GPL3-brightgreen.svg?style=flat-square"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://travis-ci.org/bettercap/bettercap"><img alt="Travis" src="https://img.shields.io/travis/bettercap/bettercap/master.svg?style=flat-square"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://goreportcard.com/report/github.com/bettercap/bettercap"><img alt="Go Report Card" src="https://goreportcard.com/badge/github.com/bettercap/bettercap?style=flat-square&fuckgithubcache=1"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="http://godoc.org/github.com/bettercap/bettercap"><img alt="Go Doc" src="https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square"></a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://bettercap.org/legacy/"><br><i class='fas fa-bookmark'></i> Legacy v1.x Doc</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/bettercap/website/edit/master/modules/wifi/_index.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/modules/'>Modules</a> > WiFi
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#commands">Commands</a>
+<ul>
+<li><a href="#wifi-recon-on"><code>wifi.recon on</code></a></li>
+<li><a href="#wifi-recon-off"><code>wifi.recon off</code></a></li>
+<li><a href="#wifi-clear"><code>wifi.clear</code></a></li>
+<li><a href="#wifi-recon-bssid"><code>wifi.recon BSSID</code></a></li>
+<li><a href="#wifi-recon-clear"><code>wifi.recon clear</code></a></li>
+<li><a href="#wifi-assoc-bssid"><code>wifi.assoc BSSID</code></a></li>
+<li><a href="#wifi-deauth-bssid"><code>wifi.deauth BSSID</code></a></li>
+<li><a href="#wifi-show"><code>wifi.show</code></a></li>
+<li><a href="#wifi-show-wps-bssid"><code>wifi.show.wps BSSID</code></a></li>
+<li><a href="#wifi-recon-channel-channel"><code>wifi.recon.channel CHANNEL</code></a></li>
+<li><a href="#wifi-recon-channel-clear"><code>wifi.recon.channel clear</code></a></li>
+<li><a href="#wifi-ap"><code>wifi.ap</code></a></li>
+</ul></li>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#examples">Examples</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>WiFi</h1>
+          
+
+        
+
+
+
+
+<p>The WiFi modules use a WiFi interface supporting monitor mode and packet injection in order to:</p>
+
+<ul>
+<li>scan the <a href="https://en.wikipedia.org/wiki/IEEE_802.11">802.11 spectrum</a></li>
+<li>perform deauthentication attacks on connected client stations</li>
+<li>perform <a href="https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/">RSN PMKID based</a> clientless attacks on vulnerable access points</li>
+<li><em>automatically sniff and save key material</em> either from complete WPA/WPA2 handshakes or PMKID packets.</li>
+<li>send spoofed management beacons to create fake access points.</li>
+</ul>
+
+<div class="notices note" ><p>The interface only needs to support monitor mode and packet injection, it&rsquo;ll be bettercap itself to switch it to the right mode, just make sure there aren&rsquo;t other processes using the same wifi interface.</p>
+</div>
+
+
+<div class="notices note" ><p>This modules are natively supported on macOS with the default interface <code>en0</code>. Just make sure the interface is not connected to any WiFi network and then start bettercap with:
+<br/>
+<code>sudo bettercap -iface en0</code></p>
+</div>
+
+
+<h3 id="commands">Commands</h3>
+
+<h4 id="wifi-recon-on"><code>wifi.recon on</code></h4>
+
+<p>Start 802.11 wireless base stations discovery and handshakes/PMKID capture.</p>
+
+<h4 id="wifi-recon-off"><code>wifi.recon off</code></h4>
+
+<p>Stop 802.11 wireless base stations discovery.</p>
+
+<h4 id="wifi-clear"><code>wifi.clear</code></h4>
+
+<p>Clear all access points collected by the WiFi discovery module.</p>
+
+<h4 id="wifi-recon-bssid"><code>wifi.recon BSSID</code></h4>
+
+<p>Set 802.11 base station address to filter for.</p>
+
+<h4 id="wifi-recon-clear"><code>wifi.recon clear</code></h4>
+
+<p>Remove the 802.11 base station filter.</p>
+
+<h4 id="wifi-assoc-bssid"><code>wifi.assoc BSSID</code></h4>
+
+<p>Send an association request to the selected BSSID in order to <a href="https://hashcat.net/forum/thread-7717.html">receive a RSN PMKID</a> key (use <code>all</code>, <code>*</code> or <code>ff:ff:ff:ff:ff:ff</code> to iterate for every access point).</p>
+
+<h4 id="wifi-deauth-bssid"><code>wifi.deauth BSSID</code></h4>
+
+<p>Start a 802.11 deauth attack, if an access point BSSID is provided, every client will be deauthenticated, otherwise only the selected client (<strong>use <code>all</code>, <code>*</code> or <code>ff:ff:ff:ff:ff:ff</code> to deauth everything</strong>).</p>
+
+<h4 id="wifi-show"><code>wifi.show</code></h4>
+
+<p>Show current wireless stations list (default sorting by RSSI).</p>
+
+<h4 id="wifi-show-wps-bssid"><code>wifi.show.wps BSSID</code></h4>
+
+<p>Show WPS information about a given station (use <code>all</code>, <code>*</code> or <code>ff:ff:ff:ff:ff:ff</code> to select all).</p>
+
+<h4 id="wifi-recon-channel-channel"><code>wifi.recon.channel CHANNEL</code></h4>
+
+<p>Comma separated list of channels to hop on.</p>
+
+<h4 id="wifi-recon-channel-clear"><code>wifi.recon.channel clear</code></h4>
+
+<p>Enable channel hopping on all supported channels.</p>
+
+<h4 id="wifi-ap"><code>wifi.ap</code></h4>
+
+<p>Inject fake management beacons in order to create a rogue access point ( requires <code>wifi.recon</code> to run ).</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>wifi.region</code></td>
+<td><code>BO</code></td>
+<td>Set the WiFi region to this value before activating the interface.</td>
+</tr>
+
+<tr>
+<td><code>wifi.txpower</code></td>
+<td><code>30</code></td>
+<td>Set WiFi transmission power to this value before activating the interface.</td>
+</tr>
+
+<tr>
+<td><code>wifi.rssi.min</code></td>
+<td><code>-200</code></td>
+<td>Minimum WiFi signal strength in dBm.</td>
+</tr>
+
+<tr>
+<td><code>wifi.show.manufacturer</code></td>
+<td><code>false</code></td>
+<td>If true, wifi.show will also show the devices manufacturers.</td>
+</tr>
+
+<tr>
+<td><code>wifi.show.filter</code></td>
+<td></td>
+<td>Defines a regular expression filter for <code>wifi.show</code>.</td>
+</tr>
+
+<tr>
+<td><code>wifi.show.sort</code></td>
+<td><code>rssi asc</code></td>
+<td>Defines sorting field (<code>rssi</code>, <code>bssid</code>, <code>essid</code>, <code>channel</code>, <code>encryption</code>, <code>clients</code>, <code>seen</code>, <code>sent</code>, <code>rcvd</code>) and direction (<code>asc</code> or <code>desc</code>) for <code>wifi.show</code>.</td>
+</tr>
+
+<tr>
+<td><code>wifi.show.sort</code></td>
+<td><code>asc</code></td>
+<td>Defines sorting direction for <code>wifi.show</code>.</td>
+</tr>
+
+<tr>
+<td><code>wifi.show.limit</code></td>
+<td><code>0</code></td>
+<td>If greater than zero, defines limit for <code>wifi.show</code>.</td>
+</tr>
+
+<tr>
+<td><code>wifi.hop.period</code></td>
+<td><code>250</code></td>
+<td>If channel hopping is enabled (empty <code>wifi.recon.channel</code>), this is the time in millseconds the algorithm will hop on every channel (it&rsquo;ll be doubled if both 2.4 and 5.0 bands are available).</td>
+</tr>
+
+<tr>
+<td><code>wifi.handshakes.file</code></td>
+<td><code>~/bettercap-wifi-handshakes.pcap</code></td>
+<td>File path of the pcap file to save handshakes to.</td>
+</tr>
+
+<tr>
+<td><code>wifi.source.file</code></td>
+<td></td>
+<td>If set, the wifi module will read from this pcap file instead of the hardware interface.</td>
+</tr>
+
+<tr>
+<td><code>wifi.skip-broken</code></td>
+<td><code>true</code></td>
+<td>If true, dot11 packets with an invalid checksum will be skipped.</td>
+</tr>
+
+<tr>
+<td><code>wifi.assoc.skip</code></td>
+<td></td>
+<td>Comma separated list of BSSID to skip while sending association requests.</td>
+</tr>
+
+<tr>
+<td><code>wifi.assoc.silent</code></td>
+<td><code>false</code></td>
+<td>If true, messages from wifi.assoc will be suppressed.</td>
+</tr>
+
+<tr>
+<td><code>wifi.assoc.open</code></td>
+<td><code>false</code></td>
+<td>Send association requests to open networks.</td>
+</tr>
+
+<tr>
+<td><code>wifi.deauth.skip</code></td>
+<td></td>
+<td>Comma separated list of BSSID to skip while sending deauth packets.</td>
+</tr>
+
+<tr>
+<td><code>wifi.deauth.silent</code></td>
+<td><code>false</code></td>
+<td>If true, messages from <code>wifi.deauth</code> will be suppressed.</td>
+</tr>
+
+<tr>
+<td><code>wifi.deauth.open</code></td>
+<td><code>true</code></td>
+<td>Send wifi deauth packets to open networks.</td>
+</tr>
+
+<tr>
+<td><code>wifi.ap.ssid</code></td>
+<td><code>FreeWifi</code></td>
+<td>SSID of the fake access point.</td>
+</tr>
+
+<tr>
+<td><code>wifi.ap.bssid</code></td>
+<td><code>&lt;random mac&gt;</code></td>
+<td>BSSID of the fake access point.</td>
+</tr>
+
+<tr>
+<td><code>wifi.ap.channel</code></td>
+<td><code>1</code></td>
+<td>Channel of the fake access point.</td>
+</tr>
+
+<tr>
+<td><code>wifi.ap.encryption</code></td>
+<td><code>true</code></td>
+<td>If true, the fake access point will use WPA2, otherwise it&rsquo;ll result as an open AP.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="examples">Examples</h3>
+
+<p>Keep deauthing clients from the access point with BSSID <code>DE:AD:BE:EF:DE:AD</code> every five seconds:</p>
+
+<pre><code>&gt; set ticker.period 5; set ticker.commands &quot;wifi.deauth DE:AD:BE:EF:DE:AD&quot;; ticker on
+</code></pre>
+
+<p>Use the <a href="/modules/core/ticker/">ticker</a> and <code>wifi.recon</code> modules to create a WiFi scanner (performing channel hopping on every supported frequency):</p>
+
+<pre><code>&gt; set ticker.commands &quot;clear; wifi.show&quot;; wifi.recon on; ticker on
+</code></pre>
+
+<p>Sort by BSSID and filter for BSSIDs starting with <code>F4</code>:</p>
+
+<pre><code>&gt; set wifi.show.sort bssid asc
+&gt; set wifi.show.filter ^F4
+&gt; wifi.show
+</code></pre>
+
+<p>Only recon on channels 1, 2 and 3:</p>
+
+<pre><code>&gt; wifi.recon.channel 1,2,3; wifi.recon on
+</code></pre>
+
+<p>Will send management beacons as the fake access point &ldquo;Banana&rdquo; with BSSID <code>DE:AD:BE:EF:DE:AD</code> on channel 5 without encryption:</p>
+
+<pre><code>&gt; set wifi.ap.ssid Banana
+&gt; set wifi.ap.bssid DE:AD:BE:EF:DE:AD
+&gt; set wifi.ap.channel 5
+&gt; set wifi.ap.encryption false
+&gt; wifi.recon on; wifi.ap
+</code></pre>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/modules/ble/" title="Bluetooth LE"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/modules/hid/" title="HID on 2.4Ghz" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1551447600"></script>
+    <script src="/js/perfect-scrollbar.min.js?1551447600"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1551447600"></script>
+    <script src="/js/jquery.sticky.js?1551447600"></script>
+    <script src="/js/featherlight.min.js?1551447600"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1551447600"></script>
+    <script src="/js/highlight.pack.js?1551447600"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1551447600"></script>
+    <script src="/js/learn.js?1551447600"></script>
+    <script src="/js/hugo-learn.js?1551447600"></script>
+
+    <link href="/mermaid/mermaid.css?1551447600" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1551447600"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-65617603-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>
