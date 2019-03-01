@@ -5,14 +5,16 @@ draft: false
 weight: 4
 ---
 
-A full featured HTTP transparent proxy that can be scripted using javascript modules. If used together with a spoofer, all HTTP traffic will be redirected to it and it will automatically handle port redirections as needed.
+A full featured HTTP transparent proxy that can be scripted using javascript modules. If used together with a [spoofer](/modules/ethernet/spoofers/), all HTTP traffic will be redirected to it and it will automatically handle port redirections as needed.
 
 ### Commands
 
-| command | description |
-|---------|-------------|
-| `http.proxy on` | Start the HTTP proxy. |
-| `http.proxy off` | Stop the HTTP proxy. |
+#### `http.proxy on`
+
+Start the HTTP proxy.
+#### `http.proxy off`
+
+Stop the HTTP proxy.
 
 ### Parameters
 

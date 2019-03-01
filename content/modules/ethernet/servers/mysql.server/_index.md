@@ -5,16 +5,19 @@ draft: false
 weight: 3
 ---
 
-A simple Rogue MySQL server, to be used to exploit LOCAL INFILE and read arbitrary files from the client.
+A rogue MySQL server that can be used to exploit [LOCAL INFILE and read arbitrary files](/modules/ethernet/spoofers/) from the client.
 
-**Commands**
+### Commands
 
-| command | description |
-|---------|-------------|
-| `mysql.server on` | Start mysql server. |
-| `mysql.server off` | Stop mysql server. |
+#### `mysql.server on`
 
-**Parameters**
+Start mysql server.
+
+#### `mysql.server off`
+
+Stop mysql server.
+
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|
@@ -34,10 +37,3 @@ Now connect to your MySQL server and observe the file output on the Bettercap te
 
     $ mysql -u root -h 192.168.1.123 -pasdsasad --enable-local-infile
 
-**Author**
-
-[Bernardo Rodrigues](https://github.com/bmaia)
-
-**Ref**
-
-https://w00tsec.blogspot.it/2018/04/abusing-mysql-local-infile-to-read.html

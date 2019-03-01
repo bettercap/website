@@ -5,14 +5,20 @@ draft: false
 weight: 5
 ---
 
-A full featured HTTPS transparent proxy that can be scripted using javascript modules that will auto generate certificates on the fly. If used together with a spoofer, all HTTPS traffic will be redirected to it and it will automatically handle port redirections as needed.
+A full featured HTTPS transparent proxy that can be scripted using javascript modules. If used together with a [spoofer](/modules/ethernet/spoofers/), all HTTPS traffic will be redirected to it and it will automatically handle port redirections as needed.
+
+{{% notice info %}}
+When a new TLS connection is being proxied, bettercap will fetch the original certificate from the target host and resign on the fly the full chain using its own CA.
+{{% /notice %}}
 
 ### Commands
 
-| command | description |
-|---------|-------------|
-| `https.proxy on` | Start the HTTPS proxy. |
-| `https.proxy off` | Stop the HTTPS proxy. |
+#### `https.proxy on`
+
+Start the HTTPS proxy.
+#### `https.proxy off`
+
+Stop the HTTPS proxy.
 
 ### Parameters
 

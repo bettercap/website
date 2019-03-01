@@ -5,20 +5,31 @@ draft: false
 weight: 1
 ---
 
-This module is enabled by default and is responsible for reading periodically the ARP cache in order to monitor for new hosts on the network.
+This module is [enabled by default](/basic-usage/#autostart-modules) and is responsible for periodically reading the system ARP table in order to detect new hosts on the network.
 
-**Commands**
+### Commands
 
-| command | description |
-|---------|-------------|
-| `net.recon on` | Start network hosts discovery. |
-| `net.recon off` | Stop network hosts discovery. |
-| `net.clear` | Clear all endpoints collected by the hosts discovery module. |
-| `net.show` | Show cache hosts list (default sorting by ip). |
-| `net.show ADDRESS1, ADDRESS2` | Show information about a specific list of addresses (by IP or MAC). |
-| `net.show.meta ADDRESS1, ADDRESS2` | Show metadata (mDNS, UPnP, open ports, etc) about a specific list of addresses (by IP or MAC). | 
+#### `net.recon on`
 
-**Parameters**
+Start network hosts discovery.
+#### `net.recon off`
+
+Stop network hosts discovery.
+#### `net.clear`
+
+Clear all endpoints collected by the hosts discovery module.
+#### `net.show`
+
+Show cache hosts list (default sorting by ip).
+
+#### `net.show ADDRESS1, ADDRESS2`
+
+Show information about a specific list of addresses (by IP or MAC).
+#### `net.show.meta ADDRESS1, ADDRESS2`
+
+Show metadata (mDNS, UPnP, open ports, etc) about a specific list of addresses (by IP or MAC).
+
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|
@@ -27,21 +38,27 @@ This module is enabled by default and is responsible for reading periodically th
 | `net.show.sort` | `ip asc` | Defines sorting field (`ip`, `mac`, `seen`, `sent`, `rcvd`) and direction (`asc` or `desc`) for `net.show`. |
 | `net.show.limit` | `0` | If greater than zero, defines limit for `net.show`. |
 
-**Examples**
+### Examples
 
 Sort by IP and filter for MAC addresses starting with `B8`:
 
-    > set net.show.sort ip asc
-    > set net.show.filter ^B8
-    > net.show
+```
+> set net.show.sort ip asc
+> set net.show.filter ^B8
+> net.show
+```
 
 Filter by endpoints with the string `Apple` in their hostname or vendor fields:
 
-    > set net.show.filter Apple
-    > net.show
+```
+> set net.show.filter Apple
+> net.show
+```
 
 Show top 10 endpoints sorted by last activity timestamp:
 
-    > set net.show.sort seen desc
-    > set net.show.limit 10
-    > net.show
+```
+> set net.show.sort seen desc
+> set net.show.limit 10
+> net.show
+```

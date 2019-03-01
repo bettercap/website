@@ -5,16 +5,22 @@ draft: false
 weight: 2
 ---
 
-Replies to DNS messages with spoofed responses.
+Replies to DNS queries with spoofed responses.
 
-**Commands**
+{{% notice info %}}
+In order to receive DNS queries from other hosts other than your own and be therefore able to spoof the selected domain names, you'll also need to activate either the [arp.spoof](/modules/ethernet/spoofers/arp.spoof/) or the [dhcp6.spoof](/modules/ethernet/spoofers/dhcp6.spoof/) module.
+{{% /notice %}}
 
-| command | description |
-|---------|-------------|
-| `dns.spoof on` | Start the DNS spoofer in the background. |
-| `dns.spoof off` | Stop the DNS spoofer in the background. |
+### Commands
 
-**Parameters**
+#### `dns.spoof on`
+
+Start the DNS spoofer in the background.
+#### `dns.spoof off`
+
+Stop the DNS spoofer in the background.
+
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|
@@ -23,7 +29,7 @@ Replies to DNS messages with spoofed responses.
 | `dns.spoof.all` | `false` | If true the module will reply to every DNS request, otherwise it will only reply to the one targeting the local pc. |
 | `dns.spoof.hosts` |   | If not empty, this hosts file will be used to map domains to IP addresses. |
 
-**Examples**
+### Examples
 
 Every DNS request coming to this computer for the `example.com` domain will resolve to the address `1.2.3.4`:
 

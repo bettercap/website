@@ -7,12 +7,17 @@ weight: 1
 
 Change the selected interface mac address.
 
-| command | description |
-|---------|-------------|
-| `mac.changer on` | Start the mac changer module. |
-| `mac.changer off` | Stop the mac changer module and restore the original mac address. |
+### Commands
 
-**Parameters**
+#### `mac.changer on`
+
+Start the mac changer module.
+
+#### `mac.changer off`
+
+Stop the mac changer module and restore the original mac address.
+
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|

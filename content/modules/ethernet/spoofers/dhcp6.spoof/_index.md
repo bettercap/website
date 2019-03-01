@@ -5,22 +5,29 @@ draft: false
 weight: 3
 ---
 
-Replies to DHCPv6 messages, providing victims with a link-local IPv6 address and setting the attacker host as default DNS server (as described [here](https://github.com/fox-it/mitm6/)), must be used together with the [dns.spoof](https://github.com/bettercap/bettercap/wiki/dns.spoof) module.
+This module's purpose is attacking Microsoft Windows hosts by replying to DHCPv6 messages and providing the target with a link-local 
+IPv6 address and setting the attacker host as default DNS server (as described [here](https://blog.fox-it.com/2018/01/11/mitm6-compromising-ipv4-networks-via-ipv6/)).
 
-**Commands**
+{{% notice info %}}
+This module must be used together with [dns.spoof](https://github.com/bettercap/bettercap/wiki/dns.spoof) module in order to be effective.
+{{% /notice %}}
 
-| command | description |
-|---------|-------------|
-| `dhcp6.spoof on` | Start the DHCPv6 spoofer in the background. |
-| `dhcp6.spoof off` | Stop the DHCPv6 spoofer in the background. |
+### Commands
 
-**Parameters**
+#### `dhcp6.spoof on`
+
+Start the DHCPv6 spoofer in the background.
+#### `dhcp6.spoof off`
+
+Stop the DHCPv6 spoofer in the background.
+
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|
 | `dhcp6.spoof.domains` | `microsoft.com, goole.com, facebook.com, apple.com, twitter.com` | Comma separated values of domain names to spoof. | 
 
-**Examples**
+### Examples
 
 The following is the [mitm6.cap](https://github.com/bettercap/caplets/blob/master/mitm6.cap) caplet performing the full DHCPv6 attack versus a Windows 10 machine which is booting:
 
@@ -29,9 +36,9 @@ The following is the [mitm6.cap](https://github.com/bettercap/caplets/blob/maste
 set dns.spoof.domains microsoft.com, google.com
 set dhcp6.spoof.domains microsoft.com, google.com
 
-# every request http request to the spoofed hosts will come to us
+# every http request to the spoofed hosts will come to us
 # let's give em some contents
-set http.server.path caplets/www
+set http.server.path /var/www/something
 
 # serve files
 http.server on

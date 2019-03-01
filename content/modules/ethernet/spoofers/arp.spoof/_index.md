@@ -5,18 +5,22 @@ draft: false
 weight: 1
 ---
 
-This module keeps spoofing selected hosts on the network using crafted ARP packets.
+This module keeps spoofing selected hosts on the network using crafted ARP packets in order to perform a [MITM attack](/modules/ethernet/spoofers/#what-is-a-mitm-attack).
 
-**Commands**
+### Commands
 
-| command | description |
-|---------|-------------|
-| `arp.spoof on` | Start ARP spoofer. |
-| `arp.ban on` | Start ARP spoofer in ban mode, meaning the target(s) connectivity will not work. |
-| `arp.spoof/ban off` | Stop ARP spoofer. |
+#### `arp.spoof on`
+
+Start ARP spoofer.
+#### `arp.ban on`
+
+Start ARP spoofer in ban mode, meaning the target(s) connectivity will not work.
+#### `arp.spoof/ban off`
+
+Stop ARP spoofer.
 
 
-**Parameters**
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|
@@ -25,7 +29,7 @@ This module keeps spoofing selected hosts on the network using crafted ARP packe
 | `arp.spoof.internal` | `false` | If true, local connections among computers of the network will be spoofed as well, otherwise only connections going to and coming from the external network. |
 | `arp.spoof.fullduplex` | `false` | If true, both the targets and the gateway will be attacked, otherwise only the target (**if the router has ARP spoofing protections in place this will make the attack fail**). |
 
-**Examples**
+### Examples
 
 Ban the address `192.168.1.6` from the network:
 

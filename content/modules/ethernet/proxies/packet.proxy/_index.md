@@ -5,20 +5,23 @@ draft: false
 weight: 2
 ---
 
-A **Linux only** module that relies on NFQUEUEs in order to actively filter packets, using [Go native plugins](https://golang.org/pkg/plugin/) (plugins for this module can be found [in this repository](https://github.com/bettercap/packet.proxy-plugins)).
+A module that relies on [NFQUEUEs](https://home.regit.org/netfilter-en/using-nfqueue-and-libnetfilter_queue/) in order to actively filter packets, using [Go native plugins](https://golang.org/pkg/plugin/) (plugins for this module can be found [in this repository](https://github.com/bettercap/packet.proxy-plugins)).
 
-**IMPORTANT**
+{{% notice warning %}}
+This module is only supported on GNU/Linux.
+{{% /notice %}}
 
-In order to be compiled correctly, plugin `.go` files need to be copied inside bettercap's source folder and compiled from there, otherwise you might have issues compiling due to dependency conflicts with the vendor folder.
+### Commands
 
-**Commands**
+#### `packet.proxy on`
 
-| command | description |
-|---------|-------------|
-| `packet.proxy on` | Start the NFQUEUE based packet proxy. |
-| `packet.proxy off` | Stop the NFQUEUE based packet proxy. |
+Start the NFQUEUE based packet proxy.
 
-**Parameters**
+#### `packet.proxy off`
+
+Stop the NFQUEUE based packet proxy.
+
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|
@@ -27,9 +30,9 @@ In order to be compiled correctly, plugin `.go` files need to be copied inside b
 | `packet.proxy.rule` |  | Any additional iptables rule to make the queue more selective (ex. `--destination 8.8.8.8`). |
 | `packet.proxy.plugin` |  | Go plugin file to load and call for every packet. |
 
-**Plugins**
+### Plugins
 
-The `packet.proxy.plugin` parameter is mandatory and needs to be filled with the path of a shared object [built as a Go plugin](https://golang.org/pkg/plugin/) and exporting an `OnPacket` callback like so:
+Instead of using Javascript extensions like the HTTP and HTTPS proxies, this module requires the plugins to be natively written in Go in order to avoid adding too much overhead for each incoming packet. The `packet.proxy.plugin` parameter is mandatory and needs to be filled with the path of a shared object [built as a Go plugin](https://golang.org/pkg/plugin/) and exporting an `OnPacket` callback like the following:
 
 ```go
 package main
@@ -75,3 +78,7 @@ This `test.go` file can be compiled like so:
     go build -buildmode=plugin test.go
 
 Once the `test.so` file is generated, it can be used for the `packet.proxy.plugin` parameter.
+
+{{% notice info %}}
+In order to be compiled correctly, plugin `.go` files need to be copied inside bettercap's source folder and compiled from there, otherwise you might have issues compiling due to dependency conflicts with the vendor folder.
+{{% /notice %}}

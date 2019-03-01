@@ -56,37 +56,13 @@ Stop the events stream.
 
 Show the events stream ( `LIMIT` is an optional parameter ).
 
-{{% notice example %}}
-Show every event:
-<br/>
-`> events.show`
-{{% /notice %}}
-
-{{% notice example %}}
-Show the last 5 events, sleep one second and then clear the buffer:
-<br/>
-`> events.show 5; sleep 1; events.clear`
-{{% /notice %}}
-
 #### `events.ignore FILTER` 
 
 Events with an identifier matching this filter will not be shown (use multiple times to add more filters).
 
-{{% notice example %}}
-Ignore the *endpoint.lost* event:
-<br/>
-`> events.ignore endpoint.lost`
-{{% /notice %}}
-
 #### `events.include FILTER`
 
 Used to remove filters passed with the events.ignore command.
-
-{{% notice example %}}
-Re enable the *endpoint.lost* event:
-<br/>
-`> events.include endpoint.lost`
-{{% /notice %}}
 
 #### `events.filters.clear`
 
@@ -102,29 +78,9 @@ Clear the events stream buffer.
 
 Wait for an event with the given tag either forever or for a timeout in seconds.
 
-{{% notice example %}}
-Start discovering BLE devices and wait that at least one is detected:
-<br/>
-`> ble.recon on; events.waitfor ble.device.new`
-{{% /notice %}}
-
-{{% notice example %}}
-Same thing but with a 10 seconds timeout:
-<br/>
-`> ble.recon on; events.waitfor ble.device.new 10`
-{{% /notice %}}
-
 #### `events.on TAG COMMANDS` 
 
 Define a new *"trigger"* that will run COMMANDS when an event with the specified TAG is triggered. Inside the COMMANDS parameter it is possible to use placeholders that will be replaced with the relative field of the event's payload (it supports [XPath queries on JSON](https://github.com/antchfx/xpath) between brackets).
-
-{{% notice example %}}
-Whenever a new WiFi client station is discovered, launch a [deauthentication attack]() and, whenever a new WiFi access point is discovered, try to associate to it:
-<br/>
-`> events.on wifi.client.new wifi.deauth {{Client/mac}}`
-<br/>
-`> events.on wifi.ap.new wifi.assoc {{mac}}`
-{{% /notice %}}
 
 #### `events.triggers` 
 
@@ -151,8 +107,53 @@ Remove all event triggers (use `events.triggers` to see the list of triggers).
 | `events.stream.http.request.dump` | `false` | If true all HTTP requests will be dumped. |
 | `events.stream.http.response.dump` | `false` | If true all HTTP responses will be dumped. |
 
-{{% notice example %}}
+### Examples
+
+Show every event:
+
+```
+> events.show
+```
+
+Show the last 5 events, sleep one second and then clear the buffer:
+
+```
+> events.show 5; sleep 1; events.clear
+```
+
+Ignore the *endpoint.lost* event:
+
+```
+> events.ignore endpoint.lost
+```
+
+Re enable the *endpoint.lost* event:
+
+```
+> events.include endpoint.lost
+```
+
+Start discovering BLE devices and wait that at least one is detected:
+
+```
+> ble.recon on; events.waitfor ble.device.new
+```
+
+Same thing but with a 10 seconds timeout:
+
+```
+> ble.recon on; events.waitfor ble.device.new 10
+```
+
+Whenever a new WiFi client station is discovered, launch a [deauthentication attack](/modules/wifi/#wifi-deauth-bssid) and, whenever a new WiFi access point is discovered, try to associate to it:
+
+```
+> events.on wifi.client.new wifi.deauth {{Client/mac}}
+> events.on wifi.ap.new wifi.assoc {{mac}}
+```
+
 Start bettercap without colors and terminal effects and write events to the file `~/bettercap-events.log`:
-<br/>
-`sudo bettercap -no-colors -eval "set events.stream.output ~/bettercap-events.log"`
-{{% /notice %}}
+
+```sh
+sudo bettercap -no-colors -eval "set events.stream.output ~/bettercap-events.log"
+```

@@ -21,7 +21,6 @@ Show a list caplet search paths.
 
 Install/updates the caplets.
 
-{{% notice example %}}
-[![example](https://asciinema.org/a/XVohDvyR7xW2PSsnFcqnyG8G2.png)](https://asciinema.org/a/XVohDvyR7xW2PSsnFcqnyG8G2)
-{{% /notice %}}
+### Examples
 
+[![example](https://asciinema.org/a/XVohDvyR7xW2PSsnFcqnyG8G2.png)](https://asciinema.org/a/XVohDvyR7xW2PSsnFcqnyG8G2)

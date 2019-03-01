@@ -7,14 +7,17 @@ weight: 2
 
 A simple HTTPS server, used to serve files and scripts across the network.
 
-**Commands**
+### Commands
 
-| command | description |
-|---------|-------------|
-| `https.server on` | Start the HTTP server in the background. |
-| `https.server off` | Stop the HTTP server in the background. |
+#### `https.server on`
 
-**Parameters**
+Start the HTTP server in the background.
+
+#### `https.server off`
+
+Stop the HTTP server in the background.
+
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|
@@ -30,8 +33,10 @@ A simple HTTPS server, used to serve files and scripts across the network.
 | `https.server.certificate.organization` | `bettercap devteam` | Organization field of the generated HTTPS certificate. |
 | `https.server.certificate.organizationalunit` | `https://bettercap.org/` | Organizational Unit field of the generated HTTPS certificate. |
 
-**Examples**
+### Examples
 
 One liner to serve `/var/www/html`:
 
-    $ sudo bettercap -eval "set https.server.path /var/www/html; https.server on"
+```sh
+sudo bettercap -eval "set https.server.path /var/www/html; https.server on"
+```

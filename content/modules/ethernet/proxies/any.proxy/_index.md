@@ -5,16 +5,19 @@ draft: false
 weight: 1
 ---
 
-A firewall redirection to any custom proxy.
+A simple firewall redirection to any custom proxy.
 
-**Commands**
+### Commands
 
-| command | description |
-|---------|-------------|
-| `any.proxy on` | Start the custom proxy redirection. |
-| `any.proxy off` | Stop the custom proxy redirection. |
+#### `any.proxy on`
 
-**Parameters**
+Start the custom proxy redirection.
+
+#### `any.proxy off`
+
+Stop the custom proxy redirection.
+
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|
@@ -24,3 +27,12 @@ A firewall redirection to any custom proxy.
 | `any.proxy.src_address` | | Leave empty to intercept any source address. |
 | `any.proxy.dst_address` | `<interface address>` | Address where the proxy is listening. |
 | `any.proxy.dst_port` | `8080` | Port where the proxy is listening. |
+
+### Examples
+
+Redirect all HTTP traffic to a local Burp proxy instance:
+
+```
+set any.proxy.dst_address 127.0.0.1
+any.proxy on
+```

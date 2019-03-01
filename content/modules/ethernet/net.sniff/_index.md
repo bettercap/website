@@ -5,19 +5,28 @@ draft: false
 weight: 3
 ---
 
-A network packet sniffer and fuzzer.
+This module is a network packet sniffer and fuzzer supporting both [BPF syntax](http://biot.com/capstats/bpf.html) and regular expressions for filtering. 
+It is also able to dissect several major protocols in order to harvest credentials.
 
-**Commands**
+### Commands
 
-| command | description |
-|---------|-------------|
-| `net.sniff on` | Start the packet sniffer. |
-| `net.sniff off` | Stop the packet sniffer. |
-| `net.sniff stats` | Print the packet sniffer session configuration and statistics. |
-| `net.fuzz on` | Enable fuzzing for every sniffed packet containing the sapecified layers. |
-| `net.fuzz off` | Disable fuzzing. |
+#### `net.sniff on`
 
-**Parameters**
+Start the packet sniffer.
+#### `net.sniff off`
+
+Stop the packet sniffer.
+#### `net.sniff stats`
+
+Print the packet sniffer session configuration and statistics.
+#### `net.fuzz on`
+
+Enable fuzzing for every sniffed packet containing the sapecified layers.
+#### `net.fuzz off`
+
+Disable fuzzing.
+
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|
@@ -32,7 +41,7 @@ A network packet sniffer and fuzzer.
 | `net.fuzz.ratio` | `0.4` | Rate in the [0.0,1.0] interval of bytes to fuzz for each packet. |
 | `net.fuzz.silent` | `false` | If true it will not report fuzzed packets. |
 
-**Examples**
+### Examples
 
 The [local-sniffer.cap](https://github.com/bettercap/caplets/blob/master/local-sniffer.cap) caplet will sniff, parse and print all packets on the local machine:
 
@@ -41,22 +50,9 @@ events.clear
 
 set net.sniff.verbose false
 set net.sniff.local true
-# https://biot.com/capstats/bpf.html
-# set net.sniff.filter not arp and not udp port 53
-
+# uncomment to skip ARP and DNS requests
+# set net.sniff.filter "not arp and not udp port 53"
 net.sniff on
-```
-
-In the [wpa_handshake.cap](https://github.com/bettercap/caplets/blob/master/wpa_handshake.cap) caplet instead, the sniffer is used to capture WPA2 handshakes while the user is deauthing clients:
-
-```sh
-...
-# Sniff EAPOL frames ( WPA handshakes ) and save them to a pcap file.
-set net.sniff.verbose true
-set net.sniff.filter ether proto 0x888e
-set net.sniff.output wpa.pcap
-net.sniff on
-...
 ```
 
 Change 90% of mDNS incoming packets by fuzzing 40% of their payload (will reinject fuzzed packets):

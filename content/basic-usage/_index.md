@@ -65,16 +65,6 @@ The basic command line arguments ( `bettercap -h` ) are:
 
 A comma separated list of modules that are automatically started (default to `events.stream, net.recon`).
 
-{{% notice example %}}
-To disable `net.recon` (if for instance you're only using WiFi or BLE related modules):
-<br/>
-`sudo bettercap -autostart "events.stream"`
-<br/>
-Which is equivalent to:
-<br/>
-`sudo bettercap -eval "net.recon off"`
-{{% /notice %}}
-
 #### `-caplet FILENAME`
 
 Read commands from this file and execute them in the interactive session.
@@ -82,12 +72,6 @@ Read commands from this file and execute them in the interactive session.
 #### `-eval COMMANDS`
 
 Run one or more commands separated by `;` in the interactive session, used to set variables via command line.
-
-{{% notice example %}}
-Set the `arp.spoof.targets` parameter and enable the `arp.spoof` module:
-<br/>
-`sudo bettercap -eval "set arp.spoof.targets 192.168.1.20; arp.spoof on"`
-{{% /notice %}}
 
 #### `-iface INTERFACE`
 
@@ -135,12 +119,6 @@ Will list all available commands and print the name of each module and its statu
 
 Will print the module specific help menu, with its sub commands and parameters.
 
-{{% notice example %}}
-To quickly get the help menu of a module and quit bettercap (basically like a *man* command), you can use the `-eval` argument, for example:
-<br/>
-`sudo bettercap -eval "help net.recon; q"`
-{{% /notice %}}
-
 #### `active` 
 
 Show which modules are running and their parameters.
@@ -165,12 +143,6 @@ Set the value of `PARAMETER` to `VALUE`, use `""` or `''` to clear its contents.
 
 Show a `PROMPT` to ask the user for input that will be saved inside `PARAMETER`.
 
-{{% notice example %}}
-Ask the user to fill the `arp.spoof.targets` parameter:
-<br/>
-`> read arp.spoof.targets "Select the target to spoof: "`
-{{% /notice %}}
-
 #### `clear`
 
 Clear the screen.
@@ -186,12 +158,6 @@ Execute a shell command and print its output into the session.
 #### `alias MAC NAME`
 
 Assign an alias to a given endpoint given its MAC address (will be persistent on `~/bettercap.aliases`).
-
-{{% notice example %}}
-Set the alias *"MY IPAD"* to the device with MAC address `DE:AD:DE:AD:BE:EF`:
-<br/>
-`> alias DE:AD:DE:AD:BE:EF MY IPAD`
-{{% /notice %}}
 
 {{% notice tip %}}
 Being persisted on disk, aliases are shared across each module and bettercap session. This means that if you set an alias for a computer while on the same network, the same alias will be shown and used, for instance, by the WiFi modules when resolving wireless stations BSSID (you'll see who's connecting to what).
@@ -242,3 +208,41 @@ There are also other operators you can use in order to access specific informati
 | `{net.packets}` | Number of packets being sniffed by the tool from the network. |
 
 And finally, you can access and use any variable that has been declared in the interactive session using the `{env.NAME-OF-THE-VAR}` operator, for instance, the default prompt is using `{env.iface.ipv4}` that is replaced by the `iface.ipv4` session variable contents ( you can check it using the `get iface.ipv4` command ).
+
+### Examples
+
+To disable `net.recon` (if for instance you're only using WiFi or BLE related modules):
+
+```sh
+sudo bettercap -autostart "events.stream"
+```
+
+Which is equivalent to:
+
+```sh
+sudo bettercap -eval "net.recon off"
+```
+
+Set the `arp.spoof.targets` parameter and enable the `arp.spoof` module:
+
+```sh
+sudo bettercap -eval "set arp.spoof.targets 192.168.1.20; arp.spoof on"
+```
+
+To quickly get the help menu of a module and quit bettercap (basically like a *man* command), you can use the `-eval` argument, for example:
+
+```sh
+sudo bettercap -eval "help net.recon; q"
+```
+
+Ask the user to fill the `arp.spoof.targets` parameter:
+
+```
+> read arp.spoof.targets "Select the target to spoof: "
+```
+
+Set the alias *"MY IPAD"* to the device with MAC address `DE:AD:DE:AD:BE:EF`:
+
+```
+> alias DE:AD:DE:AD:BE:EF MY IPAD
+```

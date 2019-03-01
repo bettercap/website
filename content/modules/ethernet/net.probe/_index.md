@@ -5,16 +5,18 @@ draft: false
 weight: 2
 ---
 
-This module keeps probing for new hosts on the network by sending dummy UDP packets to every possible IP on the subnet. 
+When activated, this module will send different types of probe packets to each IP in the current subnet in order for the [net.recon](/modules/ethernet/net.recon/) module to detect them.
 
-**Commands**
+### Commands
 
-| command | description |
-|---------|-------------|
-| `net.probe on` | Start the prober. |
-| `net.probe off` | Stop the prober. |
+#### `net.probe on`
 
-**Parameters**
+Start the prober.
+#### `net.probe off`
+
+Stop the prober.
+
+### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|

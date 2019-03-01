@@ -5,16 +5,19 @@ draft: false
 weight: 3
 ---
 
-A TCP transparent proxy that can be scripted using javascript modules. If used together with a spoofer, all TCP traffic to a given address and port will be redirected to it and it will automatically handle port redirections as needed.
+A TCP transparent proxy that can be scripted using javascript modules. If used together with a [spoofer](/modules/ethernet/spoofers/), all TCP traffic to a given address and port will be redirected to it and it will automatically handle port redirections as needed.
 
 The optional `tcp.tunnel` parameter can be used to redirect the traffic from `tcp.address` to `tcp.tunnel.address`.
 
 ### Commands
 
-| command | description |
-|---------|-------------|
-| `tcp.proxy on` | Start the TCP proxy. |
-| `tcp.proxy off` | Stop the TCP proxy. |
+#### `tcp.proxy on`
+
+Start the TCP proxy.
+
+#### `tcp.proxy off`
+
+Stop the TCP proxy.
 
 ### Parameters
 
@@ -60,7 +63,7 @@ Modules can use the following builtin functions.
 
 ### Examples
 
-The [rogue-mysql-server.cap](https://github.com/bettercap/caplets/blob/master/rogue-mysql-server.cap) executes an ARP spoofing attack against a single host and redirect the MySQL traffic to a rogue server.
+The [rogue-mysql-server.cap](https://github.com/bettercap/caplets/blob/master/rogue-mysql-server.cap) executes an ARP spoofing attack against a single host and redirect the MySQL traffic to a [builtin rogue server](/modules/ethernet/servers/mysql.server/):
 
 ```sh
 # set the target for arp spoofing

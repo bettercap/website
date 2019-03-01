@@ -33,21 +33,9 @@ Show discovered Bluetooth Low Energy devices.
 
 Enumerate services and characteristics for the given BLE device.
 
-{{% notice example %}}
-Connect, enumerate and read characteristics from the BLE device `04:52:de:ad:be:ef` (requires `ble.recon on` first):
-<br/>
-`> ble.enum 04:52:de:ad:be:ef`
-{{% /notice %}}
-
 #### `ble.write MAC UUID HEX_DATA` 
 
 Write the `HEX_DATA` buffer to the BLE device with the specified `MAC` address, to the characteristics with the given `UUID`. |
-
-{{% notice example %}}
-Write the bytes `ff ff ff ff ff ff ff ff` to the BLE device `04:52:de:ad:be:ef` on its characteristics with UUID `234bfbd5e3b34536a3fe723620d4b78d` (requires `ble.recon on` first):
-<br/>
-`> ble.write 04:52:de:ad:be:ef 234bfbd5e3b34536a3fe723620d4b78d ffffffffffffffff`
-{{% /notice %}}
 
 ### Parameters
 
@@ -56,3 +44,17 @@ Write the bytes `ff ff ff ff ff ff ff ff` to the BLE device `04:52:de:ad:be:ef` 
 | `ble.show.filter` | |  Defines a regular expression filter for `ble.show`.|
 | `ble.show.sort` | `rssi asc` | Defines sorting field (`rssi`, `mac`, or `seen`) and direction (`asc` or `desc`) for `ble.show`. |
 | `ble.show.limit` | `0` | If greater than zero, defines limit for `ble.show`. |
+
+### Examples
+
+Connect, enumerate and read characteristics from the BLE device `04:52:de:ad:be:ef` (requires `ble.recon on` first):
+
+```
+> ble.enum 04:52:de:ad:be:ef
+```
+
+Write the bytes `ff ff ff ff ff ff ff ff` to the BLE device `04:52:de:ad:be:ef` on its characteristics with UUID `234bfbd5e3b34536a3fe723620d4b78d` (requires `ble.recon on` first):
+
+```
+> ble.write 04:52:de:ad:be:ef 234bfbd5e3b34536a3fe723620d4b78d ffffffffffffffff
+```
