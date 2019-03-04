@@ -58,3 +58,7 @@ Write the bytes `ff ff ff ff ff ff ff ff` to the BLE device `04:52:de:ad:be:ef` 
 ```
 > ble.write 04:52:de:ad:be:ef 234bfbd5e3b34536a3fe723620d4b78d ffffffffffffffff
 ```
+
+Hacking a Loccess smartlock using bettercap:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzRCGxDKPFA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
