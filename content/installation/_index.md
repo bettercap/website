@@ -52,17 +52,17 @@ Once you've met this conditions, you can run the following commands to compile a
     make build 
     sudo make install
 
-## Compiling on Android
+### Compiling on Android
 
-Install [Termux](https://termux.com/).    
-In Termux, type:
+Install [Termux](https://termux.com/) and from its prompt type:
+
 ```
 pkg install root-repo
-pkg install golang git libpcap-dev libusb-dev
+pkg install golang git libpcap-dev
 go get -u github.com/bettercap/bettercap
 ```
-and wait.    
-Your build is in go/bin/bettercap.
+
+Once the build process is concluded, the binary will be located in `go/bin/bettercap`.
 
 
 
