@@ -116,6 +116,7 @@ Modules can use the following builtin functions.
 
 | function | description |
 |----------|-------------|
+| `readDir("/path/")` | Return the contents of a directory as a string array. |
 | `readFile("/path/to/file")` | Return the contents of a file as a string. |
 | `writeFile("/path/to/file", "hello world")` | Write the string `hello world` to a file, returns `null` or an error message. |
 | `log_debug("message")` | Log a message in the interactive session (its level will be `DEBUG`). |
