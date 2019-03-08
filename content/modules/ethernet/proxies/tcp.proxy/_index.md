@@ -56,8 +56,17 @@ Modules can use the following builtin functions.
 
 | function | description |
 |----------|-------------|
+| `readDir("/path/")` | Return the contents of a directory as a string array. |
 | `readFile("/path/to/file")` | Return the contents of a file as a string. |
-| `log("message")` | Log a message in the interactive session (its level will be `INFO`). |
+| `writeFile("/path/to/file", "hello world")` | Write the string `hello world` to a file, returns `null` or an error message. |
+| `log_debug("message")` | Log a message in the interactive session (its level will be `DEBUG`). |
+| `log_info("message")` | Log a message in the interactive session (its level will be `INFO`). |
+| `log_warn("message")` | Log a message in the interactive session (its level will be `WARNING`). |
+| `log_error("message")` | Log a message in the interactive session (its level will be `ERROR`). |
+| `log_fatal("message")` | Log a message in the interactive session (its level will be `FATAL`). |
+| `log("message")` | Shortcut for `log_info("message")`. |
+| `btoa("message")` | Encode a message to base64. |
+| `atob("bWVzc2FnZQ==")` | Decode a message from base64. |
 | `env("iface.ipv4")` | Read a variable. |
 | `env("foo", "bar")` | Set a variable. |
 
