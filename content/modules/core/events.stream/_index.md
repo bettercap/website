@@ -99,6 +99,7 @@ Remove all event triggers (use `events.triggers` to see the list of triggers).
 | parameter | default | description |
 |-----------|---------|-------------|
 | `events.stream.output` |  | If not empty, events will be written to this file instead of the standard output. |
+| `events.stream.time.format` | `15:04:05` | Date and time [format](https://golang.org/pkg/time/#Time.Format) to use for events reporting. |
 | `events.stream.output.rotate` | `true` | If true will enable log rotation. |
 | `events.stream.output.rotate.compress` | `true` | If true will enable log rotation compression. |
 | `events.stream.output.rotate.how` | `size` | Rotate by `size` or `time`. |
@@ -108,6 +109,12 @@ Remove all event triggers (use `events.triggers` to see the list of triggers).
 | `events.stream.http.response.dump` | `false` | If true all HTTP responses will be dumped. |
 
 ### Examples
+
+Start bettercap with full date and time format for events:
+
+```sh
+sudo bettercap -eval "set events.stream.time.format Mon Jan 2 15:04:05 -0700 MST 2006"
+```
 
 Show every event:
 
