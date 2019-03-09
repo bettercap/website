@@ -16,19 +16,19 @@
 
 
     
-    <link href="/css/nucleus.css?1552127694" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1552127694" rel="stylesheet">
-    <link href="/css/hybrid.css?1552127694" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1552127694" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1552127694" rel="stylesheet">
-    <link href="/css/auto-complete.css?1552127694" rel="stylesheet">
-    <link href="/css/theme.css?1552127694" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1552127694" rel="stylesheet">
+    <link href="/css/nucleus.css?1552128363" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1552128363" rel="stylesheet">
+    <link href="/css/hybrid.css?1552128363" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1552128363" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1552128363" rel="stylesheet">
+    <link href="/css/auto-complete.css?1552128363" rel="stylesheet">
+    <link href="/css/theme.css?1552128363" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1552128363" rel="stylesheet">
     
-      <link href="/css/theme-green.css?1552127694" rel="stylesheet">
+      <link href="/css/theme-green.css?1552128363" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1552127694"></script>
+    <script src="/js/jquery-2.x.min.js?1552128363"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -129,14 +129,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1552127694"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1552127694"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1552128363"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1552128363"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1552127694"></script>
+<script type="text/javascript" src="/js/search.js?1552128363"></script>
 
     
   </div>
@@ -1235,28 +1235,32 @@ a.highlight span.copy-to-clipboard {
 <li><a href="#parameters">Parameters</a></li>
 <li><a href="#routes">Routes</a>
 <ul>
-<li><a href="#get-api-session">GET /api/session</a></li>
-<li><a href="#get-api-session-ble">GET /api/session/ble</a>
+<li><a href="#get-api-session"><code>GET /api/session</code></a></li>
+<li><a href="#get-api-session-lan"><code>GET /api/session/lan</code></a>
 <ul>
 <li><a href="#optional-arguments">Optional Arguments</a></li>
 </ul></li>
-<li><a href="#get-api-session-env">GET /api/session/env</a></li>
-<li><a href="#get-api-session-gateway">GET /api/session/gateway</a></li>
-<li><a href="#get-api-session-interface">GET /api/session/interface</a></li>
-<li><a href="#get-api-session-lan">GET /api/session/lan</a>
+<li><a href="#get-api-session-wifi"><code>GET /api/session/wifi</code></a>
 <ul>
 <li><a href="#optional-arguments-1">Optional Arguments</a></li>
 </ul></li>
-<li><a href="#get-api-session-options">GET /api/session/options</a></li>
-<li><a href="#get-api-session-packets">GET /api/session/packets</a></li>
-<li><a href="#get-api-session-started-at">GET /api/session/started-at</a></li>
-<li><a href="#get-api-session-wifi">GET /api/session/wifi</a>
+<li><a href="#get-api-session-ble"><code>GET /api/session/ble</code></a>
 <ul>
 <li><a href="#optional-arguments-2">Optional Arguments</a></li>
 </ul></li>
-<li><a href="#post-api-session">POST /api/session</a></li>
-<li><a href="#get-api-events">GET /api/events</a></li>
-<li><a href="#delete-api-events">DELETE /api/events</a></li>
+<li><a href="#get-api-session-hid"><code>GET /api/session/hid</code></a>
+<ul>
+<li><a href="#optional-arguments-3">Optional Arguments</a></li>
+</ul></li>
+<li><a href="#get-api-session-env"><code>GET /api/session/env</code></a></li>
+<li><a href="#get-api-session-gateway"><code>GET /api/session/gateway</code></a></li>
+<li><a href="#get-api-session-interface"><code>GET /api/session/interface</code></a></li>
+<li><a href="#get-api-session-options"><code>GET /api/session/options</code></a></li>
+<li><a href="#get-api-session-packets"><code>GET /api/session/packets</code></a></li>
+<li><a href="#get-api-session-started-at"><code>GET /api/session/started-at</code></a></li>
+<li><a href="#post-api-session"><code>POST /api/session</code></a></li>
+<li><a href="#get-api-events"><code>GET /api/events</code></a></li>
+<li><a href="#delete-api-events"><code>DELETE /api/events</code></a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -1395,7 +1399,7 @@ a.highlight span.copy-to-clipboard {
 
 <p>Clients can authenticate using HTTP basic authentication, these are the available API routes.</p>
 
-<h4 id="get-api-session">GET /api/session</h4>
+<h4 id="get-api-session"><code>GET /api/session</code></h4>
 
 <p>Get a JSON of the state of the current session, example response:</p>
 
@@ -1703,185 +1707,7 @@ a.highlight span.copy-to-clipboard {
     </div>
 </div>
 
-<h4 id="get-api-session-ble">GET /api/session/ble</h4>
-
-<p>Get a JSON of the BLE devices in the current session, example response:</p>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand for the example JSON
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <pre><code class="language-json">{
-    &quot;devices&quot;: [{
-        &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
-        &quot;name&quot;: &quot;Adafruit Bluefruit LE&quot;,
-        &quot;mac&quot;: &quot;00:AA:BB:CC:DD:33&quot;,
-        &quot;vendor&quot;: &quot;&quot;,
-        &quot;rssi&quot;: -68
-    }, {
-        &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
-        &quot;name&quot;: &quot;&quot;,
-        &quot;mac&quot;: &quot;-&quot;,
-        &quot;vendor&quot;: &quot;&quot;,
-        &quot;rssi&quot;: -64
-    }]
-}
-</code></pre>
-
-    </div>
-</div>
-
-<h5 id="optional-arguments">Optional Arguments</h5>
-
-<ul>
-<li>Mac address, eg. <code>GET /api/session/ble/00:AA:BB:CC:DD:33</code> - return information of a single ble endpoint with the mac address of 00:AA:BB:CC:DD:33 (the Adafruit Bluefruit LE client from the above output).</li>
-</ul>
-
-<h4 id="get-api-session-env">GET /api/session/env</h4>
-
-<p>Get a JSON of the environment variables in the current session, example response:</p>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand for the example JSON
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <pre><code class="language-json">{
-    &quot;data&quot;: {
-        &quot;$&quot;: &quot;{by}{fw}{cidr} {fb}\u003e {env.iface.ipv4} {reset} {bold}» {reset}&quot;,
-        &quot;api.rest.address&quot;: &quot;\u003cinterface address\u003e&quot;,
-        &quot;api.rest.certificate&quot;: &quot;~/.bcap-api.rest.certificate.pem&quot;,
-        &quot;api.rest.key&quot;: &quot;~/.bcap-api.rest.key.pem&quot;,
-        &quot;api.rest.password&quot;: &quot;bcap&quot;,
-        &quot;api.rest.port&quot;: &quot;8083&quot;,
-        &quot;api.rest.username&quot;: &quot;bcap&quot;,
-        &quot;arp.spoof.targets&quot;: &quot;\u003centire subnet\u003e&quot;,
-        &quot;dhcp6.spoof.domains&quot;: &quot;microsoft.com, goole.com, facebook.com, apple.com, twitter.com&quot;,
-        &quot;dns.spoof.address&quot;: &quot;\u003cinterface address\u003e&quot;,
-        &quot;dns.spoof.all&quot;: &quot;false&quot;,
-        &quot;dns.spoof.domains&quot;: &quot;*&quot;,
-        &quot;events.stream.filter&quot;: &quot;&quot;,
-        &quot;gateway.address&quot;: &quot;192.168.1.1&quot;,
-        &quot;gateway.mac&quot;: &quot;e0:b9:e5:17:22:e4&quot;,
-        &quot;http.port&quot;: &quot;80&quot;,
-        &quot;http.proxy.address&quot;: &quot;\u003cinterface address\u003e&quot;,
-        &quot;http.proxy.port&quot;: &quot;8080&quot;,
-        &quot;http.proxy.script&quot;: &quot;&quot;,
-        &quot;http.server.address&quot;: &quot;\u003cinterface address\u003e&quot;,
-        &quot;http.server.path&quot;: &quot;.&quot;,
-        &quot;http.server.port&quot;: &quot;80&quot;,
-        &quot;https.port&quot;: &quot;443&quot;,
-        &quot;https.proxy.address&quot;: &quot;\u003cinterface address\u003e&quot;,
-        &quot;https.proxy.certificate&quot;: &quot;~/.bettercap-ca.cert.pem&quot;,
-        &quot;https.proxy.key&quot;: &quot;~/.bettercap-ca.key.pem&quot;,
-        &quot;https.proxy.port&quot;: &quot;8083&quot;,
-        &quot;https.proxy.script&quot;: &quot;&quot;,
-        &quot;iface.index&quot;: &quot;6&quot;,
-        &quot;iface.ipv4&quot;: &quot;192.168.1.17&quot;,
-        &quot;iface.ipv6&quot;: &quot;-&quot;,
-        &quot;iface.mac&quot;: &quot;-&quot;,
-        &quot;iface.name&quot;: &quot;enx18fffffff&quot;,
-        &quot;log.debug&quot;: &quot;false&quot;,
-        &quot;log.silent&quot;: &quot;false&quot;,
-        &quot;mac.changer.address&quot;: &quot;\u003crandom mac\u003e&quot;,
-        &quot;mac.changer.iface&quot;: &quot;\u003cinterface name\u003e&quot;,
-        &quot;net.probe.throttle&quot;: &quot;10&quot;,
-        &quot;net.sniff.filter&quot;: &quot;not arp&quot;,
-        &quot;net.sniff.local&quot;: &quot;false&quot;,
-        &quot;net.sniff.output&quot;: &quot;&quot;,
-        &quot;net.sniff.regexp&quot;: &quot;&quot;,
-        &quot;net.sniff.source&quot;: &quot;&quot;,
-        &quot;net.sniff.verbose&quot;: &quot;true&quot;,
-        &quot;ticker.commands&quot;: &quot;clear; net.show&quot;,
-        &quot;ticker.period&quot;: &quot;1&quot;,
-        &quot;wifi.recon.channel&quot;: &quot;&quot;
-    }
-}
-</code></pre>
-
-    </div>
-</div>
-
-<h4 id="get-api-session-gateway">GET /api/session/gateway</h4>
-
-<p>Get a JSON of the interface gateway of the current session, example response:</p>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand for the example JSON
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <pre><code class="language-json">{
-    &quot;ipv4&quot;: &quot;192.168.1.1&quot;,
-    &quot;ipv6&quot;: &quot;&quot;,
-    &quot;mac&quot;: &quot;-&quot;,
-    &quot;hostname&quot;: &quot;gateway.&quot;,
-    &quot;alias&quot;: &quot;&quot;,
-    &quot;vendor&quot;: &quot;Technicolor&quot;,
-    &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.649440315+01:00&quot;,
-    &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.649440315+01:00&quot;,
-    &quot;meta&quot;: {
-        &quot;values&quot;: {}
-    }
-}
-</code></pre>
-
-    </div>
-</div>
-
-<h4 id="get-api-session-interface">GET /api/session/interface</h4>
-
-<p>Get a JSON of the main interface (wifi/lan) of the current session, example response:</p>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand for the example JSON
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <pre><code class="language-json">{
-    &quot;ipv4&quot;: &quot;192.168.1.17&quot;,
-    &quot;ipv6&quot;: &quot;-&quot;,
-    &quot;mac&quot;: &quot;-&quot;,
-    &quot;hostname&quot;: &quot;enx18fffffff&quot;,
-    &quot;alias&quot;: &quot;&quot;,
-    &quot;vendor&quot;: &quot;Dell&quot;,
-    &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.565053179+01:00&quot;,
-    &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.565053179+01:00&quot;,
-    &quot;meta&quot;: {
-        &quot;values&quot;: {}
-    }
-}
-</code></pre>
-
-    </div>
-</div>
-
-<h4 id="get-api-session-lan">GET /api/session/lan</h4>
+<h4 id="get-api-session-lan"><code>GET /api/session/lan</code></h4>
 
 <p>Get a JSON of the lan devices in the current session, example response:</p>
 
@@ -1940,123 +1766,13 @@ a.highlight span.copy-to-clipboard {
     </div>
 </div>
 
-<h5 id="optional-arguments-1">Optional Arguments</h5>
+<h5 id="optional-arguments">Optional Arguments</h5>
 
 <ul>
 <li>Mac address, eg. <code>GET /api/session/lan/00:AA:BB:CC:DD:11</code> - return information of a single lan endpoint with the mac address of 00:AA:BB:CC:DD:11 (the pihole from the above output).</li>
 </ul>
 
-<h4 id="get-api-session-options">GET /api/session/options</h4>
-
-<p>Get a JSON of the options set for the current session, example response:</p>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand for the example JSON
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <pre><code class="language-json">{
-    &quot;InterfaceName&quot;: &quot;&quot;,
-    &quot;Caplet&quot;: &quot;../caplets/netmon.cap&quot;,
-    &quot;Debug&quot;: false,
-    &quot;Silent&quot;: false,
-    &quot;NoHistory&quot;: false,
-    &quot;Commands&quot;: &quot;&quot;,
-    &quot;CpuProfile&quot;: &quot;&quot;,
-    &quot;MemProfile&quot;: &quot;&quot;
-}
-</code></pre>
-
-    </div>
-</div>
-
-<h4 id="get-api-session-packets">GET /api/session/packets</h4>
-
-<p>Get a JSON of the packet traffic for the current session, example response:</p>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand for the example JSON
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <pre><code class="language-json">{
-    &quot;Stats&quot;: {
-        &quot;Sent&quot;: 1080,
-        &quot;Received&quot;: 213207,
-        &quot;PktReceived&quot;: 3549,
-        &quot;Errors&quot;: 0
-    },
-    &quot;Protos&quot;: {
-        &quot;ARP&quot;: 2918,
-        &quot;DNS&quot;: 32,
-        &quot;Ethernet&quot;: 3549,
-        &quot;ICMPv4&quot;: 44,
-        &quot;IPv4&quot;: 631,
-        &quot;TCP&quot;: 394,
-        &quot;UDP&quot;: 193
-    },
-    &quot;Traffic&quot;: {
-        &quot;192.168.1.0&quot;: {
-            &quot;Sent&quot;: 0,
-            &quot;Received&quot;: 215
-        },
-        &quot;192.168.1.1&quot;: {
-            &quot;Sent&quot;: 0,
-            &quot;Received&quot;: 289
-        },
-        &quot;192.168.1.34&quot;: {
-            &quot;Sent&quot;: 2303,
-            &quot;Received&quot;: 2018
-        },
-        &quot;192.168.1.76&quot;: {
-            &quot;Sent&quot;: 284,
-            &quot;Received&quot;: 172
-        },
-        &quot;192.168.1.78&quot;: {
-            &quot;Sent&quot;: 284,
-            &quot;Received&quot;: 172
-        }
-    }
-}
-</code></pre>
-
-    </div>
-</div>
-
-<h4 id="get-api-session-started-at">GET /api/session/started-at</h4>
-
-<p>Get a JSON of the time the current session was started, example response:</p>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	Expand for the example JSON
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <pre><code class="language-json">&quot;2018-02-23T06:28:43.650628576+01:00&quot;
-</code></pre>
-
-    </div>
-</div>
-
-<h4 id="get-api-session-wifi">GET /api/session/wifi</h4>
+<h4 id="get-api-session-wifi"><code>GET /api/session/wifi</code></h4>
 
 <p>Get a JSON of the wifi devices (clients and access points) in the current session, example response:</p>
 
@@ -2182,17 +1898,339 @@ a.highlight span.copy-to-clipboard {
     </div>
 </div>
 
-<h5 id="optional-arguments-2">Optional Arguments</h5>
+<h5 id="optional-arguments-1">Optional Arguments</h5>
 
 <ul>
 <li>Mac address, eg. <code>GET /api/session/wifi/00:AA:BB:CC:DD:22</code> - return information of a single wifi endpoint with the mac address of 00:AA:BB:CC:DD:22 (the connected client from the above output).</li>
 </ul>
 
-<h4 id="post-api-session">POST /api/session</h4>
+<h4 id="get-api-session-ble"><code>GET /api/session/ble</code></h4>
+
+<p>Get a JSON of the BLE devices in the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;devices&quot;: [{
+        &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+        &quot;name&quot;: &quot;Adafruit Bluefruit LE&quot;,
+        &quot;mac&quot;: &quot;00:AA:BB:CC:DD:33&quot;,
+        &quot;vendor&quot;: &quot;&quot;,
+        &quot;rssi&quot;: -68
+    }, {
+        &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.650628576+01:00&quot;,
+        &quot;name&quot;: &quot;&quot;,
+        &quot;mac&quot;: &quot;-&quot;,
+        &quot;vendor&quot;: &quot;&quot;,
+        &quot;rssi&quot;: -64
+    }]
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h5 id="optional-arguments-2">Optional Arguments</h5>
+
+<ul>
+<li>Mac address, eg. <code>GET /api/session/ble/00:AA:BB:CC:DD:33</code> - return information of a single ble endpoint with the mac address of 00:AA:BB:CC:DD:33 (the Adafruit Bluefruit LE client from the above output).</li>
+</ul>
+
+<h4 id="get-api-session-hid"><code>GET /api/session/hid</code></h4>
+
+<p>Get a JSON of the HID devices in the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+	&quot;devices&quot;: [{
+		&quot;last_seen&quot;: &quot;2019-03-09T11:41:45.642403461+01:00&quot;,
+		&quot;type&quot;: &quot;Logitech&quot;,
+		&quot;address&quot;: &quot;32:26:9f:a4:08&quot;,
+		&quot;channels&quot;: [&quot;65&quot;]
+	}]
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h5 id="optional-arguments-3">Optional Arguments</h5>
+
+<ul>
+<li>Hardware address, eg. <code>GET /api/session/hid/32:26:9f:a4:08</code> - return information of a single HID endpoint with the hardware address of <code>32:26:9f:a4:08</code>.</li>
+</ul>
+
+<h4 id="get-api-session-env"><code>GET /api/session/env</code></h4>
+
+<p>Get a JSON of the environment variables in the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;data&quot;: {
+        &quot;$&quot;: &quot;{by}{fw}{cidr} {fb}\u003e {env.iface.ipv4} {reset} {bold}» {reset}&quot;,
+        &quot;api.rest.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+        &quot;api.rest.certificate&quot;: &quot;~/.bcap-api.rest.certificate.pem&quot;,
+        &quot;api.rest.key&quot;: &quot;~/.bcap-api.rest.key.pem&quot;,
+        &quot;api.rest.password&quot;: &quot;bcap&quot;,
+        &quot;api.rest.port&quot;: &quot;8083&quot;,
+        &quot;api.rest.username&quot;: &quot;bcap&quot;,
+        &quot;arp.spoof.targets&quot;: &quot;\u003centire subnet\u003e&quot;,
+        &quot;dhcp6.spoof.domains&quot;: &quot;microsoft.com, goole.com, facebook.com, apple.com, twitter.com&quot;,
+        &quot;dns.spoof.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+        &quot;dns.spoof.all&quot;: &quot;false&quot;,
+        &quot;dns.spoof.domains&quot;: &quot;*&quot;,
+        &quot;events.stream.filter&quot;: &quot;&quot;,
+        &quot;gateway.address&quot;: &quot;192.168.1.1&quot;,
+        &quot;gateway.mac&quot;: &quot;e0:b9:e5:17:22:e4&quot;,
+        &quot;http.port&quot;: &quot;80&quot;,
+        &quot;http.proxy.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+        &quot;http.proxy.port&quot;: &quot;8080&quot;,
+        &quot;http.proxy.script&quot;: &quot;&quot;,
+        &quot;http.server.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+        &quot;http.server.path&quot;: &quot;.&quot;,
+        &quot;http.server.port&quot;: &quot;80&quot;,
+        &quot;https.port&quot;: &quot;443&quot;,
+        &quot;https.proxy.address&quot;: &quot;\u003cinterface address\u003e&quot;,
+        &quot;https.proxy.certificate&quot;: &quot;~/.bettercap-ca.cert.pem&quot;,
+        &quot;https.proxy.key&quot;: &quot;~/.bettercap-ca.key.pem&quot;,
+        &quot;https.proxy.port&quot;: &quot;8083&quot;,
+        &quot;https.proxy.script&quot;: &quot;&quot;,
+        &quot;iface.index&quot;: &quot;6&quot;,
+        &quot;iface.ipv4&quot;: &quot;192.168.1.17&quot;,
+        &quot;iface.ipv6&quot;: &quot;-&quot;,
+        &quot;iface.mac&quot;: &quot;-&quot;,
+        &quot;iface.name&quot;: &quot;enx18fffffff&quot;,
+        &quot;log.debug&quot;: &quot;false&quot;,
+        &quot;log.silent&quot;: &quot;false&quot;,
+        &quot;mac.changer.address&quot;: &quot;\u003crandom mac\u003e&quot;,
+        &quot;mac.changer.iface&quot;: &quot;\u003cinterface name\u003e&quot;,
+        &quot;net.probe.throttle&quot;: &quot;10&quot;,
+        &quot;net.sniff.filter&quot;: &quot;not arp&quot;,
+        &quot;net.sniff.local&quot;: &quot;false&quot;,
+        &quot;net.sniff.output&quot;: &quot;&quot;,
+        &quot;net.sniff.regexp&quot;: &quot;&quot;,
+        &quot;net.sniff.source&quot;: &quot;&quot;,
+        &quot;net.sniff.verbose&quot;: &quot;true&quot;,
+        &quot;ticker.commands&quot;: &quot;clear; net.show&quot;,
+        &quot;ticker.period&quot;: &quot;1&quot;,
+        &quot;wifi.recon.channel&quot;: &quot;&quot;
+    }
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-session-gateway"><code>GET /api/session/gateway</code></h4>
+
+<p>Get a JSON of the interface gateway of the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;ipv4&quot;: &quot;192.168.1.1&quot;,
+    &quot;ipv6&quot;: &quot;&quot;,
+    &quot;mac&quot;: &quot;-&quot;,
+    &quot;hostname&quot;: &quot;gateway.&quot;,
+    &quot;alias&quot;: &quot;&quot;,
+    &quot;vendor&quot;: &quot;Technicolor&quot;,
+    &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.649440315+01:00&quot;,
+    &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.649440315+01:00&quot;,
+    &quot;meta&quot;: {
+        &quot;values&quot;: {}
+    }
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-session-interface"><code>GET /api/session/interface</code></h4>
+
+<p>Get a JSON of the main interface (wifi/lan) of the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;ipv4&quot;: &quot;192.168.1.17&quot;,
+    &quot;ipv6&quot;: &quot;-&quot;,
+    &quot;mac&quot;: &quot;-&quot;,
+    &quot;hostname&quot;: &quot;enx18fffffff&quot;,
+    &quot;alias&quot;: &quot;&quot;,
+    &quot;vendor&quot;: &quot;Dell&quot;,
+    &quot;first_seen&quot;: &quot;2018-02-23T06:28:43.565053179+01:00&quot;,
+    &quot;last_seen&quot;: &quot;2018-02-23T06:28:43.565053179+01:00&quot;,
+    &quot;meta&quot;: {
+        &quot;values&quot;: {}
+    }
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-session-options"><code>GET /api/session/options</code></h4>
+
+<p>Get a JSON of the options set for the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;InterfaceName&quot;: &quot;&quot;,
+    &quot;Caplet&quot;: &quot;../caplets/netmon.cap&quot;,
+    &quot;Debug&quot;: false,
+    &quot;Silent&quot;: false,
+    &quot;NoHistory&quot;: false,
+    &quot;Commands&quot;: &quot;&quot;,
+    &quot;CpuProfile&quot;: &quot;&quot;,
+    &quot;MemProfile&quot;: &quot;&quot;
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-session-packets"><code>GET /api/session/packets</code></h4>
+
+<p>Get a JSON of the packet traffic for the current session, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">{
+    &quot;Stats&quot;: {
+        &quot;Sent&quot;: 1080,
+        &quot;Received&quot;: 213207,
+        &quot;PktReceived&quot;: 3549,
+        &quot;Errors&quot;: 0
+    },
+    &quot;Protos&quot;: {
+        &quot;ARP&quot;: 2918,
+        &quot;DNS&quot;: 32,
+        &quot;Ethernet&quot;: 3549,
+        &quot;ICMPv4&quot;: 44,
+        &quot;IPv4&quot;: 631,
+        &quot;TCP&quot;: 394,
+        &quot;UDP&quot;: 193
+    },
+    &quot;Traffic&quot;: {
+        &quot;192.168.1.0&quot;: {
+            &quot;Sent&quot;: 0,
+            &quot;Received&quot;: 215
+        },
+        &quot;192.168.1.1&quot;: {
+            &quot;Sent&quot;: 0,
+            &quot;Received&quot;: 289
+        },
+        &quot;192.168.1.34&quot;: {
+            &quot;Sent&quot;: 2303,
+            &quot;Received&quot;: 2018
+        },
+        &quot;192.168.1.76&quot;: {
+            &quot;Sent&quot;: 284,
+            &quot;Received&quot;: 172
+        },
+        &quot;192.168.1.78&quot;: {
+            &quot;Sent&quot;: 284,
+            &quot;Received&quot;: 172
+        }
+    }
+}
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="get-api-session-started-at"><code>GET /api/session/started-at</code></h4>
+
+<p>Get a JSON of the time the current session was started, example response:</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Expand for the example JSON
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code class="language-json">&quot;2018-02-23T06:28:43.650628576+01:00&quot;
+</code></pre>
+
+    </div>
+</div>
+
+<h4 id="post-api-session"><code>POST /api/session</code></h4>
 
 <p>Post a command to the interactive session, the JSON object being POSTed is expected to be:</p>
 
-<p><div class="expand">
+<div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
@@ -2207,7 +2245,9 @@ a.highlight span.copy-to-clipboard {
 </code></pre>
 
     </div>
-</div>While the response will be:</p>
+</div>
+
+<p>While the response will be:</p>
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -2226,7 +2266,11 @@ a.highlight span.copy-to-clipboard {
     </div>
 </div>
 
-<h4 id="get-api-events">GET /api/events</h4>
+<h4 id="get-api-events"><code>GET /api/events</code></h4>
+
+<div class="notices note" ><p>This route will be available as a websocket endpoint instead of normal HTTP if the <code>api.rest.websocket</code> parameter is set to true.</p>
+</div>
+
 
 <p>Return a list of events ( the optional <code>n</code> GET parameter will limit the number ):</p>
 
@@ -2273,7 +2317,7 @@ a.highlight span.copy-to-clipboard {
     </div>
 </div>
 
-<h4 id="delete-api-events">DELETE /api/events</h4>
+<h4 id="delete-api-events"><code>DELETE /api/events</code></h4>
 
 <p>Will clear the events buffer.</p>
 
@@ -2948,20 +2992,20 @@ a.highlight span.copy-to-clipboard {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1552127694"></script>
-    <script src="/js/perfect-scrollbar.min.js?1552127694"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1552127694"></script>
-    <script src="/js/jquery.sticky.js?1552127694"></script>
-    <script src="/js/featherlight.min.js?1552127694"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1552127694"></script>
-    <script src="/js/highlight.pack.js?1552127694"></script>
+    <script src="/js/clipboard.min.js?1552128363"></script>
+    <script src="/js/perfect-scrollbar.min.js?1552128363"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1552128363"></script>
+    <script src="/js/jquery.sticky.js?1552128363"></script>
+    <script src="/js/featherlight.min.js?1552128363"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1552128363"></script>
+    <script src="/js/highlight.pack.js?1552128363"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1552127694"></script>
-    <script src="/js/learn.js?1552127694"></script>
-    <script src="/js/hugo-learn.js?1552127694"></script>
+    <script src="/js/modernizr.custom.71422.js?1552128363"></script>
+    <script src="/js/learn.js?1552128363"></script>
+    <script src="/js/hugo-learn.js?1552128363"></script>
 
-    <link href="/mermaid/mermaid.css?1552127694" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1552127694"></script>
+    <link href="/mermaid/mermaid.css?1552128363" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1552128363"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

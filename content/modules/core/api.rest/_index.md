@@ -40,7 +40,7 @@ Stop the REST API server.
 
 Clients can authenticate using HTTP basic authentication, these are the available API routes.
 
-#### GET /api/session
+#### `GET /api/session`
 
 Get a JSON of the state of the current session, example response:
 
@@ -334,127 +334,8 @@ Get a JSON of the state of the current session, example response:
 	"active": true
 }
 ```{{% /expand %}}
-#### GET /api/session/ble
 
-Get a JSON of the BLE devices in the current session, example response:
-
-{{% expand "Expand for the example JSON" %}}```json
-{
-    "devices": [{
-        "last_seen": "2018-02-23T06:28:43.650628576+01:00",
-        "name": "Adafruit Bluefruit LE",
-        "mac": "00:AA:BB:CC:DD:33",
-        "vendor": "",
-        "rssi": -68
-    }, {
-        "last_seen": "2018-02-23T06:28:43.650628576+01:00",
-        "name": "",
-        "mac": "-",
-        "vendor": "",
-        "rssi": -64
-    }]
-}
-```{{% /expand %}}
-##### Optional Arguments
-
-- Mac address, eg. `GET /api/session/ble/00:AA:BB:CC:DD:33` - return information of a single ble endpoint with the mac address of 00:AA:BB:CC:DD:33 (the Adafruit Bluefruit LE client from the above output).
-
-#### GET /api/session/env
-
-Get a JSON of the environment variables in the current session, example response:
-
-{{% expand "Expand for the example JSON" %}}```json
-{
-    "data": {
-        "$": "{by}{fw}{cidr} {fb}\u003e {env.iface.ipv4} {reset} {bold}» {reset}",
-        "api.rest.address": "\u003cinterface address\u003e",
-        "api.rest.certificate": "~/.bcap-api.rest.certificate.pem",
-        "api.rest.key": "~/.bcap-api.rest.key.pem",
-        "api.rest.password": "bcap",
-        "api.rest.port": "8083",
-        "api.rest.username": "bcap",
-        "arp.spoof.targets": "\u003centire subnet\u003e",
-        "dhcp6.spoof.domains": "microsoft.com, goole.com, facebook.com, apple.com, twitter.com",
-        "dns.spoof.address": "\u003cinterface address\u003e",
-        "dns.spoof.all": "false",
-        "dns.spoof.domains": "*",
-        "events.stream.filter": "",
-        "gateway.address": "192.168.1.1",
-        "gateway.mac": "e0:b9:e5:17:22:e4",
-        "http.port": "80",
-        "http.proxy.address": "\u003cinterface address\u003e",
-        "http.proxy.port": "8080",
-        "http.proxy.script": "",
-        "http.server.address": "\u003cinterface address\u003e",
-        "http.server.path": ".",
-        "http.server.port": "80",
-        "https.port": "443",
-        "https.proxy.address": "\u003cinterface address\u003e",
-        "https.proxy.certificate": "~/.bettercap-ca.cert.pem",
-        "https.proxy.key": "~/.bettercap-ca.key.pem",
-        "https.proxy.port": "8083",
-        "https.proxy.script": "",
-        "iface.index": "6",
-        "iface.ipv4": "192.168.1.17",
-        "iface.ipv6": "-",
-        "iface.mac": "-",
-        "iface.name": "enx18fffffff",
-        "log.debug": "false",
-        "log.silent": "false",
-        "mac.changer.address": "\u003crandom mac\u003e",
-        "mac.changer.iface": "\u003cinterface name\u003e",
-        "net.probe.throttle": "10",
-        "net.sniff.filter": "not arp",
-        "net.sniff.local": "false",
-        "net.sniff.output": "",
-        "net.sniff.regexp": "",
-        "net.sniff.source": "",
-        "net.sniff.verbose": "true",
-        "ticker.commands": "clear; net.show",
-        "ticker.period": "1",
-        "wifi.recon.channel": ""
-    }
-}
-```{{% /expand %}}
-#### GET /api/session/gateway
-
-Get a JSON of the interface gateway of the current session, example response:
-
-{{% expand "Expand for the example JSON" %}}```json
-{
-    "ipv4": "192.168.1.1",
-    "ipv6": "",
-    "mac": "-",
-    "hostname": "gateway.",
-    "alias": "",
-    "vendor": "Technicolor",
-    "first_seen": "2018-02-23T06:28:43.649440315+01:00",
-    "last_seen": "2018-02-23T06:28:43.649440315+01:00",
-    "meta": {
-        "values": {}
-    }
-}
-```{{% /expand %}}
-#### GET /api/session/interface
-
-Get a JSON of the main interface (wifi/lan) of the current session, example response:
-
-{{% expand "Expand for the example JSON" %}}```json
-{
-    "ipv4": "192.168.1.17",
-    "ipv6": "-",
-    "mac": "-",
-    "hostname": "enx18fffffff",
-    "alias": "",
-    "vendor": "Dell",
-    "first_seen": "2018-02-23T06:28:43.565053179+01:00",
-    "last_seen": "2018-02-23T06:28:43.565053179+01:00",
-    "meta": {
-        "values": {}
-    }
-}
-```{{% /expand %}}
-#### GET /api/session/lan
+#### `GET /api/session/lan`
 
 Get a JSON of the lan devices in the current session, example response:
 
@@ -499,79 +380,12 @@ Get a JSON of the lan devices in the current session, example response:
     }]
 }
 ```{{% /expand %}}
+
 ##### Optional Arguments
 
 - Mac address, eg. `GET /api/session/lan/00:AA:BB:CC:DD:11` - return information of a single lan endpoint with the mac address of 00:AA:BB:CC:DD:11 (the pihole from the above output).
 
-#### GET /api/session/options
-
-Get a JSON of the options set for the current session, example response:
-
-{{% expand "Expand for the example JSON" %}}```json
-{
-    "InterfaceName": "",
-    "Caplet": "../caplets/netmon.cap",
-    "Debug": false,
-    "Silent": false,
-    "NoHistory": false,
-    "Commands": "",
-    "CpuProfile": "",
-    "MemProfile": ""
-}
-```{{% /expand %}}
-#### GET /api/session/packets
-
-Get a JSON of the packet traffic for the current session, example response:
-
-{{% expand "Expand for the example JSON" %}}```json
-{
-    "Stats": {
-        "Sent": 1080,
-        "Received": 213207,
-        "PktReceived": 3549,
-        "Errors": 0
-    },
-    "Protos": {
-        "ARP": 2918,
-        "DNS": 32,
-        "Ethernet": 3549,
-        "ICMPv4": 44,
-        "IPv4": 631,
-        "TCP": 394,
-        "UDP": 193
-    },
-    "Traffic": {
-        "192.168.1.0": {
-            "Sent": 0,
-            "Received": 215
-        },
-        "192.168.1.1": {
-            "Sent": 0,
-            "Received": 289
-        },
-        "192.168.1.34": {
-            "Sent": 2303,
-            "Received": 2018
-        },
-        "192.168.1.76": {
-            "Sent": 284,
-            "Received": 172
-        },
-        "192.168.1.78": {
-            "Sent": 284,
-            "Received": 172
-        }
-    }
-}
-```{{% /expand %}}
-#### GET /api/session/started-at
-
-Get a JSON of the time the current session was started, example response:
-
-{{% expand "Expand for the example JSON" %}}```json
-"2018-02-23T06:28:43.650628576+01:00"
-```{{% /expand %}}
-#### GET /api/session/wifi
+#### `GET /api/session/wifi`
 
 Get a JSON of the wifi devices (clients and access points) in the current session, example response:
 
@@ -683,22 +497,244 @@ Get a JSON of the wifi devices (clients and access points) in the current sessio
     ]
 }
 ```{{% /expand %}}
+
 ##### Optional Arguments
 
 - Mac address, eg. `GET /api/session/wifi/00:AA:BB:CC:DD:22` - return information of a single wifi endpoint with the mac address of 00:AA:BB:CC:DD:22 (the connected client from the above output).
 
-#### POST /api/session
+#### `GET /api/session/ble`
+
+Get a JSON of the BLE devices in the current session, example response:
+
+{{% expand "Expand for the example JSON" %}}```json
+{
+    "devices": [{
+        "last_seen": "2018-02-23T06:28:43.650628576+01:00",
+        "name": "Adafruit Bluefruit LE",
+        "mac": "00:AA:BB:CC:DD:33",
+        "vendor": "",
+        "rssi": -68
+    }, {
+        "last_seen": "2018-02-23T06:28:43.650628576+01:00",
+        "name": "",
+        "mac": "-",
+        "vendor": "",
+        "rssi": -64
+    }]
+}
+```{{% /expand %}}
+
+##### Optional Arguments
+
+- Mac address, eg. `GET /api/session/ble/00:AA:BB:CC:DD:33` - return information of a single ble endpoint with the mac address of 00:AA:BB:CC:DD:33 (the Adafruit Bluefruit LE client from the above output).
+
+#### `GET /api/session/hid`
+
+Get a JSON of the HID devices in the current session, example response:
+
+{{% expand "Expand for the example JSON" %}}```json
+{
+	"devices": [{
+		"last_seen": "2019-03-09T11:41:45.642403461+01:00",
+		"type": "Logitech",
+		"address": "32:26:9f:a4:08",
+		"channels": ["65"]
+	}]
+}
+```{{% /expand %}}
+
+##### Optional Arguments
+
+- Hardware address, eg. `GET /api/session/hid/32:26:9f:a4:08` - return information of a single HID endpoint with the hardware address of `32:26:9f:a4:08`.
+
+#### `GET /api/session/env`
+
+Get a JSON of the environment variables in the current session, example response:
+
+{{% expand "Expand for the example JSON" %}}```json
+{
+    "data": {
+        "$": "{by}{fw}{cidr} {fb}\u003e {env.iface.ipv4} {reset} {bold}» {reset}",
+        "api.rest.address": "\u003cinterface address\u003e",
+        "api.rest.certificate": "~/.bcap-api.rest.certificate.pem",
+        "api.rest.key": "~/.bcap-api.rest.key.pem",
+        "api.rest.password": "bcap",
+        "api.rest.port": "8083",
+        "api.rest.username": "bcap",
+        "arp.spoof.targets": "\u003centire subnet\u003e",
+        "dhcp6.spoof.domains": "microsoft.com, goole.com, facebook.com, apple.com, twitter.com",
+        "dns.spoof.address": "\u003cinterface address\u003e",
+        "dns.spoof.all": "false",
+        "dns.spoof.domains": "*",
+        "events.stream.filter": "",
+        "gateway.address": "192.168.1.1",
+        "gateway.mac": "e0:b9:e5:17:22:e4",
+        "http.port": "80",
+        "http.proxy.address": "\u003cinterface address\u003e",
+        "http.proxy.port": "8080",
+        "http.proxy.script": "",
+        "http.server.address": "\u003cinterface address\u003e",
+        "http.server.path": ".",
+        "http.server.port": "80",
+        "https.port": "443",
+        "https.proxy.address": "\u003cinterface address\u003e",
+        "https.proxy.certificate": "~/.bettercap-ca.cert.pem",
+        "https.proxy.key": "~/.bettercap-ca.key.pem",
+        "https.proxy.port": "8083",
+        "https.proxy.script": "",
+        "iface.index": "6",
+        "iface.ipv4": "192.168.1.17",
+        "iface.ipv6": "-",
+        "iface.mac": "-",
+        "iface.name": "enx18fffffff",
+        "log.debug": "false",
+        "log.silent": "false",
+        "mac.changer.address": "\u003crandom mac\u003e",
+        "mac.changer.iface": "\u003cinterface name\u003e",
+        "net.probe.throttle": "10",
+        "net.sniff.filter": "not arp",
+        "net.sniff.local": "false",
+        "net.sniff.output": "",
+        "net.sniff.regexp": "",
+        "net.sniff.source": "",
+        "net.sniff.verbose": "true",
+        "ticker.commands": "clear; net.show",
+        "ticker.period": "1",
+        "wifi.recon.channel": ""
+    }
+}
+```{{% /expand %}}
+
+#### `GET /api/session/gateway`
+
+Get a JSON of the interface gateway of the current session, example response:
+
+{{% expand "Expand for the example JSON" %}}```json
+{
+    "ipv4": "192.168.1.1",
+    "ipv6": "",
+    "mac": "-",
+    "hostname": "gateway.",
+    "alias": "",
+    "vendor": "Technicolor",
+    "first_seen": "2018-02-23T06:28:43.649440315+01:00",
+    "last_seen": "2018-02-23T06:28:43.649440315+01:00",
+    "meta": {
+        "values": {}
+    }
+}
+```{{% /expand %}}
+
+#### `GET /api/session/interface`
+
+Get a JSON of the main interface (wifi/lan) of the current session, example response:
+
+{{% expand "Expand for the example JSON" %}}```json
+{
+    "ipv4": "192.168.1.17",
+    "ipv6": "-",
+    "mac": "-",
+    "hostname": "enx18fffffff",
+    "alias": "",
+    "vendor": "Dell",
+    "first_seen": "2018-02-23T06:28:43.565053179+01:00",
+    "last_seen": "2018-02-23T06:28:43.565053179+01:00",
+    "meta": {
+        "values": {}
+    }
+}
+```{{% /expand %}}
+
+#### `GET /api/session/options`
+
+Get a JSON of the options set for the current session, example response:
+
+{{% expand "Expand for the example JSON" %}}```json
+{
+    "InterfaceName": "",
+    "Caplet": "../caplets/netmon.cap",
+    "Debug": false,
+    "Silent": false,
+    "NoHistory": false,
+    "Commands": "",
+    "CpuProfile": "",
+    "MemProfile": ""
+}
+```{{% /expand %}}
+
+#### `GET /api/session/packets`
+
+Get a JSON of the packet traffic for the current session, example response:
+
+{{% expand "Expand for the example JSON" %}}```json
+{
+    "Stats": {
+        "Sent": 1080,
+        "Received": 213207,
+        "PktReceived": 3549,
+        "Errors": 0
+    },
+    "Protos": {
+        "ARP": 2918,
+        "DNS": 32,
+        "Ethernet": 3549,
+        "ICMPv4": 44,
+        "IPv4": 631,
+        "TCP": 394,
+        "UDP": 193
+    },
+    "Traffic": {
+        "192.168.1.0": {
+            "Sent": 0,
+            "Received": 215
+        },
+        "192.168.1.1": {
+            "Sent": 0,
+            "Received": 289
+        },
+        "192.168.1.34": {
+            "Sent": 2303,
+            "Received": 2018
+        },
+        "192.168.1.76": {
+            "Sent": 284,
+            "Received": 172
+        },
+        "192.168.1.78": {
+            "Sent": 284,
+            "Received": 172
+        }
+    }
+}
+```{{% /expand %}}
+
+#### `GET /api/session/started-at`
+
+Get a JSON of the time the current session was started, example response:
+
+{{% expand "Expand for the example JSON" %}}```json
+"2018-02-23T06:28:43.650628576+01:00"
+```{{% /expand %}}
+
+#### `POST /api/session`
 
 Post a command to the interactive session, the JSON object being POSTed is expected to be:
 
 {{% expand "Expand for the example JSON" %}}```json
 {"cmd": "net.probe on"}
-```{{% /expand %}}While the response will be:
+```{{% /expand %}}
+
+While the response will be:
 
 {{% expand "Expand for the example JSON" %}}```json
 {"success": true, "msg":""}
 ```{{% /expand %}}
-#### GET /api/events
+
+#### `GET /api/events`
+
+{{% notice note %}}
+This route will be available as a websocket endpoint instead of normal HTTP if the `api.rest.websocket` parameter is set to true.
+{{% /notice %}}
 
 Return a list of events ( the optional `n` GET parameter will limit the number ):
 
@@ -731,6 +767,7 @@ Return a list of events ( the optional `n` GET parameter will limit the number )
 	}
 }]
 ```{{% /expand %}}
-#### DELETE /api/events
+
+#### `DELETE /api/events`
 
 Will clear the events buffer.
