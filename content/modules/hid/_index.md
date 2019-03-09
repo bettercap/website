@@ -53,15 +53,22 @@ Start scanning for HID devices on the 2.4Ghz spectrum.
 #### `hid.recon off`
 
 Stop scanning for HID devices on the 2.4Ghz spectrum.
+
 #### `hid.show`
 
 Show a list of detected HID devices on the 2.4Ghz spectrum.
+
 #### `hid.sniff ADDRESS`
 
 Start sniffing a specific ADDRESS in order to collect payloads, use 'clear' to stop collecting.
+
 #### `hid.inject ADDRESS LAYOUT FILENAME`
 
 Parse the DuckyScript `FILENAME` and inject it as HID frames spoofing the device `ADDRESS`, using the `LAYOUT` keyboard mapping (available layouts: `BE BR CA CH DE DK ES FI FR GB HR IT NO PT RU SI SV TR US`).
+
+{{% notice note %}}
+The command `hid.inject` does not require the HID device to be visible via the `hid.show` command. If you know the address of the dongle already, you can simply set the `hid.force.type` parameter to one among `logitech` (the default value), `amazon` or `microsoft` and run the injection *"blindly"*.
+{{% /notice %}}
 
 ### Parameters
 
