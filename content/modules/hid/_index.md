@@ -17,7 +17,17 @@ The module will work with one of the devices supported by RFStorm:
 In order for this module to work, you need to make sure you installed the [Bastille’s RFStorm firmware](https://github.com/BastilleResearch/nrf-research-firmware) on one of the supported devices.
 {{% /notice %}}
 
-It is known to support detection and [DuckyScript](https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript) injection for the following devices:
+Once flashed with the proper firmware and connected to your computer, `dmesg` should report the device as:
+
+```sh
+usb 3-1.3: new full-speed USB device number 8 using xhci_hcd
+usb 3-1.3: New USB device found, idVendor=1915, idProduct=0102
+usb 3-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 3-1.3: Product: Research Firmware
+usb 3-1.3: Manufacturer: RFStorm
+```
+
+The attack is known to support detection and [DuckyScript](https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript) injection for the following devices:
 
 * Microsoft Wireless Keyboard 800
 * Microsoft Wireless Mouse 1000
