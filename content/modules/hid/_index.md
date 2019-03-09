@@ -61,6 +61,7 @@ Parse the DuckyScript `FILENAME` and inject it as HID frames spoofing the device
 | `hid.hop.period` | `100` | Time in milliseconds to stay on each channel before hopping to the next one. |
 | `hid.ping.period` | `100` | Time in milliseconds to attempt to ping a device on a given channel while in sniffer mode. |
 | `hid.sniff.period` | `500` | Time in milliseconds to automatically sniff payloads from a device, once it's detected, in order to determine its type. |
+| `hid.force.type` | `logitech` | If the device is not visible (if you want to talk directly to a dongle without connected devices) or its type has not being detected, force the device type to this value. Accepted values: `logitech`, `amazon`, `microsoft`. |
 | `hid.show.filter` | | Defines a regular expression filter for `hid.show`. |
 | `hid.show.sort` | `mac desc` | Defines sorting field (mac, seen) and direction (asc or desc) for `hid.show`. |
 | `hid.show.limit` | `0` | Defines limit for `hid.show`. | 
@@ -74,6 +75,14 @@ Enable HID discovery, use the `ticker` module to display detected devices, wait 
 > hid.recon on
 > ticker on
 # ... wait for the device to be detected, using `hid.show` ...
+> hid.inject 32:26:9f:a4:08 US ducky.txt
+```
+
+Send the `ducky.txt` script keystrokes to the dongle with address `32:26:9f:a4:08` forcing its type to `logitech` and without waiting for any connected device to be visible:
+
+```sh
+> set hid.force.type logitech
+> hid.recon on
 > hid.inject 32:26:9f:a4:08 US ducky.txt
 ```
 
