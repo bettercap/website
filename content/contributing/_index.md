@@ -21,7 +21,7 @@ If you find bugs or inconsistencies while using bettercap, you can create an Iss
 
 Once you've gone through this list, open an issue and please give us as much as informations as possible in order for us to fix the bug as soon as possible, such as:
 
-* bettercap version you are using.
+* bettercap version you are using ( `bettercap -version` ).
 * Go version if building from sources.
 * OS version and architecture you are using.
 * Command line arguments you are using.
