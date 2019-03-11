@@ -67,6 +67,8 @@ Modules can use the following builtin functions.
 | `log("message")` | Shortcut for `log_info("message")`. |
 | `btoa("message")` | Encode a message to base64. |
 | `atob("bWVzc2FnZQ==")` | Decode a message from base64. |
+| `gzipCompress("plaintext data")` | Compress a string using gzip encoding. |
+| `gzipDecompress(")9�\+�I��+I�(QHI,I����")` | Decompress a gzip encoded string. |
 | `env("iface.ipv4")` | Read a variable. |
 | `env("foo", "bar")` | Set a variable. |
 
