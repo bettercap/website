@@ -16,19 +16,19 @@
 
 
     
-    <link href="/css/nucleus.css?1552452860" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1552452860" rel="stylesheet">
-    <link href="/css/hybrid.css?1552452860" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1552452860" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1552452860" rel="stylesheet">
-    <link href="/css/auto-complete.css?1552452860" rel="stylesheet">
-    <link href="/css/theme.css?1552452860" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1552452860" rel="stylesheet">
+    <link href="/css/nucleus.css?1552490055" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1552490055" rel="stylesheet">
+    <link href="/css/hybrid.css?1552490055" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1552490055" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1552490055" rel="stylesheet">
+    <link href="/css/auto-complete.css?1552490055" rel="stylesheet">
+    <link href="/css/theme.css?1552490055" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1552490055" rel="stylesheet">
     
-      <link href="/css/theme-green.css?1552452860" rel="stylesheet">
+      <link href="/css/theme-green.css?1552490055" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1552452860"></script>
+    <script src="/js/jquery-2.x.min.js?1552490055"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -129,14 +129,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1552452860"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1552452860"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1552490055"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1552490055"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1552452860"></script>
+<script type="text/javascript" src="/js/search.js?1552490055"></script>
 
     
   </div>
@@ -1344,6 +1344,12 @@ a.highlight span.copy-to-clipboard {
 
 <tbody>
 <tr>
+<td><code>wifi.interface</code></td>
+<td></td>
+<td>If filled, the module will use this interface instead of the one provided by the <code>-iface</code> argument or detected automatically.</td>
+</tr>
+
+<tr>
 <td><code>wifi.region</code></td>
 <td><code>BO</code></td>
 <td>Set the WiFi region to this value before activating the interface.</td>
@@ -1478,6 +1484,11 @@ a.highlight span.copy-to-clipboard {
 </table>
 
 <h3 id="examples">Examples</h3>
+
+<p>Run bettercap using <code>eth0</code> as the main interface but start the wifi module on <code>wlan0</code> instead:</p>
+
+<pre><code class="language-sh">sudo bettercap -iface eth0 -eval &quot;set wifi.interface wlan0; wifi.recon on&quot;
+</code></pre>
 
 <p>Keep deauthing clients from the access point with BSSID <code>DE:AD:BE:EF:DE:AD</code> every five seconds:</p>
 
@@ -2180,20 +2191,20 @@ a.highlight span.copy-to-clipboard {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1552452860"></script>
-    <script src="/js/perfect-scrollbar.min.js?1552452860"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1552452860"></script>
-    <script src="/js/jquery.sticky.js?1552452860"></script>
-    <script src="/js/featherlight.min.js?1552452860"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1552452860"></script>
-    <script src="/js/highlight.pack.js?1552452860"></script>
+    <script src="/js/clipboard.min.js?1552490055"></script>
+    <script src="/js/perfect-scrollbar.min.js?1552490055"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1552490055"></script>
+    <script src="/js/jquery.sticky.js?1552490055"></script>
+    <script src="/js/featherlight.min.js?1552490055"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1552490055"></script>
+    <script src="/js/highlight.pack.js?1552490055"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1552452860"></script>
-    <script src="/js/learn.js?1552452860"></script>
-    <script src="/js/hugo-learn.js?1552452860"></script>
+    <script src="/js/modernizr.custom.71422.js?1552490055"></script>
+    <script src="/js/learn.js?1552490055"></script>
+    <script src="/js/hugo-learn.js?1552490055"></script>
 
-    <link href="/mermaid/mermaid.css?1552452860" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1552452860"></script>
+    <link href="/mermaid/mermaid.css?1552490055" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1552490055"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

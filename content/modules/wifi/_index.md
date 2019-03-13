@@ -77,6 +77,7 @@ Inject fake management beacons in order to create a rogue access point ( require
 
 | parameter | default | description |
 |-----------|---------|-------------|
+| `wifi.interface` | | If filled, the module will use this interface instead of the one provided by the `-iface` argument or detected automatically. |
 | `wifi.region`| `BO` | Set the WiFi region to this value before activating the interface. |
 | `wifi.txpower` | `30` | Set WiFi transmission power to this value before activating the interface. |
 | `wifi.rssi.min` | `-200` | Minimum WiFi signal strength in dBm. |
@@ -101,6 +102,12 @@ Inject fake management beacons in order to create a rogue access point ( require
 | `wifi.ap.encryption` | `true` | If true, the fake access point will use WPA2, otherwise it'll result as an open AP. |
 
 ### Examples
+
+Run bettercap using `eth0` as the main interface but start the wifi module on `wlan0` instead:
+
+```sh
+sudo bettercap -iface eth0 -eval "set wifi.interface wlan0; wifi.recon on"
+```
 
 Keep deauthing clients from the access point with BSSID `DE:AD:BE:EF:DE:AD` every five seconds:
 
