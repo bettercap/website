@@ -65,7 +65,7 @@ pkg install root-repo
 pkg install golang git libpcap-dev libusb-dev
 ```
 
-There's a [pkg-config bug](https://github.com/bettercap/bettercap/issues/486) in termux about some hardcoded path, the fix is ugly but it works:
+There's a [golang bug](https://github.com/bettercap/bettercap/issues/486) in termux about some hardcoded path, the fix is ugly but it works:
 
 ```sh
 sudo su
