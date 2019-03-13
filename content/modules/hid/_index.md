@@ -54,6 +54,10 @@ Start scanning for HID devices on the 2.4Ghz spectrum.
 
 Stop scanning for HID devices on the 2.4Ghz spectrum.
 
+#### `hid.clear`
+
+Clear all devices collected by the HID discovery module.
+
 #### `hid.show`
 
 Show a list of detected HID devices on the 2.4Ghz spectrum.

@@ -12,12 +12,15 @@ This module is [enabled by default](/basic-usage/#autostart-modules) and is resp
 #### `net.recon on`
 
 Start network hosts discovery.
+
 #### `net.recon off`
 
 Stop network hosts discovery.
+
 #### `net.clear`
 
 Clear all endpoints collected by the hosts discovery module.
+
 #### `net.show`
 
 Show cache hosts list (default sorting by ip).
@@ -25,6 +28,7 @@ Show cache hosts list (default sorting by ip).
 #### `net.show ADDRESS1, ADDRESS2`
 
 Show information about a specific list of addresses (by IP or MAC).
+
 #### `net.show.meta ADDRESS1, ADDRESS2`
 
 Show metadata (mDNS, UPnP, open ports, etc) about a specific list of addresses (by IP or MAC).
