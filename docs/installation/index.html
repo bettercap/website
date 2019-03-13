@@ -16,19 +16,19 @@
 
 
     
-    <link href="/css/nucleus.css?1552145077" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1552145077" rel="stylesheet">
-    <link href="/css/hybrid.css?1552145077" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1552145077" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1552145077" rel="stylesheet">
-    <link href="/css/auto-complete.css?1552145077" rel="stylesheet">
-    <link href="/css/theme.css?1552145077" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1552145077" rel="stylesheet">
+    <link href="/css/nucleus.css?1552452720" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1552452720" rel="stylesheet">
+    <link href="/css/hybrid.css?1552452720" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1552452720" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1552452720" rel="stylesheet">
+    <link href="/css/auto-complete.css?1552452720" rel="stylesheet">
+    <link href="/css/theme.css?1552452720" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1552452720" rel="stylesheet">
     
-      <link href="/css/theme-green.css?1552145077" rel="stylesheet">
+      <link href="/css/theme-green.css?1552452720" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1552145077"></script>
+    <script src="/js/jquery-2.x.min.js?1552452720"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -129,14 +129,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1552145077"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1552145077"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1552452720"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1552452720"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1552145077"></script>
+<script type="text/javascript" src="/js/search.js?1552452720"></script>
 
     
   </div>
@@ -1300,11 +1300,27 @@ sudo make install
 
 <h3 id="compiling-on-android">Compiling on Android</h3>
 
+<div class="notices warning" ><p>This procedure and bettercap itself require a rooted device.</p>
+</div>
+
+
 <p>Install <a href="https://termux.com/">Termux</a> and from its prompt type:</p>
 
 <pre><code>pkg install root-repo
 pkg install golang git libpcap-dev libusb-dev
-go get -u github.com/bettercap/bettercap
+</code></pre>
+
+<p>There&rsquo;s a <a href="https://github.com/bettercap/bettercap/issues/486">pkg-config bug</a> in termux about some hardcoded path, the fix is ugly but it works:</p>
+
+<pre><code class="language-sh">sudo su
+mount -o rw,remount /
+mkdir -p /home/builder/.termux-build/_cache/18-arm-21-v2/bin/
+ln -s `which pkg-config` /home/builder/.termux-build/_cache/18-arm-21-v2/bin/arm-linux-androideabi-pkg-config
+</code></pre>
+
+<p>You can now proceed with the compilation:</p>
+
+<pre><code class="language-sh">go get -u github.com/bettercap/bettercap
 </code></pre>
 
 <p>Once the build process is concluded, the binary will be located in <code>go/bin/bettercap</code>.</p>
@@ -1975,20 +1991,20 @@ go get -u github.com/bettercap/bettercap
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1552145077"></script>
-    <script src="/js/perfect-scrollbar.min.js?1552145077"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1552145077"></script>
-    <script src="/js/jquery.sticky.js?1552145077"></script>
-    <script src="/js/featherlight.min.js?1552145077"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1552145077"></script>
-    <script src="/js/highlight.pack.js?1552145077"></script>
+    <script src="/js/clipboard.min.js?1552452720"></script>
+    <script src="/js/perfect-scrollbar.min.js?1552452720"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1552452720"></script>
+    <script src="/js/jquery.sticky.js?1552452720"></script>
+    <script src="/js/featherlight.min.js?1552452720"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1552452720"></script>
+    <script src="/js/highlight.pack.js?1552452720"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1552145077"></script>
-    <script src="/js/learn.js?1552145077"></script>
-    <script src="/js/hugo-learn.js?1552145077"></script>
+    <script src="/js/modernizr.custom.71422.js?1552452720"></script>
+    <script src="/js/learn.js?1552452720"></script>
+    <script src="/js/hugo-learn.js?1552452720"></script>
 
-    <link href="/mermaid/mermaid.css?1552145077" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1552145077"></script>
+    <link href="/mermaid/mermaid.css?1552452720" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1552452720"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

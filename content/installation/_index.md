@@ -54,16 +54,30 @@ Once you've met this conditions, you can run the following commands to compile a
 
 ### Compiling on Android
 
+{{% notice warning %}}
+This procedure and bettercap itself require a rooted device.
+{{% /notice %}}
+
 Install [Termux](https://termux.com/) and from its prompt type:
 
 ```
 pkg install root-repo
 pkg install golang git libpcap-dev libusb-dev
+```
+
+There's a [pkg-config bug](https://github.com/bettercap/bettercap/issues/486) in termux about some hardcoded path, the fix is ugly but it works:
+
+```sh
+sudo su
+mount -o rw,remount /
+mkdir -p /home/builder/.termux-build/_cache/18-arm-21-v2/bin/
+ln -s `which pkg-config` /home/builder/.termux-build/_cache/18-arm-21-v2/bin/arm-linux-androideabi-pkg-config
+```
+
+You can now proceed with the compilation:
+
+```sh
 go get -u github.com/bettercap/bettercap
 ```
 
 Once the build process is concluded, the binary will be located in `go/bin/bettercap`.
-
-
-
-
