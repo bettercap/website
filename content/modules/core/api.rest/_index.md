@@ -29,7 +29,7 @@ Stop the REST API server.
 | `api.rest.certificate.locality` | | Locality field of the generated HTTPS certificate. |
 | `api.rest.certificate.organization` | `bettercap devteam` | Organization field of the generated HTTPS certificate. |
 | `api.rest.certificate.organizationalunit` | `https://bettercap.org/` | Organizational Unit field of the generated HTTPS certificate. |
-| `api.rest.address` | `<interface address>` | Address to bind the API REST server to. | 
+| `api.rest.address` | `127.0.0.1` | Address to bind the API REST server to. | 
 | `api.rest.port` | `8081` | Port to bind the API REST server to. | 
 | `api.rest.username` | | API HTTP basic auth username. | 
 | `api.rest.password` | | API HTTP basic auth password. | 
