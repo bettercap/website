@@ -12,7 +12,7 @@ weight: 3
 For every new release, we distribute bettercap's [precompiled binaries](https://github.com/bettercap/bettercap/releases). In order to be able to use them, you'll need the following dependencies on your system:
 
 * libpcap
-* libusb-1.0 (required by the [HID module](/modules/hid/))
+* libusb-1.0-0 (required by the [HID module](/modules/hid/))
 * libnetfilter-queue (on Linux only, required by the [packet.proxy module](/modules/ethernet/proxies/packet.proxy/))
 
 ## Using Docker
