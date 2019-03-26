@@ -42,7 +42,7 @@ You'll also need to install the dependencies:
 
 * build-essential
 * libpcap-dev
-* libusb-1.0-dev (required by the [HID module](/modules/hid/))
+* libusb-1.0-0-dev (required by the [HID module](/modules/hid/))
 * libnetfilter-queue-dev (on Linux only, required by the [packet.proxy module](/modules/ethernet/proxies/packet.proxy/))
 
 Once you've met this conditions, you can run the following commands to compile and install bettercap in `/usr/local/bin/bettercap`:
