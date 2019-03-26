@@ -38,6 +38,8 @@ Stop the HTTPS proxy.
 | `https.proxy.sslstrip` | `false` | Enable or disable SSL stripping. |
 | `https.proxy.script` | | Path of a proxy module script. |
 | `https.proxy.injectjs` | | URL, path or javascript code to inject into every HTML page. |
+| `https.proxy.blacklist` | | Comma separated list of hostnames to skip while proxying (wildcard expressions can be used). |
+| `https.proxy.whitelist` | | Comma separated list of hostnames to proxy if the blacklist is used (wildcard expressions can be used). |
 
 ### Modules
 

@@ -26,6 +26,8 @@ Stop the HTTP proxy.
 | `http.proxy.sslstrip` | `false` | Enable or disable SSL stripping. |
 | `http.proxy.script` | | Path of a proxy module script. |
 | `http.proxy.injectjs` | | URL, path or javascript code to inject into every HTML page. |
+| `http.proxy.blacklist` | | Comma separated list of hostnames to skip while proxying (wildcard expressions can be used). |
+| `http.proxy.whitelist` | | Comma separated list of hostnames to proxy if the blacklist is used (wildcard expressions can be used). |
 
 ### Modules
 
@@ -130,4 +132,12 @@ set http.proxy.sslstrip true
 
 http.proxy on
 arp.spoof on
+```
+
+Only proxy requests for `cnn.com` (including subdomains):
+
+```sh
+set http.proxy.blacklist *
+set http.proxy.whitelist cnn.com, *.cnn.com
+http.proxy on
 ```
