@@ -5,7 +5,7 @@ draft: false
 weight: 1
 ---
 
-This module is [enabled by default](/basic-usage/#autostart-modules) and is responsible for periodically reading the system ARP table in order to detect new hosts on the network.
+This module is responsible for periodically reading the system ARP table in order to detect new hosts on the network.
 
 ### Commands
 

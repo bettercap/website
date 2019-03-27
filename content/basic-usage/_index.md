@@ -63,7 +63,7 @@ The basic command line arguments ( `bettercap -h` ) are:
 
 #### `-autostart MODULES`
 
-A comma separated list of modules that are automatically started (default to `events.stream, net.recon`).
+A comma separated list of modules that are automatically started (default to `events.stream`).
 
 #### `-caplet FILENAME`
 
@@ -214,18 +214,6 @@ There are also other operators you can use in order to access specific informati
 And finally, you can access and use any variable that has been declared in the interactive session using the `{env.NAME-OF-THE-VAR}` operator, for instance, the default prompt is using `{env.iface.ipv4}` that is replaced by the `iface.ipv4` session variable contents ( you can check it using the `get iface.ipv4` command ).
 
 ### Examples
-
-To disable `net.recon` (if for instance you're only using WiFi or BLE related modules):
-
-```sh
-sudo bettercap -autostart "events.stream"
-```
-
-Which is equivalent to:
-
-```sh
-sudo bettercap -eval "net.recon off"
-```
 
 Set the `arp.spoof.targets` parameter and enable the `arp.spoof` module:
 
