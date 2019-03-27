@@ -11,7 +11,7 @@
 
 
     
-      <title>bettercap :: packet.proxy</title>
+      <title>bettercap :: ui</title>
     
 
 
@@ -101,7 +101,7 @@ a.highlight span.copy-to-clipboard {
 </style>
 
   </head>
-  <body class="" data-url="/modules/ethernet/proxies/packet.proxy/">
+  <body class="" data-url="/modules/core/ui/">
     <nav id="sidebar" class="">
 
 
@@ -268,7 +268,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/core/" title="Core" class="dd-item 
-        
+        parent
         
         
         ">
@@ -415,8 +415,8 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/core/ui/" title="ui" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/modules/core/ui/">
@@ -520,7 +520,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/ethernet/" title="Ethernet" class="dd-item 
-        parent
+        
         
         
         ">
@@ -775,7 +775,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/ethernet/proxies/" title="Proxies" class="dd-item 
-        parent
+        
         
         
         ">
@@ -826,8 +826,8 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/ethernet/proxies/packet.proxy/" title="packet.proxy" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/modules/ethernet/proxies/packet.proxy/">
@@ -1195,7 +1195,7 @@ a.highlight span.copy-to-clipboard {
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/bettercap/website/edit/master/content/modules/ethernet/proxies/packet.proxy/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/bettercap/website/edit/master/content/modules/core/ui/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1230,13 +1230,7 @@ a.highlight span.copy-to-clipboard {
             
           
           
-            
-            
-          
-          
-            <a href='/'></a> > <a href='/modules/'>Modules</a> > <a href='/modules/ethernet/'>Ethernet</a> > <a href='/modules/ethernet/proxies/'>Proxies</a> > packet.proxy
-          
-         
+            <a href='/'></a> > <a href='/modules/'>Modules</a> > <a href='/modules/core/'>Core</a> > ui
           
          
           
@@ -1259,11 +1253,10 @@ a.highlight span.copy-to-clipboard {
 <ul>
 <li><a href="#commands">Commands</a>
 <ul>
-<li><a href="#packet-proxy-on"><code>packet.proxy on</code></a></li>
-<li><a href="#packet-proxy-off"><code>packet.proxy off</code></a></li>
+<li><a href="#ui-version"><code>ui.version</code></a></li>
+<li><a href="#ui-update"><code>ui.update</code></a></li>
 </ul></li>
 <li><a href="#parameters">Parameters</a></li>
-<li><a href="#plugins">Plugins</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1279,7 +1272,7 @@ a.highlight span.copy-to-clipboard {
         
         <div id="body-inner">
           
-            <h1>packet.proxy</h1>
+            <h1>ui</h1>
           
 
         
@@ -1287,21 +1280,17 @@ a.highlight span.copy-to-clipboard {
 
 
 
-<p>A module that relies on <a href="https://home.regit.org/netfilter-en/using-nfqueue-and-libnetfilter_queue/">NFQUEUEs</a> in order to actively filter packets, using <a href="https://golang.org/pkg/plugin/">Go native plugins</a> (plugins for this module can be found <a href="https://github.com/bettercap/packet.proxy-plugins">in this repository</a>).</p>
-
-<div class="notices warning" ><p>This module is only supported on GNU/Linux.</p>
-</div>
-
+<p>A module to manage bettercap&rsquo;s UI updates and installed version.</p>
 
 <h3 id="commands">Commands</h3>
 
-<h4 id="packet-proxy-on"><code>packet.proxy on</code></h4>
+<h4 id="ui-version"><code>ui.version</code></h4>
 
-<p>Start the NFQUEUE based packet proxy.</p>
+<p>Print the currently installed UI version.</p>
 
-<h4 id="packet-proxy-off"><code>packet.proxy off</code></h4>
+<h4 id="ui-update"><code>ui.update</code></h4>
 
-<p>Stop the NFQUEUE based packet proxy.</p>
+<p>Download the latest available version of the UI and install it.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1316,82 +1305,18 @@ a.highlight span.copy-to-clipboard {
 
 <tbody>
 <tr>
-<td><code>packet.proxy.queue.num</code></td>
-<td><code>0</code></td>
-<td>NFQUEUE number to create and bind to.</td>
+<td><code>ui.basepath</code></td>
+<td><code>/usr/local/share/bettercap/</code></td>
+<td>UI base installation path.</td>
 </tr>
 
 <tr>
-<td><code>packet.proxy.chain</code></td>
-<td><code>OUTPUT</code></td>
-<td>Chain name of the iptables rule.</td>
-</tr>
-
-<tr>
-<td><code>packet.proxy.rule</code></td>
-<td></td>
-<td>Any additional iptables rule to make the queue more selective (ex. <code>--destination 8.8.8.8</code>).</td>
-</tr>
-
-<tr>
-<td><code>packet.proxy.plugin</code></td>
-<td></td>
-<td>Go plugin file to load and call for every packet.</td>
+<td><code>ui.tmpfile</code></td>
+<td><code>/tmp/ui.zip</code></td>
+<td>Temporary file to use while downloading UI updates.</td>
 </tr>
 </tbody>
 </table>
-
-<h3 id="plugins">Plugins</h3>
-
-<p>Instead of using Javascript extensions like the HTTP and HTTPS proxies, this module requires the plugins to be natively written in Go in order to avoid adding too much overhead for each incoming packet. The <code>packet.proxy.plugin</code> parameter is mandatory and needs to be filled with the path of a shared object <a href="https://golang.org/pkg/plugin/">built as a Go plugin</a> and exporting an <code>OnPacket</code> callback like the following:</p>
-
-<pre><code class="language-go">package main
-
-import (
-	&quot;github.com/bettercap/bettercap/log&quot;
-
-	&quot;github.com/chifflier/nfqueue-go/nfqueue&quot;
-)
-
-func OnPacket(payload *nfqueue.Payload) int {
-	log.Info(&quot;We got a packet: %v&quot;, payload)
-        // this will accept the packet, use NF_DROP to 
-        // drop the packet instead.
-	payload.SetVerdict(nfqueue.NF_ACCEPT)
-	return 0
-}
-</code></pre>
-
-<p>A more complex example using the <code>gopacket</code> library to parse and dump all the layers of the packet:</p>
-
-<pre><code class="language-go">package main
-
-import (
-	&quot;github.com/bettercap/bettercap/log&quot;
-
-	&quot;github.com/chifflier/nfqueue-go/nfqueue&quot;
-	&quot;github.com/google/gopacket&quot;
-	&quot;github.com/google/gopacket/layers&quot;
-)
-
-func OnPacket(payload *nfqueue.Payload) int {
-	packet := gopacket.NewPacket(payload.Data, layers.LayerTypeIPv4, gopacket.Default)
-	log.Info(&quot;%s&quot;, packet.Dump())
-	payload.SetVerdict(nfqueue.NF_ACCEPT)
-	return 0
-}
-</code></pre>
-
-<p>This <code>test.go</code> file can be compiled like so:</p>
-
-<pre><code>go build -buildmode=plugin test.go
-</code></pre>
-
-<p>Once the <code>test.so</code> file is generated, it can be used for the <code>packet.proxy.plugin</code> parameter.</p>
-
-<div class="notices info" ><p>In order to be compiled correctly, plugin <code>.go</code> files need to be copied inside bettercap&rsquo;s source folder and compiled from there, otherwise you might have issues compiling due to dependency conflicts with the vendor folder.</p>
-</div>
-
 
 
 <footer class=" footline" >
@@ -1512,8 +1437,6 @@ func OnPacket(payload *nfqueue.Payload) int {
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1529,6 +1452,9 @@ func OnPacket(payload *nfqueue.Payload) int {
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1553,73 +1479,6 @@ func OnPacket(payload *nfqueue.Payload) int {
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1683,26 +1542,11 @@ func OnPacket(payload *nfqueue.Payload) int {
 
                     
                     
-                        
-                    
                     
 
                     
-                        
             
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
+        
                     
             
         
@@ -1712,21 +1556,8 @@ func OnPacket(payload *nfqueue.Payload) int {
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -1834,32 +1665,10 @@ func OnPacket(payload *nfqueue.Payload) int {
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1877,6 +1686,36 @@ func OnPacket(payload *nfqueue.Payload) int {
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1894,8 +1733,87 @@ func OnPacket(payload *nfqueue.Payload) int {
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2074,10 +1992,10 @@ func OnPacket(payload *nfqueue.Payload) int {
 	 
 	 
 		
-			<a class="nav nav-prev" href="/modules/ethernet/proxies/any.proxy/" title="any.proxy"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/modules/core/api.rest/" title="api.rest"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/modules/ethernet/proxies/tcp.proxy/" title="tcp.proxy" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/modules/ble/" title="Bluetooth LE" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

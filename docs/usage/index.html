@@ -11,24 +11,24 @@
 
 
     
-      <title>bettercap :: Basic Usage</title>
+      <title>bettercap :: Usage</title>
     
 
 
     
-    <link href="/css/nucleus.css?1553691857" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1553691857" rel="stylesheet">
-    <link href="/css/hybrid.css?1553691857" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1553691857" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1553691857" rel="stylesheet">
-    <link href="/css/auto-complete.css?1553691857" rel="stylesheet">
-    <link href="/css/theme.css?1553691857" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1553691857" rel="stylesheet">
+    <link href="/css/nucleus.css?1553698192" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1553698192" rel="stylesheet">
+    <link href="/css/hybrid.css?1553698192" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1553698192" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1553698192" rel="stylesheet">
+    <link href="/css/auto-complete.css?1553698192" rel="stylesheet">
+    <link href="/css/theme.css?1553698192" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1553698192" rel="stylesheet">
     
-      <link href="/css/theme-green.css?1553691857" rel="stylesheet">
+      <link href="/css/theme-green.css?1553698192" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1553691857"></script>
+    <script src="/js/jquery-2.x.min.js?1553698192"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -101,7 +101,7 @@ a.highlight span.copy-to-clipboard {
 </style>
 
   </head>
-  <body class="" data-url="/basic-usage/">
+  <body class="" data-url="/usage/">
     <nav id="sidebar" class="">
 
 
@@ -129,14 +129,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1553691857"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1553691857"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1553698192"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1553698192"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1553691857"></script>
+<script type="text/javascript" src="/js/search.js?1553698192"></script>
 
     
   </div>
@@ -218,13 +218,13 @@ a.highlight span.copy-to-clipboard {
  
   
     
-    <li data-nav-id="/basic-usage/" title="Basic Usage" class="dd-item 
+    <li data-nav-id="/usage/" title="Usage" class="dd-item 
         parent
         active
         
         ">
-      <a href="/basic-usage/">
-          Basic Usage
+      <a href="/usage/">
+          Usage
           
       </a>
       
@@ -397,6 +397,30 @@ a.highlight span.copy-to-clipboard {
         ">
       <a href="/modules/core/api.rest/">
           api.rest
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/ui/" title="ui" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/modules/core/ui/">
+          ui
           
       </a>
       
@@ -1171,7 +1195,7 @@ a.highlight span.copy-to-clipboard {
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/bettercap/website/edit/master/content/basic-usage/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/bettercap/website/edit/master/content/usage/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1198,7 +1222,7 @@ a.highlight span.copy-to-clipboard {
             
           
           
-            <a href='/'></a> > Basic Usage
+            <a href='/'></a> > Usage
           
          
           
@@ -1215,6 +1239,8 @@ a.highlight span.copy-to-clipboard {
 <ul>
 <li>
 <ul>
+<li><a href="#web-ui">Web UI</a></li>
+<li><a href="#interactive-session">Interactive Session</a></li>
 <li><a href="#caplets">Caplets</a></li>
 <li><a href="#command-line-arguments">Command Line Arguments</a>
 <ul>
@@ -1264,13 +1290,35 @@ a.highlight span.copy-to-clipboard {
         
         <div id="body-inner">
           
-            <h1>Basic Usage</h1>
+            <h1>Usage</h1>
           
 
         
 
 
 
+
+<h3 id="web-ui">Web UI</h3>
+
+<p>The easiest way to start playing with bettercap is using its official <a href="https://github.com/bettercap/ui">web user interface</a>, in order to install it make sure you have the <a href="https://github.com/bettercap/bettercap/releases">latest version of bettercap</a>, then:</p>
+
+<pre><code class="language-sh">sudo bettercap -eval &quot;caplets.update; ui.update; q&quot;
+</code></pre>
+
+<p>This will download and update your caplets and web ui from the latest github releases.</p>
+
+<p>After you have changed the default credentials in <code>/usr/local/share/bettercap/caplets/http-ui.cap</code>, you can start the web ui with:</p>
+
+<pre><code class="language-sh">sudo bettercap -caplet http-ui
+</code></pre>
+
+<p>Now open your browser to <code>http://127.0.0.1/</code> and login using the credentials you configured in the previous step.</p>
+
+<div class="notices warning" ><p>Only run <code>caplets.update</code> the first time as every time the entire system caplets folder is replaced with the downloaded contents from github, overwriting your changes, such as the credentials, with default values. You can either backup your changes and restore them later in the system folder, or simply copy the changed caplet files in bettercap&rsquo;s working directory, in which case they&rsquo;ll be loaded before the ones installed system wide.</p>
+</div>
+
+
+<h3 id="interactive-session">Interactive Session</h3>
 
 <p>Once started the tool with <code>sudo bettercap</code> (<a href="#command-line-arguments">click here</a> for the list of command line arguments), you&rsquo;ll be presented with an interactive session <em>a la Metasploit</em> where you&rsquo;ll be able to run commands, enable or disable modules, get or set parameters and so on.</p>
 
@@ -1824,6 +1872,22 @@ ticker on
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2278,20 +2342,20 @@ ticker on
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1553691857"></script>
-    <script src="/js/perfect-scrollbar.min.js?1553691857"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1553691857"></script>
-    <script src="/js/jquery.sticky.js?1553691857"></script>
-    <script src="/js/featherlight.min.js?1553691857"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1553691857"></script>
-    <script src="/js/highlight.pack.js?1553691857"></script>
+    <script src="/js/clipboard.min.js?1553698192"></script>
+    <script src="/js/perfect-scrollbar.min.js?1553698192"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1553698192"></script>
+    <script src="/js/jquery.sticky.js?1553698192"></script>
+    <script src="/js/featherlight.min.js?1553698192"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1553698192"></script>
+    <script src="/js/highlight.pack.js?1553698192"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1553691857"></script>
-    <script src="/js/learn.js?1553691857"></script>
-    <script src="/js/hugo-learn.js?1553691857"></script>
+    <script src="/js/modernizr.custom.71422.js?1553698192"></script>
+    <script src="/js/learn.js?1553698192"></script>
+    <script src="/js/hugo-learn.js?1553698192"></script>
 
-    <link href="/mermaid/mermaid.css?1553691857" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1553691857"></script>
+    <link href="/mermaid/mermaid.css?1553698192" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1553698192"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

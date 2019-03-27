@@ -138,7 +138,7 @@
   </url>
   
   <url>
-    <loc>https://bettercap.org/basic-usage/</loc>
+    <loc>https://bettercap.org/usage/</loc>
     <lastmod>2019-02-25T10:58:28+01:00</lastmod>
   </url>
   
@@ -185,6 +185,11 @@
   <url>
     <loc>https://bettercap.org/modules/utils/</loc>
     <lastmod>2019-02-25T11:37:35+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bettercap.org/modules/core/ui/</loc>
+    <lastmod>2019-03-27T12:39:51+01:00</lastmod>
   </url>
   
   <url>

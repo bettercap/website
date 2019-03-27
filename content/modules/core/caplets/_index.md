@@ -5,7 +5,7 @@ draft: false
 weight: 3
 ---
 
-A module to list and update [caplets](/basic-usage/#caplets).
+A module to list and update [caplets](/usage/#caplets).
 
 ### Commands
 
