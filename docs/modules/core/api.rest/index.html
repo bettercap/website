@@ -16,19 +16,19 @@
 
 
     
-    <link href="/css/nucleus.css?1553698192" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1553698192" rel="stylesheet">
-    <link href="/css/hybrid.css?1553698192" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1553698192" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1553698192" rel="stylesheet">
-    <link href="/css/auto-complete.css?1553698192" rel="stylesheet">
-    <link href="/css/theme.css?1553698192" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1553698192" rel="stylesheet">
+    <link href="/css/nucleus.css?1553967457" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1553967457" rel="stylesheet">
+    <link href="/css/hybrid.css?1553967457" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1553967457" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1553967457" rel="stylesheet">
+    <link href="/css/auto-complete.css?1553967457" rel="stylesheet">
+    <link href="/css/theme.css?1553967457" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1553967457" rel="stylesheet">
     
-      <link href="/css/theme-green.css?1553698192" rel="stylesheet">
+      <link href="/css/theme-green.css?1553967457" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1553698192"></script>
+    <script src="/js/jquery-2.x.min.js?1553967457"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -129,14 +129,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1553698192"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1553698192"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1553967457"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1553967457"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1553698192"></script>
+<script type="text/javascript" src="/js/search.js?1553967457"></script>
 
     
   </div>
@@ -1255,6 +1255,10 @@ a.highlight span.copy-to-clipboard {
 <ul>
 <li><a href="#api-rest-on"><code>api.rest on</code></a></li>
 <li><a href="#api-rest-off"><code>api.rest off</code></a></li>
+<li><a href="#api-rest-record-filename"><code>api.rest.record FILENAME</code></a></li>
+<li><a href="#api-rest-record-off"><code>api.rest.record off</code></a></li>
+<li><a href="#api-rest-replay-filename"><code>api.rest.replay FILENAME</code></a></li>
+<li><a href="#api-rest-replay-off"><code>api.rest.replay off</code></a></li>
 </ul></li>
 <li><a href="#parameters">Parameters</a></li>
 <li><a href="#routes">Routes</a>
@@ -1320,6 +1324,22 @@ a.highlight span.copy-to-clipboard {
 <h4 id="api-rest-off"><code>api.rest off</code></h4>
 
 <p>Stop the REST API server.</p>
+
+<h4 id="api-rest-record-filename"><code>api.rest.record FILENAME</code></h4>
+
+<p>Start polling the rest API periodically recording each sample in a compressed file that can be later replayed.</p>
+
+<h4 id="api-rest-record-off"><code>api.rest.record off</code></h4>
+
+<p>Stop recording the session.</p>
+
+<h4 id="api-rest-replay-filename"><code>api.rest.replay FILENAME</code></h4>
+
+<p>Start the rest API module in replay mode using <code>FILENAME</code> as the recorded session file, will revert to normal mode once the replay is over.</p>
+
+<h4 id="api-rest-replay-off"><code>api.rest.replay off</code></h4>
+
+<p>Stop replaying the recorded session.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1415,6 +1435,12 @@ a.highlight span.copy-to-clipboard {
 <td><code>api.rest.alloworigin</code></td>
 <td><code>*</code></td>
 <td>Value of the Access-Control-Allow-Origin header of the API server.</td>
+</tr>
+
+<tr>
+<td><code>api.rest.record.clock</code></td>
+<td><code>1</code></td>
+<td>Number of seconds to wait while recording with api.rest.record between one sample and the next one.</td>
 </tr>
 </tbody>
 </table>
@@ -3032,20 +3058,20 @@ a.highlight span.copy-to-clipboard {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1553698192"></script>
-    <script src="/js/perfect-scrollbar.min.js?1553698192"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1553698192"></script>
-    <script src="/js/jquery.sticky.js?1553698192"></script>
-    <script src="/js/featherlight.min.js?1553698192"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1553698192"></script>
-    <script src="/js/highlight.pack.js?1553698192"></script>
+    <script src="/js/clipboard.min.js?1553967457"></script>
+    <script src="/js/perfect-scrollbar.min.js?1553967457"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1553967457"></script>
+    <script src="/js/jquery.sticky.js?1553967457"></script>
+    <script src="/js/featherlight.min.js?1553967457"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1553967457"></script>
+    <script src="/js/highlight.pack.js?1553967457"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1553698192"></script>
-    <script src="/js/learn.js?1553698192"></script>
-    <script src="/js/hugo-learn.js?1553698192"></script>
+    <script src="/js/modernizr.custom.71422.js?1553967457"></script>
+    <script src="/js/learn.js?1553967457"></script>
+    <script src="/js/hugo-learn.js?1553967457"></script>
 
-    <link href="/mermaid/mermaid.css?1553698192" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1553698192"></script>
+    <link href="/mermaid/mermaid.css?1553967457" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1553967457"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -41,6 +41,7 @@ Write the `HEX_DATA` buffer to the BLE device with the specified `MAC` address, 
 
 | parameter | default | description |
 |-----------|---------|-------------|
+| `ble.device` | `-1` | Index of the HCI device to use, -1 to autodetect. |
 | `ble.show.filter` | |  Defines a regular expression filter for `ble.show`.|
 | `ble.show.sort` | `rssi asc` | Defines sorting field (`rssi`, `mac`, or `seen`) and direction (`asc` or `desc`) for `ble.show`. |
 | `ble.show.limit` | `0` | If greater than zero, defines limit for `ble.show`. |

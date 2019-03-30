@@ -17,6 +17,22 @@ Start the REST API server.
 
 Stop the REST API server.
 
+#### `api.rest.record FILENAME` 
+
+Start polling the rest API periodically recording each sample in a compressed file that can be later replayed.
+
+#### `api.rest.record off` 
+
+Stop recording the session.
+
+#### `api.rest.replay FILENAME`
+
+Start the rest API module in replay mode using `FILENAME` as the recorded session file, will revert to normal mode once the replay is over.
+
+#### `api.rest.replay off`
+
+Stop replaying the recorded session.
+
 ### Parameters
 
 | parameter | default | description |
@@ -35,6 +51,7 @@ Stop the REST API server.
 | `api.rest.password` | | API HTTP basic auth password. | 
 | `api.rest.websocket` | `false` | If true the `/api/events` route will be available as a websocket endpoint instead of HTTP. |
 | `api.rest.alloworigin` | `*` | Value of the Access-Control-Allow-Origin header of the API server. |
+| `api.rest.record.clock` | `1` | Number of seconds to wait while recording with api.rest.record between one sample and the next one. |
 
 ### Routes
 
