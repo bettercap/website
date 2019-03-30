@@ -58,20 +58,12 @@ Once you've met this conditions, you can run the following commands to compile a
 This procedure and bettercap itself require a rooted device.
 {{% /notice %}}
 
-Install [Termux](https://termux.com/) and from its prompt type:
+Install [Linux Deploy](https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy), [JuiceSSH](https://play.google.com/store/apps/details?id=com.sonelli.juicessh), in Linux Deploy install kalilinux_arm (u need the [piggy helper](https://www.google.cl/search?q=piggy+helper+apk) and enable the SSH) and type:
 
 ```
-pkg install root-repo
-pkg install golang git libpcap-dev libusb-dev
-```
+sudo apt update
+sudo apt install golang git build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
 
-There's a [golang bug](https://github.com/bettercap/bettercap/issues/486) in termux about some hardcoded path, the fix is ugly but it works:
-
-```sh
-sudo su
-mount -o rw,remount /
-mkdir -p /home/builder/.termux-build/_cache/18-arm-21-v2/bin/
-ln -s `which pkg-config` /home/builder/.termux-build/_cache/18-arm-21-v2/bin/arm-linux-androideabi-pkg-config
 ```
 
 You can now proceed with the compilation:
