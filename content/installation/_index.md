@@ -54,6 +54,8 @@ Once you've met this conditions, you can run the following commands to compile a
 
 ### Compiling on Android
 
+#### Termux Method
+
 {{% notice warning %}}
 This procedure and bettercap itself require a rooted device.
 {{% /notice %}}
@@ -72,6 +74,16 @@ sudo su
 mount -o rw,remount /
 mkdir -p /home/builder/.termux-build/_cache/18-arm-21-v2/bin/
 ln -s `which pkg-config` /home/builder/.termux-build/_cache/18-arm-21-v2/bin/arm-linux-androideabi-pkg-config
+```
+
+#### Linux Deploy Method
+
+Install [Linux Deploy](https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy), [JuiceSSH](https://play.google.com/store/apps/details?id=com.sonelli.juicessh), in Linux Deploy install kalilinux_arm (u need the [piggy helper](https://www.google.cl/search?q=piggy+helper+apk) and enable the SSH) and type:
+
+```
+sudo apt update
+sudo apt install golang git build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
+
 ```
 
 You can now proceed with the compilation:
