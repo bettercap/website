@@ -48,7 +48,7 @@ Functionalities are organized in **[core commands](#core-commands)** (basic comm
 
 Other than executing commands manually one by one, it is possible to *script* your interactive session using **caplets**. Caplets (script files with a `.cap` extension) are a powerful way to automate your workflow: think about them as the Metasploit's `.rc` files, where each line of the file is a command that'll be executed at runtime. 
 
-For instance, a simple caplet that sets the `ticker.commands` parameter and enables the [net.probe](/modules/ethernet/net.probe/) and [ticker](/modules/core/tucker/) modules would be:
+For instance, a simple caplet that sets the `ticker.commands` parameter and enables the [net.probe](/modules/ethernet/net.probe/) and [ticker](/modules/core/ticker/) modules would be:
 
     set ticker.commands 'clear; net.show; events.show 10'
     net.probe on
