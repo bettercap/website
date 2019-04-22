@@ -9,13 +9,13 @@ draft: false
 
 The easiest way to start playing with bettercap is using its official [web user interface](https://github.com/bettercap/ui), in order to install it make sure you have the [latest version of bettercap](https://github.com/bettercap/bettercap/releases), then:
 
-{{% notice warning %}}
-Only run `caplets.update` the first time as every time the entire system caplets folder is replaced with the downloaded contents from github, overwriting your changes, such as the credentials, with default values. You can either backup your changes and restore them later in the system folder, or simply copy the changed caplet files in bettercap's working directory, in which case they'll be loaded before the ones installed system wide.
-{{% /notice %}}
-
 ```sh
 sudo bettercap -eval "caplets.update; ui.update; q"
 ```
+
+{{% notice warning %}}
+Only run `caplets.update` the first time as every time the entire system caplets folder is replaced with the downloaded contents from github, overwriting your changes, such as the credentials, with default values. You can either backup your changes and restore them later in the system folder, or simply copy the changed caplet files in bettercap's working directory, in which case they'll be loaded before the ones installed system wide.
+{{% /notice %}}
 
 This will download and update your caplets and web ui from the latest github releases.
 
@@ -26,6 +26,8 @@ sudo bettercap -caplet http-ui
 ```
 
 Now open your browser to `http://127.0.0.1/` and login using the credentials you configured in the previous step.
+
+![UI](https://raw.githubusercontent.com/bettercap/media/master/ui-events.png)
 
 ### Interactive Session
 
