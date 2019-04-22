@@ -5,8 +5,8 @@ Read the [project introduction](/intro/) to get an idea of what bettercap can do
 <p align="center">
     <img src="/logo.png" width="250px" style="margin-bottom:10px"/>
     <b>ベッターキャップ！</b>
-    <br/>
-    <br/>
+
+    <img src="https://raw.githubusercontent.com/bettercap/media/master/ui-events.png"/>
 
     <a href="https://twitter.com/bettercap?ref_src=twsrc%5Etfw" class="nav-link twitter-follow-button" data-show-count="true">
     Follow @bettercap
