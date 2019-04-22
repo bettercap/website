@@ -11,7 +11,7 @@
 
 
     
-      <title>bettercap :: dns.spoof</title>
+      <title>bettercap :: mdns.server</title>
     
 
 
@@ -101,7 +101,7 @@ a.highlight span.copy-to-clipboard {
 </style>
 
   </head>
-  <body class="" data-url="/modules/ethernet/spoofers/dns.spoof/">
+  <body class="" data-url="/modules/ethernet/servers/mdns.server/">
     <nav id="sidebar" class="">
 
 
@@ -667,7 +667,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/ethernet/spoofers/" title="Spoofers" class="dd-item 
-        parent
+        
         
         
         ">
@@ -718,8 +718,8 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/ethernet/spoofers/dns.spoof/" title="dns.spoof" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/modules/ethernet/spoofers/dns.spoof/">
@@ -931,7 +931,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/ethernet/servers/" title="Servers" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1006,8 +1006,8 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/ethernet/servers/mdns.server/" title="mdns.server" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/modules/ethernet/servers/mdns.server/">
@@ -1219,7 +1219,7 @@ a.highlight span.copy-to-clipboard {
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/bettercap/website/edit/master/content/modules/ethernet/spoofers/dns.spoof/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/bettercap/website/edit/master/content/modules/ethernet/servers/mdns.server/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1258,7 +1258,7 @@ a.highlight span.copy-to-clipboard {
             
           
           
-            <a href='/'></a> > <a href='/modules/'>Modules</a> > <a href='/modules/ethernet/'>Ethernet</a> > <a href='/modules/ethernet/spoofers/'>Spoofers</a> > dns.spoof
+            <a href='/'></a> > <a href='/modules/'>Modules</a> > <a href='/modules/ethernet/'>Ethernet</a> > <a href='/modules/ethernet/servers/'>Servers</a> > mdns.server
           
          
           
@@ -1283,11 +1283,10 @@ a.highlight span.copy-to-clipboard {
 <ul>
 <li><a href="#commands">Commands</a>
 <ul>
-<li><a href="#dns-spoof-on"><code>dns.spoof on</code></a></li>
-<li><a href="#dns-spoof-off"><code>dns.spoof off</code></a></li>
+<li><a href="#mdns-server-on"><code>mdns.server on</code></a></li>
+<li><a href="#mdns-server-off"><code>mdns.server off</code></a></li>
 </ul></li>
 <li><a href="#parameters">Parameters</a></li>
-<li><a href="#examples">Examples</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1303,7 +1302,7 @@ a.highlight span.copy-to-clipboard {
         
         <div id="body-inner">
           
-            <h1>dns.spoof</h1>
+            <h1>mdns.server</h1>
           
 
         
@@ -1311,21 +1310,17 @@ a.highlight span.copy-to-clipboard {
 
 
 
-<p>Replies to DNS queries with spoofed responses.</p>
-
-<div class="notices info" ><p>In order to receive DNS queries from other hosts other than your own and be therefore able to spoof the selected domain names, you&rsquo;ll also need to activate either the <a href="/modules/ethernet/spoofers/arp.spoof/">arp.spoof</a> or the <a href="/modules/ethernet/spoofers/dhcp6.spoof/">dhcp6.spoof</a> module.</p>
-</div>
-
+<p>A mDNS server module to create multicast services or spoof existing ones.</p>
 
 <h3 id="commands">Commands</h3>
 
-<h4 id="dns-spoof-on"><code>dns.spoof on</code></h4>
+<h4 id="mdns-server-on"><code>mdns.server on</code></h4>
 
-<p>Start the DNS spoofer in the background.</p>
+<p>Start the mDNS server in the background.</p>
 
-<h4 id="dns-spoof-off"><code>dns.spoof off</code></h4>
+<h4 id="mdns-server-off"><code>mdns.server off</code></h4>
 
-<p>Stop the DNS spoofer in the background.</p>
+<p>Stop the mDNS server in the background.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1340,48 +1335,48 @@ a.highlight span.copy-to-clipboard {
 
 <tbody>
 <tr>
-<td><code>dns.spoof.domains</code></td>
-<td></td>
-<td>Comma separated values of domain names to spoof.</td>
-</tr>
-
-<tr>
-<td><code>dns.spoof.address</code></td>
+<td><code>mdns.server.address</code></td>
 <td><code>&lt;interface address&gt;</code></td>
-<td>IP address to map the domains to.</td>
+<td>IPv4 address of the mDNS service.</td>
 </tr>
 
 <tr>
-<td><code>dns.spoof.all</code></td>
-<td><code>false</code></td>
-<td>If true the module will reply to every DNS request, otherwise it will only reply to the one targeting the local pc.</td>
+<td><code>mdns.server.address6</code></td>
+<td><code>&lt;interface ipv6 address&gt;</code></td>
+<td>IPv6 address of the mDNS service.</td>
 </tr>
 
 <tr>
-<td><code>dns.spoof.hosts</code></td>
-<td></td>
-<td>If not empty, this hosts file will be used to map domains to IP addresses.</td>
+<td><code>mdns.server.domain</code></td>
+<td><code>local.</code></td>
+<td>mDNS domain.</td>
+</tr>
+
+<tr>
+<td><code>mdns.server.host</code></td>
+<td><code>&lt;hostname&gt;.</code></td>
+<td>mDNS hostname to advertise on the network.</td>
+</tr>
+
+<tr>
+<td><code>mdns.server.info</code></td>
+<td><code>rpBA=DE:AD:BE:EF:CA:FE ...</code></td>
+<td>Comma separated list of informative TXT records for the mDNS server.</td>
+</tr>
+
+<tr>
+<td><code>mdns.server.port</code></td>
+<td><code>52377</code></td>
+<td>Port of the mDNS service.</td>
+</tr>
+
+<tr>
+<td><code>mdns.server.service</code></td>
+<td><code>_companion-link._tcp.</code></td>
+<td>mDNS service name to advertise on the network.</td>
 </tr>
 </tbody>
 </table>
-
-<h3 id="examples">Examples</h3>
-
-<p>Every DNS request coming to this computer for the <code>example.com</code> domain will resolve to the address <code>1.2.3.4</code>:</p>
-
-<pre><code>&gt; set dns.spoof.domains example.com; set dns.spoof.address 1.2.3.4; dns.spoof on
-</code></pre>
-
-<p>Use a hosts file instead of the <code>dns.spoof.*</code> parameters for multiple mappings:</p>
-
-<pre><code>&gt; !cat ./dns.spoof.hosts
-
-1.2.3.4 facebook.com
-1.2.3.5 cnn.com
-1.2.4.6 www.google.com
-
-&gt; set dns.spoof.hosts ./dns.spoof.hosts; dns.spoof on
-</code></pre>
 
 
 <footer class=" footline" >
@@ -1766,7 +1761,6 @@ a.highlight span.copy-to-clipboard {
             
                 
                     
-                    
                 
                 
 
@@ -1776,111 +1770,6 @@ a.highlight span.copy-to-clipboard {
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -2000,6 +1889,112 @@ a.highlight span.copy-to-clipboard {
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2080,10 +2075,10 @@ a.highlight span.copy-to-clipboard {
 	 
 	 
 		
-			<a class="nav nav-prev" href="/modules/ethernet/spoofers/arp.spoof/" title="arp.spoof"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/modules/ethernet/servers/https.server/" title="https.server"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/modules/ethernet/spoofers/dhcp6.spoof/" title="dhcp6.spoof" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/modules/ethernet/servers/mysql.server/" title="mysql.server (rogue)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

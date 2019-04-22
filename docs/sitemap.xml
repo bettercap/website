@@ -83,8 +83,8 @@
   </url>
   
   <url>
-    <loc>https://bettercap.org/modules/ethernet/servers/mysql.server/</loc>
-    <lastmod>2019-02-25T13:25:31+01:00</lastmod>
+    <loc>https://bettercap.org/modules/ethernet/servers/mdns.server/</loc>
+    <lastmod>2019-02-25T13:25:15+01:00</lastmod>
   </url>
   
   <url>
@@ -115,6 +115,11 @@
   <url>
     <loc>https://bettercap.org/installation/</loc>
     <lastmod>2019-02-25T10:57:57+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bettercap.org/modules/ethernet/servers/mysql.server/</loc>
+    <lastmod>2019-02-25T13:25:31+01:00</lastmod>
   </url>
   
   <url>

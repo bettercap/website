@@ -2,7 +2,7 @@
 title: "mysql.server (rogue)"
 date: 2019-02-25T13:25:31+01:00
 draft: false
-weight: 3
+weight: 4
 ---
 
 A rogue MySQL server that can be used to exploit [LOCAL INFILE and read arbitrary files](/modules/ethernet/spoofers/) from the client.
