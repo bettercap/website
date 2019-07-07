@@ -18,7 +18,7 @@ bettercap is a powerful, easily extensible and portable framework written in Go 
 * A powerful **network sniffer** for **credentials harvesting** which can also be used as a **network protocol fuzzer**.
 * A very fast port scanner.
 * A powerful [REST API](/modules/core/api.rest/) with support for asynchronous events notification on websocket to orchestrate your attacks easily.
-* An easy to use [web user interface](http://localhost:1313/usage/#web-ui).
+* An easy to use [web user interface](/usage/#web-ui).
 * [More!](/modules/)
 
 <center>
