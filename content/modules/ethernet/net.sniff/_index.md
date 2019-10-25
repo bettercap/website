@@ -21,7 +21,7 @@ Stop the packet sniffer.
 Print the packet sniffer session configuration and statistics.
 #### `net.fuzz on`
 
-Enable fuzzing for every sniffed packet containing the sapecified layers.
+Enable fuzzing for every sniffed packet containing the specified layers.
 #### `net.fuzz off`
 
 Disable fuzzing.
