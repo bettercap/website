@@ -1424,7 +1424,7 @@ function onCommand(cmd) {
 }
 </code></pre>
 
-<p>Modules can change the <code>req</code> request and <code>res</code> response objects, for instance the <a href="https://github.com/bettercap/caplets/blob/master/web-override.cap">web-override.cap caplet</a> is using the <code>onRequest</code> function in order to override every request before it is executed with a fake response:</p>
+<p>Modules can change the <code>req</code> request and <code>res</code> response objects, for instance the <a href="https://github.com/bettercap/caplets/blob/master/web-override/web-override.cap">web-override.cap caplet</a> is using the <code>onRequest</code> function in order to override every request before it is executed with a fake response:</p>
 
 <pre><code class="language-js">function onRequest(req, res) {
     res.Status      = 200;
@@ -1439,7 +1439,7 @@ function onCommand(cmd) {
 }
 </code></pre>
 
-<p>The <a href="https://github.com/bettercap/caplets/blob/master/login-man-abuse.cap">login-man-abuse.cap caplet</a> instead will use the <code>onResponse</code> handler to inject its malicious javascript file in every html response:</p>
+<p>The <a href="https://github.com/bettercap/caplets/blob/master/login-manager-abuse/login-man-abuse.cap">login-man-abuse.cap caplet</a> instead will use the <code>onResponse</code> handler to inject its malicious javascript file in every html response:</p>
 
 <pre><code class="language-js">function onResponse(req, res) {
     if( res.ContentType.indexOf('text/html') == 0 ){
