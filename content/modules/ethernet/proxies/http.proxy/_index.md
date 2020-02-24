@@ -65,7 +65,7 @@ function onCommand(cmd) {
 }
 ```
 
-Modules can change the `req` request and `res` response objects, for instance the [web-override.cap caplet](https://github.com/bettercap/caplets/blob/master/web-override.cap) is using the `onRequest` function in order to override every request before it is executed with a fake response:
+Modules can change the `req` request and `res` response objects, for instance the [web-override.cap caplet](https://github.com/bettercap/caplets/blob/master/web-override/web-override.cap) is using the `onRequest` function in order to override every request before it is executed with a fake response:
 
 ```js
 function onRequest(req, res) {
@@ -81,7 +81,7 @@ function onRequest(req, res) {
 }
 ```
 
-The [login-man-abuse.cap caplet](https://github.com/bettercap/caplets/blob/master/login-man-abuse.cap) instead will use the `onResponse` handler to inject its malicious javascript file in every html response:
+The [login-man-abuse.cap caplet](https://github.com/bettercap/caplets/blob/master/login-manager-abuse/login-man-abuse.cap) instead will use the `onResponse` handler to inject its malicious javascript file in every html response:
 
 ```js
 function onResponse(req, res) {
