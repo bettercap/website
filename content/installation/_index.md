@@ -76,7 +76,7 @@ mkdir -p /home/builder/.termux-build/_cache/18-arm-21-v2/bin/
 ln -s `which pkg-config` /home/builder/.termux-build/_cache/18-arm-21-v2/bin/arm-linux-androideabi-pkg-config
 ```
 
-#### Linux Deploy Method
+#### Linux Deploy Method Debian based (like Ubuntu)
 
 Install [Linux Deploy](https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy), [JuiceSSH](https://play.google.com/store/apps/details?id=com.sonelli.juicessh), in Linux Deploy install kalilinux_arm (u need the [piggy helper](https://www.google.cl/search?q=piggy+helper+apk) and enable the SSH) and type:
 
@@ -93,3 +93,11 @@ go get -u github.com/bettercap/bettercap
 ```
 
 Once the build process is concluded, the binary will be located in `go/bin/bettercap`.
+
+
+#### Linux Deploy Method Fedora based (like Redhat, Centos)
+```
+sudo dnf update
+sudo dnf install golang git make automake gcc gcc-c++ kernel-devel libpcap-devel libusb-devel libnetfilter_queue-devel
+
+```
