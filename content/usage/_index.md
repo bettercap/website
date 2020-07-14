@@ -149,11 +149,11 @@ Write memory profile file when exiting (used for debugging and benchmarking).
 
 #### `-debug`
 
-Enable debug messages (**must be used [to report bugs](/contributing/#reporting-bugs)**.
+Enable debug messages (**must be used [to report bugs](/contributing/#reporting-bugs)**).
 
 #### `-version`
 
-Print version and build information, then exit (**must be used [to report bugs](/contributing/#reporting-bugs)**.
+Print version and build information, then exit (**must be used [to report bugs](/contributing/#reporting-bugs)**).
 
 ### Core Commands
 
