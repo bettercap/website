@@ -229,9 +229,9 @@ The available effects are:
 | `{bold}` | Set text to bold. |
 | `{dim}` | Set dim effect on text. |
 | `{r}` | Set text foreground color to red. |
-| `{g}` | Set text foreground color to red. |
-| `{b}` | Set text foreground color to red. |
-| `{y}` | Set text foreground color to red. |
+| `{g}` | Set text foreground color to green. |
+| `{b}` | Set text foreground color to blue. |
+| `{y}` | Set text foreground color to yellow. |
 | `{fb}` | Set text foreground color to black. |
 | `{fw}` | Set text foreground color to white. |
 | `{bdg}` | Set text background color to dark gray. |
