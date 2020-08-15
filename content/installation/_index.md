@@ -49,7 +49,7 @@ Once you've met this conditions, you can run the following commands to compile a
 
     go get github.com/bettercap/bettercap
     cd $GOPATH/src/github.com/bettercap/bettercap
-    make build 
+    make build
     sudo make install
 
 ### Compiling on Android
@@ -64,7 +64,7 @@ Install [Termux](https://termux.com/) and from its prompt type:
 
 ```
 pkg install root-repo
-pkg install golang git libpcap-dev libusb-dev
+pkg install golang git libpcap libusb
 ```
 
 There's a [golang bug](https://github.com/bettercap/bettercap/issues/486) in termux about some hardcoded path, the fix is ugly but it works:
