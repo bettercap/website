@@ -199,16 +199,15 @@
   
   <url>
     <loc>https://bettercap.org/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bettercap.org/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bettercap.org/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

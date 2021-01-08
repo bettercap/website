@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="generator" content="Hugo 0.58.3" />
     <meta name="description" content="">
 
 
@@ -16,19 +16,19 @@
 
 
     
-    <link href="/css/nucleus.css?1559576463" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1559576463" rel="stylesheet">
-    <link href="/css/hybrid.css?1559576463" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1559576463" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1559576463" rel="stylesheet">
-    <link href="/css/auto-complete.css?1559576463" rel="stylesheet">
-    <link href="/css/theme.css?1559576463" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1559576463" rel="stylesheet">
+    <link href="/css/nucleus.css?1610146526" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1610146526" rel="stylesheet">
+    <link href="/css/hybrid.css?1610146526" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1610146526" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1610146526" rel="stylesheet">
+    <link href="/css/auto-complete.css?1610146526" rel="stylesheet">
+    <link href="/css/theme.css?1610146526" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1610146526" rel="stylesheet">
     
-      <link href="/css/theme-green.css?1559576463" rel="stylesheet">
+      <link href="/css/theme-green.css?1610146526" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1559576463"></script>
+    <script src="/js/jquery-2.x.min.js?1610146526"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -129,14 +129,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1559576463"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1559576463"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1610146526"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1610146526"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1559576463"></script>
+<script type="text/javascript" src="/js/search.js?1610146526"></script>
 
     
   </div>
@@ -1268,7 +1268,8 @@ a.highlight span.copy-to-clipboard {
 <li><a href="#compiling-on-android">Compiling on Android</a>
 <ul>
 <li><a href="#termux-method">Termux Method</a></li>
-<li><a href="#linux-deploy-method">Linux Deploy Method</a></li>
+<li><a href="#linux-deploy-method-debian-based-like-ubuntu">Linux Deploy Method Debian based (like Ubuntu)</a></li>
+<li><a href="#linux-deploy-method-fedora-based-like-redhat-centos">Linux Deploy Method Fedora based (like Redhat, Centos)</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -1346,7 +1347,7 @@ a.highlight span.copy-to-clipboard {
 
 <pre><code>go get github.com/bettercap/bettercap
 cd $GOPATH/src/github.com/bettercap/bettercap
-make build 
+make build
 sudo make install
 </code></pre>
 
@@ -1354,14 +1355,14 @@ sudo make install
 
 <h4 id="termux-method">Termux Method</h4>
 
-<div class="notices warning" ><p>This procedure and bettercap itself require a rooted device.</p>
+<div class="notices warning" >
+This procedure and bettercap itself require a rooted device.
 </div>
-
 
 <p>Install <a href="https://termux.com/">Termux</a> and from its prompt type:</p>
 
 <pre><code>pkg install root-repo
-pkg install golang git libpcap-dev libusb-dev
+pkg install golang git libpcap libusb
 </code></pre>
 
 <p>There&rsquo;s a <a href="https://github.com/bettercap/bettercap/issues/486">golang bug</a> in termux about some hardcoded path, the fix is ugly but it works:</p>
@@ -1372,7 +1373,7 @@ mkdir -p /home/builder/.termux-build/_cache/18-arm-21-v2/bin/
 ln -s `which pkg-config` /home/builder/.termux-build/_cache/18-arm-21-v2/bin/arm-linux-androideabi-pkg-config
 </code></pre>
 
-<h4 id="linux-deploy-method">Linux Deploy Method</h4>
+<h4 id="linux-deploy-method-debian-based-like-ubuntu">Linux Deploy Method Debian based (like Ubuntu)</h4>
 
 <p>Install <a href="https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy">Linux Deploy</a>, <a href="https://play.google.com/store/apps/details?id=com.sonelli.juicessh">JuiceSSH</a>, in Linux Deploy install kalilinux_arm (u need the <a href="https://www.google.cl/search?q=piggy+helper+apk">piggy helper</a> and enable the SSH) and type:</p>
 
@@ -1387,6 +1388,13 @@ sudo apt install golang git build-essential libpcap-dev libusb-1.0-0-dev libnetf
 </code></pre>
 
 <p>Once the build process is concluded, the binary will be located in <code>go/bin/bettercap</code>.</p>
+
+<h4 id="linux-deploy-method-fedora-based-like-redhat-centos">Linux Deploy Method Fedora based (like Redhat, Centos)</h4>
+
+<pre><code>sudo dnf update
+sudo dnf install golang git make automake gcc gcc-c++ kernel-devel libpcap-devel libusb-devel libnetfilter_queue-devel
+
+</code></pre>
 
 
 <footer class=" footline" >
@@ -2086,20 +2094,20 @@ sudo apt install golang git build-essential libpcap-dev libusb-1.0-0-dev libnetf
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1559576463"></script>
-    <script src="/js/perfect-scrollbar.min.js?1559576463"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1559576463"></script>
-    <script src="/js/jquery.sticky.js?1559576463"></script>
-    <script src="/js/featherlight.min.js?1559576463"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1559576463"></script>
-    <script src="/js/highlight.pack.js?1559576463"></script>
+    <script src="/js/clipboard.min.js?1610146526"></script>
+    <script src="/js/perfect-scrollbar.min.js?1610146526"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1610146526"></script>
+    <script src="/js/jquery.sticky.js?1610146526"></script>
+    <script src="/js/featherlight.min.js?1610146526"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1610146526"></script>
+    <script src="/js/highlight.pack.js?1610146526"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1559576463"></script>
-    <script src="/js/learn.js?1559576463"></script>
-    <script src="/js/hugo-learn.js?1559576463"></script>
+    <script src="/js/modernizr.custom.71422.js?1610146526"></script>
+    <script src="/js/learn.js?1610146526"></script>
+    <script src="/js/hugo-learn.js?1610146526"></script>
 
-    <link href="/mermaid/mermaid.css?1559576463" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1559576463"></script>
+    <link href="/mermaid/mermaid.css?1610146526" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1610146526"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

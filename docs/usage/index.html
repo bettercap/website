@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="generator" content="Hugo 0.58.3" />
     <meta name="description" content="">
 
 
@@ -16,19 +16,19 @@
 
 
     
-    <link href="/css/nucleus.css?1559576463" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1559576463" rel="stylesheet">
-    <link href="/css/hybrid.css?1559576463" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1559576463" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1559576463" rel="stylesheet">
-    <link href="/css/auto-complete.css?1559576463" rel="stylesheet">
-    <link href="/css/theme.css?1559576463" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1559576463" rel="stylesheet">
+    <link href="/css/nucleus.css?1610146526" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1610146526" rel="stylesheet">
+    <link href="/css/hybrid.css?1610146526" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1610146526" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1610146526" rel="stylesheet">
+    <link href="/css/auto-complete.css?1610146526" rel="stylesheet">
+    <link href="/css/theme.css?1610146526" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1610146526" rel="stylesheet">
     
-      <link href="/css/theme-green.css?1559576463" rel="stylesheet">
+      <link href="/css/theme-green.css?1610146526" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1559576463"></script>
+    <script src="/js/jquery-2.x.min.js?1610146526"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -129,14 +129,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1559576463"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1559576463"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1610146526"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1610146526"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1559576463"></script>
+<script type="text/javascript" src="/js/search.js?1610146526"></script>
 
     
   </div>
@@ -1335,9 +1335,9 @@ a.highlight span.copy-to-clipboard {
 <pre><code class="language-sh">sudo bettercap -eval &quot;caplets.update; ui.update; q&quot;
 </code></pre>
 
-<div class="notices warning" ><p>Only run <code>caplets.update</code> the first time as every time the entire system caplets folder is replaced with the downloaded contents from github, overwriting your changes, such as the credentials, with default values. You can either backup your changes and restore them later in the system folder, or simply copy the changed caplet files in bettercap&rsquo;s working directory, in which case they&rsquo;ll be loaded before the ones installed system wide.</p>
+<div class="notices warning" >
+Only run `caplets.update` the first time as every time the entire system caplets folder is replaced with the downloaded contents from github, overwriting your changes, such as the credentials, with default values. You can either backup your changes and restore them later in the system folder, or simply copy the changed caplet files in bettercap's working directory, in which case they'll be loaded before the ones installed system wide.
 </div>
-
 
 <p>This will download and update your caplets and web ui from the latest github releases.</p>
 
@@ -1367,16 +1367,16 @@ a.highlight span.copy-to-clipboard {
 
 <p>Once started the tool with <code>sudo bettercap</code> (<a href="#command-line-arguments">click here</a> for the list of command line arguments), you&rsquo;ll be presented with an interactive session <em>a la Metasploit</em> where you&rsquo;ll be able to run commands, enable or disable modules, get or set parameters and so on.</p>
 
-<div class="notices tip" ><p>Each command can either be executed singularly, or concatenated by the <code>;</code> operator, for instance, instead of typing:
+<div class="notices tip" >
+Each command can either be executed singularly, or concatenated by the `;` operator, for instance, instead of typing:
 <br/>
-<code>clear</code><br/>
-<code>net.show</code>
+`clear`<br/>
+`net.show`
 <br/>
 You can simply type:
 <br/>
-<code>clear; net.show</code></p>
+`clear; net.show`
 </div>
-
 
 <p>Functionalities are organized in <strong><a href="#core-commands">core commands</a></strong> (basic commands you&rsquo;ll need to perform operations such as setting a session parameter, getting its value, clearing the screen, etc) and <strong><a href="/modules/">session modules</a></strong> (each will provide a set of feature specific sub commands and use some session parameters for its configuration).</p>
 
@@ -1475,11 +1475,11 @@ ticker on
 
 <h4 id="debug"><code>-debug</code></h4>
 
-<p>Enable debug messages (<strong>must be used <a href="/contributing/#reporting-bugs">to report bugs</a></strong>.</p>
+<p>Enable debug messages (<strong>must be used <a href="/contributing/#reporting-bugs">to report bugs</a></strong>).</p>
 
 <h4 id="version"><code>-version</code></h4>
 
-<p>Print version and build information, then exit (<strong>must be used <a href="/contributing/#reporting-bugs">to report bugs</a></strong>.</p>
+<p>Print version and build information, then exit (<strong>must be used <a href="/contributing/#reporting-bugs">to report bugs</a></strong>).</p>
 
 <h3 id="core-commands">Core Commands</h3>
 
@@ -1531,9 +1531,9 @@ ticker on
 
 <p>Assign an alias to a given endpoint given its MAC address (will be persistent on <code>~/bettercap.aliases</code>).</p>
 
-<div class="notices tip" ><p>Being persisted on disk, aliases are shared across each module and bettercap session. This means that if you set an alias for a computer while on the same network, the same alias will be shown and used, for instance, by the WiFi modules when resolving wireless stations BSSID (you&rsquo;ll see who&rsquo;s connecting to what).</p>
+<div class="notices tip" >
+Being persisted on disk, aliases are shared across each module and bettercap session. This means that if you set an alias for a computer while on the same network, the same alias will be shown and used, for instance, by the WiFi modules when resolving wireless stations BSSID (you'll see who's connecting to what).
 </div>
-
 
 <h3 id="customizing-the-prompt">Customizing the Prompt</h3>
 
@@ -1578,17 +1578,17 @@ ticker on
 
 <tr>
 <td><code>{g}</code></td>
-<td>Set text foreground color to red.</td>
+<td>Set text foreground color to green.</td>
 </tr>
 
 <tr>
 <td><code>{b}</code></td>
-<td>Set text foreground color to red.</td>
+<td>Set text foreground color to blue.</td>
 </tr>
 
 <tr>
 <td><code>{y}</code></td>
-<td>Set text foreground color to red.</td>
+<td>Set text foreground color to yellow.</td>
 </tr>
 
 <tr>
@@ -2403,20 +2403,20 @@ ticker on
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1559576463"></script>
-    <script src="/js/perfect-scrollbar.min.js?1559576463"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1559576463"></script>
-    <script src="/js/jquery.sticky.js?1559576463"></script>
-    <script src="/js/featherlight.min.js?1559576463"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1559576463"></script>
-    <script src="/js/highlight.pack.js?1559576463"></script>
+    <script src="/js/clipboard.min.js?1610146526"></script>
+    <script src="/js/perfect-scrollbar.min.js?1610146526"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1610146526"></script>
+    <script src="/js/jquery.sticky.js?1610146526"></script>
+    <script src="/js/featherlight.min.js?1610146526"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1610146526"></script>
+    <script src="/js/highlight.pack.js?1610146526"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1559576463"></script>
-    <script src="/js/learn.js?1559576463"></script>
-    <script src="/js/hugo-learn.js?1559576463"></script>
+    <script src="/js/modernizr.custom.71422.js?1610146526"></script>
+    <script src="/js/learn.js?1610146526"></script>
+    <script src="/js/hugo-learn.js?1610146526"></script>
 
-    <link href="/mermaid/mermaid.css?1559576463" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1559576463"></script>
+    <link href="/mermaid/mermaid.css?1610146526" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1610146526"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
