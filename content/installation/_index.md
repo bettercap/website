@@ -37,6 +37,7 @@ In order to compile bettercap from sources, make sure that:
 
 * You have a correctly configured **[Go >= 1.8](https://golang.org/doc/install)** environment.
 * `$GOPATH` is defined and `$GOPATH/bin` is in `$PATH`.
+* For hardware with limited resources (like Raspberry Pi Zero boards) you might want [to increase the swap size](https://www.bitpi.co/2015/02/11/how-to-change-raspberry-pis-swapfile-size-on-rasbian/).
 
 You'll also need to install the dependencies:
 
