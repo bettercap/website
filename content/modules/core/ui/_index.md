@@ -2,7 +2,7 @@
 title: "ui"
 date: 2019-03-27T12:39:51+01:00
 draft: false
-weight: 0
+weight: 6
 ---
 
 A module to manage bettercap's UI updates and installed version.

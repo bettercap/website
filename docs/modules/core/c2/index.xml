@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c2 on bettercap</title>
+    <link>https://bettercap.org/modules/core/c2/</link>
+    <description>Recent content in c2 on bettercap</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Apr 2020 11:57:21 +0100</lastBuildDate><atom:link href="https://bettercap.org/modules/core/c2/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

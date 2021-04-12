@@ -11,7 +11,7 @@ The WiFi modules use a WiFi interface supporting monitor mode and packet injecti
 - perform deauthentication attacks on connected client stations
 - perform [RSN PMKID based](https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/) clientless attacks on vulnerable access points 
 - *automatically sniff and save key material* either from complete WPA/WPA2 handshakes or PMKID packets.
-- send spoofed management beacons to create fake access points.
+- send spoofed management beacons to create fake access points or fake client probes.
 
 {{% notice note %}}
 The interface only needs to support monitor mode and packet injection, it'll be bettercap itself to switch it to the right mode, just make sure there aren't other processes using the same wifi interface.
@@ -52,6 +52,10 @@ Send an association request to the selected BSSID in order to [receive a RSN PMK
 #### `wifi.deauth BSSID` 
 
 Start a 802.11 deauth attack, if an access point BSSID is provided, every client will be deauthenticated, otherwise only the selected client (**use `all`, `*` or `ff:ff:ff:ff:ff:ff` to deauth everything**).
+
+#### `wifi.probe BSSID ESSID` 
+
+Send a fake client probe with the given station BSSID, searching for ESSID.
 
 #### `wifi.show` 
 

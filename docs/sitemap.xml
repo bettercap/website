@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -43,6 +43,10 @@
   </url>
   
   <url>
+    <loc>https://bettercap.org/usage/webui/</loc>
+  </url>
+  
+  <url>
     <loc>https://bettercap.org/modules/utils/gps/</loc>
     <lastmod>2019-02-25T13:33:04+01:00</lastmod>
   </url>
@@ -80,6 +84,15 @@
   <url>
     <loc>https://bettercap.org/modules/ble/</loc>
     <lastmod>2019-02-25T11:11:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bettercap.org/usage/interactive/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bettercap.org/usage/scripting/</loc>
+    <lastmod>2021-04-12T12:00:00+01:00</lastmod>
   </url>
   
   <url>
@@ -148,6 +161,11 @@
   </url>
   
   <url>
+    <loc>https://bettercap.org/modules/ethernet/spoofers/ndp.spoof/</loc>
+    <lastmod>2021-04-12T13:02:36+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bettercap.org/modules/ethernet/proxies/https.proxy/</loc>
     <lastmod>2019-02-25T13:22:47+01:00</lastmod>
   </url>
@@ -173,8 +191,18 @@
   </url>
   
   <url>
+    <loc>https://bettercap.org/modules/core/ui/</loc>
+    <lastmod>2019-03-27T12:39:51+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bettercap.org/modules/ethernet/spoofers/</loc>
     <lastmod>2019-02-25T12:57:36+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bettercap.org/modules/core/c2/</loc>
+    <lastmod>2020-04-12T11:57:21+01:00</lastmod>
   </url>
   
   <url>
@@ -193,12 +221,8 @@
   </url>
   
   <url>
-    <loc>https://bettercap.org/modules/core/ui/</loc>
-    <lastmod>2019-03-27T12:39:51+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bettercap.org/</loc>
+    <lastmod>2021-04-12T13:02:36+01:00</lastmod>
     <priority>0</priority>
   </url>
   

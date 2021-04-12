@@ -5,7 +5,7 @@ weight: 1
 draft: false
 ---
 
-bettercap is a powerful, easily extensible and portable framework written in Go which aims to offer to security researchers, red teamers and reverse engineers an **easy to use**, **all-in-one solution** with all the features they might possibly need for performing reconnaissance and attacking [WiFi](/modules/wifi/) networks, [Bluetooth Low Energy](/modules/ble/) devices, wireless [HID](/modules/hid/) devices and [Ethernet](/modules/ethernet) networks.
+bettercap is a powerful, easily extensible and portable framework written in Go which aims to offer to security researchers, red teamers and reverse engineers an **easy to use**, **all-in-one solution** with all the features they might possibly need for performing reconnaissance and attacking [WiFi](/modules/wifi/) networks, [Bluetooth Low Energy](/modules/ble/) devices, wireless [HID](/modules/hid/) devices and [IPv4/IPv6](/modules/ethernet) networks.
 
 ## Main Features
 
@@ -13,7 +13,7 @@ bettercap is a powerful, easily extensible and portable framework written in Go 
 * **Bluetooth Low Energy** devices scanning, characteristics enumeration, reading and writing.
 * 2.4Ghz wireless devices scanning and **MouseJacking** attacks with over-the-air HID frames injection (with DuckyScript support).
 * Passive and active IP network hosts probing and recon.
-* **ARP, DNS and DHCPv6 spoofers** for MITM attacks on IP based networks.
+* **ARP, DNS, DHCPv6 and NDP spoofers** for MITM attacks on IPv4 and IPv6 based networks.
 * **Proxies at packet level, TCP level and HTTP/HTTPS** application level fully scriptable with easy to implement **javascript plugins**.
 * A powerful **network sniffer** for **credentials harvesting** which can also be used as a **network protocol fuzzer**.
 * A very fast port scanner.
