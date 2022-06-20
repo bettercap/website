@@ -90,7 +90,7 @@ sudo apt install golang git build-essential libpcap-dev libusb-1.0-0-dev libnetf
 You can now proceed with the compilation:
 
 ```sh
-go get -u github.com/bettercap/bettercap
+go install github.com/bettercap/bettercap@latest
 ```
 
 Once the build process is concluded, the binary will be located in `go/bin/bettercap`.
