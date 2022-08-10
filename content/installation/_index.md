@@ -92,6 +92,19 @@ You can now proceed with the compilation:
 ```sh
 go get -u github.com/bettercap/bettercap
 ```
+^^^
+DOESN'T WORK IN KALI LINUX
+```
+go install github.com/bettercap/bettercap@latest
+```
+AND THEN RUN THESE COMMAND TO INSTALL THE BINARY FILE I GUESS
+```
+cd go/bin/ && sudo apt install bettercap
+```
+AND FINALLY YOU CAN DO THIS TO ENJOY THE FUNCTIONALITY
+```
+sudo bettercap
+```
 
 Once the build process is concluded, the binary will be located in `go/bin/bettercap`.
 
