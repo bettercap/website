@@ -67,7 +67,7 @@ Show WPS information about a given station (use `all`, `*` or `ff:ff:ff:ff:ff:ff
 
 #### `wifi.recon.channel CHANNEL` 
 
-Comma separated list of channels to hop on.
+Comma separated list of channels to hop on while wifi.recon is active.
 
 #### `wifi.recon.channel clear`
 
@@ -136,7 +136,7 @@ Sort by BSSID and filter for BSSIDs starting with `F4`:
 Only recon on channels 1, 2 and 3:
 
 ```
-> wifi.recon.channel 1,2,3; wifi.recon on
+> wifi.recon on; wifi.recon.channel 1,2,3
 ```
 
 Will send management beacons as the fake access point "Banana" with BSSID `DE:AD:BE:EF:DE:AD` on channel 5 without encryption:
