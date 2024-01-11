@@ -99,6 +99,6 @@ Once the build process is concluded, the binary will be located in `go/bin/bette
 #### Linux Deploy Method Fedora based (like Redhat, Centos)
 ```
 sudo dnf update
-sudo dnf install golang git make automake gcc gcc-c++ kernel-devel libpcap-devel libusb-devel libnetfilter_queue-devel
+sudo dnf install golang git make automake gcc gcc-c++ kernel-devel libpcap-devel libusb1-devel libnetfilter_queue-devel
 
 ```
