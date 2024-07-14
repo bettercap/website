@@ -4,8 +4,9 @@
     <title>wake on lan on bettercap</title>
     <link>https://bettercap.org/modules/ethernet/wol/</link>
     <description>Recent content in wake on lan on bettercap</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Feb 2019 12:55:00 +0100</lastBuildDate><atom:link href="https://bettercap.org/modules/ethernet/wol/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://bettercap.org/modules/ethernet/wol/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

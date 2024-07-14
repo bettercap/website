@@ -4,8 +4,9 @@
     <title>IPv4 / IPv6 on bettercap</title>
     <link>https://bettercap.org/modules/ethernet/</link>
     <description>Recent content in IPv4 / IPv6 on bettercap</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Feb 2019 11:10:07 +0100</lastBuildDate><atom:link href="https://bettercap.org/modules/ethernet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://bettercap.org/modules/ethernet/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

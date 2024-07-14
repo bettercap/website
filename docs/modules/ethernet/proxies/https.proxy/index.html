@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.128.2">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>https.proxy :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1618232426" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1618232426" rel="stylesheet">
-    <link href="/css/hybrid.css?1618232426" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618232426" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618232426" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618232426" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1618232426" rel="stylesheet">
-    <link href="/css/theme.css?1618232426" rel="stylesheet">
-    <link href="/css/tabs.css?1618232426" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1618232426" rel="stylesheet">
+    <link href="/css/nucleus.css?1720991455" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1720991455" rel="stylesheet">
+    <link href="/css/hybrid.css?1720991455" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1720991455" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1720991455" rel="stylesheet">
+    <link href="/css/auto-complete.css?1720991455" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1720991455" rel="stylesheet">
+    <link href="/css/theme.css?1720991455" rel="stylesheet">
+    <link href="/css/tabs.css?1720991455" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1720991455" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1618232426" rel="stylesheet">
+    <link href="/css/theme-green.css?1720991455" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1618232426"></script>
+    <script src="/js/jquery-3.3.1.min.js?1720991455"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -120,6 +120,11 @@ a.highlight span.copy-to-clipboard {
 </a>
 </center>
 
+<p align="center">
+  <a href="https://discord.gg/btZpkp45gQ" target="_blank" title="Join our community!">
+    <img src="https://dcbadge.limes.pink/api/server/https://discord.gg/btZpkp45gQ"/>
+  </a>
+</p>
     </div>
     
         <div class="searchbox">
@@ -128,14 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618232426"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618232426"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1720991455"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1720991455"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618232426"></script>
+<script type="text/javascript" src="/js/search.js?1720991455"></script>
 
     
   </div>
@@ -1110,7 +1115,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/ethernet/proxies/https.proxy/" title="https.proxy" class="dd-item
-        parent
+        
         active
         
         ">
@@ -1640,63 +1645,63 @@ a.highlight span.copy-to-clipboard {
 </table>
 <h3 id="modules">Modules</h3>
 <p>The <code>http.proxy</code> and <code>https.proxy</code> modules can be scripted using javascript files that must declare at least one of the following functions:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// called when the script is loaded
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onLoad</span>() {
-
-}
-
-<span style="color:#75715e">// called when the request is received by the proxy
-</span><span style="color:#75715e">// and before it is sent to the real server.
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onRequest</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
-
-}
-
-<span style="color:#75715e">// called when the request is sent to the real server
-</span><span style="color:#75715e">// and a response is received
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onResponse</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
-
-}
-
-<span style="color:#75715e">// called every time an unknown session command is typed,
-</span><span style="color:#75715e">// proxy modules can optionally handle custom commands this way:
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onCommand</span>(<span style="color:#a6e22e">cmd</span>) {
-    <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">cmd</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;test&#34;</span> ) {
-        <span style="color:#75715e">/*
-</span><span style="color:#75715e">         * Custom session command logic here.
-</span><span style="color:#75715e">         */</span>
-
-        <span style="color:#75715e">// tell the session we handled this command
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
-    }
-}
-</code></pre></div><p>Modules can change the <code>req</code> request and <code>res</code> response objects, for instance the <a href="https://github.com/bettercap/caplets/blob/master/web-override/web-override.cap">web-override.cap caplet</a> is using the <code>onRequest</code> function in order to override every request before it is executed with a fake response:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onRequest</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
-    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Status</span>      <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
-    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">ContentType</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;text/html&#34;</span>;
-    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Body</span>        <span style="color:#f92672">=</span> <span style="color:#a6e22e">readFile</span>(<span style="color:#e6db74">&#34;caplets/www/index.html&#34;</span>);
-    <span style="color:#a6e22e">headers</span>         <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Headers</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;\r\n&#34;</span>)
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">headers</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-        <span style="color:#a6e22e">header_name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headers</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/:.*/</span>, <span style="color:#e6db74">&#34;&#34;</span>)
-        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">RemoveHeader</span>(<span style="color:#a6e22e">header_name</span>);
-    }
-    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">SetHeader</span>(<span style="color:#e6db74">&#34;Connection&#34;</span>, <span style="color:#e6db74">&#34;close&#34;</span>);
-}
-</code></pre></div><p>The <a href="https://github.com/bettercap/caplets/blob/master/login-manager-abuse/login-man-abuse.cap">login-man-abuse.cap caplet</a> instead will use the <code>onResponse</code> handler to inject its malicious javascript file in every html response:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onResponse</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
-    <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">ContentType</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#39;text/html&#39;</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> ){
-        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">ReadBody</span>();
-        <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#39;&lt;/head&gt;&#39;</span>) <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> ) {
-            <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Body</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">replace</span>( 
-                <span style="color:#e6db74">&#39;&lt;/head&gt;&#39;</span>, 
-                <span style="color:#e6db74">&#39;&lt;script type=&#34;text/javascript&#34;&gt;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span> <span style="color:#f92672">+</span>
-                    <span style="color:#a6e22e">AbuserJavascript</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#39;&lt;/script&gt;&#39;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#39;&lt;/head&gt;&#39;</span>
-            ); 
-        }
-    }
-}
-</code></pre></div><h4 id="builtin-functions">Builtin Functions</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// called when the script is loaded
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onLoad</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// called when the request is received by the proxy
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// and before it is sent to the real server.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onRequest</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// called when the request is sent to the real server
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// and a response is received
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onResponse</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// called every time an unknown session command is typed,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// proxy modules can optionally handle custom commands this way:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onCommand</span>(<span style="color:#a6e22e">cmd</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">cmd</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;test&#34;</span> ) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">         * Custom session command logic here.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">         */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// tell the session we handled this command
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Modules can change the <code>req</code> request and <code>res</code> response objects, for instance the <a href="https://github.com/bettercap/caplets/blob/master/web-override/web-override.cap">web-override.cap caplet</a> is using the <code>onRequest</code> function in order to override every request before it is executed with a fake response:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onRequest</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Status</span>      <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">ContentType</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;text/html&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Body</span>        <span style="color:#f92672">=</span> <span style="color:#a6e22e">readFile</span>(<span style="color:#e6db74">&#34;caplets/www/index.html&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">headers</span>         <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Headers</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;\r\n&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">headers</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">header_name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headers</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/:.*/</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">RemoveHeader</span>(<span style="color:#a6e22e">header_name</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">SetHeader</span>(<span style="color:#e6db74">&#34;Connection&#34;</span>, <span style="color:#e6db74">&#34;close&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The <a href="https://github.com/bettercap/caplets/blob/master/login-manager-abuse/login-man-abuse.cap">login-man-abuse.cap caplet</a> instead will use the <code>onResponse</code> handler to inject its malicious javascript file in every html response:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onResponse</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">ContentType</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#39;text/html&#39;</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> ){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">ReadBody</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#39;&lt;/head&gt;&#39;</span>) <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> ) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Body</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">replace</span>( 
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;&lt;/head&gt;&#39;</span>, 
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;&lt;script type=&#34;text/javascript&#34;&gt;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">AbuserJavascript</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;&lt;/script&gt;&#39;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;&lt;/head&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>            ); 
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="builtin-functions">Builtin Functions</h4>
 <p>Modules can use the following builtin functions.</p>
 <table>
 <thead>
@@ -2564,19 +2569,19 @@ a.highlight span.copy-to-clipboard {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618232426"></script>
-    <script src="/js/jquery.sticky.js?1618232426"></script>
-    <script src="/js/featherlight.min.js?1618232426"></script>
-    <script src="/js/highlight.pack.js?1618232426"></script>
+    <script src="/js/clipboard.min.js?1720991455"></script>
+    <script src="/js/perfect-scrollbar.min.js?1720991455"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1720991455"></script>
+    <script src="/js/jquery.sticky.js?1720991455"></script>
+    <script src="/js/featherlight.min.js?1720991455"></script>
+    <script src="/js/highlight.pack.js?1720991455"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618232426"></script>
-    <script src="/js/learn.js?1618232426"></script>
-    <script src="/js/hugo-learn.js?1618232426"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1720991455"></script>
+    <script src="/js/learn.js?1720991455"></script>
+    <script src="/js/hugo-learn.js?1720991455"></script>
     
         
-            <script src="/mermaid/mermaid.js?1618232426"></script>
+            <script src="/mermaid/mermaid.js?1720991455"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

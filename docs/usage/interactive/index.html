@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.128.2">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>Interactive Session :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1618232426" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1618232426" rel="stylesheet">
-    <link href="/css/hybrid.css?1618232426" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618232426" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618232426" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618232426" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1618232426" rel="stylesheet">
-    <link href="/css/theme.css?1618232426" rel="stylesheet">
-    <link href="/css/tabs.css?1618232426" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1618232426" rel="stylesheet">
+    <link href="/css/nucleus.css?1720991456" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1720991456" rel="stylesheet">
+    <link href="/css/hybrid.css?1720991456" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1720991456" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1720991456" rel="stylesheet">
+    <link href="/css/auto-complete.css?1720991456" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1720991456" rel="stylesheet">
+    <link href="/css/theme.css?1720991456" rel="stylesheet">
+    <link href="/css/tabs.css?1720991456" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1720991456" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1618232426" rel="stylesheet">
+    <link href="/css/theme-green.css?1720991456" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1618232426"></script>
+    <script src="/js/jquery-3.3.1.min.js?1720991456"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -120,6 +120,11 @@ a.highlight span.copy-to-clipboard {
 </a>
 </center>
 
+<p align="center">
+  <a href="https://discord.gg/btZpkp45gQ" target="_blank" title="Join our community!">
+    <img src="https://dcbadge.limes.pink/api/server/https://discord.gg/btZpkp45gQ"/>
+  </a>
+</p>
     </div>
     
         <div class="searchbox">
@@ -128,14 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618232426"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618232426"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1720991456"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1720991456"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618232426"></script>
+<script type="text/javascript" src="/js/search.js?1720991456"></script>
 
     
   </div>
@@ -290,7 +295,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/usage/interactive/" title="Interactive Session" class="dd-item
-        parent
+        
         active
         
         ">
@@ -1748,13 +1753,13 @@ ticker on
 <p>And finally, you can access and use any variable that has been declared in the interactive session using the <code>{env.NAME-OF-THE-VAR}</code> operator, for instance, the default prompt is using <code>{env.iface.ipv4}</code> that is replaced by the <code>iface.ipv4</code> session variable contents ( you can check it using the <code>get iface.ipv4</code> command ).</p>
 <h3 id="examples">Examples</h3>
 <p>Set the <code>arp.spoof.targets</code> parameter and enable the <code>arp.spoof</code> module:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo bettercap -eval <span style="color:#e6db74">&#34;set arp.spoof.targets 192.168.1.20; arp.spoof on&#34;</span>
-</code></pre></div><p>To quickly get the help menu of a module and quit bettercap (basically like a <em>man</em> command), you can use the <code>-eval</code> argument, for example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo bettercap -eval <span style="color:#e6db74">&#34;help net.recon; q&#34;</span>
-</code></pre></div><p>Ask the user to fill the <code>arp.spoof.targets</code> parameter:</p>
-<pre><code>&gt; read arp.spoof.targets &quot;Select the target to spoof: &quot;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo bettercap -eval <span style="color:#e6db74">&#34;set arp.spoof.targets 192.168.1.20; arp.spoof on&#34;</span>
+</span></span></code></pre></div><p>To quickly get the help menu of a module and quit bettercap (basically like a <em>man</em> command), you can use the <code>-eval</code> argument, for example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo bettercap -eval <span style="color:#e6db74">&#34;help net.recon; q&#34;</span>
+</span></span></code></pre></div><p>Ask the user to fill the <code>arp.spoof.targets</code> parameter:</p>
+<pre tabindex="0"><code>&gt; read arp.spoof.targets &#34;Select the target to spoof: &#34;
 </code></pre><p>Set the alias <em>&ldquo;MY IPAD&rdquo;</em> to the device with MAC address <code>DE:AD:DE:AD:BE:EF</code>:</p>
-<pre><code>&gt; alias DE:AD:DE:AD:BE:EF MY IPAD
+<pre tabindex="0"><code>&gt; alias DE:AD:DE:AD:BE:EF MY IPAD
 </code></pre>
 
 
@@ -2543,19 +2548,19 @@ ticker on
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618232426"></script>
-    <script src="/js/jquery.sticky.js?1618232426"></script>
-    <script src="/js/featherlight.min.js?1618232426"></script>
-    <script src="/js/highlight.pack.js?1618232426"></script>
+    <script src="/js/clipboard.min.js?1720991456"></script>
+    <script src="/js/perfect-scrollbar.min.js?1720991456"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1720991456"></script>
+    <script src="/js/jquery.sticky.js?1720991456"></script>
+    <script src="/js/featherlight.min.js?1720991456"></script>
+    <script src="/js/highlight.pack.js?1720991456"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618232426"></script>
-    <script src="/js/learn.js?1618232426"></script>
-    <script src="/js/hugo-learn.js?1618232426"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1720991456"></script>
+    <script src="/js/learn.js?1720991456"></script>
+    <script src="/js/hugo-learn.js?1720991456"></script>
     
         
-            <script src="/mermaid/mermaid.js?1618232426"></script>
+            <script src="/mermaid/mermaid.js?1720991456"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

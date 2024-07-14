@@ -1,237 +1,142 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://bettercap.org/modules/utils/mac.changer/</loc>
     <lastmod>2019-02-25T13:33:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/servers/http.server/</loc>
     <lastmod>2019-02-25T13:25:15+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/proxies/any.proxy/</loc>
     <lastmod>2019-02-25T13:06:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/spoofers/arp.spoof/</loc>
     <lastmod>2019-02-25T13:00:32+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/net.recon/</loc>
     <lastmod>2019-02-25T12:50:16+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/core/events.stream/</loc>
     <lastmod>2019-02-25T11:46:40+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/core/</loc>
     <lastmod>2019-02-25T11:09:34+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/intro/</loc>
     <lastmod>2019-02-25T10:57:36+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/usage/webui/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/utils/gps/</loc>
     <lastmod>2019-02-25T13:33:04+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/servers/https.server/</loc>
     <lastmod>2019-02-25T13:25:21+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/proxies/packet.proxy/</loc>
     <lastmod>2019-02-25T13:15:51+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/spoofers/dns.spoof/</loc>
     <lastmod>2019-02-25T13:01:48+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/net.probe/</loc>
     <lastmod>2019-02-25T12:51:29+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/core/ticker/</loc>
     <lastmod>2019-02-25T11:57:21+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/contributing/</loc>
     <lastmod>2019-02-25T11:33:49+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ble/</loc>
     <lastmod>2019-02-25T11:11:23+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/usage/interactive/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/usage/scripting/</loc>
     <lastmod>2021-04-12T12:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/servers/mdns.server/</loc>
     <lastmod>2019-02-25T13:25:15+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/proxies/tcp.proxy/</loc>
     <lastmod>2019-02-25T13:18:06+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/spoofers/dhcp6.spoof/</loc>
     <lastmod>2019-02-25T13:02:36+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/net.sniff/</loc>
     <lastmod>2019-02-25T12:52:30+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/core/caplets/</loc>
     <lastmod>2019-02-25T12:39:57+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/wifi/</loc>
     <lastmod>2019-02-25T11:10:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/installation/</loc>
     <lastmod>2019-02-25T10:57:57+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/servers/mysql.server/</loc>
     <lastmod>2019-02-25T13:25:31+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/proxies/http.proxy/</loc>
     <lastmod>2019-02-25T13:17:05+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/syn.scan/</loc>
     <lastmod>2019-02-25T12:53:38+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/core/update/</loc>
     <lastmod>2019-02-25T12:39:51+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/hid/</loc>
     <lastmod>2019-02-25T11:10:28+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/usage/</loc>
     <lastmod>2019-02-25T10:58:28+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/spoofers/ndp.spoof/</loc>
     <lastmod>2021-04-12T13:02:36+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/proxies/https.proxy/</loc>
     <lastmod>2019-02-25T13:22:47+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/wol/</loc>
     <lastmod>2019-02-25T12:55:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/core/api.rest/</loc>
     <lastmod>2019-02-25T12:40:01+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/</loc>
     <lastmod>2019-02-25T11:10:07+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/</loc>
     <lastmod>2019-02-25T11:07:30+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/core/ui/</loc>
     <lastmod>2019-03-27T12:39:51+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/spoofers/</loc>
     <lastmod>2019-02-25T12:57:36+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/core/c2/</loc>
     <lastmod>2020-04-12T11:57:21+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/proxies/</loc>
     <lastmod>2019-02-25T13:03:38+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/ethernet/servers/</loc>
     <lastmod>2019-02-25T13:24:42+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/modules/utils/</loc>
     <lastmod>2019-02-25T11:37:35+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/</loc>
     <lastmod>2021-04-12T13:02:36+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://bettercap.org/tags/</loc>
   </url>
-  
 </urlset>

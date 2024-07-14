@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.128.2">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>Scripting :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1618232426" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1618232426" rel="stylesheet">
-    <link href="/css/hybrid.css?1618232426" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618232426" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618232426" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618232426" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1618232426" rel="stylesheet">
-    <link href="/css/theme.css?1618232426" rel="stylesheet">
-    <link href="/css/tabs.css?1618232426" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1618232426" rel="stylesheet">
+    <link href="/css/nucleus.css?1720991456" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1720991456" rel="stylesheet">
+    <link href="/css/hybrid.css?1720991456" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1720991456" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1720991456" rel="stylesheet">
+    <link href="/css/auto-complete.css?1720991456" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1720991456" rel="stylesheet">
+    <link href="/css/theme.css?1720991456" rel="stylesheet">
+    <link href="/css/tabs.css?1720991456" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1720991456" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1618232426" rel="stylesheet">
+    <link href="/css/theme-green.css?1720991456" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1618232426"></script>
+    <script src="/js/jquery-3.3.1.min.js?1720991456"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -120,6 +120,11 @@ a.highlight span.copy-to-clipboard {
 </a>
 </center>
 
+<p align="center">
+  <a href="https://discord.gg/btZpkp45gQ" target="_blank" title="Join our community!">
+    <img src="https://dcbadge.limes.pink/api/server/https://discord.gg/btZpkp45gQ"/>
+  </a>
+</p>
     </div>
     
         <div class="searchbox">
@@ -128,14 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618232426"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618232426"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1720991456"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1720991456"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618232426"></script>
+<script type="text/javascript" src="/js/search.js?1720991456"></script>
 
     
   </div>
@@ -316,7 +321,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/usage/scripting/" title="Scripting" class="dd-item
-        parent
+        
         active
         
         ">
@@ -1519,40 +1524,40 @@ a.highlight span.copy-to-clipboard {
 <pre><code>sudo bettercap -script /path/to/script.js
 </code></pre>
 <p>Once loaded the script can run session commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">run</span>(<span style="color:#e6db74">&#39;net.probe on&#39;</span>);
-</code></pre></div><p>or shell commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">run</span>(<span style="color:#e6db74">&#39;!touch /tmp/yo&#39;</span>);
-</code></pre></div><p>register for specific events:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">onEvent</span>(<span style="color:#e6db74">&#39;wifi.client.handshake&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>){
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">data</span>;
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gps</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">session</span>.<span style="color:#a6e22e">GPS</span>; <span style="color:#75715e">// session is a global object with all the session data
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">what</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;handshake&#39;</span>;
-
-    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">pmkid</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
-        <span style="color:#a6e22e">what</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;RSN PMKID&#34;</span>;
-    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">full</span>) {
-        <span style="color:#a6e22e">what</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34; (full)&#34;</span>;
-    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">half</span>) {
-        <span style="color:#a6e22e">what</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34; (half)&#34;</span>;
-    }
-
-    <span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;💰 Captured &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">what</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;:&#39;</span>);
-    <span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39; station: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">station</span>);
-    <span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39; ap: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">ap</span>);
-    <span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39; lat:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">gps</span>.<span style="color:#a6e22e">Latitude</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; lon:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">gps</span>.<span style="color:#a6e22e">Longitude</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; updated_at:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">gps</span>.<span style="color:#a6e22e">Updated</span>.String());
-});
-</code></pre></div><p>register for any event:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">onEvent</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>){
-    <span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">tag</span>);
-});
-</code></pre></div><p>perform HTTP queries:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">resp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">url</span>, {});
-<span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">resp</span>.Error ) {
-    <span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">resp</span>.Error.Error());
-} <span style="color:#66d9ef">else</span> {
-    <span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">something</span>);
-}
-</code></pre></div><p>and a variety of other tasks depending on your imagination :D Check the <a href="http://github.com/bettercap/scripts">scripts repository</a> for some example scripts.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">run</span>(<span style="color:#e6db74">&#39;net.probe on&#39;</span>);
+</span></span></code></pre></div><p>or shell commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">run</span>(<span style="color:#e6db74">&#39;!touch /tmp/yo&#39;</span>);
+</span></span></code></pre></div><p>register for specific events:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">onEvent</span>(<span style="color:#e6db74">&#39;wifi.client.handshake&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">data</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gps</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">session</span>.<span style="color:#a6e22e">GPS</span>; <span style="color:#75715e">// session is a global object with all the session data
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">what</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;handshake&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">pmkid</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">what</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;RSN PMKID&#34;</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">full</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">what</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34; (full)&#34;</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">half</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">what</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34; (half)&#34;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;💰 Captured &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">what</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;:&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39; station: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">station</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39; ap: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">ap</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39; lat:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">gps</span>.<span style="color:#a6e22e">Latitude</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; lon:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">gps</span>.<span style="color:#a6e22e">Longitude</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; updated_at:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">gps</span>.<span style="color:#a6e22e">Updated</span>.String());
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>register for any event:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">onEvent</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">tag</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>perform HTTP queries:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">resp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">url</span>, {});
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">resp</span>.Error ) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">resp</span>.Error.Error());
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">something</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>and a variety of other tasks depending on your imagination :D Check the <a href="http://github.com/bettercap/scripts">scripts repository</a> for some example scripts.</p>
 
 
 
@@ -2341,19 +2346,19 @@ a.highlight span.copy-to-clipboard {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618232426"></script>
-    <script src="/js/jquery.sticky.js?1618232426"></script>
-    <script src="/js/featherlight.min.js?1618232426"></script>
-    <script src="/js/highlight.pack.js?1618232426"></script>
+    <script src="/js/clipboard.min.js?1720991456"></script>
+    <script src="/js/perfect-scrollbar.min.js?1720991456"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1720991456"></script>
+    <script src="/js/jquery.sticky.js?1720991456"></script>
+    <script src="/js/featherlight.min.js?1720991456"></script>
+    <script src="/js/highlight.pack.js?1720991456"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618232426"></script>
-    <script src="/js/learn.js?1618232426"></script>
-    <script src="/js/hugo-learn.js?1618232426"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1720991456"></script>
+    <script src="/js/learn.js?1720991456"></script>
+    <script src="/js/hugo-learn.js?1720991456"></script>
     
         
-            <script src="/mermaid/mermaid.js?1618232426"></script>
+            <script src="/mermaid/mermaid.js?1720991456"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

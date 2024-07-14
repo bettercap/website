@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.128.2">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>Web UI :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1618232426" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1618232426" rel="stylesheet">
-    <link href="/css/hybrid.css?1618232426" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618232426" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618232426" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618232426" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1618232426" rel="stylesheet">
-    <link href="/css/theme.css?1618232426" rel="stylesheet">
-    <link href="/css/tabs.css?1618232426" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1618232426" rel="stylesheet">
+    <link href="/css/nucleus.css?1720991456" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1720991456" rel="stylesheet">
+    <link href="/css/hybrid.css?1720991456" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1720991456" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1720991456" rel="stylesheet">
+    <link href="/css/auto-complete.css?1720991456" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1720991456" rel="stylesheet">
+    <link href="/css/theme.css?1720991456" rel="stylesheet">
+    <link href="/css/tabs.css?1720991456" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1720991456" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1618232426" rel="stylesheet">
+    <link href="/css/theme-green.css?1720991456" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1618232426"></script>
+    <script src="/js/jquery-3.3.1.min.js?1720991456"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -120,6 +120,11 @@ a.highlight span.copy-to-clipboard {
 </a>
 </center>
 
+<p align="center">
+  <a href="https://discord.gg/btZpkp45gQ" target="_blank" title="Join our community!">
+    <img src="https://dcbadge.limes.pink/api/server/https://discord.gg/btZpkp45gQ"/>
+  </a>
+</p>
     </div>
     
         <div class="searchbox">
@@ -128,14 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618232426"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618232426"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1720991456"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1720991456"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618232426"></script>
+<script type="text/javascript" src="/js/search.js?1720991456"></script>
 
     
   </div>
@@ -264,7 +269,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/usage/webui/" title="Web UI" class="dd-item
-        parent
+        
         active
         
         ">
@@ -1524,8 +1529,8 @@ a.highlight span.copy-to-clipboard {
 
 	<p><img src="https://raw.githubusercontent.com/bettercap/media/master/ui-events.png" alt="UI"></p>
 <p>The easiest way to start playing with bettercap is using its official <a href="https://github.com/bettercap/ui">web user interface</a>, in order to install it make sure you have the <a href="https://github.com/bettercap/bettercap/releases">latest version of bettercap</a>, then:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo bettercap -eval <span style="color:#e6db74">&#34;caplets.update; ui.update; q&#34;</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo bettercap -eval <span style="color:#e6db74">&#34;caplets.update; ui.update; q&#34;</span>
+</span></span></code></pre></div>
 <div class="notices warning" ><p>Only run <code>caplets.update</code> the first time as every time the entire system caplets folder is replaced with the downloaded contents from github, overwriting your changes, such as the credentials, with default values. You can either backup your changes and restore them later in the system folder, or simply copy the changed caplet files in bettercap&rsquo;s working directory, in which case they&rsquo;ll be loaded before the ones installed system wide.</p>
 </div>
 
@@ -1533,13 +1538,13 @@ a.highlight span.copy-to-clipboard {
 <h4 id="local-ui">Local UI</h4>
 <p>If you want both bettercap and the web ui running on your computer, you&rsquo;ll want to use the <code>http-ui</code> caplet which will start the <code>api.rest</code> and <code>http.server</code> modules on <code>127.0.0.1</code>.</p>
 <p>Edit the default credentials in <code>/usr/local/share/bettercap/caplets/http-ui.cap</code> and then start the ui with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo bettercap -caplet http-ui
-</code></pre></div><p>Open your browser to <code>http://127.0.0.1/</code> and login using the credentials you configured in the previous step.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo bettercap -caplet http-ui
+</span></span></code></pre></div><p>Open your browser to <code>http://127.0.0.1/</code> and login using the credentials you configured in the previous step.</p>
 <h4 id="remote-ui">Remote UI</h4>
 <p>If instead you&rsquo;re running bettercap on another host, say on a RaspberryPI or another machine with a different IP address, you want to use the <code>https-ui</code> caplet in order for the connection to the UI and the api to be protected by TLS. The caplet will bind the modules on <code>0.0.0.0</code> and generate a self signed certificate you can then allow in your browser.</p>
 <p>Edit the default credentials in <code>/usr/local/share/bettercap/caplets/https-ui.cap</code> and then start the ui with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo bettercap -caplet https-ui
-</code></pre></div><p>Open your browser to <code>https://&lt;ip of the machine&gt;/</code> and login using the credentials you configured in the previous step.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo bettercap -caplet https-ui
+</span></span></code></pre></div><p>Open your browser to <code>https://&lt;ip of the machine&gt;/</code> and login using the credentials you configured in the previous step.</p>
 
 
 
@@ -2325,19 +2330,19 @@ a.highlight span.copy-to-clipboard {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618232426"></script>
-    <script src="/js/jquery.sticky.js?1618232426"></script>
-    <script src="/js/featherlight.min.js?1618232426"></script>
-    <script src="/js/highlight.pack.js?1618232426"></script>
+    <script src="/js/clipboard.min.js?1720991456"></script>
+    <script src="/js/perfect-scrollbar.min.js?1720991456"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1720991456"></script>
+    <script src="/js/jquery.sticky.js?1720991456"></script>
+    <script src="/js/featherlight.min.js?1720991456"></script>
+    <script src="/js/highlight.pack.js?1720991456"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618232426"></script>
-    <script src="/js/learn.js?1618232426"></script>
-    <script src="/js/hugo-learn.js?1618232426"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1720991456"></script>
+    <script src="/js/learn.js?1720991456"></script>
+    <script src="/js/hugo-learn.js?1720991456"></script>
     
         
-            <script src="/mermaid/mermaid.js?1618232426"></script>
+            <script src="/mermaid/mermaid.js?1720991456"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -4,8 +4,9 @@
     <title>events.stream on bettercap</title>
     <link>https://bettercap.org/modules/core/events.stream/</link>
     <description>Recent content in events.stream on bettercap</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Feb 2019 11:46:40 +0100</lastBuildDate><atom:link href="https://bettercap.org/modules/core/events.stream/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://bettercap.org/modules/core/events.stream/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

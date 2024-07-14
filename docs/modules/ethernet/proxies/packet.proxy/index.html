@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.128.2">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>packet.proxy :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1618232426" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1618232426" rel="stylesheet">
-    <link href="/css/hybrid.css?1618232426" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618232426" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618232426" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618232426" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1618232426" rel="stylesheet">
-    <link href="/css/theme.css?1618232426" rel="stylesheet">
-    <link href="/css/tabs.css?1618232426" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1618232426" rel="stylesheet">
+    <link href="/css/nucleus.css?1720991455" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1720991455" rel="stylesheet">
+    <link href="/css/hybrid.css?1720991455" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1720991455" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1720991455" rel="stylesheet">
+    <link href="/css/auto-complete.css?1720991455" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1720991455" rel="stylesheet">
+    <link href="/css/theme.css?1720991455" rel="stylesheet">
+    <link href="/css/tabs.css?1720991455" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1720991455" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1618232426" rel="stylesheet">
+    <link href="/css/theme-green.css?1720991455" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1618232426"></script>
+    <script src="/js/jquery-3.3.1.min.js?1720991455"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -120,6 +120,11 @@ a.highlight span.copy-to-clipboard {
 </a>
 </center>
 
+<p align="center">
+  <a href="https://discord.gg/btZpkp45gQ" target="_blank" title="Join our community!">
+    <img src="https://dcbadge.limes.pink/api/server/https://discord.gg/btZpkp45gQ"/>
+  </a>
+</p>
     </div>
     
         <div class="searchbox">
@@ -128,14 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618232426"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618232426"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1720991455"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1720991455"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618232426"></script>
+<script type="text/javascript" src="/js/search.js?1720991455"></script>
 
     
   </div>
@@ -1032,7 +1037,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/ethernet/proxies/packet.proxy/" title="packet.proxy" class="dd-item
-        parent
+        
         active
         
         ">
@@ -1580,39 +1585,39 @@ a.highlight span.copy-to-clipboard {
 </table>
 <h3 id="plugins">Plugins</h3>
 <p>Instead of using Javascript extensions like the HTTP and HTTPS proxies, this module requires the plugins to be natively written in Go in order to avoid adding too much overhead for each incoming packet. The <code>packet.proxy.plugin</code> parameter is mandatory and needs to be filled with the path of a shared object <a href="https://golang.org/pkg/plugin/">built as a Go plugin</a> and exporting an <code>OnPacket</code> callback like the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;github.com/bettercap/bettercap/log&#34;</span>
-
-	<span style="color:#e6db74">&#34;github.com/chifflier/nfqueue-go/nfqueue&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">OnPacket</span>(<span style="color:#a6e22e">payload</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">nfqueue</span>.<span style="color:#a6e22e">Payload</span>) <span style="color:#66d9ef">int</span> {
-	<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Info</span>(<span style="color:#e6db74">&#34;We got a packet: %v&#34;</span>, <span style="color:#a6e22e">payload</span>)
-        <span style="color:#75715e">// this will accept the packet, use NF_DROP to 
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// drop the packet instead.
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">payload</span>.<span style="color:#a6e22e">SetVerdict</span>(<span style="color:#a6e22e">nfqueue</span>.<span style="color:#a6e22e">NF_ACCEPT</span>)
-	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
-}
-</code></pre></div><p>A more complex example using the <code>gopacket</code> library to parse and dump all the layers of the packet:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;github.com/bettercap/bettercap/log&#34;</span>
-
-	<span style="color:#e6db74">&#34;github.com/chifflier/nfqueue-go/nfqueue&#34;</span>
-	<span style="color:#e6db74">&#34;github.com/google/gopacket&#34;</span>
-	<span style="color:#e6db74">&#34;github.com/google/gopacket/layers&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">OnPacket</span>(<span style="color:#a6e22e">payload</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">nfqueue</span>.<span style="color:#a6e22e">Payload</span>) <span style="color:#66d9ef">int</span> {
-	<span style="color:#a6e22e">packet</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gopacket</span>.<span style="color:#a6e22e">NewPacket</span>(<span style="color:#a6e22e">payload</span>.<span style="color:#a6e22e">Data</span>, <span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">LayerTypeIPv4</span>, <span style="color:#a6e22e">gopacket</span>.<span style="color:#a6e22e">Default</span>)
-	<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Info</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#a6e22e">packet</span>.<span style="color:#a6e22e">Dump</span>())
-	<span style="color:#a6e22e">payload</span>.<span style="color:#a6e22e">SetVerdict</span>(<span style="color:#a6e22e">nfqueue</span>.<span style="color:#a6e22e">NF_ACCEPT</span>)
-	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
-}
-</code></pre></div><p>This <code>test.go</code> file can be compiled like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;github.com/bettercap/bettercap/log&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;github.com/chifflier/nfqueue-go/nfqueue&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">OnPacket</span>(<span style="color:#a6e22e">payload</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">nfqueue</span>.<span style="color:#a6e22e">Payload</span>) <span style="color:#66d9ef">int</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Info</span>(<span style="color:#e6db74">&#34;We got a packet: %v&#34;</span>, <span style="color:#a6e22e">payload</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// this will accept the packet, use NF_DROP to 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// drop the packet instead.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">payload</span>.<span style="color:#a6e22e">SetVerdict</span>(<span style="color:#a6e22e">nfqueue</span>.<span style="color:#a6e22e">NF_ACCEPT</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>A more complex example using the <code>gopacket</code> library to parse and dump all the layers of the packet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;github.com/bettercap/bettercap/log&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;github.com/chifflier/nfqueue-go/nfqueue&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;github.com/google/gopacket&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;github.com/google/gopacket/layers&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">OnPacket</span>(<span style="color:#a6e22e">payload</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">nfqueue</span>.<span style="color:#a6e22e">Payload</span>) <span style="color:#66d9ef">int</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">packet</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gopacket</span>.<span style="color:#a6e22e">NewPacket</span>(<span style="color:#a6e22e">payload</span>.<span style="color:#a6e22e">Data</span>, <span style="color:#a6e22e">layers</span>.<span style="color:#a6e22e">LayerTypeIPv4</span>, <span style="color:#a6e22e">gopacket</span>.<span style="color:#a6e22e">Default</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Info</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#a6e22e">packet</span>.<span style="color:#a6e22e">Dump</span>())
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">payload</span>.<span style="color:#a6e22e">SetVerdict</span>(<span style="color:#a6e22e">nfqueue</span>.<span style="color:#a6e22e">NF_ACCEPT</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This <code>test.go</code> file can be compiled like so:</p>
 <pre><code>go build -buildmode=plugin test.go
 </code></pre>
 <p>Once the <code>test.so</code> file is generated, it can be used for the <code>packet.proxy.plugin</code> parameter.</p>
@@ -2416,19 +2421,19 @@ a.highlight span.copy-to-clipboard {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618232426"></script>
-    <script src="/js/jquery.sticky.js?1618232426"></script>
-    <script src="/js/featherlight.min.js?1618232426"></script>
-    <script src="/js/highlight.pack.js?1618232426"></script>
+    <script src="/js/clipboard.min.js?1720991455"></script>
+    <script src="/js/perfect-scrollbar.min.js?1720991455"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1720991455"></script>
+    <script src="/js/jquery.sticky.js?1720991455"></script>
+    <script src="/js/featherlight.min.js?1720991455"></script>
+    <script src="/js/highlight.pack.js?1720991455"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618232426"></script>
-    <script src="/js/learn.js?1618232426"></script>
-    <script src="/js/hugo-learn.js?1618232426"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1720991455"></script>
+    <script src="/js/learn.js?1720991455"></script>
+    <script src="/js/hugo-learn.js?1720991455"></script>
     
         
-            <script src="/mermaid/mermaid.js?1618232426"></script>
+            <script src="/mermaid/mermaid.js?1720991455"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

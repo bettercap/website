@@ -4,7 +4,8 @@
     <title>Tags on bettercap</title>
     <link>https://bettercap.org/tags/</link>
     <description>Recent content in Tags on bettercap</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://bettercap.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://bettercap.org/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

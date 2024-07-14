@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.128.2">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>Installation :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1618232426" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1618232426" rel="stylesheet">
-    <link href="/css/hybrid.css?1618232426" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618232426" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618232426" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618232426" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1618232426" rel="stylesheet">
-    <link href="/css/theme.css?1618232426" rel="stylesheet">
-    <link href="/css/tabs.css?1618232426" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1618232426" rel="stylesheet">
+    <link href="/css/nucleus.css?1720991455" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1720991455" rel="stylesheet">
+    <link href="/css/hybrid.css?1720991455" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1720991455" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1720991455" rel="stylesheet">
+    <link href="/css/auto-complete.css?1720991455" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1720991455" rel="stylesheet">
+    <link href="/css/theme.css?1720991455" rel="stylesheet">
+    <link href="/css/tabs.css?1720991455" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1720991455" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1618232426" rel="stylesheet">
+    <link href="/css/theme-green.css?1720991455" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1618232426"></script>
+    <script src="/js/jquery-3.3.1.min.js?1720991455"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -120,6 +120,11 @@ a.highlight span.copy-to-clipboard {
 </a>
 </center>
 
+<p align="center">
+  <a href="https://discord.gg/btZpkp45gQ" target="_blank" title="Join our community!">
+    <img src="https://dcbadge.limes.pink/api/server/https://discord.gg/btZpkp45gQ"/>
+  </a>
+</p>
     </div>
     
         <div class="searchbox">
@@ -128,14 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618232426"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618232426"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1720991455"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1720991455"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618232426"></script>
+<script type="text/javascript" src="/js/search.js?1720991455"></script>
 
     
   </div>
@@ -211,7 +216,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/installation/" title="Installation" class="dd-item
-        parent
+        
         active
         
         ">
@@ -1564,25 +1569,23 @@ sudo make install
 </div>
 
 <p>Install <a href="https://termux.com/">Termux</a> and from its prompt type:</p>
-<pre><code>pkg install root-repo
+<pre tabindex="0"><code>pkg install root-repo
 pkg install golang git libpcap libusb
 </code></pre><p>There&rsquo;s a <a href="https://github.com/bettercap/bettercap/issues/486">golang bug</a> in termux about some hardcoded path, the fix is ugly but it works:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo su
-mount -o rw,remount /
-mkdir -p /home/builder/.termux-build/_cache/18-arm-21-v2/bin/
-ln -s <span style="color:#e6db74">`</span>which pkg-config<span style="color:#e6db74">`</span> /home/builder/.termux-build/_cache/18-arm-21-v2/bin/arm-linux-androideabi-pkg-config
-</code></pre></div><h4 id="linux-deploy-method-debian-based-like-ubuntu">Linux Deploy Method Debian based (like Ubuntu)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo su
+</span></span><span style="display:flex;"><span>mount -o rw,remount /
+</span></span><span style="display:flex;"><span>mkdir -p /home/builder/.termux-build/_cache/18-arm-21-v2/bin/
+</span></span><span style="display:flex;"><span>ln -s <span style="color:#e6db74">`</span>which pkg-config<span style="color:#e6db74">`</span> /home/builder/.termux-build/_cache/18-arm-21-v2/bin/arm-linux-androideabi-pkg-config
+</span></span></code></pre></div><h4 id="linux-deploy-method-debian-based-like-ubuntu">Linux Deploy Method Debian based (like Ubuntu)</h4>
 <p>Install <a href="https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy">Linux Deploy</a>, <a href="https://play.google.com/store/apps/details?id=com.sonelli.juicessh">JuiceSSH</a>, in Linux Deploy install kalilinux_arm (u need the <a href="https://www.google.cl/search?q=piggy+helper+apk">piggy helper</a> and enable the SSH) and type:</p>
-<pre><code>sudo apt update
+<pre tabindex="0"><code>sudo apt update
 sudo apt install golang git build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
-
 </code></pre><p>You can now proceed with the compilation:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go get -u github.com/bettercap/bettercap
-</code></pre></div><p>Once the build process is concluded, the binary will be located in <code>go/bin/bettercap</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>go get -u github.com/bettercap/bettercap
+</span></span></code></pre></div><p>Once the build process is concluded, the binary will be located in <code>go/bin/bettercap</code>.</p>
 <h4 id="linux-deploy-method-fedora-based-like-redhat-centos">Linux Deploy Method Fedora based (like Redhat, Centos)</h4>
-<pre><code>sudo dnf update
+<pre tabindex="0"><code>sudo dnf update
 sudo dnf install golang git make automake gcc gcc-c++ kernel-devel libpcap-devel libusb-devel libnetfilter_queue-devel
-
 </code></pre>
 
 
@@ -2367,19 +2370,19 @@ sudo dnf install golang git make automake gcc gcc-c++ kernel-devel libpcap-devel
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618232426"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618232426"></script>
-    <script src="/js/jquery.sticky.js?1618232426"></script>
-    <script src="/js/featherlight.min.js?1618232426"></script>
-    <script src="/js/highlight.pack.js?1618232426"></script>
+    <script src="/js/clipboard.min.js?1720991455"></script>
+    <script src="/js/perfect-scrollbar.min.js?1720991455"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1720991455"></script>
+    <script src="/js/jquery.sticky.js?1720991455"></script>
+    <script src="/js/featherlight.min.js?1720991455"></script>
+    <script src="/js/highlight.pack.js?1720991455"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618232426"></script>
-    <script src="/js/learn.js?1618232426"></script>
-    <script src="/js/hugo-learn.js?1618232426"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1720991455"></script>
+    <script src="/js/learn.js?1720991455"></script>
+    <script src="/js/hugo-learn.js?1720991455"></script>
     
         
-            <script src="/mermaid/mermaid.js?1618232426"></script>
+            <script src="/mermaid/mermaid.js?1720991455"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

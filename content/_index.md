@@ -9,6 +9,12 @@ The Swiss Army knife for [WiFi](/modules/wifi/), [Bluetooth Low Energy](/modules
 
 Read the [project introduction](/intro/) to get an idea of what bettercap can do for you, [install](/installation/) it, [RTFM](/usage/) and start **hacking all the things!!!**
 
+<p align="center">
+  <a href="https://discord.gg/btZpkp45gQ" target="_blank" title="Join our community!">
+    <img src="https://dcbadge.limes.pink/api/server/https://discord.gg/btZpkp45gQ"/>
+  </a>
+</p>
+
 <img src="https://raw.githubusercontent.com/bettercap/media/master/ui-events.png"/>
 
 <a href="https://twitter.com/bettercap?ref_src=twsrc%5Etfw" class="nav-link twitter-follow-button" data-show-count="true">
