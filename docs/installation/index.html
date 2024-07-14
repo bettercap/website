@@ -12,22 +12,22 @@
     <title>Installation :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1720991455" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1720991455" rel="stylesheet">
-    <link href="/css/hybrid.css?1720991455" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1720991455" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1720991455" rel="stylesheet">
-    <link href="/css/auto-complete.css?1720991455" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1720991455" rel="stylesheet">
-    <link href="/css/theme.css?1720991455" rel="stylesheet">
-    <link href="/css/tabs.css?1720991455" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1720991455" rel="stylesheet">
+    <link href="/css/nucleus.css?1721000728" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1721000728" rel="stylesheet">
+    <link href="/css/hybrid.css?1721000728" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1721000728" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1721000728" rel="stylesheet">
+    <link href="/css/auto-complete.css?1721000728" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1721000728" rel="stylesheet">
+    <link href="/css/theme.css?1721000728" rel="stylesheet">
+    <link href="/css/tabs.css?1721000728" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1721000728" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1720991455" rel="stylesheet">
+    <link href="/css/theme-green.css?1721000728" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1720991455"></script>
+    <script src="/js/jquery-3.3.1.min.js?1721000728"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -133,14 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1720991455"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1720991455"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1721000728"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1721000728"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1720991455"></script>
+<script type="text/javascript" src="/js/search.js?1721000728"></script>
 
     
   </div>
@@ -1491,7 +1491,8 @@ a.highlight span.copy-to-clipboard {
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#precompiled-binaries">Precompiled Binaries</a></li>
+    <li><a href="#dependencies">Dependencies</a></li>
+    <li><a href="#installing-via-go">Installing via Go</a></li>
     <li><a href="#using-docker">Using Docker</a></li>
     <li><a href="#compiling-from-sources">Compiling from Sources</a>
       <ul>
@@ -1524,13 +1525,16 @@ a.highlight span.copy-to-clipboard {
 
 
 	<p><strong>bettercap supports GNU/Linux, BSD, Android, Apple macOS and the Microsoft Windows</strong> operating systems - depending if you want to install the latest stable release or the bleeding edge from the <a href="https://github.com/bettercap/bettercap">GitHub repository</a>, you have several choices.</p>
-<h2 id="precompiled-binaries">Precompiled Binaries</h2>
-<p>For every new release, we distribute bettercap&rsquo;s <a href="https://github.com/bettercap/bettercap/releases">precompiled binaries</a>. In order to be able to use them, you&rsquo;ll need the following dependencies on your system:</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>In order to be able to use bettercap, you&rsquo;ll need the following dependencies on your system:</p>
 <ul>
 <li>libpcap</li>
 <li>libusb-1.0-0 (required by the <a href="/modules/hid/">HID module</a>)</li>
 <li>libnetfilter-queue (on Linux only, required by the <a href="/modules/ethernet/proxies/packet.proxy/">packet.proxy module</a>)</li>
 </ul>
+<h2 id="installing-via-go">Installing via Go</h2>
+<pre><code>go install github.com/bettercap/bettercap@latest 
+</code></pre>
 <h2 id="using-docker">Using Docker</h2>
 <p>BetterCAP is containerized using <a href="https://alpinelinux.org/">Alpine Linux</a> -  a security-oriented, lightweight Linux distribution based on musl libc and busybox. The resulting Docker image is relatively small and easy to manage the dependencies. Since it is using a multi-stage build, <strong>a Docker version greater than 17.05 is required</strong>.</p>
 <p>To pull latest stable version of the image:</p>
@@ -2370,19 +2374,19 @@ sudo dnf install golang git make automake gcc gcc-c++ kernel-devel libpcap-devel
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1720991455"></script>
-    <script src="/js/perfect-scrollbar.min.js?1720991455"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1720991455"></script>
-    <script src="/js/jquery.sticky.js?1720991455"></script>
-    <script src="/js/featherlight.min.js?1720991455"></script>
-    <script src="/js/highlight.pack.js?1720991455"></script>
+    <script src="/js/clipboard.min.js?1721000729"></script>
+    <script src="/js/perfect-scrollbar.min.js?1721000729"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1721000729"></script>
+    <script src="/js/jquery.sticky.js?1721000729"></script>
+    <script src="/js/featherlight.min.js?1721000729"></script>
+    <script src="/js/highlight.pack.js?1721000729"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1720991455"></script>
-    <script src="/js/learn.js?1720991455"></script>
-    <script src="/js/hugo-learn.js?1720991455"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1721000729"></script>
+    <script src="/js/learn.js?1721000729"></script>
+    <script src="/js/hugo-learn.js?1721000729"></script>
     
         
-            <script src="/mermaid/mermaid.js?1720991455"></script>
+            <script src="/mermaid/mermaid.js?1721000729"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
