@@ -256,7 +256,7 @@
 	"title": "IPv4 / IPv6",
 	"tags": [],
 	"description": "",
-	"content": "These modules offer reconnaissance, active probing (mDNS, NBNS, UPnP and WSD) of hosts, sniffing / credentials harvesting, port scanning, spoofing (MITM) and a few basic servers for IPv4 and IPv6 based networks:\nnet.recon net.probe net.sniff - net.fuzz arp.spoof dns.spoof dhcp6.spoof ndp.spoof (IPv6) syn.scan wake on lan Spoofers arp.spoof dns.spoof dhcp6.spoof ndp.spoof (IPv6) Proxies any.proxy packet.proxy tcp.proxy http.proxy https.proxy Servers http.server https.server mdns.server mysql.server (rogue) "
+	"content": "These modules offer reconnaissance, active probing (mDNS, NBNS, UPnP and WSD) of hosts, sniffing / credentials harvesting, port scanning, spoofing (MITM) and a few basic servers for IPv4 and IPv6 based networks:\nnet.recon net.probe net.sniff - net.fuzz syn.scan wake on lan Spoofers arp.spoof dns.spoof dhcp6.spoof ndp.spoof (IPv6) Proxies any.proxy packet.proxy tcp.proxy http.proxy https.proxy Servers http.server https.server mdns.server mysql.server (rogue) "
 },
 {
 	"uri": "https://bettercap.org/modules/",
