@@ -11,6 +11,7 @@ weight: 3
 
 In order to be able to use bettercap, you'll need the following dependencies on your system:
 
+* pkg-config
 * libpcap
 * libusb-1.0-0 (required by the [HID module](/modules/hid/))
 * libnetfilter-queue (on Linux only, required by the [packet.proxy module](/modules/ethernet/proxies/packet.proxy/))
