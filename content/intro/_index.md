@@ -5,7 +5,7 @@ weight: 1
 draft: false
 ---
 
-bettercap is a powerful, easily extensible and portable framework written in Go which aims to offer to security researchers, red teamers and reverse engineers an **easy to use**, **all-in-one solution** with all the features they might possibly need for performing reconnaissance and attacking [WiFi](/modules/wifi/) networks, [Bluetooth Low Energy](/modules/ble/) devices, wireless [HID](/modules/hid/) devices and [IPv4/IPv6](/modules/ethernet) networks.
+bettercap is a powerful, easily extensible and portable framework written in Go which aims to offer to security researchers, red teamers and reverse engineers an **easy to use**, **all-in-one solution** with all the features they might possibly need for performing reconnaissance and attacking [WiFi](/modules/wifi/) networks, [Bluetooth Low Energy](/modules/ble/) devices, wireless [HID](/modules/hid/) devices, [CAN-bus](/modules/canbus/) and [IPv4/IPv6](/modules/ethernet) networks.
 
 ## Main Features
 
@@ -17,6 +17,7 @@ bettercap is a powerful, easily extensible and portable framework written in Go 
 * **Proxies at packet level, TCP level and HTTP/HTTPS** application level fully scriptable with easy to implement **javascript plugins**.
 * A powerful **network sniffer** for **credentials harvesting** which can also be used as a **network protocol fuzzer**.
 * A very fast port scanner.
+* CAN-bus support for reading, injecting, **fuzzing**, loading custom DBC and builtin OBD2 PIDs parser.
 * A powerful [REST API](/modules/core/api.rest/) with support for asynchronous events notification on websocket to orchestrate your attacks easily.
 * An easy to use [web user interface](/usage/#web-ui).
 * [More!](/modules/)

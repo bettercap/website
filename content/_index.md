@@ -5,7 +5,7 @@
 <img src="/logo.png" width="250px" style="margin-bottom:10px"/>
 <b>ベッターキャップ！</b>
 
-The Swiss Army knife for [WiFi](/modules/wifi/), [Bluetooth Low Energy](/modules/ble/), wireless [HID hijacking](/modules/hid/) and [IPv4 and IPv6](/modules/ethernet) networks reconnaissance and MITM attacks.
+The Swiss Army knife for [WiFi](/modules/wifi/), [Bluetooth Low Energy](/modules/ble/), wireless [HID hijacking](/modules/hid/), [CAN-bus](/modules/canbus/) and [IPv4 and IPv6](/modules/ethernet) networks reconnaissance and MITM attacks.
 
 Read the [project introduction](/intro/) to get an idea of what bettercap can do for you, [install](/installation/) it, [RTFM](/usage/) and start **hacking all the things!!!**
 
@@ -32,5 +32,3 @@ Follow @bettercap
 </p>
 
 </center>
-
-<a class="twitter-timeline" data-dnt="true" data-theme="light" data-link-color="#599a3e" href="https://twitter.com/bettercap">Tweets by @bettercap</a>

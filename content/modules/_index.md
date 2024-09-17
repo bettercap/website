@@ -7,4 +7,4 @@ draft: false
 
 Session modules are organized in the following categories:
 
-{{% children depth="999" %}}
+{{% children depth="1000" %}}

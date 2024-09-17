@@ -21,6 +21,10 @@ Stop acquiring from the GPS hardware.
 
 Show the last coordinates returned by the GPS hardware.
 
+#### `gps.set LAT LON`
+
+Manually set GPS location.
+
 ### Parameters
 
 | parameter | default | description |

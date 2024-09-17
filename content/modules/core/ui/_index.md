@@ -9,17 +9,13 @@ A module to manage bettercap's UI updates and installed version.
 
 ### Commands
 
-#### `ui.version` 
+#### `ui.on`
 
-Print the currently installed UI version.
-
-#### `ui.update`
-
-Download the latest available version of the UI and install it.
+Activates the weui.
 
 ### Parameters
 
 | parameter | default | description |
 |-----------|---------|-------------|
-| `ui.basepath` | `/usr/local/share/bettercap/` | UI base installation path. |
-| `ui.tmpfile` | `/tmp/ui.zip` | Temporary file to use while downloading UI updates. |
+| `ui.address` | `127.0.0.1` | Address to bind the web ui to. |
+| `ui.port` | `8080` | Port to bind the web ui server to. |

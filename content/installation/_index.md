@@ -24,13 +24,9 @@ In order to be able to use bettercap, you'll need the following dependencies on 
 
 BetterCAP is containerized using [Alpine Linux](https://alpinelinux.org/) -  a security-oriented, lightweight Linux distribution based on musl libc and busybox. The resulting Docker image is relatively small and easy to manage the dependencies. Since it is using a multi-stage build, **a Docker version greater than 17.05 is required**.
 
-To pull latest stable version of the image:
+To pull latest version of the image:
 
     docker pull bettercap/bettercap
-
-To pull latest source code build of the image:
-
-    docker pull bettercap/dev
 
 To run:
 

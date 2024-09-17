@@ -12,22 +12,22 @@
     <title>Installation :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1721000863" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1721000863" rel="stylesheet">
-    <link href="/css/hybrid.css?1721000863" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1721000863" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1721000863" rel="stylesheet">
-    <link href="/css/auto-complete.css?1721000863" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1721000863" rel="stylesheet">
-    <link href="/css/theme.css?1721000863" rel="stylesheet">
-    <link href="/css/tabs.css?1721000863" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1721000863" rel="stylesheet">
+    <link href="/css/nucleus.css?1726565315" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726565315" rel="stylesheet">
+    <link href="/css/hybrid.css?1726565315" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726565315" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726565315" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726565315" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726565315" rel="stylesheet">
+    <link href="/css/theme.css?1726565315" rel="stylesheet">
+    <link href="/css/tabs.css?1726565315" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726565315" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1721000863" rel="stylesheet">
+    <link href="/css/theme-green.css?1726565315" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1721000863"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726565315"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -133,14 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1721000863"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1721000863"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726565315"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726565315"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1721000863"></script>
+<script type="text/javascript" src="/js/search.js?1726565315"></script>
 
     
   </div>
@@ -584,6 +584,32 @@ a.highlight span.copy-to-clipboard {
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/graph/" title="graph" class="dd-item
+        
+        
+        
+        ">
+      <a href="/modules/core/graph/">
+          graph
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
       
@@ -661,6 +687,32 @@ a.highlight span.copy-to-clipboard {
         ">
       <a href="/modules/hid/">
           HID on 2.4Ghz
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/canbus/" title="CAN-bus" class="dd-item
+        
+        
+        
+        ">
+      <a href="/modules/canbus/">
+          CAN-bus
           
       </a>
       
@@ -1524,6 +1576,7 @@ a.highlight span.copy-to-clipboard {
 <h2 id="dependencies">Dependencies</h2>
 <p>In order to be able to use bettercap, you&rsquo;ll need the following dependencies on your system:</p>
 <ul>
+<li>pkg-config</li>
 <li>libpcap</li>
 <li>libusb-1.0-0 (required by the <a href="/modules/hid/">HID module</a>)</li>
 <li>libnetfilter-queue (on Linux only, required by the <a href="/modules/ethernet/proxies/packet.proxy/">packet.proxy module</a>)</li>
@@ -1533,11 +1586,8 @@ a.highlight span.copy-to-clipboard {
 </code></pre>
 <h2 id="using-docker">Using Docker</h2>
 <p>BetterCAP is containerized using <a href="https://alpinelinux.org/">Alpine Linux</a> -  a security-oriented, lightweight Linux distribution based on musl libc and busybox. The resulting Docker image is relatively small and easy to manage the dependencies. Since it is using a multi-stage build, <strong>a Docker version greater than 17.05 is required</strong>.</p>
-<p>To pull latest stable version of the image:</p>
+<p>To pull latest version of the image:</p>
 <pre><code>docker pull bettercap/bettercap
-</code></pre>
-<p>To pull latest source code build of the image:</p>
-<pre><code>docker pull bettercap/dev
 </code></pre>
 <p>To run:</p>
 <pre><code>docker run -it --privileged --net=host bettercap/bettercap -h
@@ -1883,6 +1933,38 @@ sudo dnf install golang git make automake gcc gcc-c++ kernel-devel libpcap-devel
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -2370,19 +2452,19 @@ sudo dnf install golang git make automake gcc gcc-c++ kernel-devel libpcap-devel
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1721000863"></script>
-    <script src="/js/perfect-scrollbar.min.js?1721000863"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1721000863"></script>
-    <script src="/js/jquery.sticky.js?1721000863"></script>
-    <script src="/js/featherlight.min.js?1721000863"></script>
-    <script src="/js/highlight.pack.js?1721000863"></script>
+    <script src="/js/clipboard.min.js?1726565315"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726565315"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726565315"></script>
+    <script src="/js/jquery.sticky.js?1726565315"></script>
+    <script src="/js/featherlight.min.js?1726565315"></script>
+    <script src="/js/highlight.pack.js?1726565315"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1721000863"></script>
-    <script src="/js/learn.js?1721000863"></script>
-    <script src="/js/hugo-learn.js?1721000863"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726565315"></script>
+    <script src="/js/learn.js?1726565315"></script>
+    <script src="/js/hugo-learn.js?1726565315"></script>
     
         
-            <script src="/mermaid/mermaid.js?1721000863"></script>
+            <script src="/mermaid/mermaid.js?1726565315"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

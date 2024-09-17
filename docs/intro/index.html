@@ -12,22 +12,22 @@
     <title>Introduction :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1721000863" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1721000863" rel="stylesheet">
-    <link href="/css/hybrid.css?1721000863" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1721000863" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1721000863" rel="stylesheet">
-    <link href="/css/auto-complete.css?1721000863" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1721000863" rel="stylesheet">
-    <link href="/css/theme.css?1721000863" rel="stylesheet">
-    <link href="/css/tabs.css?1721000863" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1721000863" rel="stylesheet">
+    <link href="/css/nucleus.css?1726565315" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726565315" rel="stylesheet">
+    <link href="/css/hybrid.css?1726565315" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726565315" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726565315" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726565315" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726565315" rel="stylesheet">
+    <link href="/css/theme.css?1726565315" rel="stylesheet">
+    <link href="/css/tabs.css?1726565315" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726565315" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1721000863" rel="stylesheet">
+    <link href="/css/theme-green.css?1726565315" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1721000863"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726565315"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -133,14 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1721000863"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1721000863"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726565315"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726565315"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1721000863"></script>
+<script type="text/javascript" src="/js/search.js?1726565315"></script>
 
     
   </div>
@@ -584,6 +584,32 @@ a.highlight span.copy-to-clipboard {
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/core/graph/" title="graph" class="dd-item
+        
+        
+        
+        ">
+      <a href="/modules/core/graph/">
+          graph
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
       
@@ -661,6 +687,32 @@ a.highlight span.copy-to-clipboard {
         ">
       <a href="/modules/hid/">
           HID on 2.4Ghz
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/canbus/" title="CAN-bus" class="dd-item
+        
+        
+        
+        ">
+      <a href="/modules/canbus/">
+          CAN-bus
           
       </a>
       
@@ -1514,7 +1566,7 @@ a.highlight span.copy-to-clipboard {
 
 
 
-	<p>bettercap is a powerful, easily extensible and portable framework written in Go which aims to offer to security researchers, red teamers and reverse engineers an <strong>easy to use</strong>, <strong>all-in-one solution</strong> with all the features they might possibly need for performing reconnaissance and attacking <a href="/modules/wifi/">WiFi</a> networks, <a href="/modules/ble/">Bluetooth Low Energy</a> devices, wireless <a href="/modules/hid/">HID</a> devices and <a href="/modules/ethernet">IPv4/IPv6</a> networks.</p>
+	<p>bettercap is a powerful, easily extensible and portable framework written in Go which aims to offer to security researchers, red teamers and reverse engineers an <strong>easy to use</strong>, <strong>all-in-one solution</strong> with all the features they might possibly need for performing reconnaissance and attacking <a href="/modules/wifi/">WiFi</a> networks, <a href="/modules/ble/">Bluetooth Low Energy</a> devices, wireless <a href="/modules/hid/">HID</a> devices, <a href="/modules/canbus/">CAN-bus</a> and <a href="/modules/ethernet">IPv4/IPv6</a> networks.</p>
 <h2 id="main-features">Main Features</h2>
 <ul>
 <li><strong>WiFi</strong> networks scanning, <a href="https://www.evilsocket.net/2018/07/28/Project-PITA-Writeup-build-a-mini-mass-deauther-using-bettercap-and-a-Raspberry-Pi-Zero-W/">deauthentication attack</a>, <a href="https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/">clientless PMKID association attack</a> and automatic WPA/WPA2 client handshakes capture.</li>
@@ -1525,6 +1577,7 @@ a.highlight span.copy-to-clipboard {
 <li><strong>Proxies at packet level, TCP level and HTTP/HTTPS</strong> application level fully scriptable with easy to implement <strong>javascript plugins</strong>.</li>
 <li>A powerful <strong>network sniffer</strong> for <strong>credentials harvesting</strong> which can also be used as a <strong>network protocol fuzzer</strong>.</li>
 <li>A very fast port scanner.</li>
+<li>CAN-bus support for reading, injecting, <strong>fuzzing</strong>, loading custom DBC and builtin OBD2 PIDs parser.</li>
 <li>A powerful <a href="/modules/core/api.rest/">REST API</a> with support for asynchronous events notification on websocket to orchestrate your attacks easily.</li>
 <li>An easy to use <a href="/usage/#web-ui">web user interface</a>.</li>
 <li><a href="/modules/">More!</a></li>
@@ -1837,6 +1890,38 @@ a.highlight span.copy-to-clipboard {
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -2324,19 +2409,19 @@ a.highlight span.copy-to-clipboard {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1721000863"></script>
-    <script src="/js/perfect-scrollbar.min.js?1721000863"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1721000863"></script>
-    <script src="/js/jquery.sticky.js?1721000863"></script>
-    <script src="/js/featherlight.min.js?1721000863"></script>
-    <script src="/js/highlight.pack.js?1721000863"></script>
+    <script src="/js/clipboard.min.js?1726565315"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726565315"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726565315"></script>
+    <script src="/js/jquery.sticky.js?1726565315"></script>
+    <script src="/js/featherlight.min.js?1726565315"></script>
+    <script src="/js/highlight.pack.js?1726565315"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1721000863"></script>
-    <script src="/js/learn.js?1721000863"></script>
-    <script src="/js/hugo-learn.js?1721000863"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726565315"></script>
+    <script src="/js/learn.js?1726565315"></script>
+    <script src="/js/hugo-learn.js?1726565315"></script>
     
         
-            <script src="/mermaid/mermaid.js?1721000863"></script>
+            <script src="/mermaid/mermaid.js?1726565315"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

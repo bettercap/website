@@ -12,6 +12,7 @@ The WiFi modules use a WiFi interface supporting monitor mode and packet injecti
 - perform [RSN PMKID based](https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/) clientless attacks on vulnerable access points 
 - *automatically sniff and save key material* either from complete WPA/WPA2 handshakes or PMKID packets.
 - send spoofed management beacons to create fake access points or fake client probes.
+- perform authentication wordlist attacks.
 
 {{% notice note %}}
 The interface only needs to support monitor mode and packet injection, it'll be bettercap itself to switch it to the right mode, just make sure there aren't other processes using the same wifi interface.
@@ -32,6 +33,14 @@ Start 802.11 wireless base stations discovery and handshakes/PMKID capture.
 #### `wifi.recon off` 
 
 Stop 802.11 wireless base stations discovery.
+
+#### `wifi.bruteforce on`
+
+Attempts to bruteforce WiFi authentication (see **bruteforce** specific parameters).
+
+#### `wifi.bruteforce off`
+
+Stop previously started bruteforcing.
 
 #### `wifi.clear`
 
@@ -105,6 +114,17 @@ Inject fake management beacons in order to create a rogue access point ( require
 | `wifi.ap.channel` | `1` | Channel of the fake access point. |
 | `wifi.ap.encryption` | `true` | If true, the fake access point will use WPA2, otherwise it'll result as an open AP. |
 
+#### Bruteforce specific parameters
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `wifi.bruteforce.stop_at_first` | `true` | Stop bruteforcing after the first successful attempt. |
+| `wifi.bruteforce.target` |  | One or more comma separated targets to bruteforce as ESSID or BSSID. Leave empty to bruteforce all visibile access points. |
+| `wifi.bruteforce.timeout` | `15` | Timeout in seconds for each association attempt. |
+| `wifi.bruteforce.wide` | `false` | Attempt a password for each access point before moving to the next one. |
+| `wifi.bruteforce.wordlist` | `/usr/share/dict/words` | Wordlist file to use for bruteforcing. |
+| `wifi.bruteforce.workers` | `1` | How many parallel workers. WARNING: Some routers will ban multiple concurrent attempts. |
+
 ### Examples
 
 Run bettercap using `eth0` as the main interface but start the wifi module on `wlan0` instead:
@@ -147,4 +167,14 @@ Will send management beacons as the fake access point "Banana" with BSSID `DE:AD
 > set wifi.ap.channel 5
 > set wifi.ap.encryption false
 > wifi.recon on; wifi.ap
+```
+
+Bruteforce using a wordlist:
+
+```
+> set wifi.interface en0
+> set wifi.bruteforce.target TargetRouter
+> set wifi.bruteforce.wordlist /path/to/your/wordlist.txt
+> set wifi.bruteforce.stop_at_first true
+> wifi.bruteforce on
 ```
