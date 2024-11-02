@@ -18,7 +18,7 @@ In order to be able to use bettercap, you'll need the following dependencies on 
 
 ## Installing via Go
 
-    go install github.com/bettercap/bettercap@latest 
+    go install github.com/bettercap/bettercap/v2@latest 
 
 ## Using Docker
 
