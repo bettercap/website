@@ -49,7 +49,7 @@ You'll also need to install the dependencies:
 
 Once you've met this conditions, you can run the following commands to compile and install bettercap in `/usr/local/bin/bettercap`:
 
-    go get github.com/bettercap/bettercap
+    go install github.com/bettercap/bettercap@latest
     cd $GOPATH/src/github.com/bettercap/bettercap
     make build
     sudo make install
@@ -91,7 +91,7 @@ sudo apt install golang git build-essential libpcap-dev libusb-1.0-0-dev libnetf
 You can now proceed with the compilation:
 
 ```sh
-go get -u github.com/bettercap/bettercap
+go install github.com/bettercap/bettercap@latest
 ```
 
 Once the build process is concluded, the binary will be located in `go/bin/bettercap`.
