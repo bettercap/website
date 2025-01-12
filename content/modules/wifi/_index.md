@@ -1,4 +1,4 @@
----
+wifi.recon off
 title: "WiFi"
 date: 2019-02-25T11:10:00+01:00
 draft: false
