@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.128.2">
+    <meta name="generator" content="Hugo 0.147.9">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>WiFi :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1726565315" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726565315" rel="stylesheet">
-    <link href="/css/hybrid.css?1726565315" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726565315" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726565315" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726565315" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726565315" rel="stylesheet">
-    <link href="/css/theme.css?1726565315" rel="stylesheet">
-    <link href="/css/tabs.css?1726565315" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726565315" rel="stylesheet">
+    <link href="/css/nucleus.css?1751882235" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1751882235" rel="stylesheet">
+    <link href="/css/hybrid.css?1751882235" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1751882235" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1751882235" rel="stylesheet">
+    <link href="/css/auto-complete.css?1751882235" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1751882235" rel="stylesheet">
+    <link href="/css/theme.css?1751882235" rel="stylesheet">
+    <link href="/css/tabs.css?1751882235" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1751882235" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1726565315" rel="stylesheet">
+    <link href="/css/theme-green.css?1751882235" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726565315"></script>
+    <script src="/js/jquery-3.3.1.min.js?1751882235"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -133,14 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726565315"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726565315"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1751882235"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1751882235"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726565315"></script>
+<script type="text/javascript" src="/js/search.js?1751882235"></script>
 
     
   </div>
@@ -1629,172 +1629,172 @@ a.highlight span.copy-to-clipboard {
 <p>Inject fake management beacons in order to create a rogue access point ( requires <code>wifi.recon</code> to run ).</p>
 <h3 id="parameters">Parameters</h3>
 <table>
-<thead>
-<tr>
-<th>parameter</th>
-<th>default</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>wifi.interface</code></td>
-<td></td>
-<td>If filled, the module will use this interface instead of the one provided by the <code>-iface</code> argument or detected automatically.</td>
-</tr>
-<tr>
-<td><code>wifi.region</code></td>
-<td><code>BO</code></td>
-<td>Set the WiFi region to this value before activating the interface.</td>
-</tr>
-<tr>
-<td><code>wifi.txpower</code></td>
-<td><code>30</code></td>
-<td>Set WiFi transmission power to this value before activating the interface.</td>
-</tr>
-<tr>
-<td><code>wifi.rssi.min</code></td>
-<td><code>-200</code></td>
-<td>Minimum WiFi signal strength in dBm.</td>
-</tr>
-<tr>
-<td><code>wifi.show.manufacturer</code></td>
-<td><code>false</code></td>
-<td>If true, wifi.show will also show the devices manufacturers.</td>
-</tr>
-<tr>
-<td><code>wifi.show.filter</code></td>
-<td></td>
-<td>Defines a regular expression filter for <code>wifi.show</code>.</td>
-</tr>
-<tr>
-<td><code>wifi.show.sort</code></td>
-<td><code>rssi asc</code></td>
-<td>Defines sorting field (<code>rssi</code>, <code>bssid</code>, <code>essid</code>, <code>channel</code>, <code>encryption</code>, <code>clients</code>, <code>seen</code>, <code>sent</code>, <code>rcvd</code>) and direction (<code>asc</code> or <code>desc</code>) for <code>wifi.show</code>.</td>
-</tr>
-<tr>
-<td><code>wifi.show.sort</code></td>
-<td><code>asc</code></td>
-<td>Defines sorting direction for <code>wifi.show</code>.</td>
-</tr>
-<tr>
-<td><code>wifi.show.limit</code></td>
-<td><code>0</code></td>
-<td>If greater than zero, defines limit for <code>wifi.show</code>.</td>
-</tr>
-<tr>
-<td><code>wifi.hop.period</code></td>
-<td><code>250</code></td>
-<td>If channel hopping is enabled (empty <code>wifi.recon.channel</code>), this is the time in millseconds the algorithm will hop on every channel (it&rsquo;ll be doubled if both 2.4 and 5.0 bands are available).</td>
-</tr>
-<tr>
-<td><code>wifi.handshakes.file</code></td>
-<td><code>~/bettercap-wifi-handshakes.pcap</code></td>
-<td>File path of the pcap file to save handshakes to.</td>
-</tr>
-<tr>
-<td><code>wifi.source.file</code></td>
-<td></td>
-<td>If set, the wifi module will read from this pcap file instead of the hardware interface.</td>
-</tr>
-<tr>
-<td><code>wifi.skip-broken</code></td>
-<td><code>true</code></td>
-<td>If true, dot11 packets with an invalid checksum will be skipped.</td>
-</tr>
-<tr>
-<td><code>wifi.assoc.skip</code></td>
-<td></td>
-<td>Comma separated list of BSSID to skip while sending association requests.</td>
-</tr>
-<tr>
-<td><code>wifi.assoc.silent</code></td>
-<td><code>false</code></td>
-<td>If true, messages from wifi.assoc will be suppressed.</td>
-</tr>
-<tr>
-<td><code>wifi.assoc.open</code></td>
-<td><code>false</code></td>
-<td>Send association requests to open networks.</td>
-</tr>
-<tr>
-<td><code>wifi.deauth.skip</code></td>
-<td></td>
-<td>Comma separated list of BSSID to skip while sending deauth packets.</td>
-</tr>
-<tr>
-<td><code>wifi.deauth.silent</code></td>
-<td><code>false</code></td>
-<td>If true, messages from <code>wifi.deauth</code> will be suppressed.</td>
-</tr>
-<tr>
-<td><code>wifi.deauth.open</code></td>
-<td><code>true</code></td>
-<td>Send wifi deauth packets to open networks.</td>
-</tr>
-<tr>
-<td><code>wifi.ap.ssid</code></td>
-<td><code>FreeWifi</code></td>
-<td>SSID of the fake access point.</td>
-</tr>
-<tr>
-<td><code>wifi.ap.bssid</code></td>
-<td><code>&lt;random mac&gt;</code></td>
-<td>BSSID of the fake access point.</td>
-</tr>
-<tr>
-<td><code>wifi.ap.channel</code></td>
-<td><code>1</code></td>
-<td>Channel of the fake access point.</td>
-</tr>
-<tr>
-<td><code>wifi.ap.encryption</code></td>
-<td><code>true</code></td>
-<td>If true, the fake access point will use WPA2, otherwise it&rsquo;ll result as an open AP.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>parameter</th>
+          <th>default</th>
+          <th>description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>wifi.interface</code></td>
+          <td></td>
+          <td>If filled, the module will use this interface instead of the one provided by the <code>-iface</code> argument or detected automatically.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.region</code></td>
+          <td><code>BO</code></td>
+          <td>Set the WiFi region to this value before activating the interface.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.txpower</code></td>
+          <td><code>30</code></td>
+          <td>Set WiFi transmission power to this value before activating the interface.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.rssi.min</code></td>
+          <td><code>-200</code></td>
+          <td>Minimum WiFi signal strength in dBm.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.show.manufacturer</code></td>
+          <td><code>false</code></td>
+          <td>If true, wifi.show will also show the devices manufacturers.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.show.filter</code></td>
+          <td></td>
+          <td>Defines a regular expression filter for <code>wifi.show</code>.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.show.sort</code></td>
+          <td><code>rssi asc</code></td>
+          <td>Defines sorting field (<code>rssi</code>, <code>bssid</code>, <code>essid</code>, <code>channel</code>, <code>encryption</code>, <code>clients</code>, <code>seen</code>, <code>sent</code>, <code>rcvd</code>) and direction (<code>asc</code> or <code>desc</code>) for <code>wifi.show</code>.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.show.sort</code></td>
+          <td><code>asc</code></td>
+          <td>Defines sorting direction for <code>wifi.show</code>.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.show.limit</code></td>
+          <td><code>0</code></td>
+          <td>If greater than zero, defines limit for <code>wifi.show</code>.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.hop.period</code></td>
+          <td><code>250</code></td>
+          <td>If channel hopping is enabled (empty <code>wifi.recon.channel</code>), this is the time in millseconds the algorithm will hop on every channel (it&rsquo;ll be doubled if both 2.4 and 5.0 bands are available).</td>
+      </tr>
+      <tr>
+          <td><code>wifi.handshakes.file</code></td>
+          <td><code>~/bettercap-wifi-handshakes.pcap</code></td>
+          <td>File path of the pcap file to save handshakes to.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.source.file</code></td>
+          <td></td>
+          <td>If set, the wifi module will read from this pcap file instead of the hardware interface.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.skip-broken</code></td>
+          <td><code>true</code></td>
+          <td>If true, dot11 packets with an invalid checksum will be skipped.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.assoc.skip</code></td>
+          <td></td>
+          <td>Comma separated list of BSSID to skip while sending association requests.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.assoc.silent</code></td>
+          <td><code>false</code></td>
+          <td>If true, messages from wifi.assoc will be suppressed.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.assoc.open</code></td>
+          <td><code>false</code></td>
+          <td>Send association requests to open networks.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.deauth.skip</code></td>
+          <td></td>
+          <td>Comma separated list of BSSID to skip while sending deauth packets.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.deauth.silent</code></td>
+          <td><code>false</code></td>
+          <td>If true, messages from <code>wifi.deauth</code> will be suppressed.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.deauth.open</code></td>
+          <td><code>true</code></td>
+          <td>Send wifi deauth packets to open networks.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.ap.ssid</code></td>
+          <td><code>FreeWifi</code></td>
+          <td>SSID of the fake access point.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.ap.bssid</code></td>
+          <td><code>&lt;random mac&gt;</code></td>
+          <td>BSSID of the fake access point.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.ap.channel</code></td>
+          <td><code>1</code></td>
+          <td>Channel of the fake access point.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.ap.encryption</code></td>
+          <td><code>true</code></td>
+          <td>If true, the fake access point will use WPA2, otherwise it&rsquo;ll result as an open AP.</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="bruteforce-specific-parameters">Bruteforce specific parameters</h4>
 <table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>wifi.bruteforce.stop_at_first</code></td>
-<td><code>true</code></td>
-<td>Stop bruteforcing after the first successful attempt.</td>
-</tr>
-<tr>
-<td><code>wifi.bruteforce.target</code></td>
-<td></td>
-<td>One or more comma separated targets to bruteforce as ESSID or BSSID. Leave empty to bruteforce all visibile access points.</td>
-</tr>
-<tr>
-<td><code>wifi.bruteforce.timeout</code></td>
-<td><code>15</code></td>
-<td>Timeout in seconds for each association attempt.</td>
-</tr>
-<tr>
-<td><code>wifi.bruteforce.wide</code></td>
-<td><code>false</code></td>
-<td>Attempt a password for each access point before moving to the next one.</td>
-</tr>
-<tr>
-<td><code>wifi.bruteforce.wordlist</code></td>
-<td><code>/usr/share/dict/words</code></td>
-<td>Wordlist file to use for bruteforcing.</td>
-</tr>
-<tr>
-<td><code>wifi.bruteforce.workers</code></td>
-<td><code>1</code></td>
-<td>How many parallel workers. WARNING: Some routers will ban multiple concurrent attempts.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Parameter</th>
+          <th>Default</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>wifi.bruteforce.stop_at_first</code></td>
+          <td><code>true</code></td>
+          <td>Stop bruteforcing after the first successful attempt.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.bruteforce.target</code></td>
+          <td></td>
+          <td>One or more comma separated targets to bruteforce as ESSID or BSSID. Leave empty to bruteforce all visibile access points.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.bruteforce.timeout</code></td>
+          <td><code>15</code></td>
+          <td>Timeout in seconds for each association attempt.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.bruteforce.wide</code></td>
+          <td><code>false</code></td>
+          <td>Attempt a password for each access point before moving to the next one.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.bruteforce.wordlist</code></td>
+          <td><code>/usr/share/dict/words</code></td>
+          <td>Wordlist file to use for bruteforcing.</td>
+      </tr>
+      <tr>
+          <td><code>wifi.bruteforce.workers</code></td>
+          <td><code>1</code></td>
+          <td>How many parallel workers. WARNING: Some routers will ban multiple concurrent attempts.</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="examples">Examples</h3>
 <p>Run bettercap using <code>eth0</code> as the main interface but start the wifi module on <code>wlan0</code> instead:</p>
@@ -2641,19 +2641,19 @@ a.highlight span.copy-to-clipboard {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726565315"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726565315"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726565315"></script>
-    <script src="/js/jquery.sticky.js?1726565315"></script>
-    <script src="/js/featherlight.min.js?1726565315"></script>
-    <script src="/js/highlight.pack.js?1726565315"></script>
+    <script src="/js/clipboard.min.js?1751882235"></script>
+    <script src="/js/perfect-scrollbar.min.js?1751882235"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1751882235"></script>
+    <script src="/js/jquery.sticky.js?1751882235"></script>
+    <script src="/js/featherlight.min.js?1751882235"></script>
+    <script src="/js/highlight.pack.js?1751882235"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726565315"></script>
-    <script src="/js/learn.js?1726565315"></script>
-    <script src="/js/hugo-learn.js?1726565315"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1751882235"></script>
+    <script src="/js/learn.js?1751882235"></script>
+    <script src="/js/hugo-learn.js?1751882235"></script>
     
         
-            <script src="/mermaid/mermaid.js?1726565315"></script>
+            <script src="/mermaid/mermaid.js?1751882235"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

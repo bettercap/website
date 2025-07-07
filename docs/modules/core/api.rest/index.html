@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.128.2">
+    <meta name="generator" content="Hugo 0.147.9">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>api.rest :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1726565315" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726565315" rel="stylesheet">
-    <link href="/css/hybrid.css?1726565315" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726565315" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726565315" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726565315" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726565315" rel="stylesheet">
-    <link href="/css/theme.css?1726565315" rel="stylesheet">
-    <link href="/css/tabs.css?1726565315" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726565315" rel="stylesheet">
+    <link href="/css/nucleus.css?1751882235" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1751882235" rel="stylesheet">
+    <link href="/css/hybrid.css?1751882235" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1751882235" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1751882235" rel="stylesheet">
+    <link href="/css/auto-complete.css?1751882235" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1751882235" rel="stylesheet">
+    <link href="/css/theme.css?1751882235" rel="stylesheet">
+    <link href="/css/tabs.css?1751882235" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1751882235" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1726565315" rel="stylesheet">
+    <link href="/css/theme-green.css?1751882235" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726565315"></script>
+    <script src="/js/jquery-3.3.1.min.js?1751882235"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -133,14 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726565315"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726565315"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1751882235"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1751882235"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bettercap.org\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726565315"></script>
+<script type="text/javascript" src="/js/search.js?1751882235"></script>
 
     
   </div>
@@ -1599,90 +1599,90 @@ a.highlight span.copy-to-clipboard {
 <p>Stop replaying the recorded session.</p>
 <h3 id="parameters">Parameters</h3>
 <table>
-<thead>
-<tr>
-<th>parameter</th>
-<th>default</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>api.rest.certificate</code></td>
-<td></td>
-<td>API TLS certificate (will be auto generated if not existing), fill to enable HTTPS.</td>
-</tr>
-<tr>
-<td><code>api.rest.key</code></td>
-<td></td>
-<td>API TLS key (will be auto generated if not existing), fill to enable HTTPS.</td>
-</tr>
-<tr>
-<td><code>api.rest.certificate.bits</code></td>
-<td><code>4096</code></td>
-<td>Number of bits of the RSA private key of the generated HTTPS certificate.</td>
-</tr>
-<tr>
-<td><code>api.rest.certificate.commonname</code></td>
-<td><code>bettercap</code></td>
-<td>Common Name field of the generated HTTPS certificate.</td>
-</tr>
-<tr>
-<td><code>api.rest.certificate.country</code></td>
-<td><code>US</code></td>
-<td>Country field of the generated HTTPS certificate.</td>
-</tr>
-<tr>
-<td><code>api.rest.certificate.locality</code></td>
-<td></td>
-<td>Locality field of the generated HTTPS certificate.</td>
-</tr>
-<tr>
-<td><code>api.rest.certificate.organization</code></td>
-<td><code>bettercap devteam</code></td>
-<td>Organization field of the generated HTTPS certificate.</td>
-</tr>
-<tr>
-<td><code>api.rest.certificate.organizationalunit</code></td>
-<td><code>https://bettercap.org/</code></td>
-<td>Organizational Unit field of the generated HTTPS certificate.</td>
-</tr>
-<tr>
-<td><code>api.rest.address</code></td>
-<td><code>127.0.0.1</code></td>
-<td>Address to bind the API REST server to.</td>
-</tr>
-<tr>
-<td><code>api.rest.port</code></td>
-<td><code>8081</code></td>
-<td>Port to bind the API REST server to.</td>
-</tr>
-<tr>
-<td><code>api.rest.username</code></td>
-<td></td>
-<td>API HTTP basic auth username.</td>
-</tr>
-<tr>
-<td><code>api.rest.password</code></td>
-<td></td>
-<td>API HTTP basic auth password.</td>
-</tr>
-<tr>
-<td><code>api.rest.websocket</code></td>
-<td><code>false</code></td>
-<td>If true the <code>/api/events</code> route will be available as a websocket endpoint instead of HTTP.</td>
-</tr>
-<tr>
-<td><code>api.rest.alloworigin</code></td>
-<td><code>*</code></td>
-<td>Value of the Access-Control-Allow-Origin header of the API server.</td>
-</tr>
-<tr>
-<td><code>api.rest.record.clock</code></td>
-<td><code>1</code></td>
-<td>Number of seconds to wait while recording with api.rest.record between one sample and the next one.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>parameter</th>
+          <th>default</th>
+          <th>description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>api.rest.certificate</code></td>
+          <td></td>
+          <td>API TLS certificate (will be auto generated if not existing), fill to enable HTTPS.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.key</code></td>
+          <td></td>
+          <td>API TLS key (will be auto generated if not existing), fill to enable HTTPS.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.certificate.bits</code></td>
+          <td><code>4096</code></td>
+          <td>Number of bits of the RSA private key of the generated HTTPS certificate.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.certificate.commonname</code></td>
+          <td><code>bettercap</code></td>
+          <td>Common Name field of the generated HTTPS certificate.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.certificate.country</code></td>
+          <td><code>US</code></td>
+          <td>Country field of the generated HTTPS certificate.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.certificate.locality</code></td>
+          <td></td>
+          <td>Locality field of the generated HTTPS certificate.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.certificate.organization</code></td>
+          <td><code>bettercap devteam</code></td>
+          <td>Organization field of the generated HTTPS certificate.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.certificate.organizationalunit</code></td>
+          <td><code>https://bettercap.org/</code></td>
+          <td>Organizational Unit field of the generated HTTPS certificate.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.address</code></td>
+          <td><code>127.0.0.1</code></td>
+          <td>Address to bind the API REST server to.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.port</code></td>
+          <td><code>8081</code></td>
+          <td>Port to bind the API REST server to.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.username</code></td>
+          <td></td>
+          <td>API HTTP basic auth username.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.password</code></td>
+          <td></td>
+          <td>API HTTP basic auth password.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.websocket</code></td>
+          <td><code>false</code></td>
+          <td>If true the <code>/api/events</code> route will be available as a websocket endpoint instead of HTTP.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.alloworigin</code></td>
+          <td><code>*</code></td>
+          <td>Value of the Access-Control-Allow-Origin header of the API server.</td>
+      </tr>
+      <tr>
+          <td><code>api.rest.record.clock</code></td>
+          <td><code>1</code></td>
+          <td>Number of seconds to wait while recording with api.rest.record between one sample and the next one.</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="routes">Routes</h3>
 <p>Clients can authenticate using HTTP basic authentication, these are the available API routes.</p>
@@ -3378,19 +3378,19 @@ a.highlight span.copy-to-clipboard {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726565315"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726565315"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726565315"></script>
-    <script src="/js/jquery.sticky.js?1726565315"></script>
-    <script src="/js/featherlight.min.js?1726565315"></script>
-    <script src="/js/highlight.pack.js?1726565315"></script>
+    <script src="/js/clipboard.min.js?1751882235"></script>
+    <script src="/js/perfect-scrollbar.min.js?1751882235"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1751882235"></script>
+    <script src="/js/jquery.sticky.js?1751882235"></script>
+    <script src="/js/featherlight.min.js?1751882235"></script>
+    <script src="/js/highlight.pack.js?1751882235"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726565315"></script>
-    <script src="/js/learn.js?1726565315"></script>
-    <script src="/js/hugo-learn.js?1726565315"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1751882235"></script>
+    <script src="/js/learn.js?1751882235"></script>
+    <script src="/js/hugo-learn.js?1751882235"></script>
     
         
-            <script src="/mermaid/mermaid.js?1726565315"></script>
+            <script src="/mermaid/mermaid.js?1751882235"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
