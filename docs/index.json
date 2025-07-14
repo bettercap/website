@@ -263,7 +263,14 @@
 	"title": "Modules",
 	"tags": [],
 	"description": "",
-	"content": "Session modules are organized in the following categories:\nCore events.stream ticker caplets update api.rest ui c2 graph Bluetooth LE WiFi HID on 2.4Ghz CAN-bus IPv4 / IPv6 net.recon net.probe net.sniff - net.fuzz syn.scan wake on lan Spoofers arp.spoof dns.spoof dhcp6.spoof ndp.spoof (IPv6) Proxies any.proxy packet.proxy tcp.proxy http.proxy https.proxy Servers http.server https.server mdns.server mysql.server (rogue) Utils mac.changer gps "
+	"content": "Session modules are organized in the following categories:\nCore events.stream ticker caplets update api.rest ui c2 graph Bluetooth LE WiFi HID on 2.4Ghz CAN-bus Zerogod IPv4 / IPv6 net.recon net.probe net.sniff - net.fuzz syn.scan wake on lan Spoofers arp.spoof dns.spoof dhcp6.spoof ndp.spoof (IPv6) Proxies any.proxy packet.proxy tcp.proxy http.proxy https.proxy Servers http.server https.server mdns.server mysql.server (rogue) Utils mac.changer gps "
+},
+{
+	"uri": "https://bettercap.org/modules/zerogod/",
+	"title": "Zerogod",
+	"tags": [],
+	"description": "",
+	"content": "This module is a DNS-SD / mDNS / Bonjour / Zeroconf module for device discovery, service spoofing, and impersonation.\nIt allows you to scan the local network for mDNS services, impersonate discovered services, and advertise custom services.\nCommands zerogod.discovery on Start DNS-SD / mDNS discovery.\nzerogod.discovery off Stop DNS-SD / mDNS discovery.\nzerogod.show ADDRESS Show discovered services given an ADDRESS.\nzerogod.show-full ADDRESS Show discovered services and DNS records given an ADDRESS.\nzerogod.save ADDRESS FILENAME Save the mDNS information of a given ADDRESS in the FILENAME yaml file.\nzerogod.advertise FILENAME Start advertising the mDNS services from the FILENAME yaml file. To stop advertising, use:\nzerogod.advertise off zerogod.impersonate ADDRESS Impersonate the specified ADDRESS by advertising the same services it exposes.\nThis command automatically captures service data from the target, stores it in a temporary YAML file, and starts advertising it.\nTo stop impersonation, use:\nzerogod.impersonate off Parameters Parameter Default Description zerogod.advertise.certificate ~/.bettercap-zerogod.cert.pem TLS certificate file (will be auto generated if filled but not existing) to use for advertised TCP services. zerogod.advertise.key ~/.bettercap-zerogod.key.pem TLS key file (will be auto generated if filled but not existing) to use for advertised TCP services. zerogod.ipp.save_path ~/.bettercap/zerogod/documents/ If an IPP acceptor is started, this setting defines where to save documents received for printing. zerogod.verbose false Log every mDNS query. Examples Discover services on the local network Start the mDNS discovery:\nzerogod.discovery on Stop discovery:\nzerogod.discovery off Show services of a specific IP zerogod.show 192.168.1.42 Show all available records (including DNS details):\nzerogod.show-full 192.168.1.42 Save service information for later Save the discovered data for a given IP to a YAML file:\nzerogod.save 192.168.1.42 target-services.yml Replay and advertise services Load and advertise previously saved services:\nzerogod.advertise target-services.yml Stop advertising:\nzerogod.advertise off Impersonate a device on the network Impersonate all services of a device with a given IP:\nzerogod.impersonate 192.168.1.42 Stop impersonation:\nzerogod.impersonate off "
 },
 {
 	"uri": "https://bettercap.org/modules/core/ui/",
@@ -277,14 +284,7 @@
 	"title": "Spoofers",
 	"tags": [],
 	"description": "",
-	"content": "Spoofing modules used to perform Man-in-the-Middle attacks:\narp.spoof http.server https.server mdns.server mysql.server (rogue) dns.spoof dhcp6.spoof ndp.spoof (IPv6) What is a MITM Attack? According to Wikipedia:\nIn cryptography and computer security, a man-in-the-middle attack (often abbreviated to MITM, MitM, MIM, MiM attack or MITMA) is an attack where the attacker secretly relays and possibly alters the communication between two parties who believe they are directly communicating with each other. Man-in-the-middle attacks can be thought about through a chess analogy. Mallory, who barely knows how to play chess, claims that she can play two grandmasters simultaneously and either win one game or draw both. She waits for the first grandmaster to make a move and then makes this same move against the second grandmaster. When the second grandmaster responds, Mallory makes the same play against the first. She plays the entire game this way and cannot lose. A man-in-the-middle attack is a similar strategy and can be used against many cryptographic protocols. One example of man-in-the-middle attacks is active eavesdropping, in which the attacker makes independent connections with the victims and relays messages between them to make them believe they are talking directly to each other over a private connection, when in fact the entire conversation is controlled by the attacker. The attacker must be able to intercept all relevant messages passing between the two victims and inject new ones. This is straightforward in many circumstances; for example, an attacker within reception range of an unencrypted Wi-Fi wireless access point, can insert himself as a man-in-the-middle.\nThis is quite a generic description, mostly because ( if we\u0026rsquo;re talking about network MITM attacks ), the logic and details heavily rely on the technique being used ( more in the spoofing section ).\nNevertheless we can simplify the concept with an example. When you connect to some network ( your home network, some public WiFi, StarBucks, etc ), the router/switch is responsible for forwarding all of your packets to the correct destination, during a MITM attack we \u0026ldquo;force\u0026rdquo; the network to consider our device as the router ( we \u0026ldquo;spoof\u0026rdquo; the original router/switch address in some way ):\nOnce this happens, all of the network traffic goes through your computer instead of the legit router/switch and at that point you can do pretty much everything you want, from just sniffing for specific data ( emails, passwords, cookies, etc of other people on your network ) to actively intercepting and proxying all the requests of some specific protocol in order to modify them on the fly ( you can, for instance, replace all images of all websites being visited by everyone, kill connections, etc ).\n"
-},
-{
-	"uri": "https://bettercap.org/modules/ethernet/",
-	"title": "IPv4 / IPv6",
-	"tags": [],
-	"description": "",
-	"content": "These modules offer reconnaissance, active probing (mDNS, NBNS, UPnP and WSD) of hosts, sniffing / credentials harvesting, port scanning, spoofing (MITM) and a few basic servers for IPv4 and IPv6 based networks:\nnet.recon net.probe net.sniff - net.fuzz syn.scan wake on lan Spoofers arp.spoof dns.spoof dhcp6.spoof ndp.spoof (IPv6) Proxies any.proxy packet.proxy tcp.proxy http.proxy https.proxy Servers http.server https.server mdns.server mysql.server (rogue) "
+	"content": "Spoofing modules used to perform Man-in-the-Middle attacks:\narp.spoof dns.spoof dhcp6.spoof ndp.spoof (IPv6) What is a MITM Attack? According to Wikipedia:\nIn cryptography and computer security, a man-in-the-middle attack (often abbreviated to MITM, MitM, MIM, MiM attack or MITMA) is an attack where the attacker secretly relays and possibly alters the communication between two parties who believe they are directly communicating with each other. Man-in-the-middle attacks can be thought about through a chess analogy. Mallory, who barely knows how to play chess, claims that she can play two grandmasters simultaneously and either win one game or draw both. She waits for the first grandmaster to make a move and then makes this same move against the second grandmaster. When the second grandmaster responds, Mallory makes the same play against the first. She plays the entire game this way and cannot lose. A man-in-the-middle attack is a similar strategy and can be used against many cryptographic protocols. One example of man-in-the-middle attacks is active eavesdropping, in which the attacker makes independent connections with the victims and relays messages between them to make them believe they are talking directly to each other over a private connection, when in fact the entire conversation is controlled by the attacker. The attacker must be able to intercept all relevant messages passing between the two victims and inject new ones. This is straightforward in many circumstances; for example, an attacker within reception range of an unencrypted Wi-Fi wireless access point, can insert himself as a man-in-the-middle.\nThis is quite a generic description, mostly because ( if we\u0026rsquo;re talking about network MITM attacks ), the logic and details heavily rely on the technique being used ( more in the spoofing section ).\nNevertheless we can simplify the concept with an example. When you connect to some network ( your home network, some public WiFi, StarBucks, etc ), the router/switch is responsible for forwarding all of your packets to the correct destination, during a MITM attack we \u0026ldquo;force\u0026rdquo; the network to consider our device as the router ( we \u0026ldquo;spoof\u0026rdquo; the original router/switch address in some way ):\nOnce this happens, all of the network traffic goes through your computer instead of the legit router/switch and at that point you can do pretty much everything you want, from just sniffing for specific data ( emails, passwords, cookies, etc of other people on your network ) to actively intercepting and proxying all the requests of some specific protocol in order to modify them on the fly ( you can, for instance, replace all images of all websites being visited by everyone, kill connections, etc ).\n"
 },
 {
 	"uri": "https://bettercap.org/modules/core/c2/",
@@ -301,11 +301,11 @@
 	"content": "A set of modules you can use to intercept traffic at the packet, TCP or HTTP/HTTPS level while performing a MITM attack. Each proxy can be either extended with the Go plugin system (when keeping high performances is important), or scripted with Javascript plugins thanks to the Otto builtin engine:\nany.proxy packet.proxy tcp.proxy http.proxy https.proxy "
 },
 {
-	"uri": "https://bettercap.org/modules/utils/",
-	"title": "Utils",
+	"uri": "https://bettercap.org/modules/ethernet/",
+	"title": "IPv4 / IPv6",
 	"tags": [],
 	"description": "",
-	"content": "Various utility modules:\nmac.changer gps "
+	"content": "These modules offer reconnaissance, active probing (mDNS, NBNS, UPnP and WSD) of hosts, sniffing / credentials harvesting, port scanning, spoofing (MITM) and a few basic servers for IPv4 and IPv6 based networks:\nnet.recon net.probe net.sniff - net.fuzz syn.scan wake on lan Spoofers arp.spoof dns.spoof dhcp6.spoof ndp.spoof (IPv6) Proxies any.proxy packet.proxy tcp.proxy http.proxy https.proxy Servers http.server https.server mdns.server mysql.server (rogue) "
 },
 {
 	"uri": "https://bettercap.org/modules/ethernet/servers/",
@@ -313,6 +313,13 @@
 	"tags": [],
 	"description": "",
 	"content": "A set of servers used to serve files on a network or intercept credentials by exposing a rogue service:\nhttp.server https.server mdns.server mysql.server (rogue) "
+},
+{
+	"uri": "https://bettercap.org/modules/utils/",
+	"title": "Utils",
+	"tags": [],
+	"description": "",
+	"content": "Various utility modules:\nmac.changer gps "
 },
 {
 	"uri": "https://bettercap.org/",

@@ -4,7 +4,7 @@
     <title>Web UI on bettercap</title>
     <link>https://bettercap.org/usage/webui/</link>
     <description>Recent content in Web UI on bettercap</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="https://bettercap.org/usage/webui/index.xml" rel="self" type="application/rss+xml" />
   </channel>

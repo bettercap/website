@@ -114,14 +114,14 @@
     <loc>https://bettercap.org/modules/</loc>
     <lastmod>2019-02-25T11:07:30+01:00</lastmod>
   </url><url>
+    <loc>https://bettercap.org/modules/zerogod/</loc>
+    <lastmod>2025-07-14T19:29:00+01:00</lastmod>
+  </url><url>
     <loc>https://bettercap.org/modules/core/ui/</loc>
     <lastmod>2019-03-27T12:39:51+01:00</lastmod>
   </url><url>
     <loc>https://bettercap.org/modules/ethernet/spoofers/</loc>
     <lastmod>2019-02-25T12:57:36+01:00</lastmod>
-  </url><url>
-    <loc>https://bettercap.org/modules/ethernet/</loc>
-    <lastmod>2019-02-25T11:10:07+01:00</lastmod>
   </url><url>
     <loc>https://bettercap.org/modules/core/c2/</loc>
     <lastmod>2020-04-12T11:57:21+01:00</lastmod>
@@ -129,14 +129,17 @@
     <loc>https://bettercap.org/modules/ethernet/proxies/</loc>
     <lastmod>2019-02-25T13:03:38+01:00</lastmod>
   </url><url>
-    <loc>https://bettercap.org/modules/utils/</loc>
-    <lastmod>2019-02-25T11:37:35+01:00</lastmod>
+    <loc>https://bettercap.org/modules/ethernet/</loc>
+    <lastmod>2019-02-25T11:10:07+01:00</lastmod>
   </url><url>
     <loc>https://bettercap.org/modules/ethernet/servers/</loc>
     <lastmod>2019-02-25T13:24:42+01:00</lastmod>
   </url><url>
+    <loc>https://bettercap.org/modules/utils/</loc>
+    <lastmod>2019-02-25T11:37:35+01:00</lastmod>
+  </url><url>
     <loc>https://bettercap.org/</loc>
-    <lastmod>2023-09-17T11:00:28+01:00</lastmod>
+    <lastmod>2025-07-14T19:29:00+01:00</lastmod>
   </url><url>
     <loc>https://bettercap.org/modules/core/graph/</loc>
     <lastmod>2023-09-17T11:00:21+01:00</lastmod>

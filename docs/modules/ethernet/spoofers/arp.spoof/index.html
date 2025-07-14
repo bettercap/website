@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.0">
+    <meta name="generator" content="Hugo 0.148.1">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>arp.spoof :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1752143299" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1752143299" rel="stylesheet">
-    <link href="/css/hybrid.css?1752143299" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1752143299" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1752143299" rel="stylesheet">
-    <link href="/css/auto-complete.css?1752143299" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1752143299" rel="stylesheet">
-    <link href="/css/theme.css?1752143299" rel="stylesheet">
-    <link href="/css/tabs.css?1752143299" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1752143299" rel="stylesheet">
+    <link href="/css/nucleus.css?1752517973" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1752517973" rel="stylesheet">
+    <link href="/css/hybrid.css?1752517973" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1752517973" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1752517973" rel="stylesheet">
+    <link href="/css/auto-complete.css?1752517973" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1752517973" rel="stylesheet">
+    <link href="/css/theme.css?1752517973" rel="stylesheet">
+    <link href="/css/tabs.css?1752517973" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1752517973" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1752143299" rel="stylesheet">
+    <link href="/css/theme-green.css?1752517973" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1752143299"></script>
+    <script src="/js/jquery-3.3.1.min.js?1752517973"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -133,14 +133,12 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1752143299"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1752143299"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1752517973"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1752517973"></script>
 <script type="text/javascript">
-    
-        var baseurl = "https:\/\/bettercap.org\/";
-    
+    var baseurl = "https:\/\/bettercap.org\/";
 </script>
-<script type="text/javascript" src="/js/search.js?1752143299"></script>
+<script type="text/javascript" src="/js/search.js?1752517973"></script>
 
     
   </div>
@@ -713,6 +711,32 @@ a.highlight span.copy-to-clipboard {
         ">
       <a href="/modules/canbus/">
           CAN-bus
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/zerogod/" title="Zerogod" class="dd-item
+        
+        
+        
+        ">
+      <a href="/modules/zerogod/">
+          Zerogod
           
       </a>
       
@@ -1599,35 +1623,35 @@ a.highlight span.copy-to-clipboard {
 <p>Stop ARP spoofer.</p>
 <h3 id="parameters">Parameters</h3>
 <table>
-<thead>
-<tr>
-<th>parameter</th>
-<th>default</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>arp.spoof.targets</code></td>
-<td><code>&lt;entire subnet&gt;</code></td>
-<td>A comma separated list of MAC addresses, IP addresses, IP ranges or aliases to spoof (<a href="https://github.com/malfunkt/iprange">a list of supported range formats</a>).</td>
-</tr>
-<tr>
-<td><code>arp.spoof.whitelist</code></td>
-<td></td>
-<td>A comma separated list of MAC addresses, IP addresses, IP ranges or aliases to skip while spoofing.</td>
-</tr>
-<tr>
-<td><code>arp.spoof.internal</code></td>
-<td><code>false</code></td>
-<td>If true, local connections among computers of the network will be spoofed as well, otherwise only connections going to and coming from the external network.</td>
-</tr>
-<tr>
-<td><code>arp.spoof.fullduplex</code></td>
-<td><code>false</code></td>
-<td>If true, both the targets and the gateway will be attacked, otherwise only the target (<strong>if the router has ARP spoofing protections in place this will make the attack fail</strong>).</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>parameter</th>
+          <th>default</th>
+          <th>description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>arp.spoof.targets</code></td>
+          <td><code>&lt;entire subnet&gt;</code></td>
+          <td>A comma separated list of MAC addresses, IP addresses, IP ranges or aliases to spoof (<a href="https://github.com/malfunkt/iprange">a list of supported range formats</a>).</td>
+      </tr>
+      <tr>
+          <td><code>arp.spoof.whitelist</code></td>
+          <td></td>
+          <td>A comma separated list of MAC addresses, IP addresses, IP ranges or aliases to skip while spoofing.</td>
+      </tr>
+      <tr>
+          <td><code>arp.spoof.internal</code></td>
+          <td><code>false</code></td>
+          <td>If true, local connections among computers of the network will be spoofed as well, otherwise only connections going to and coming from the external network.</td>
+      </tr>
+      <tr>
+          <td><code>arp.spoof.fullduplex</code></td>
+          <td><code>false</code></td>
+          <td>If true, both the targets and the gateway will be attacked, otherwise only the target (<strong>if the router has ARP spoofing protections in place this will make the attack fail</strong>).</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="examples">Examples</h3>
 <p>Ban the address <code>192.168.1.6</code> from the network:</p>
@@ -1949,6 +1973,22 @@ a.highlight span.copy-to-clipboard {
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -2461,19 +2501,19 @@ a.highlight span.copy-to-clipboard {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1752143299"></script>
-    <script src="/js/perfect-scrollbar.min.js?1752143299"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1752143299"></script>
-    <script src="/js/jquery.sticky.js?1752143299"></script>
-    <script src="/js/featherlight.min.js?1752143299"></script>
-    <script src="/js/highlight.pack.js?1752143299"></script>
+    <script src="/js/clipboard.min.js?1752517973"></script>
+    <script src="/js/perfect-scrollbar.min.js?1752517973"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1752517973"></script>
+    <script src="/js/jquery.sticky.js?1752517973"></script>
+    <script src="/js/featherlight.min.js?1752517973"></script>
+    <script src="/js/highlight.pack.js?1752517973"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1752143299"></script>
-    <script src="/js/learn.js?1752143299"></script>
-    <script src="/js/hugo-learn.js?1752143299"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1752517973"></script>
+    <script src="/js/learn.js?1752517973"></script>
+    <script src="/js/hugo-learn.js?1752517973"></script>
     
         
-            <script src="/mermaid/mermaid.js?1752143299"></script>
+            <script src="/mermaid/mermaid.js?1752517973"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
