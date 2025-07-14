@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.148.1">
+    <meta name="generator" content="Hugo 0.123.0">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>HID on 2.4Ghz :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1752520953" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1752520953" rel="stylesheet">
-    <link href="/css/hybrid.css?1752520953" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1752520953" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1752520953" rel="stylesheet">
-    <link href="/css/auto-complete.css?1752520953" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1752520953" rel="stylesheet">
-    <link href="/css/theme.css?1752520953" rel="stylesheet">
-    <link href="/css/tabs.css?1752520953" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1752520953" rel="stylesheet">
+    <link href="/css/nucleus.css?1752143299" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1752143299" rel="stylesheet">
+    <link href="/css/hybrid.css?1752143299" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1752143299" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1752143299" rel="stylesheet">
+    <link href="/css/auto-complete.css?1752143299" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1752143299" rel="stylesheet">
+    <link href="/css/theme.css?1752143299" rel="stylesheet">
+    <link href="/css/tabs.css?1752143299" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1752143299" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1752520953" rel="stylesheet">
+    <link href="/css/theme-green.css?1752143299" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1752520953"></script>
+    <script src="/js/jquery-3.3.1.min.js?1752143299"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -133,12 +133,14 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1752520953"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1752520953"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1752143299"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1752143299"></script>
 <script type="text/javascript">
-    var baseurl = "https:\/\/bettercap.org\/";
+    
+        var baseurl = "https:\/\/bettercap.org\/";
+    
 </script>
-<script type="text/javascript" src="/js/search.js?1752520953"></script>
+<script type="text/javascript" src="/js/search.js?1752143299"></script>
 
     
   </div>
@@ -730,32 +732,6 @@ a.highlight span.copy-to-clipboard {
  
   
     
-    <li data-nav-id="/modules/zerogod/" title="Zerogod" class="dd-item
-        
-        
-        
-        ">
-      <a href="/modules/zerogod/">
-          Zerogod
-          
-      </a>
-      
-      
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
     <li data-nav-id="/modules/ethernet/" title="IPv4 / IPv6" class="dd-item
         
         
@@ -1197,32 +1173,6 @@ a.highlight span.copy-to-clipboard {
         ">
       <a href="/modules/ethernet/proxies/https.proxy/">
           https.proxy
-          
-      </a>
-      
-      
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/modules/ethernet/proxies/dns.proxy/" title="dns.proxy" class="dd-item
-        
-        
-        
-        ">
-      <a href="/modules/ethernet/proxies/dns.proxy/">
-          dns.proxy
           
       </a>
       
@@ -1680,55 +1630,55 @@ a.highlight span.copy-to-clipboard {
 
 <h3 id="parameters">Parameters</h3>
 <table>
-  <thead>
-      <tr>
-          <th>parameter</th>
-          <th>default</th>
-          <th>description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>hid.lna</code></td>
-          <td><code>true</code></td>
-          <td>If true, enable the LNA power amplifier for CrazyRadio devices.</td>
-      </tr>
-      <tr>
-          <td><code>hid.hop.period</code></td>
-          <td><code>100</code></td>
-          <td>Time in milliseconds to stay on each channel before hopping to the next one.</td>
-      </tr>
-      <tr>
-          <td><code>hid.ping.period</code></td>
-          <td><code>100</code></td>
-          <td>Time in milliseconds to attempt to ping a device on a given channel while in sniffer mode.</td>
-      </tr>
-      <tr>
-          <td><code>hid.sniff.period</code></td>
-          <td><code>500</code></td>
-          <td>Time in milliseconds to automatically sniff payloads from a device, once it&rsquo;s detected, in order to determine its type.</td>
-      </tr>
-      <tr>
-          <td><code>hid.force.type</code></td>
-          <td><code>logitech</code></td>
-          <td>If the device is not visible (if you want to talk directly to a dongle without connected devices) or its type has not being detected, force the device type to this value. Accepted values: <code>logitech</code>, <code>amazon</code>, <code>microsoft</code>.</td>
-      </tr>
-      <tr>
-          <td><code>hid.show.filter</code></td>
-          <td></td>
-          <td>Defines a regular expression filter for <code>hid.show</code>.</td>
-      </tr>
-      <tr>
-          <td><code>hid.show.sort</code></td>
-          <td><code>mac desc</code></td>
-          <td>Defines sorting field (mac, seen) and direction (asc or desc) for <code>hid.show</code>.</td>
-      </tr>
-      <tr>
-          <td><code>hid.show.limit</code></td>
-          <td><code>0</code></td>
-          <td>Defines limit for <code>hid.show</code>.</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>parameter</th>
+<th>default</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hid.lna</code></td>
+<td><code>true</code></td>
+<td>If true, enable the LNA power amplifier for CrazyRadio devices.</td>
+</tr>
+<tr>
+<td><code>hid.hop.period</code></td>
+<td><code>100</code></td>
+<td>Time in milliseconds to stay on each channel before hopping to the next one.</td>
+</tr>
+<tr>
+<td><code>hid.ping.period</code></td>
+<td><code>100</code></td>
+<td>Time in milliseconds to attempt to ping a device on a given channel while in sniffer mode.</td>
+</tr>
+<tr>
+<td><code>hid.sniff.period</code></td>
+<td><code>500</code></td>
+<td>Time in milliseconds to automatically sniff payloads from a device, once it&rsquo;s detected, in order to determine its type.</td>
+</tr>
+<tr>
+<td><code>hid.force.type</code></td>
+<td><code>logitech</code></td>
+<td>If the device is not visible (if you want to talk directly to a dongle without connected devices) or its type has not being detected, force the device type to this value. Accepted values: <code>logitech</code>, <code>amazon</code>, <code>microsoft</code>.</td>
+</tr>
+<tr>
+<td><code>hid.show.filter</code></td>
+<td></td>
+<td>Defines a regular expression filter for <code>hid.show</code>.</td>
+</tr>
+<tr>
+<td><code>hid.show.sort</code></td>
+<td><code>mac desc</code></td>
+<td>Defines sorting field (mac, seen) and direction (asc or desc) for <code>hid.show</code>.</td>
+</tr>
+<tr>
+<td><code>hid.show.limit</code></td>
+<td><code>0</code></td>
+<td>Defines limit for <code>hid.show</code>.</td>
+</tr>
+</tbody>
 </table>
 <h3 id="examples">Examples</h3>
 <p>Enable HID discovery, use the <code>ticker</code> module to display detected devices, wait for the device <code>32:26:9f:a4:08</code> to be detected and inject the <code>ducky.txt</code> script as HID frames using the US keyboard layout:</p>
@@ -2147,22 +2097,6 @@ ENTER
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -2344,22 +2278,6 @@ ENTER
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -2604,19 +2522,19 @@ ENTER
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1752520953"></script>
-    <script src="/js/perfect-scrollbar.min.js?1752520953"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1752520953"></script>
-    <script src="/js/jquery.sticky.js?1752520953"></script>
-    <script src="/js/featherlight.min.js?1752520953"></script>
-    <script src="/js/highlight.pack.js?1752520953"></script>
+    <script src="/js/clipboard.min.js?1752143299"></script>
+    <script src="/js/perfect-scrollbar.min.js?1752143299"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1752143299"></script>
+    <script src="/js/jquery.sticky.js?1752143299"></script>
+    <script src="/js/featherlight.min.js?1752143299"></script>
+    <script src="/js/highlight.pack.js?1752143299"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1752520953"></script>
-    <script src="/js/learn.js?1752520953"></script>
-    <script src="/js/hugo-learn.js?1752520953"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1752143299"></script>
+    <script src="/js/learn.js?1752143299"></script>
+    <script src="/js/hugo-learn.js?1752143299"></script>
     
         
-            <script src="/mermaid/mermaid.js?1752520953"></script>
+            <script src="/mermaid/mermaid.js?1752143299"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

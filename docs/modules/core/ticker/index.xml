@@ -4,7 +4,7 @@
     <title>ticker on bettercap</title>
     <link>https://bettercap.org/modules/core/ticker/</link>
     <description>Recent content in ticker on bettercap</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
     <atom:link href="https://bettercap.org/modules/core/ticker/index.xml" rel="self" type="application/rss+xml" />
