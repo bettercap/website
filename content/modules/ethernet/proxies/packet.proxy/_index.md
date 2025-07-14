@@ -23,12 +23,12 @@ Stop the NFQUEUE based packet proxy.
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `packet.proxy.queue.num` | `0` |  NFQUEUE number to create and bind to. |
-| `packet.proxy.chain` | `OUTPUT` | Chain name of the iptables rule. |
-| `packet.proxy.rule` |  | Any additional iptables rule to make the queue more selective (ex. `--destination 8.8.8.8`). |
-| `packet.proxy.plugin` |  | Go plugin file to load and call for every packet. |
+| parameter                | default  | description                                                                                  |
+| ------------------------ | -------- | -------------------------------------------------------------------------------------------- |
+| `packet.proxy.queue.num` | `0`      | NFQUEUE number to create and bind to.                                                        |
+| `packet.proxy.chain`     | `OUTPUT` | Chain name of the iptables rule.                                                             |
+| `packet.proxy.rule`      |          | Any additional iptables rule to make the queue more selective (ex. `--destination 8.8.8.8`). |
+| `packet.proxy.plugin`    |          | Go plugin file to load and call for every packet.                                            |
 
 ### Plugins
 
@@ -45,7 +45,7 @@ import (
 
 func OnPacket(payload *nfqueue.Payload) int {
 	log.Info("We got a packet: %v", payload)
-        // this will accept the packet, use NF_DROP to 
+        // this will accept the packet, use NF_DROP to
         // drop the packet instead.
 	payload.SetVerdict(nfqueue.NF_ACCEPT)
 	return 0

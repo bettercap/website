@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/favicon.png" type="image/png">
 
-    <title>Servers :: bettercap</title>
+    <title>dns.proxy :: bettercap</title>
 
     
     <link href="/css/nucleus.css?1752520953" rel="stylesheet">
@@ -100,7 +100,7 @@ a.highlight span.copy-to-clipboard {
 </style>
 
   </head>
-  <body class="" data-url="/modules/ethernet/servers/">
+  <body class="" data-url="/modules/ethernet/proxies/dns.proxy/">
     <nav id="sidebar" class="">
 
 
@@ -1058,7 +1058,7 @@ a.highlight span.copy-to-clipboard {
   
     
     <li data-nav-id="/modules/ethernet/proxies/" title="Proxies" class="dd-item
-        
+        parent
         
         
         ">
@@ -1218,7 +1218,7 @@ a.highlight span.copy-to-clipboard {
     
     <li data-nav-id="/modules/ethernet/proxies/dns.proxy/" title="dns.proxy" class="dd-item
         
-        
+        active
         
         ">
       <a href="/modules/ethernet/proxies/dns.proxy/">
@@ -1253,7 +1253,7 @@ a.highlight span.copy-to-clipboard {
     
     <li data-nav-id="/modules/ethernet/servers/" title="Servers" class="dd-item
         
-        active
+        
         
         ">
       <a href="/modules/ethernet/servers/">
@@ -1549,7 +1549,7 @@ a.highlight span.copy-to-clipboard {
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/bettercap/website/edit/master/content/modules/ethernet/servers/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/bettercap/website/edit/master/content/modules/ethernet/proxies/dns.proxy/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -1584,7 +1584,13 @@ a.highlight span.copy-to-clipboard {
             
           
           
-            <a href='/'></a> > <a href='/modules/'>Modules</a> > <a href='/modules/ethernet/'>IPv4 / IPv6</a> > Servers
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/modules/'>Modules</a> > <a href='/modules/ethernet/'>IPv4 / IPv6</a> > <a href='/modules/ethernet/proxies/'>Proxies</a> > dns.proxy
+          
+        
           
         
           
@@ -1599,7 +1605,21 @@ a.highlight span.copy-to-clipboard {
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#commands">Commands</a>
+      <ul>
+        <li><a href="#dnsproxy-on"><code>dns.proxy on</code></a></li>
+        <li><a href="#dnsproxy-off"><code>dns.proxy off</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#parameters">Parameters</a>
+      <ul>
+        <li><a href="#modules">Modules</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1615,7 +1635,7 @@ a.highlight span.copy-to-clipboard {
           
             <h1>
               
-              Servers
+              dns.proxy
             </h1>
           
 
@@ -1623,169 +1643,217 @@ a.highlight span.copy-to-clipboard {
 
 
 
-	<p>A set of servers used to serve files on a network or intercept credentials by exposing a rogue service:</p>
-
-
-
-
-
-
-
-<ul class="children children-li">
-	
-
-	
-		
-			
-		
-	
-
-	
-
-	
-		
-	
-		
-			
-				
-<li>
-<a href="/modules/ethernet/servers/http.server/" >http.server</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/modules/ethernet/servers/https.server/" >https.server</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/modules/ethernet/servers/mdns.server/" >mdns.server</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/modules/ethernet/servers/mysql.server/" >mysql.server (rogue)</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-
-	
-</ul>
-
-
+	<p>A full featured DNS proxy that can manipulate DNS traffic in real-time.<br>
+It can be used for DNS spoofing, redirection, logging, or injection of custom DNS responses.</p>
+<p>It supports <strong>UDP</strong>, <strong>TCP</strong>, and <strong>TCP-TLS</strong> protocols, with automatic generation of a self-signed certificate if needed.</p>
+<p>Additionally, <code>dns.proxy</code> can be scripted using JavaScript modules, similarly to <code>http.proxy</code> and <code>https.proxy</code>, to manipulate requests and responses dynamically.</p>
+<h2 id="commands">Commands</h2>
+<h3 id="dnsproxy-on"><code>dns.proxy on</code></h3>
+<p>Start the DNS proxy.</p>
+<h3 id="dnsproxy-off"><code>dns.proxy off</code></h3>
+<p>Stop the DNS proxy.</p>
+<h2 id="parameters">Parameters</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Parameter</th>
+          <th>Default</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>dns.port</code></td>
+          <td><code>53</code></td>
+          <td>DNS port to redirect when the proxy is activated.</td>
+      </tr>
+      <tr>
+          <td><code>dns.proxy.address</code></td>
+          <td><code>&lt;interface address&gt;</code></td>
+          <td>Address to bind the DNS proxy to.</td>
+      </tr>
+      <tr>
+          <td><code>dns.proxy.blacklist</code></td>
+          <td></td>
+          <td>Comma separated list of client IPs to skip while proxying (wildcard allowed).</td>
+      </tr>
+      <tr>
+          <td><code>dns.proxy.whitelist</code></td>
+          <td></td>
+          <td>Comma separated list of client IPs to proxy if the blacklist is used.</td>
+      </tr>
+      <tr>
+          <td><code>dns.proxy.nameserver</code></td>
+          <td><code>1.1.1.1</code></td>
+          <td>DNS resolver address.</td>
+      </tr>
+      <tr>
+          <td><code>dns.proxy.port</code></td>
+          <td><code>8053</code></td>
+          <td>Port to bind the DNS proxy to.</td>
+      </tr>
+      <tr>
+          <td><code>dns.proxy.protocol</code></td>
+          <td><code>udp</code></td>
+          <td>Network protocol for the DNS proxy server to use. Accepted values: <code>udp</code>, <code>tcp</code>, <code>tcp-tls</code>.</td>
+      </tr>
+      <tr>
+          <td><code>dns.proxy.redirect</code></td>
+          <td><code>true</code></td>
+          <td>Enable or disable port redirection with iptables.</td>
+      </tr>
+      <tr>
+          <td><code>dns.proxy.certificate</code></td>
+          <td><code>~/.bettercap-ca.cert.pem</code></td>
+          <td>DNS proxy certification authority TLS certificate file.</td>
+      </tr>
+      <tr>
+          <td><code>dns.proxy.key</code></td>
+          <td><code>~/.bettercap-ca.key.pem</code></td>
+          <td>DNS proxy certification authority TLS key file.</td>
+      </tr>
+      <tr>
+          <td><code>dns.proxy.script</code></td>
+          <td></td>
+          <td>Path of a JS proxy script.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="modules">Modules</h3>
+<p>The <code>dns.proxy</code> module can be scripted using JavaScript files that must declare at least one of the following functions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// called when the script is loaded
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onLoad</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// called when the DNS request is received by the proxy
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// and before it is sent to the real resolver.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onRequest</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// called when the DNS request is sent to the real resolver
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// and a response is received.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onResponse</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// called every time an unknown session command is typed,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// proxy modules can optionally handle custom commands this way:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onCommand</span>(<span style="color:#a6e22e">cmd</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">cmd</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;test&#34;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * Custom session command logic here.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// tell the session we handled this command
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="builtin-functions">Builtin Functions</h4>
+<p>Modules can use the following builtin functions.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Function</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>readDir(&quot;/path/&quot;)</code></td>
+          <td>Return the contents of a directory as a string array.</td>
+      </tr>
+      <tr>
+          <td><code>readFile(&quot;/path/to/file&quot;)</code></td>
+          <td>Return the contents of a file as a string.</td>
+      </tr>
+      <tr>
+          <td><code>writeFile(&quot;/path/to/file&quot;, &quot;hello world&quot;)</code></td>
+          <td>Write the string <code>hello world</code> to a file, returns <code>null</code> or an error message.</td>
+      </tr>
+      <tr>
+          <td><code>log_debug(&quot;message&quot;)</code></td>
+          <td>Log a message in the interactive session (its level will be <code>DEBUG</code>).</td>
+      </tr>
+      <tr>
+          <td><code>log_info(&quot;message&quot;)</code></td>
+          <td>Log a message in the interactive session (its level will be <code>INFO</code>).</td>
+      </tr>
+      <tr>
+          <td><code>log_warn(&quot;message&quot;)</code></td>
+          <td>Log a message in the interactive session (its level will be <code>WARNING</code>).</td>
+      </tr>
+      <tr>
+          <td><code>log_error(&quot;message&quot;)</code></td>
+          <td>Log a message in the interactive session (its level will be <code>ERROR</code>).</td>
+      </tr>
+      <tr>
+          <td><code>log_fatal(&quot;message&quot;)</code></td>
+          <td>Log a message in the interactive session (its level will be <code>FATAL</code>).</td>
+      </tr>
+      <tr>
+          <td><code>log(&quot;message&quot;)</code></td>
+          <td>Shortcut for <code>log_info(&quot;message&quot;)</code>.</td>
+      </tr>
+      <tr>
+          <td><code>btoa(&quot;message&quot;)</code></td>
+          <td>Encode a message to base64.</td>
+      </tr>
+      <tr>
+          <td><code>atob(&quot;bWVzc2FnZQ==&quot;)</code></td>
+          <td>Decode a message from base64.</td>
+      </tr>
+      <tr>
+          <td><code>gzipCompress(&quot;plaintext data&quot;)</code></td>
+          <td>Compress a string using gzip encoding.</td>
+      </tr>
+      <tr>
+          <td><code>gzipDecompress(&quot;)9�\+�I��+I�(QHI,I����&quot;)</code></td>
+          <td>Decompress a gzip encoded string.</td>
+      </tr>
+      <tr>
+          <td><code>env(&quot;iface.ipv4&quot;)</code></td>
+          <td>Read a variable.</td>
+      </tr>
+      <tr>
+          <td><code>env(&quot;foo&quot;, &quot;bar&quot;)</code></td>
+          <td>Set a variable.</td>
+      </tr>
+      <tr>
+          <td><code>run(&quot;command&quot;)</code></td>
+          <td>Execute a shell command and return the output as a string.</td>
+      </tr>
+      <tr>
+          <td><code>fileExists(&quot;/path/to/file&quot;)</code></td>
+          <td>Return <code>true</code> if the file exists, otherwise <code>false</code>.</td>
+      </tr>
+      <tr>
+          <td><code>loadJSON(&quot;/path/to/file.json&quot;)</code></td>
+          <td>Load and parse a JSON file, returns a JS object.</td>
+      </tr>
+      <tr>
+          <td><code>saveJSON(&quot;/path/to/file.json&quot;, object)</code></td>
+          <td>Serialize and save a JS object as JSON to the specified file.</td>
+      </tr>
+      <tr>
+          <td><code>saveToFile(&quot;/path.txt&quot;, &quot;data&quot;)</code></td>
+          <td>Save raw string data to a file.</td>
+      </tr>
+      <tr>
+          <td><code>onEvent(&quot;event.tag&quot;, callback)</code></td>
+          <td>Register a JS callback for the given session event tag.</td>
+      </tr>
+      <tr>
+          <td><code>removeEventListener(&quot;event.tag&quot;)</code></td>
+          <td>Remove a previously registered event listener for the given tag.</td>
+      </tr>
+      <tr>
+          <td><code>addSessionEvent(&quot;tag&quot;, data)</code></td>
+          <td>Trigger a session event from within the script with a custom tag and payload.</td>
+      </tr>
+  </tbody>
+</table>
 
 
 
@@ -2369,6 +2437,7 @@ a.highlight span.copy-to-clipboard {
             
                 
                     
+                    
                 
                 
 
@@ -2383,6 +2452,9 @@ a.highlight span.copy-to-clipboard {
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2464,6 +2536,7 @@ a.highlight span.copy-to-clipboard {
             
                 
                     
+                    
                 
                 
 
@@ -2483,6 +2556,8 @@ a.highlight span.copy-to-clipboard {
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -2498,9 +2573,6 @@ a.highlight span.copy-to-clipboard {
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2629,10 +2701,10 @@ a.highlight span.copy-to-clipboard {
 	 
 	 
 		
-			<a class="nav nav-prev" href="/modules/ethernet/proxies/dns.proxy/" title="dns.proxy"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/modules/ethernet/proxies/https.proxy/" title="https.proxy"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/modules/ethernet/servers/http.server/" title="http.server" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/modules/ethernet/servers/" title="Servers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

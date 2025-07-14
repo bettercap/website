@@ -12,22 +12,22 @@
     <title>tcp.proxy :: bettercap</title>
 
     
-    <link href="/css/nucleus.css?1752517973" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1752517973" rel="stylesheet">
-    <link href="/css/hybrid.css?1752517973" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1752517973" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1752517973" rel="stylesheet">
-    <link href="/css/auto-complete.css?1752517973" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1752517973" rel="stylesheet">
-    <link href="/css/theme.css?1752517973" rel="stylesheet">
-    <link href="/css/tabs.css?1752517973" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1752517973" rel="stylesheet">
+    <link href="/css/nucleus.css?1752520953" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1752520953" rel="stylesheet">
+    <link href="/css/hybrid.css?1752520953" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1752520953" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1752520953" rel="stylesheet">
+    <link href="/css/auto-complete.css?1752520953" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1752520953" rel="stylesheet">
+    <link href="/css/theme.css?1752520953" rel="stylesheet">
+    <link href="/css/tabs.css?1752520953" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1752520953" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1752517973" rel="stylesheet">
+    <link href="/css/theme-green.css?1752520953" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1752517973"></script>
+    <script src="/js/jquery-3.3.1.min.js?1752520953"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -133,12 +133,12 @@ a.highlight span.copy-to-clipboard {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1752517973"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1752517973"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1752520953"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1752520953"></script>
 <script type="text/javascript">
     var baseurl = "https:\/\/bettercap.org\/";
 </script>
-<script type="text/javascript" src="/js/search.js?1752517973"></script>
+<script type="text/javascript" src="/js/search.js?1752520953"></script>
 
     
   </div>
@@ -1207,6 +1207,32 @@ a.highlight span.copy-to-clipboard {
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/modules/ethernet/proxies/dns.proxy/" title="dns.proxy" class="dd-item
+        
+        
+        
+        ">
+      <a href="/modules/ethernet/proxies/dns.proxy/">
+          dns.proxy
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
       
@@ -1673,22 +1699,22 @@ a.highlight span.copy-to-clipboard {
 <p>The <code>tcp.proxy</code> module can be scripted using javascript files that must declare at least one of the following functions:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// called when the script is loaded
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onLoad</span>() {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// called when data is available
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// return an array of bytes to override &#34;data&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onData</span>(<span style="color:#a6e22e">from</span>, <span style="color:#a6e22e">to</span>, <span style="color:#a6e22e">data</span>) {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
 </span></span></code></pre></div><p>Modules can change the <code>data</code> buffer and return it, signaling the proxy to override the original buffer.</p>
 <h3 id="builtin-functions">Builtin Functions</h3>
 <p>Modules can use the following builtin functions.</p>
 <table>
   <thead>
       <tr>
-          <th>function</th>
-          <th>description</th>
+          <th>Function</th>
+          <th>Description</th>
       </tr>
   </thead>
   <tbody>
@@ -1751,6 +1777,38 @@ a.highlight span.copy-to-clipboard {
       <tr>
           <td><code>env(&quot;foo&quot;, &quot;bar&quot;)</code></td>
           <td>Set a variable.</td>
+      </tr>
+      <tr>
+          <td><code>run(&quot;command&quot;)</code></td>
+          <td>Execute a shell command and return the output as a string.</td>
+      </tr>
+      <tr>
+          <td><code>fileExists(&quot;/path/to/file&quot;)</code></td>
+          <td>Return <code>true</code> if the file exists, otherwise <code>false</code>.</td>
+      </tr>
+      <tr>
+          <td><code>loadJSON(&quot;/path/to/file.json&quot;)</code></td>
+          <td>Load and parse a JSON file, returns a JS object.</td>
+      </tr>
+      <tr>
+          <td><code>saveJSON(&quot;/path/to/file.json&quot;, object)</code></td>
+          <td>Serialize and save a JS object as JSON to the specified file.</td>
+      </tr>
+      <tr>
+          <td><code>saveToFile(&quot;/path.txt&quot;, &quot;data&quot;)</code></td>
+          <td>Save raw string data to a file.</td>
+      </tr>
+      <tr>
+          <td><code>onEvent(&quot;event.tag&quot;, callback)</code></td>
+          <td>Register a JS callback for the given session event tag.</td>
+      </tr>
+      <tr>
+          <td><code>removeEventListener(&quot;event.tag&quot;)</code></td>
+          <td>Remove a previously registered event listener for the given tag.</td>
+      </tr>
+      <tr>
+          <td><code>addSessionEvent(&quot;tag&quot;, data)</code></td>
+          <td>Trigger a session event from within the script with a custom tag and payload.</td>
       </tr>
   </tbody>
 </table>
@@ -2458,6 +2516,22 @@ a.highlight span.copy-to-clipboard {
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2621,19 +2695,19 @@ a.highlight span.copy-to-clipboard {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1752517973"></script>
-    <script src="/js/perfect-scrollbar.min.js?1752517973"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1752517973"></script>
-    <script src="/js/jquery.sticky.js?1752517973"></script>
-    <script src="/js/featherlight.min.js?1752517973"></script>
-    <script src="/js/highlight.pack.js?1752517973"></script>
+    <script src="/js/clipboard.min.js?1752520953"></script>
+    <script src="/js/perfect-scrollbar.min.js?1752520953"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1752520953"></script>
+    <script src="/js/jquery.sticky.js?1752520953"></script>
+    <script src="/js/featherlight.min.js?1752520953"></script>
+    <script src="/js/highlight.pack.js?1752520953"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1752517973"></script>
-    <script src="/js/learn.js?1752517973"></script>
-    <script src="/js/hugo-learn.js?1752517973"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1752520953"></script>
+    <script src="/js/learn.js?1752520953"></script>
+    <script src="/js/hugo-learn.js?1752520953"></script>
     
         
-            <script src="/mermaid/mermaid.js?1752517973"></script>
+            <script src="/mermaid/mermaid.js?1752520953"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
