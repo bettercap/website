@@ -49,7 +49,7 @@ func OnPacket(queue *nfqueue.Nfqueue, attribute nfqueue.Attribute) int {
 			log.Info("We got a packet with payload:", *attribute.Payload)
 		}
 		// this will accept the packet, use NfDrop to
-    // drop the packet instead.
+		// drop the packet instead.
 		queue.SetVerdict(*attribute.PacketID, nfqueue.NfAccept)
 	}
 	return 0
