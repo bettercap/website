@@ -48,6 +48,11 @@ function onLoad() {
   // ...
 }
 
+// called when the module is stopped
+function onExit() {
+  // ...
+}
+
 // called when the DNS request is received by the proxy
 // and before it is sent to the real resolver.
 function onRequest(req, res) {

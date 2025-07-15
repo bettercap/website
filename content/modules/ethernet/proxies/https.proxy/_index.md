@@ -52,6 +52,11 @@ function onLoad() {
   // ...
 }
 
+// called when the module is stopped
+function onExit() {
+  // ...
+}
+
 // called when the request is received by the proxy
 // and before it is sent to the real server.
 function onRequest(req, res) {
