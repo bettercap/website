@@ -1,5 +1,5 @@
 ---
-title: "Zerogod"
+title: "ZeroGod"
 date: 2025-07-14T19:29:00+01:00
 draft: false
 weight: 6
