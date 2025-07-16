@@ -13,7 +13,7 @@ This module is not supported on Microsoft Windows and Apple macOS [due to this b
 
 ### Commands
 
-#### `ble.recon on` 
+#### `ble.recon on`
 
 Start Bluetooth Low Energy devices discovery.
 
@@ -21,11 +21,11 @@ Start Bluetooth Low Energy devices discovery.
 
 Stop Bluetooth Low Energy devices discovery.
 
-#### `ble.clear` 
+#### `ble.clear`
 
 Clear all devices collected by the BLE discovery module.
 
-#### `ble.show` 
+#### `ble.show`
 
 Show discovered Bluetooth Low Energy devices.
 
@@ -33,18 +33,20 @@ Show discovered Bluetooth Low Energy devices.
 
 Enumerate services and characteristics for the given BLE device.
 
-#### `ble.write MAC UUID HEX_DATA` 
+#### `ble.write MAC UUID HEX_DATA`
 
 Write the `HEX_DATA` buffer to the BLE device with the specified `MAC` address, to the characteristics with the given `UUID`. |
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `ble.device` | `-1` | Index of the HCI device to use, -1 to autodetect. |
-| `ble.show.filter` | |  Defines a regular expression filter for `ble.show`.|
-| `ble.show.sort` | `rssi asc` | Defines sorting field (`rssi`, `mac`, or `seen`) and direction (`asc` or `desc`) for `ble.show`. |
-| `ble.show.limit` | `0` | If greater than zero, defines limit for `ble.show`. |
+| parameter         | default    | description                                                                                      |
+| ----------------- | ---------- | ------------------------------------------------------------------------------------------------ |
+| `ble.device`      | `-1`       | Index of the HCI device to use, -1 to autodetect.                                                |
+| `ble.timeout`     | `5`        | Connection timeout in seconds.                                                                   |
+| `ble.ttl`         | `30`       | Seconds of inactivity for a device to be pruned.                                                 |
+| `ble.show.filter` |            | Defines a regular expression filter for `ble.show`.                                              |
+| `ble.show.sort`   | `rssi asc` | Defines sorting field (`rssi`, `mac`, or `seen`) and direction (`asc` or `desc`) for `ble.show`. |
+| `ble.show.limit`  | `0`        | If greater than zero, defines limit for `ble.show`.                                              |
 
 ### Examples
 
