@@ -27,7 +27,7 @@ Stop the named ticker called `NAME`.
 
 ### Parameters
 
-| parameter         | default                           | description                                              |
+| Parameter         | Default                           | Description                                              |
 | ----------------- | --------------------------------- | -------------------------------------------------------- |
 | `ticker.commands` | `clear; net.show; events.show 20` | List of commands for the main ticker separated by a `;`. |
 | `ticker.period`   | `1`                               | Main ticker period in seconds.                           |

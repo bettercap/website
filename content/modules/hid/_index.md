@@ -86,6 +86,7 @@ The command `hid.inject` does not require the HID device to be visible via the `
 | `hid.show.filter`  |            | Defines a regular expression filter for `hid.show`.                                                                                                                                                                            |
 | `hid.show.sort`    | `mac desc` | Defines sorting field (mac, seen) and direction (asc or desc) for `hid.show`.                                                                                                                                                  |
 | `hid.show.limit`   | `0`        | Defines limit for `hid.show`.                                                                                                                                                                                                  |
+| `hid.ttl`          | `1200`     | Seconds of inactivity to consider a device as not in range.                                                                                                                                                                    |
 
 ### Examples
 

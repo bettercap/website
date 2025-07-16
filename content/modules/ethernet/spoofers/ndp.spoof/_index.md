@@ -23,7 +23,7 @@ Stop NDP spoofer.
 
 ### Parameters
 
-| parameter                   | default   | description                                                          |
+| Parameter                   | Default   | Description                                                          |
 | --------------------------- | --------- | -------------------------------------------------------------------- |
 | `ndp.spoof.neighbour`       | `fe80::1` | Neighbour IPv6 address to spoof, clear to disable NA.                |
 | `ndp.spoof.prefix`          | `d00d::`  | IPv6 prefix for router advertisements spoofing, clear to disable RA. |

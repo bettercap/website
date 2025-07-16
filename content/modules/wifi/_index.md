@@ -86,6 +86,18 @@ Enable channel hopping on all supported channels.
 
 Inject fake management beacons in order to create a rogue access point ( requires `wifi.recon` to run ).
 
+#### `wifi.client.probe.ap.filter FILTER`
+
+Use this regular expression on the access point name to filter client probes, `clear` to reset the filter.
+
+#### `wifi.client.probe.sta.filter FILTER`
+
+Use this regular expression on the station address to filter client probes, `clear` to reset the filter.
+
+#### `wifi.channel_switch_announce BSSID CHANNEL`
+
+Start a 802.11 channel hop attack, all client will be forced to change the channel lead to connection down.
+
 ### Parameters
 
 | Parameter                | Default                            | Description                                                                                                                                                                                     |

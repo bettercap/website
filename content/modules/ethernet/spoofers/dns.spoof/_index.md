@@ -23,7 +23,7 @@ Stop the DNS spoofer in the background.
 
 ### Parameters
 
-| parameter           | default               | description                                                                                                         |
+| Parameter           | Default               | Description                                                                                                         |
 | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | `dns.spoof.domains` |                       | Comma separated values of domain names to spoof.                                                                    |
 | `dns.spoof.address` | `<interface address>` | IP address to map the domains to.                                                                                   |

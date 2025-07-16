@@ -21,7 +21,7 @@ Stop the TCP proxy.
 
 ### Parameters
 
-| parameter            | default               | description                                       |
+| Parameter            | Default               | Description                                       |
 | -------------------- | --------------------- | ------------------------------------------------- |
 | `tcp.port`           | `443`                 | TCP port to redirect when the proxy is activated. |
 | `tcp.address`        |                       | **Mandatory** remote address of the TCP proxy.    |

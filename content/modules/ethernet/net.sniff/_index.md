@@ -32,7 +32,7 @@ Disable fuzzing.
 
 ### Parameters
 
-| parameter             | default   | description                                                                                                                                                           |
+| Parameter             | Default   | Description                                                                                                                                                           |
 | --------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `net.sniff.output`    |           | If set, the sniffer will write captured packets to this pcap file.                                                                                                    |
 | `net.sniff.source`    |           | If set, the sniffer will read from this pcap file instead of the current interface.                                                                                   |

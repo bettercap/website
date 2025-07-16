@@ -23,7 +23,7 @@ Stop the NFQUEUE based packet proxy.
 
 ### Parameters
 
-| parameter                | default  | description                                                                                  |
+| Parameter                | Default  | Description                                                                                  |
 | ------------------------ | -------- | -------------------------------------------------------------------------------------------- |
 | `packet.proxy.queue.num` | `0`      | NFQUEUE number to create and bind to.                                                        |
 | `packet.proxy.chain`     | `OUTPUT` | Chain name of the iptables rule.                                                             |

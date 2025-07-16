@@ -39,7 +39,7 @@ Write the `HEX_DATA` buffer to the BLE device with the specified `MAC` address, 
 
 ### Parameters
 
-| parameter         | default    | description                                                                                      |
+| Parameter         | Default    | Description                                                                                      |
 | ----------------- | ---------- | ------------------------------------------------------------------------------------------------ |
 | `ble.device`      | `-1`       | Index of the HCI device to use, -1 to autodetect.                                                |
 | `ble.timeout`     | `5`        | Connection timeout in seconds.                                                                   |

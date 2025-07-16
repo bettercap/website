@@ -11,10 +11,10 @@ weight: 3
 
 In order to be able to use bettercap, you'll need the following dependencies on your system:
 
-* pkg-config
-* libpcap
-* libusb-1.0-0 (required by the [HID module](/modules/hid/))
-* libnetfilter-queue (on Linux only, required by the [packet.proxy module](/modules/ethernet/proxies/packet.proxy/))
+- pkg-config
+- libpcap
+- libusb-1.0-0 (required by the [HID module](/modules/hid/))
+- libnetfilter-queue (on Linux only, required by the [packet.proxy module](/modules/ethernet/proxies/packet.proxy/))
 
 ## Installing via Go
 
@@ -22,7 +22,7 @@ In order to be able to use bettercap, you'll need the following dependencies on 
 
 ## Using Docker
 
-BetterCAP is containerized using [Alpine Linux](https://alpinelinux.org/) -  a security-oriented, lightweight Linux distribution based on musl libc and busybox. The resulting Docker image is relatively small and easy to manage the dependencies. Since it is using a multi-stage build, **a Docker version greater than 17.05 is required**.
+BetterCAP is containerized using [Alpine Linux](https://alpinelinux.org/) - a security-oriented, lightweight Linux distribution based on musl libc and busybox. The resulting Docker image is relatively small and easy to manage the dependencies. Since it is using a multi-stage build, **a Docker version greater than 17.05 is required**.
 
 To pull latest version of the image:
 
@@ -36,16 +36,16 @@ To run:
 
 In order to compile bettercap from sources, make sure that:
 
-* You have a correctly configured **[Go >= 1.8](https://golang.org/doc/install)** environment.
-* `$GOPATH` is defined and `$GOPATH/bin` is in `$PATH`.
-* For hardware with limited resources (like Raspberry Pi Zero boards) you might want [to increase the swap size](https://www.bitpi.co/2015/02/11/how-to-change-raspberry-pis-swapfile-size-on-rasbian/).
+- You have a correctly configured **[Go >= 1.8](https://golang.org/doc/install)** environment.
+- `$GOPATH` is defined and `$GOPATH/bin` is in `$PATH`.
+- For hardware with limited resources (like Raspberry Pi Zero boards) you might want [to increase the swap size](https://www.bitpi.co/2015/02/11/how-to-change-raspberry-pis-swapfile-size-on-rasbian/).
 
 You'll also need to install the dependencies:
 
-* build-essential
-* libpcap-dev
-* libusb-1.0-0-dev (required by the [HID module](/modules/hid/))
-* libnetfilter-queue-dev (on Linux only, required by the [packet.proxy module](/modules/ethernet/proxies/packet.proxy/))
+- build-essential
+- libpcap-dev
+- libusb-1.0-0-dev (required by the [HID module](/modules/hid/))
+- libnetfilter-queue-dev (on Linux only, required by the [packet.proxy module](/modules/ethernet/proxies/packet.proxy/))
 
 Once you've met this conditions, you can run the following commands to compile and install bettercap in `/usr/local/bin/bettercap`:
 
@@ -96,8 +96,8 @@ go get -u github.com/bettercap/bettercap
 
 Once the build process is concluded, the binary will be located in `go/bin/bettercap`.
 
-
 #### Linux Deploy Method Fedora based (like Redhat, Centos)
+
 ```
 sudo dnf update
 sudo dnf install golang git make automake gcc gcc-c++ kernel-devel libpcap-devel libusb1-devel libnetfilter_queue-devel

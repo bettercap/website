@@ -8,4 +8,3 @@ weight: 1
 Core modules used to instrument and perform basic interaction with bettercap and other modules:
 
 {{% children depth="999" %}}
-

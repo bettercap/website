@@ -23,7 +23,7 @@ Stop ARP spoofer.
 
 ### Parameters
 
-| parameter                | default           | description                                                                                                                                                                     |
+| Parameter                | Default           | Description                                                                                                                                                                     |
 | ------------------------ | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `arp.spoof.targets`      | `<entire subnet>` | A comma separated list of MAC addresses, IP addresses, IP ranges or aliases to spoof ([a list of supported range formats](https://github.com/malfunkt/iprange)).                |
 | `arp.spoof.whitelist`    |                   | A comma separated list of MAC addresses, IP addresses, IP ranges or aliases to skip while spoofing.                                                                             |

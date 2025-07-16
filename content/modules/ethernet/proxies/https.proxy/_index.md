@@ -23,13 +23,13 @@ Stop the HTTPS proxy.
 
 ### Parameters
 
-| parameter                                    | default                                      | description                                                                                             |
+| Parameter                                    | Default                                      | Description                                                                                             |
 | -------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | `https.port`                                 | `443`                                        | HTTPS port to redirect when the proxy is activated.                                                     |
 | `https.proxy.address`                        | `<interface address>`                        | Address to bind the HTTPS proxy to.                                                                     |
 | `https.proxy.port`                           | `8083`                                       | Port to bind the HTTPS proxy to.                                                                        |
-| `https.proxy.certificate`                    | `~/.bettercap-ca.cert.pem`                   | HTTPS proxy certification authority TLS certificate file.                                               |
 | `https.proxy.key`                            | `~/.bettercap-ca.key.pem`                    | HTTPS proxy certification authority TLS key file.                                                       |
+| `https.proxy.certificate`                    | `~/.bettercap-ca.cert.pem`                   | HTTPS proxy certification authority TLS certificate file.                                               |
 | `https.proxy.certificate.bits`               | `4096`                                       | Number of bits of the RSA private key of the generated HTTPS certificate authority.                     |
 | `https.proxy.certificate.commonname`         | `Go Daddy Secure Certificate Authority - G2` | Common Name field of the generated HTTPS certificate authority.                                         |
 | `https.proxy.certificate.country`            | `US`                                         | Country field of the generated HTTPS certificate authority.                                             |

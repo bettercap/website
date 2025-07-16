@@ -19,7 +19,7 @@ Stop the HTTP proxy.
 
 ### Parameters
 
-| parameter              | default               | description                                                                                             |
+| Parameter              | Default               | Description                                                                                             |
 | ---------------------- | --------------------- | ------------------------------------------------------------------------------------------------------- |
 | `http.port`            | `80`                  | HTTP port to redirect when the proxy is activated.                                                      |
 | `http.proxy.address`   | `<interface address>` | Address to bind the HTTP proxy to.                                                                      |
@@ -29,6 +29,7 @@ Stop the HTTP proxy.
 | `http.proxy.injectjs`  |                       | URL, path or javascript code to inject into every HTML page.                                            |
 | `http.proxy.blacklist` |                       | Comma separated list of hostnames to skip while proxying (wildcard expressions can be used).            |
 | `http.proxy.whitelist` |                       | Comma separated list of hostnames to proxy if the blacklist is used (wildcard expressions can be used). |
+| `http.proxy.redirect`  | `true`                | Enable or disable port redirection with iptables.                                                       |
 
 ### Modules
 

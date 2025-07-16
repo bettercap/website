@@ -35,7 +35,7 @@ Stop replaying the recorded session.
 
 ### Parameters
 
-| parameter                                 | default                  | description                                                                                         |
+| Parameter                                 | Default                  | Description                                                                                         |
 | ----------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------- |
 | `api.rest.certificate`                    |                          | API TLS certificate (will be auto generated if not existing), fill to enable HTTPS.                 |
 | `api.rest.key`                            |                          | API TLS key (will be auto generated if not existing), fill to enable HTTPS.                         |

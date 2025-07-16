@@ -19,13 +19,12 @@ Stop mysql server.
 
 ### Parameters
 
-| Parameter              | Default                                                                          | Description                                                                      |
-| ---------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `mysql.server.infile`  | `/etc/passwd`                                                                    | File you want to read. UNC paths are also supported.                             |
-| `mysql.server.outfile` |                                                                                  | If filled, the INFILE buffer will be saved to this path instead of being logged. |
-| `mysql.server.address` | `<interface address>`                                                            | Address to bind the mysql server to.                                             |
-| `mysql.server.port`    | `3306`                                                                           | Port to bind the mysql server to.                                                |
-| `mysql.server.outfile` | If filled, the INFILE buffer will be saved to this path instead of being logged. |
+| Parameter              | Default               | Description                                                                      |
+| ---------------------- | --------------------- | -------------------------------------------------------------------------------- |
+| `mysql.server.infile`  | `/etc/passwd`         | File you want to read. UNC paths are also supported.                             |
+| `mysql.server.outfile` |                       | If filled, the INFILE buffer will be saved to this path instead of being logged. |
+| `mysql.server.address` | `<interface address>` | Address to bind the mysql server to.                                             |
+| `mysql.server.port`    | `3306`                | Port to bind the mysql server to.                                                |
 
 **Examples**
 
