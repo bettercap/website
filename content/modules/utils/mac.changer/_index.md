@@ -19,7 +19,7 @@ Stop the mac changer module and restore the original mac address.
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `mac.changer.iface` | `<interface name>` | Name of the interface to use. | 
-| `mac.changer.address` |  `<random mac>` | Hardware address to apply to the interface. |
+| Parameter             | Default            | Description                                 |
+| --------------------- | ------------------ | ------------------------------------------- |
+| `mac.changer.iface`   | `<interface name>` | Name of the interface to use.               |
+| `mac.changer.address` | `<random mac>`     | Hardware address to apply to the interface. |

