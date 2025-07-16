@@ -12,6 +12,7 @@ A module to send [Wake On LAN](https://en.wikipedia.org/wiki/Wake-on-LAN) packet
 #### `wol.eth MAC`
 
 Send a WOL as a raw ethernet packet of type 0x0847 (if no MAC is specified, `ff:ff:ff:ff:ff:ff` will be used).
+
 #### `wol.udp MAC`
 
 Send a WOL as an IPv4 broadcast packet to UDP port 9 (if no MAC is specified, `ff:ff:ff:ff:ff:ff` will be used).

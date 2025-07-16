@@ -13,16 +13,20 @@ This module performs [IPv6 neighbor spoofing](https://packetlife.net/blog/2009/f
 
 Start NDP spoofer.
 
-#### `ndp.spoof off`
+#### `ndp.ban on`
+
+Start NDP spoofer in ban mode, meaning the target(s) connectivity will not work.
+
+#### `ndp.spoof off` / `ndp.ban off`
 
 Stop NDP spoofer.
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `ndp.spoof.neighbour` | `fe80::1` | Neighbour IPv6 address to spoof, clear to disable NA. |
-| `ndp.spoof.prefix` | `d00d::` | IPv6 prefix for router advertisements spoofing, clear to disable RA. |
-| `ndp.spoof.prefix.length` | `64` | IPv6 prefix length for router advertisements. |
-| `ndp.spoof.targets` | | Comma separated list of IPv6 victim addresses. |
-| `ndp.spoof.router_lifetime` |  `10` |  Router lifetime for router advertisements in seconds. |
+| Parameter                   | Default   | Description                                                          |
+| --------------------------- | --------- | -------------------------------------------------------------------- |
+| `ndp.spoof.neighbour`       | `fe80::1` | Neighbour IPv6 address to spoof, clear to disable NA.                |
+| `ndp.spoof.prefix`          | `d00d::`  | IPv6 prefix for router advertisements spoofing, clear to disable RA. |
+| `ndp.spoof.prefix.length`   | `64`      | IPv6 prefix length for router advertisements.                        |
+| `ndp.spoof.targets`         |           | Comma separated list of IPv6 victim addresses.                       |
+| `ndp.spoof.router_lifetime` | `10`      | Router lifetime for router advertisements in seconds.                |

@@ -35,12 +35,12 @@ Show metadata (mDNS, UPnP, open ports, etc) about a specific list of addresses (
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `net.show.meta` | `false` | If true, the net.show command will show all metadata collected about each endpoint. |
-| `net.show.filter` | |  Defines a regular expression filter for `net.show`.|
-| `net.show.sort` | `ip asc` | Defines sorting field (`ip`, `mac`, `seen`, `sent`, `rcvd`) and direction (`asc` or `desc`) for `net.show`. |
-| `net.show.limit` | `0` | If greater than zero, defines limit for `net.show`. |
+| Parameter         | Default  | Description                                                                                                 |
+| ----------------- | -------- | ----------------------------------------------------------------------------------------------------------- |
+| `net.show.meta`   | `false`  | If true, the net.show command will show all metadata collected about each endpoint.                         |
+| `net.show.filter` |          | Defines a regular expression filter for `net.show`.                                                         |
+| `net.show.sort`   | `ip asc` | Defines sorting field (`ip`, `mac`, `seen`, `sent`, `rcvd`) and direction (`asc` or `desc`) for `net.show`. |
+| `net.show.limit`  | `0`      | If greater than zero, defines limit for `net.show`.                                                         |
 
 ### Examples
 

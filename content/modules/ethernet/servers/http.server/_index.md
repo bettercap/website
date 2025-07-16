@@ -19,11 +19,11 @@ Stop the HTTP server in the background.
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `http.server.path` | `.` | Server folder. | 
-| `http.server.address` |  `<interface address>` | Address to bind the http server to. |
-| `http.server.port` | `80` | Port to bind the http server to. |
+| Parameter             | Default               | Description                         |
+| --------------------- | --------------------- | ----------------------------------- |
+| `http.server.path`    | `.`                   | Server folder.                      |
+| `http.server.address` | `<interface address>` | Address to bind the http server to. |
+| `http.server.port`    | `80`                  | Port to bind the http server to.    |
 
 ### Examples
 

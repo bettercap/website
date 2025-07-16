@@ -12,4 +12,4 @@ The easiest way to start playing with bettercap is using its official [web user 
 sudo bettercap -eval "ui on"
 ```
 
-You can customize the UI (and REST API) settings, use `help ui` and `help api.rest` for more. 
+You can customize the UI (and REST API) settings, use `help ui` and `help api.rest` for more.

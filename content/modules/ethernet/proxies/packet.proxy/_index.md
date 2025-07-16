@@ -23,12 +23,12 @@ Stop the NFQUEUE based packet proxy.
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `packet.proxy.queue.num` | `0` |  NFQUEUE number to create and bind to. |
-| `packet.proxy.chain` | `OUTPUT` | Chain name of the iptables rule. |
-| `packet.proxy.rule` |  | Any additional iptables rule to make the queue more selective (ex. `--destination 8.8.8.8`). |
-| `packet.proxy.plugin` |  | Go plugin file to load and call for every packet. |
+| Parameter                | Default  | Description                                                                                  |
+| ------------------------ | -------- | -------------------------------------------------------------------------------------------- |
+| `packet.proxy.queue.num` | `0`      | NFQUEUE number to create and bind to.                                                        |
+| `packet.proxy.chain`     | `OUTPUT` | Chain name of the iptables rule.                                                             |
+| `packet.proxy.rule`      |          | Any additional iptables rule to make the queue more selective (ex. `--destination 8.8.8.8`). |
+| `packet.proxy.plugin`    |          | Go plugin file to load and call for every packet.                                            |
 
 ### Plugins
 
@@ -38,16 +38,20 @@ Instead of using Javascript extensions like the HTTP and HTTPS proxies, this mod
 package main
 
 import (
-	"github.com/bettercap/bettercap/log"
+	"github.com/bettercap/bettercap/v2/log"
 
-	"github.com/chifflier/nfqueue-go/nfqueue"
+	nfqueue "github.com/florianl/go-nfqueue/v2"
 )
 
-func OnPacket(payload *nfqueue.Payload) int {
-	log.Info("We got a packet: %v", payload)
-        // this will accept the packet, use NF_DROP to 
-        // drop the packet instead.
-	payload.SetVerdict(nfqueue.NF_ACCEPT)
+func OnPacket(queue *nfqueue.Nfqueue, attribute nfqueue.Attribute) int {
+	if attribute.PacketID != nil {
+		if attribute.Payload != nil {
+			log.Info("We got a packet with payload:", *attribute.Payload)
+		}
+		// this will accept the packet, use NfDrop to
+		// drop the packet instead.
+		queue.SetVerdict(*attribute.PacketID, nfqueue.NfAccept)
+	}
 	return 0
 }
 ```
@@ -58,17 +62,20 @@ A more complex example using the `gopacket` library to parse and dump all the la
 package main
 
 import (
-	"github.com/bettercap/bettercap/log"
+	"github.com/bettercap/bettercap/v2/log"
 
-	"github.com/chifflier/nfqueue-go/nfqueue"
+	nfqueue "github.com/florianl/go-nfqueue/v2"
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/layers"
 )
 
-func OnPacket(payload *nfqueue.Payload) int {
-	packet := gopacket.NewPacket(payload.Data, layers.LayerTypeIPv4, gopacket.Default)
-	log.Info("%s", packet.Dump())
-	payload.SetVerdict(nfqueue.NF_ACCEPT)
+func OnPacket(queue *nfqueue.Nfqueue, attribute nfqueue.Attribute) int {
+	if attribute.PacketID != nil {
+		id := *attribute.PacketID
+		packet := gopacket.NewPacket(*attribute.Payload, layers.LayerTypeIPv4, gopacket.Default)
+		log.Info(packet.Dump())
+		queue.SetVerdict(id, nfqueue.NfAccept)
+	}
 	return 0
 }
 ```

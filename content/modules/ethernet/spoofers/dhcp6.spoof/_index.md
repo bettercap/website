@@ -5,7 +5,7 @@ draft: false
 weight: 3
 ---
 
-This module's purpose is attacking Microsoft Windows hosts by replying to DHCPv6 messages and providing the target with a link-local 
+This module's purpose is attacking Microsoft Windows hosts by replying to DHCPv6 messages and providing the target with a link-local
 IPv6 address and setting the attacker host as default DNS server (as described [here](https://blog.fox-it.com/2018/01/11/mitm6-compromising-ipv4-networks-via-ipv6/)).
 
 {{% notice info %}}
@@ -17,15 +17,16 @@ This module must be used together with [dns.spoof](https://github.com/bettercap/
 #### `dhcp6.spoof on`
 
 Start the DHCPv6 spoofer in the background.
+
 #### `dhcp6.spoof off`
 
 Stop the DHCPv6 spoofer in the background.
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `dhcp6.spoof.domains` | `microsoft.com, goole.com, facebook.com, apple.com, twitter.com` | Comma separated values of domain names to spoof. | 
+| Parameter             | Default                                                          | Description                                      |
+| --------------------- | ---------------------------------------------------------------- | ------------------------------------------------ |
+| `dhcp6.spoof.domains` | `microsoft.com, goole.com, facebook.com, apple.com, twitter.com` | Comma separated values of domain names to spoof. |
 
 ### Examples
 

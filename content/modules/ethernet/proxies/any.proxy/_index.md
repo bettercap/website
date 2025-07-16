@@ -19,14 +19,14 @@ Stop the custom proxy redirection.
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `any.proxy.iface` | `<interface name>` | Interface to redirect packets from. |
-| `any.proxy.protocol` | `TCP` | Proxy protocol. |
-| `any.proxy.src_port` | `80` | Remote port to redirect when the module is activated. |
-| `any.proxy.src_address` | | Leave empty to intercept any source address. |
-| `any.proxy.dst_address` | `<interface address>` | Address where the proxy is listening. |
-| `any.proxy.dst_port` | `8080` | Port where the proxy is listening. |
+| Parameter               | Default               | Description                                           |
+| ----------------------- | --------------------- | ----------------------------------------------------- |
+| `any.proxy.iface`       | `<interface name>`    | Interface to redirect packets from.                   |
+| `any.proxy.protocol`    | `TCP`                 | Proxy protocol.                                       |
+| `any.proxy.src_port`    | `80`                  | Remote port to redirect when the module is activated. |
+| `any.proxy.src_address` |                       | Leave empty to intercept any source address.          |
+| `any.proxy.dst_address` | `<interface address>` | Address where the proxy is listening.                 |
+| `any.proxy.dst_port`    | `8080`                | Port where the proxy is listening.                    |
 
 ### Examples
 

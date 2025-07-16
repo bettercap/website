@@ -39,15 +39,15 @@ If an hexadecimal frame ID is specified, create a randomized version of it and i
 
 ### Parameters
 
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `can.device` | `can0` | CAN-bus device. |
-| `can.dump` |  | Load CAN traffic from this candump log file. |
+| Parameter         | Default | Description                                                                  |
+| ----------------- | ------- | ---------------------------------------------------------------------------- |
+| `can.device`      | `can0`  | CAN-bus device.                                                              |
+| `can.dump`        |         | Load CAN traffic from this candump log file.                                 |
 | `can.dump.inject` | `false` | Write CAN traffic read form the candump log file to the selected can.device. |
-| `can.filter` |  | Optional boolean expression to select frames to report. |
-| `can.parse.obd2` | `false` | Enable built in OBD2 PID parsing. |
-| `can.transport` | `can` | Network type, can be 'can' for SocketCAN or 'udp'. |
-    
+| `can.filter`      |         | Optional boolean expression to select frames to report.                      |
+| `can.parse.obd2`  | `false` | Enable built in OBD2 PID parsing.                                            |
+| `can.transport`   | `can`   | Network type, can be 'can' for SocketCAN or 'udp'.                           |
+
 ### Examples
 
 #### Read, write and fuzz raw frames

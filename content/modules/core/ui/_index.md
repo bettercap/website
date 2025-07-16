@@ -15,7 +15,7 @@ Activates the weui.
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `ui.address` | `127.0.0.1` | Address to bind the web ui to. |
-| `ui.port` | `8080` | Port to bind the web ui server to. |
+| Parameter    | Default     | Description                        |
+| ------------ | ----------- | ---------------------------------- |
+| `ui.address` | `127.0.0.1` | Address to bind the web ui to.     |
+| `ui.port`    | `8080`      | Port to bind the web ui server to. |

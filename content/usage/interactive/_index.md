@@ -4,7 +4,7 @@ weight: 2
 draft: false
 ---
 
-Once started the tool with `sudo bettercap` ([click here](#command-line-arguments) for the list of command line arguments), you'll be presented with an interactive session *a la Metasploit* where you'll be able to run commands, enable or disable modules, get or set parameters and so on.
+Once started the tool with `sudo bettercap` ([click here](#command-line-arguments) for the list of command line arguments), you'll be presented with an interactive session _a la Metasploit_ where you'll be able to run commands, enable or disable modules, get or set parameters and so on.
 
 {{% notice tip %}}
 Each command can either be executed singularly, or concatenated by the `;` operator, for instance, instead of typing:
@@ -21,7 +21,7 @@ Functionalities are organized in **[core commands](#core-commands)** (basic comm
 
 ### Caplets
 
-Other than executing commands manually one by one, it is possible to *script* your interactive session using **caplets**. Caplets (script files with a `.cap` extension) are a powerful way to automate your workflow: think about them as the Metasploit's `.rc` files, where each line of the file is a command that'll be executed at runtime. 
+Other than executing commands manually one by one, it is possible to _script_ your interactive session using **caplets**. Caplets (script files with a `.cap` extension) are a powerful way to automate your workflow: think about them as the Metasploit's `.rc` files, where each line of the file is a command that'll be executed at runtime.
 
 For instance, a simple caplet that sets the `ticker.commands` parameter and enables the [net.probe](/modules/ethernet/net.probe/) and [ticker](/modules/core/ticker/) modules would be:
 
@@ -92,15 +92,15 @@ Use the provided IP address instead of the default gateway. If not specified or 
 
 Disable the interactive session history file `~/.bettercap.history`.
 
-#### `-no-colors` 
+#### `-no-colors`
 
 Disable terminal colors and effects.
 
-#### `-env-file FILENAME` 
+#### `-env-file FILENAME`
 
 Preload the parameters values from this file if found, set to empty to disable environment persistance (default `~/bettercap.env`).
 
-#### `-silent` 
+#### `-silent`
 
 Suppress all logs which are not errors.
 
@@ -108,7 +108,7 @@ Suppress all logs which are not errors.
 
 Write a CPU profile file when exiting (used for debugging and benchmarking).
 
-#### `-mem-profile FILENAME` 
+#### `-mem-profile FILENAME`
 
 Write memory profile file when exiting (used for debugging and benchmarking).
 
@@ -124,21 +124,21 @@ Print version and build information, then exit (**must be used [to report bugs](
 
 #### `help`
 
-Will list all available commands and print the name of each module and its status (*running* or *not running*).
+Will list all available commands and print the name of each module and its status (_running_ or _not running_).
 
 #### `help MODULE_NAME`
 
 Will print the module specific help menu, with its sub commands and parameters.
 
-#### `active` 
+#### `active`
 
 Show which modules are running and their parameters.
 
-#### `quit` or `q` 
+#### `quit` or `q`
 
 Close the session and exit.
 
-#### `sleep SECONDS` 
+#### `sleep SECONDS`
 
 Sleep for the given amount of seconds.
 
@@ -150,7 +150,7 @@ Get the value of the specified parameter, use `*` for all.
 
 Set the value of `PARAMETER` to `VALUE`, use `""` or `''` to clear its contents.
 
-#### `read PARAMETER PROMPT` 
+#### `read PARAMETER PROMPT`
 
 Show a `PROMPT` to ask the user for input that will be saved inside `PARAMETER`.
 
@@ -158,11 +158,11 @@ Show a `PROMPT` to ask the user for input that will be saved inside `PARAMETER`.
 
 Clear the screen.
 
-#### `include CAPLET` 
+#### `include CAPLET`
 
 Load and run this caplet in the current session, the same behaviour can be achieved by just specifying the caplet name as a command.
 
-#### `!COMMAND` 
+#### `!COMMAND`
 
 Execute a shell command and print its output into the session.
 
@@ -189,34 +189,34 @@ Will set the prompt to the string `something`. You can also access parameters an
 
 The available effects are:
 
-| Operator | Description |
-| ------------- | ------------- |
-| `{bold}` | Set text to bold. |
-| `{dim}` | Set dim effect on text. |
-| `{r}` | Set text foreground color to red. |
-| `{g}` | Set text foreground color to green. |
-| `{b}` | Set text foreground color to blue. |
-| `{y}` | Set text foreground color to yellow. |
-| `{fb}` | Set text foreground color to black. |
-| `{fw}` | Set text foreground color to white. |
-| `{bdg}` | Set text background color to dark gray. |
-| `{br}` | Set text background color to red. |
-| `{bg}` | Set text background color to green. |
-| `{by}` | Set text background color to yellow. |
-| `{blb}` | Set text background color to light blue. |
+| Operator  | Description                                                                      |
+| --------- | -------------------------------------------------------------------------------- |
+| `{bold}`  | Set text to bold.                                                                |
+| `{dim}`   | Set dim effect on text.                                                          |
+| `{r}`     | Set text foreground color to red.                                                |
+| `{g}`     | Set text foreground color to green.                                              |
+| `{b}`     | Set text foreground color to blue.                                               |
+| `{y}`     | Set text foreground color to yellow.                                             |
+| `{fb}`    | Set text foreground color to black.                                              |
+| `{fw}`    | Set text foreground color to white.                                              |
+| `{bdg}`   | Set text background color to dark gray.                                          |
+| `{br}`    | Set text background color to red.                                                |
+| `{bg}`    | Set text background color to green.                                              |
+| `{by}`    | Set text background color to yellow.                                             |
+| `{blb}`   | Set text background color to light blue.                                         |
 | `{reset}` | Reset text effects (added by default at the end of the prompt if not specified). |
 
 There are also other operators you can use in order to access specific information about the session.
 
-| Operator | Description |
-| ------------- | ------------- |
-| `{cidr}` | Selected interface subnet CIDR. |
-| `{net.sent}` | Number of bytes being sent by the tool on the network. |
-| `{net.sent.human}` | Number of bytes being sent by the tool on the network (human readable form). |
-| `{net.errors}` | Number of errors while sending packets. |
-| `{net.received}` | Number of bytes being sniffed from the tool on the network. |
+| Operator               | Description                                                                         |
+| ---------------------- | ----------------------------------------------------------------------------------- |
+| `{cidr}`               | Selected interface subnet CIDR.                                                     |
+| `{net.sent}`           | Number of bytes being sent by the tool on the network.                              |
+| `{net.sent.human}`     | Number of bytes being sent by the tool on the network (human readable form).        |
+| `{net.errors}`         | Number of errors while sending packets.                                             |
+| `{net.received}`       | Number of bytes being sniffed from the tool on the network.                         |
 | `{net.received.human}` | Number of bytes being sniffed from the tool from the network (human readable form). |
-| `{net.packets}` | Number of packets being sniffed by the tool from the network. |
+| `{net.packets}`        | Number of packets being sniffed by the tool from the network.                       |
 
 And finally, you can access and use any variable that has been declared in the interactive session using the `{env.NAME-OF-THE-VAR}` operator, for instance, the default prompt is using `{env.iface.ipv4}` that is replaced by the `iface.ipv4` session variable contents ( you can check it using the `get iface.ipv4` command ).
 
@@ -228,7 +228,7 @@ Set the `arp.spoof.targets` parameter and enable the `arp.spoof` module:
 sudo bettercap -eval "set arp.spoof.targets 192.168.1.20; arp.spoof on"
 ```
 
-To quickly get the help menu of a module and quit bettercap (basically like a *man* command), you can use the `-eval` argument, for example:
+To quickly get the help menu of a module and quit bettercap (basically like a _man_ command), you can use the `-eval` argument, for example:
 
 ```sh
 sudo bettercap -eval "help net.recon; q"
@@ -240,7 +240,7 @@ Ask the user to fill the `arp.spoof.targets` parameter:
 > read arp.spoof.targets "Select the target to spoof: "
 ```
 
-Set the alias *"MY IPAD"* to the device with MAC address `DE:AD:DE:AD:BE:EF`:
+Set the alias _"MY IPAD"_ to the device with MAC address `DE:AD:DE:AD:BE:EF`:
 
 ```
 > alias DE:AD:DE:AD:BE:EF MY IPAD

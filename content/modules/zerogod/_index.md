@@ -1,0 +1,124 @@
+---
+title: "ZeroGod"
+date: 2025-07-14T19:29:00+01:00
+draft: false
+weight: 6
+---
+
+This module is a DNS-SD / mDNS / Bonjour / Zeroconf module for device discovery, service spoofing, and impersonation.
+
+It allows you to **scan the local network for mDNS services**, **impersonate discovered services**, and **advertise custom services**.
+
+## Commands
+
+### `zerogod.discovery on`
+
+Start DNS-SD / mDNS discovery.
+
+### `zerogod.discovery off`
+
+Stop DNS-SD / mDNS discovery.
+
+### `zerogod.show ADDRESS`
+
+Show discovered services given an `ADDRESS`.
+
+### `zerogod.show-full ADDRESS`
+
+Show discovered services **and DNS records** given an `ADDRESS`.
+
+### `zerogod.save ADDRESS FILENAME`
+
+Save the mDNS information of a given `ADDRESS` in the `FILENAME` yaml file.
+
+### `zerogod.advertise FILENAME`
+
+Start advertising the mDNS services from the `FILENAME` yaml file.
+To stop advertising, use:
+
+```
+zerogod.advertise off
+```
+
+### `zerogod.impersonate ADDRESS`
+
+Impersonate the specified `ADDRESS` by advertising the same services it exposes.  
+This command automatically captures service data from the target, stores it in a temporary YAML file, and starts advertising it.  
+To stop impersonation, use:
+
+```
+zerogod.impersonate off
+```
+
+## Parameters
+
+| Parameter                       | Default                           | Description                                                                                                  |
+| ------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `zerogod.advertise.certificate` | `~/.bettercap-zerogod.cert.pem`   | TLS certificate file (will be auto generated if filled but not existing) to use for advertised TCP services. |
+| `zerogod.advertise.key`         | `~/.bettercap-zerogod.key.pem`    | TLS key file (will be auto generated if filled but not existing) to use for advertised TCP services.         |
+| `zerogod.ipp.save_path`         | `~/.bettercap/zerogod/documents/` | If an IPP acceptor is started, this setting defines where to save documents received for printing.           |
+| `zerogod.verbose`               | `false`                           | Log every mDNS query.                                                                                        |
+
+## Examples
+
+### Discover services on the local network
+
+Start the mDNS discovery:
+
+```
+zerogod.discovery on
+```
+
+Stop discovery:
+
+```
+zerogod.discovery off
+```
+
+### Show services of a specific IP
+
+```
+zerogod.show 192.168.1.42
+```
+
+Show **all available records** (including DNS details):
+
+```
+zerogod.show-full 192.168.1.42
+```
+
+### Save service information for later
+
+Save the discovered data for a given IP to a YAML file:
+
+```
+zerogod.save 192.168.1.42 target-services.yml
+```
+
+### Replay and advertise services
+
+Load and advertise previously saved services:
+
+```
+zerogod.advertise target-services.yml
+```
+
+Stop advertising:
+
+```
+zerogod.advertise off
+```
+
+### Impersonate a device on the network
+
+Impersonate all services of a device with a given IP:
+
+```
+zerogod.impersonate 192.168.1.42
+```
+
+Stop impersonation:
+
+```
+zerogod.impersonate off
+```

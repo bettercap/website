@@ -5,7 +5,7 @@ draft: false
 weight: 3
 ---
 
-This module is a network packet sniffer and fuzzer supporting both [BPF syntax](http://biot.com/capstats/bpf.html) and regular expressions for filtering. 
+This module is a network packet sniffer and fuzzer supporting both [BPF syntax](http://biot.com/capstats/bpf.html) and regular expressions for filtering.
 It is also able to dissect several major protocols in order to harvest credentials.
 
 ### Commands
@@ -13,33 +13,38 @@ It is also able to dissect several major protocols in order to harvest credentia
 #### `net.sniff on`
 
 Start the packet sniffer.
+
 #### `net.sniff off`
 
 Stop the packet sniffer.
+
 #### `net.sniff stats`
 
 Print the packet sniffer session configuration and statistics.
+
 #### `net.fuzz on`
 
 Enable fuzzing for every sniffed packet containing the specified layers.
+
 #### `net.fuzz off`
 
 Disable fuzzing.
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `net.sniff.output` |  | If set, the sniffer will write captured packets to this pcap file. |
-| `net.sniff.source` | | If set, the sniffer will read from this pcap file instead of the current interface. |
-| `net.sniff.verbose` | `false` | If true, every captured and parsed packet will be sent to the events.stream for displaying, otherwise only the ones parsed at the application layer (sni, http, etc). |
-| `net.sniff.local` | `false` | If true it will consider packets from/to this computer, otherwise it will skip them. |
-| `net.sniff.filter` | `not arp` | BPF filter for the sniffer. |
-| `net.sniff.regexp` | | If set, only packets with a payload matching this regular expression will be considered. |
-| `net.fuzz.layers` | `Payload` | Comma separated [types of layer](https://github.com/google/gopacket/blob/master/layers/layertypes.go#L13) to fuzz. |
-| `net.fuzz.rate` | `1.0` | Rate in the [0.0,1.0] interval of packets to fuzz. |
-| `net.fuzz.ratio` | `0.4` | Rate in the [0.0,1.0] interval of bytes to fuzz for each packet. |
-| `net.fuzz.silent` | `false` | If true it will not report fuzzed packets. |
+| Parameter             | Default   | Description                                                                                                                                                           |
+| --------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `net.sniff.output`    |           | If set, the sniffer will write captured packets to this pcap file.                                                                                                    |
+| `net.sniff.source`    |           | If set, the sniffer will read from this pcap file instead of the current interface.                                                                                   |
+| `net.sniff.interface` |           | Interface to sniff on.                                                                                                                                                |
+| `net.sniff.verbose`   | `false`   | If true, every captured and parsed packet will be sent to the events.stream for displaying, otherwise only the ones parsed at the application layer (sni, http, etc). |
+| `net.sniff.local`     | `false`   | If true it will consider packets from/to this computer, otherwise it will skip them.                                                                                  |
+| `net.sniff.filter`    | `not arp` | BPF filter for the sniffer.                                                                                                                                           |
+| `net.sniff.regexp`    |           | If set, only packets with a payload matching this regular expression will be considered.                                                                              |
+| `net.fuzz.layers`     | `Payload` | Comma separated [types of layer](https://github.com/google/gopacket/blob/master/layers/layertypes.go#L13) to fuzz.                                                    |
+| `net.fuzz.rate`       | `1.0`     | Rate in the [0.0,1.0] interval of packets to fuzz.                                                                                                                    |
+| `net.fuzz.ratio`      | `0.4`     | Rate in the [0.0,1.0] interval of bytes to fuzz for each packet.                                                                                                      |
+| `net.fuzz.silent`     | `false`   | If true it will not report fuzzed packets.                                                                                                                            |
 
 ### Examples
 

@@ -27,10 +27,10 @@ Manually set GPS location.
 
 ### Parameters
 
-| parameter | default | description |
-|-----------|---------|-------------|
-| `gps.device` | `/dev/ttyUSB0` | Serial device of the GPS hardware. | 
-| `gps.baudrate` |  `19200` | Baud rate of the GPS serial device. |
+| Parameter      | Default        | Description                         |
+| -------------- | -------------- | ----------------------------------- |
+| `gps.device`   | `/dev/ttyUSB0` | Serial device of the GPS hardware.  |
+| `gps.baudrate` | `19200`        | Baud rate of the GPS serial device. |
 
 ### Examples
 
