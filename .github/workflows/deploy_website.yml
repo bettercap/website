@@ -48,6 +48,8 @@ jobs:
           path: ./public
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     needs: build
     steps:
       - name: Deploy to GitHub Pages
