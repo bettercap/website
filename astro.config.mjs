@@ -6,6 +6,7 @@ import starlightFullViewMode from "starlight-fullview-mode";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://www.bettercap.org",
   integrations: [
     starlight({
       title: "bettercap",
