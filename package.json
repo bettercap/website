@@ -1,0 +1,21 @@
+{
+  "name": "bettercap-website",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.35.1",
+    "astro": "^5.6.1",
+    "astro-embed": "^0.9.0",
+    "sharp": "^0.34.2",
+    "starlight-auto-sidebar": "^0.1.2",
+    "starlight-contributor-list": "^0.3.0",
+    "starlight-fullview-mode": "^0.2.3"
+  }
+}
