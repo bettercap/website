@@ -2,7 +2,7 @@
 title: net.sniff - net.fuzz
 description: This module is a network packet sniffer and fuzzer supporting both BPF syntax and regular expressions for filtering.
 sidebar:
-  order: 3
+  order: 4
 ---
 
 This module is a network packet sniffer and fuzzer supporting both [BPF syntax](http://biot.com/capstats/bpf.html) and regular expressions for filtering.

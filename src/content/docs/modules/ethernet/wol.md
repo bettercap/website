@@ -2,7 +2,7 @@
 title: wol
 description: A module to send Wake On LAN packets in broadcast or to a specific MAC.
 sidebar:
-  order: 5
+  order: 6
 ---
 
 A module to send [Wake On LAN](https://en.wikipedia.org/wiki/Wake-on-LAN) packets in broadcast or to a specific MAC.

@@ -2,7 +2,7 @@
 title: syn.scan
 description: A module to perform SYN port scanning
 sidebar:
-  order: 4
+  order: 5
 ---
 
 A module to perform SYN port scanning, as open ports are discovered the `tcp-ports` meta field of the endpoints will be filled and it will be shown in the
