@@ -1,5 +1,5 @@
 ---
-title: ZeroGod
+title: zerogod
 description: This module is a DNS-SD / mDNS / Bonjour / Zeroconf module for device discovery, service spoofing, and impersonation.
 sidebar:
   order: 3
