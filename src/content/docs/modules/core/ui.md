@@ -7,9 +7,9 @@ A module to manage bettercap's UI updates and installed version.
 
 ### Commands
 
-#### `ui.on`
+#### `ui on`
 
-Activates the weui.
+Activates the web UI.
 
 ### Parameters
 
