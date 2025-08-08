@@ -3,6 +3,14 @@ title: api.rest
 description: A RESTful API server to orchestrate and interact with the current interactive session, starts on HTTP and unauthenticated by default, can be switched to HTTPS and basic auth by using the proper parameters.
 ---
 
+:::note
+The default credentials are:
+
+- **Username**: `user`
+- **Password**: `pass`
+
+:::
+
 A RESTful API server to orchestrate and interact with the current interactive session, starts on HTTP and unauthenticated by default, can be switched to HTTPS and basic auth by using the proper parameters.
 
 ### Commands
@@ -45,10 +53,10 @@ Stop replaying the recorded session.
 | `api.rest.certificate.organization`       | `bettercap devteam`      | Organization field of the generated HTTPS certificate.                                              |
 | `api.rest.certificate.organizationalunit` | `https://bettercap.org/` | Organizational Unit field of the generated HTTPS certificate.                                       |
 | `api.rest.key`                            |                          | API TLS key (will be auto generated if not existing), fill to enable HTTPS.                         |
-| `api.rest.password`                       |                          | API HTTP basic auth password.                                                                       |
+| `api.rest.password`                       | `pass`                   | API HTTP basic auth password.                                                                       |
 | `api.rest.port`                           | `8081`                   | Port to bind the API REST server to.                                                                |
 | `api.rest.record.clock`                   | `1`                      | Number of seconds to wait while recording with api.rest.record between one sample and the next one. |
-| `api.rest.username`                       |                          | API HTTP basic auth username.                                                                       |
+| `api.rest.username`                       | `user`                   | API HTTP basic auth username.                                                                       |
 | `api.rest.websocket`                      | `false`                  | If true the `/api/events` route will be available as a websocket endpoint instead of HTTP.          |
 
 ### Routes
