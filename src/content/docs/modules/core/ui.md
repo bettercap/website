@@ -1,9 +1,17 @@
 ---
 title: ui
-description: A module to manage bettercap's UI updates and installed version.
+description: A module to use bettercap's web UI.
 ---
 
-A module to manage bettercap's UI updates and installed version.
+:::note
+The default credentials are:
+
+- **Username**: `user`
+- **Password**: `pass`
+
+:::
+
+A module to use bettercap's web UI.
 
 ### Commands
 
