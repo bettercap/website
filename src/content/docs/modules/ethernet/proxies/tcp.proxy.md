@@ -40,15 +40,28 @@ function onLoad() {
 }
 
 // called when data is available
-// return an array of bytes to override "data"
+// from: String, to: String, data: ByteArray
+// return: ByteArray|int[]
 function onData(from, to, data) {
-  // ...
+  log(data) // 104 101 108 108 111
+  log(String.fromCharCode.apply(null, data)) // "hello"
+  // modify 1 byte of data
+  data[0] = "a".charCodeAt()
+  return data
+
+  // return new array of int, only on bettercap >= 2.41.2
+  new_payload = "world"
+  function charToInt(value) { return value.charCodeAt() }
+  new_data = new_payload.split("").map(charToInt) // [119,111,114,108,100]
+  return new_data
 }
 ```
 
 Modules can change the `data` buffer and return it, signaling the proxy to override the original buffer.
 
 ### Builtin Functions
+
+The JS interpreter is [limited to ES5](https://github.com/robertkrimen/otto?tab=readme-ov-file#caveat-emptor) (no for/of, typed arrays, classes... )
 
 Modules can use the following builtin functions.
 

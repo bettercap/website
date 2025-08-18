@@ -75,3 +75,5 @@ if (resp.Error) {
 ```
 
 and a variety of other tasks depending on your imagination :D Check the [scripts repository](http://github.com/bettercap/scripts) for some example scripts.
+
+The JS interpreter is [limited to ES5](https://github.com/robertkrimen/otto?tab=readme-ov-file#caveat-emptor) (no for/of, typed arrays, classes... )
