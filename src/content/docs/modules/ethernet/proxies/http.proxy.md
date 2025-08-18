@@ -108,6 +108,9 @@ function onResponse(req, res) {
 
 #### Builtin Functions
 
+The JS interpreter is [limited to ES5](https://github.com/robertkrimen/otto?tab=readme-ov-file#caveat-emptor) (no 
+for/of, typed arrays, classes... )
+
 Modules can use the following builtin functions.
 
 | Function                                    | Description                                                                   |
