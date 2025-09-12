@@ -16,7 +16,15 @@ In order to be able to use bettercap, you'll need the following dependencies on 
 - libusb-1.0-0 (required by the [HID module](/modules/hid/))
 - libnetfilter-queue (on Linux only, required by the [packet.proxy module](/modules/ethernet/proxies/packetproxy/))
 
-## Installing via Go
+## Using pre-built binaries
+
+Binaries are pre-built and uploaded as asset for each new [release](https://github.com/bettercap/bettercap/releases) of bettercap. It currently has binaries for the following targets:
+
+- Darwin arm64
+- Linux amd64
+- Windows amd64
+
+## Using Go
 
 Provided you have [Go](https://go.dev) installed:
 
@@ -53,7 +61,7 @@ Provided you have [Homebrew](https://brew.sh) installed:
 brew install bettercap
 ```
 
-## Compiling from Sources
+## Compiling from sources
 
 In order to compile bettercap from sources, make sure that:
 
