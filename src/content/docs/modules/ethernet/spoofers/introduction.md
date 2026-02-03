@@ -7,7 +7,7 @@ sidebar:
 
 Spoofing modules used to perform Man-in-the-Middle attacks:
 
-### What is a MITM Attack?
+## What is a MITM Attack?
 
 According to [Wikipedia](https://en.wikipedia.org/wiki/Man-in-the-middle_attack):
 

@@ -9,29 +9,29 @@ This module is a network packet sniffer and fuzzer supporting both [BPF syntax](
 
 It is also able to dissect several major protocols in order to harvest credentials.
 
-### Commands
+## Commands
 
-#### `net.sniff on`
+### `net.sniff on`
 
 Start the packet sniffer.
 
-#### `net.sniff off`
+### `net.sniff off`
 
 Stop the packet sniffer.
 
-#### `net.sniff stats`
+### `net.sniff stats`
 
 Print the packet sniffer session configuration and statistics.
 
-#### `net.fuzz on`
+### `net.fuzz on`
 
 Enable fuzzing for every sniffed packet containing the specified layers.
 
-#### `net.fuzz off`
+### `net.fuzz off`
 
 Disable fuzzing.
 
-### Parameters
+## Parameters
 
 | Parameter             | Default   | Description                                                                                                                                                           |
 | --------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -47,7 +47,7 @@ Disable fuzzing.
 | `net.sniff.source`    |           | If set, the sniffer will read from this pcap file instead of the current interface.                                                                                   |
 | `net.sniff.verbose`   | `false`   | If true, every captured and parsed packet will be sent to the events.stream for displaying, otherwise only the ones parsed at the application layer (sni, http, etc). |
 
-### Examples
+## Examples
 
 The [local-sniffer.cap](https://github.com/bettercap/caplets/blob/master/local-sniffer.cap) caplet will sniff, parse and print all packets on the local machine:
 

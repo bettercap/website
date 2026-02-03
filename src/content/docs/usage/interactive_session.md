@@ -21,7 +21,7 @@ You can simply type: `clear; net.show`
 
 Functionalities are organized in **[core commands](#core-commands)** (basic commands you'll need to perform operations such as setting a session parameter, getting its value, clearing the screen, etc) and **session modules** (each will provide a set of feature specific sub commands and use some session parameters for its configuration).
 
-### Caplets
+## Caplets
 
 Other than executing commands manually one by one, it is possible to _script_ your interactive session using **caplets**. Caplets (script files with a `.cap` extension) are a powerful way to automate your workflow: think about them as the Metasploit's `.rc` files, where each line of the file is a command that'll be executed at runtime.
 
@@ -71,117 +71,117 @@ You can then check what's been installed in `/usr/local/share/bettercap/caplets/
 caplets.show
 ```
 
-### Command Line Arguments
+## Command Line Arguments
 
 The basic command line arguments ( `bettercap -h` ) are:
 
-#### `-autostart MODULES`
+### `-autostart MODULES`
 
 A comma separated list of modules that are automatically started (default to `events.stream`).
 
-#### `-caplet FILENAME`
+### `-caplet FILENAME`
 
 Read commands from this file and execute them in the interactive session.
 
-#### `-caplets-path PATH`
+### `-caplets-path PATH`
 
 Specify an alternative base path for caplets.
 
-#### `-eval COMMANDS`
+### `-eval COMMANDS`
 
 Run one or more commands separated by `;` in the interactive session, used to set variables via command line.
 
-#### `-script FILENAME`
+### `-script FILENAME`
 
 Load a [session script](/usage/scripting/).
 
-#### `-iface INTERFACE`
+### `-iface INTERFACE`
 
 Network interface to bind to, if empty the default interface will be auto selected (accepts interface name, ip or mac address)
 
-#### `-gateway-override ADDRESS`
+### `-gateway-override ADDRESS`
 
 Use the provided IP address instead of the default gateway. If not specified or invalid, the default gateway will be auto detected and used.
 
-#### `-no-history`
+### `-no-history`
 
 Disable the interactive session history file `~/.bettercap.history`.
 
-#### `-no-colors`
+### `-no-colors`
 
 Disable terminal colors and effects.
 
-#### `-env-file FILENAME`
+### `-env-file FILENAME`
 
 Preload the parameters values from this file if found, set to empty to disable environment persistance (default `~/bettercap.env`).
 
-#### `-silent`
+### `-silent`
 
 Suppress all logs which are not errors.
 
-#### `-cpu-profile FILENAME`
+### `-cpu-profile FILENAME`
 
 Write a CPU profile file when exiting (used for debugging and benchmarking).
 
-#### `-mem-profile FILENAME`
+### `-mem-profile FILENAME`
 
 Write memory profile file when exiting (used for debugging and benchmarking).
 
-#### `-debug`
+### `-debug`
 
 Enable debug messages (**must be used [to report bugs](/project/contributing/#reporting-bugs)**).
 
-#### `-version`
+### `-version`
 
 Print version and build information, then exit (**must be used [to report bugs](/project/contributing/#reporting-bugs)**).
 
-### Core Commands
+## Core Commands
 
-#### `help`
+### `help`
 
 Will list all available commands and print the name of each module and its status (_running_ or _not running_).
 
-#### `help MODULE_NAME`
+### `help MODULE_NAME`
 
 Will print the module specific help menu, with its sub commands and parameters.
 
-#### `active`
+### `active`
 
 Show which modules are running and their parameters.
 
-#### `quit` or `q`
+### `quit` or `q`
 
 Close the session and exit.
 
-#### `sleep SECONDS`
+### `sleep SECONDS`
 
 Sleep for the given amount of seconds.
 
-#### `get PARAMETER`
+### `get PARAMETER`
 
 Get the value of the specified parameter, use `*` for all.
 
-#### `set PARAMETER VALUE`
+### `set PARAMETER VALUE`
 
 Set the value of `PARAMETER` to `VALUE`, use `""` or `''` to clear its contents.
 
-#### `read PARAMETER PROMPT`
+### `read PARAMETER PROMPT`
 
 Show a `PROMPT` to ask the user for input that will be saved inside `PARAMETER`.
 
-#### `clear`
+### `clear`
 
 Clear the screen.
 
-#### `include CAPLET`
+### `include CAPLET`
 
 Load and run this caplet in the current session, the same behaviour can be achieved by just specifying the caplet name as a command.
 
-#### `!COMMAND`
+### `!COMMAND`
 
 Execute a shell command and print its output into the session.
 
-#### `alias MAC NAME`
+### `alias MAC NAME`
 
 Assign an alias to a given endpoint given its MAC address (will be persistent on `~/bettercap.aliases`).
 
@@ -190,7 +190,7 @@ Being persisted on disk, aliases are shared across each module and bettercap ses
 
 :::
 
-### Customizing the Prompt
+## Customizing the Prompt
 
 The interactive session prompt can be modified by setting the `$` variable, for instance this:
 
@@ -239,7 +239,7 @@ There are also other operators you can use in order to access specific informati
 
 And finally, you can access and use any variable that has been declared in the interactive session using the `{env.NAME-OF-THE-VAR}` operator, for instance, the default prompt is using `{env.iface.ipv4}` that is replaced by the `iface.ipv4` session variable contents ( you can check it using the `get iface.ipv4` command ).
 
-### Examples
+## Examples
 
 Set the `arp.spoof.targets` parameter and enable the `arp.spoof` module:
 

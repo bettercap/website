@@ -13,13 +13,13 @@ The default credentials are:
 
 A module to use bettercap's web UI.
 
-### Commands
+## Commands
 
-#### `ui on`
+### `ui on`
 
 Activates the web UI.
 
-### Parameters
+## Parameters
 
 | Parameter    | Default     | Description                        |
 | ------------ | ----------- | ---------------------------------- |

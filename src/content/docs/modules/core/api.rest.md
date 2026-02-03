@@ -13,33 +13,33 @@ The default credentials are:
 
 A RESTful API server to orchestrate and interact with the current interactive session, starts on HTTP and unauthenticated by default, can be switched to HTTPS and basic auth by using the proper parameters.
 
-### Commands
+## Commands
 
-#### `api.rest on`
+### `api.rest on`
 
 Start the REST API server.
 
-#### `api.rest off`
+### `api.rest off`
 
 Stop the REST API server.
 
-#### `api.rest.record FILENAME`
+### `api.rest.record FILENAME`
 
 Start polling the rest API periodically recording each sample in a compressed file that can be later replayed.
 
-#### `api.rest.record off`
+### `api.rest.record off`
 
 Stop recording the session.
 
-#### `api.rest.replay FILENAME`
+### `api.rest.replay FILENAME`
 
 Start the rest API module in replay mode using `FILENAME` as the recorded session file, will revert to normal mode once the replay is over.
 
-#### `api.rest.replay off`
+### `api.rest.replay off`
 
 Stop replaying the recorded session.
 
-### Parameters
+## Parameters
 
 | Parameter                                 | Default                  | Description                                                                                         |
 | ----------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------- |
@@ -59,15 +59,15 @@ Stop replaying the recorded session.
 | `api.rest.username`                       | `user`                   | API HTTP basic auth username.                                                                       |
 | `api.rest.websocket`                      | `false`                  | If true the `/api/events` route will be available as a websocket endpoint instead of HTTP.          |
 
-### Routes
+## Routes
 
 Clients can authenticate using HTTP basic authentication, these are the available API routes.
 
-#### `GET /api/file?name=FILENAME`
+### `GET /api/file?name=FILENAME`
 
 Get a file on the host
 
-#### `GET /api/events`
+### `GET /api/events`
 
 {{% notice note %}}
 This route will be available as a websocket endpoint instead of normal HTTP if the `api.rest.websocket` parameter is set to true.
@@ -113,11 +113,11 @@ Return a list of events ( the optional `n` GET parameter will limit the number )
 
 </details>
 
-#### `DELETE /api/events`
+### `DELETE /api/events`
 
 Will clear the events buffer.
 
-#### `GET /api/session`
+### `GET /api/session`
 
 Get a JSON of the state of the current session, example response:
 
@@ -426,7 +426,7 @@ Get a JSON of the state of the current session, example response:
 
 </details>
 
-#### `POST /api/session`
+### `POST /api/session`
 
 Post a command to the interactive session, the JSON object being POSTed is expected to be:
 
@@ -450,7 +450,7 @@ While the response will be:
 
 </details>
 
-#### `GET /api/session/ble`
+### `GET /api/session/ble`
 
 Get a JSON of the BLE devices in the current session, example response:
 
@@ -480,11 +480,11 @@ Get a JSON of the BLE devices in the current session, example response:
 
 </details>
 
-##### Optional Arguments
+#### Optional Arguments
 
 - Mac address, eg. `GET /api/session/ble/00:AA:BB:CC:DD:33` - return information of a single ble endpoint with the mac address of 00:AA:BB:CC:DD:33 (the Adafruit Bluefruit LE client from the above output).
 
-#### `GET /api/session/hid`
+### `GET /api/session/hid`
 
 Get a JSON of the HID devices in the current session, example response:
 
@@ -506,11 +506,11 @@ Get a JSON of the HID devices in the current session, example response:
 
 </details>
 
-##### Optional Arguments
+#### Optional Arguments
 
 - Hardware address, eg. `GET /api/session/hid/32:26:9f:a4:08` - return information of a single HID endpoint with the hardware address of `32:26:9f:a4:08`.
 
-#### `GET /api/session/env`
+### `GET /api/session/env`
 
 Get a JSON of the environment variables in the current session, example response:
 
@@ -573,7 +573,7 @@ Get a JSON of the environment variables in the current session, example response
 
 </details>
 
-#### `GET /api/session/gateway`
+### `GET /api/session/gateway`
 
 Get a JSON of the interface gateway of the current session, example response:
 
@@ -598,7 +598,7 @@ Get a JSON of the interface gateway of the current session, example response:
 
 </details>
 
-#### `GET /api/session/interface`
+### `GET /api/session/interface`
 
 Get a JSON of the main interface (wifi/lan) of the current session, example response:
 
@@ -623,7 +623,7 @@ Get a JSON of the main interface (wifi/lan) of the current session, example resp
 
 </details>
 
-#### `GET /api/session/modules`
+### `GET /api/session/modules`
 
 Get a JSON of the available modules (name, description, parameters, handlers, ...) of the current session, example response:
 
@@ -951,7 +951,7 @@ Get a JSON of the available modules (name, description, parameters, handlers, ..
 
 </details>
 
-#### `GET /api/session/lan`
+### `GET /api/session/lan`
 
 Get a JSON of the lan devices in the current session, example response:
 
@@ -1006,11 +1006,11 @@ Get a JSON of the lan devices in the current session, example response:
 
 </details>
 
-##### Optional Arguments
+#### Optional Arguments
 
 - Mac address, eg. `GET /api/session/lan/00:AA:BB:CC:DD:11` - return information of a single lan endpoint with the mac address of 00:AA:BB:CC:DD:11 (the pihole from the above output).
 
-#### `GET /api/session/options`
+### `GET /api/session/options`
 
 Get a JSON of the options set for the current session, example response:
 
@@ -1032,7 +1032,7 @@ Get a JSON of the options set for the current session, example response:
 
 </details>
 
-#### `GET /api/session/packets`
+### `GET /api/session/packets`
 
 Get a JSON of the packet traffic for the current session, example response:
 
@@ -1083,7 +1083,7 @@ Get a JSON of the packet traffic for the current session, example response:
 
 </details>
 
-#### `GET /api/session/started-at`
+### `GET /api/session/started-at`
 
 Get a JSON of the time the current session was started, example response:
 
@@ -1096,7 +1096,7 @@ Get a JSON of the time the current session was started, example response:
 
 </details>
 
-#### `GET /api/session/wifi`
+### `GET /api/session/wifi`
 
 Get a JSON of the wifi devices (clients and access points) in the current session, example response:
 
@@ -1217,6 +1217,6 @@ Get a JSON of the wifi devices (clients and access points) in the current sessio
 
 </details>
 
-##### Optional Arguments
+#### Optional Arguments
 
 - Mac address, eg. `GET /api/session/wifi/00:AA:BB:CC:DD:22` - return information of a single wifi endpoint with the mac address of 00:AA:BB:CC:DD:22 (the connected client from the above output).

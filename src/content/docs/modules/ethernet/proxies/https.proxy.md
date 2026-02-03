@@ -10,17 +10,17 @@ When a new TLS connection is being proxied, bettercap will fetch the original ce
 
 :::
 
-### Commands
+## Commands
 
-#### `https.proxy on`
+### `https.proxy on`
 
 Start the HTTPS proxy.
 
-#### `https.proxy off`
+### `https.proxy off`
 
 Stop the HTTPS proxy.
 
-### Parameters
+## Parameters
 
 | Parameter                                    | Default                                      | Description                                                                                             |
 | -------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -41,7 +41,7 @@ Stop the HTTPS proxy.
 | `https.proxy.sslstrip`                       | `false`                                      | Enable or disable SSL stripping.                                                                        |
 | `https.proxy.whitelist`                      |                                              | Comma separated list of hostnames to proxy if the blacklist is used (wildcard expressions can be used). |
 
-### Modules
+## Modules
 
 The `http.proxy` and `https.proxy` modules can be scripted using javascript files that must declare at least one of the following functions:
 
@@ -118,7 +118,7 @@ function onResponse(req, res) {
 }
 ```
 
-#### Builtin Functions
+### Builtin Functions
 
 The JS interpreter is [limited to ES5](https://github.com/robertkrimen/otto?tab=readme-ov-file#caveat-emptor) (no for/of, typed arrays, classes... )
 

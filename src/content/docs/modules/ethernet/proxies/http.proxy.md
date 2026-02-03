@@ -5,17 +5,17 @@ description: A full featured HTTP transparent proxy that can be scripted using J
 
 A full featured HTTP transparent proxy that can be scripted using JavaScript modules. If used together with a [spoofer](/modules/ethernet/spoofers/introduction/), all HTTP traffic will be redirected to it and it will automatically handle port redirections as needed.
 
-### Commands
+## Commands
 
-#### `http.proxy on`
+### `http.proxy on`
 
 Start the HTTP proxy.
 
-#### `http.proxy off`
+### `http.proxy off`
 
 Stop the HTTP proxy.
 
-### Parameters
+## Parameters
 
 | Parameter              | Default               | Description                                                                                             |
 | ---------------------- | --------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ Stop the HTTP proxy.
 | `http.proxy.sslstrip`  | `false`               | Enable or disable SSL stripping.                                                                        |
 | `http.proxy.whitelist` |                       | Comma separated list of hostnames to proxy if the blacklist is used (wildcard expressions can be used). |
 
-### Modules
+## Modules
 
 The `http.proxy` and `https.proxy` modules can be scripted using javascript files that must declare at least one of the following functions:
 
@@ -106,7 +106,7 @@ function onResponse(req, res) {
 }
 ```
 
-#### Builtin Functions
+### Builtin Functions
 
 The JS interpreter is [limited to ES5](https://github.com/robertkrimen/otto?tab=readme-ov-file#caveat-emptor) (no 
 for/of, typed arrays, classes... )
@@ -139,7 +139,7 @@ Modules can use the following builtin functions.
 | `removeEventListener("event.tag")`          | Remove a previously registered event listener for the given tag.              |
 | `addSessionEvent("tag", data)`              | Trigger a session event from within the script with a custom tag and payload. |
 
-### Examples
+## Examples
 
 Will ARP spoof the whole network, enable sslstrip and inject a "Hello World" javascript alert to every HTML page being visited:
 

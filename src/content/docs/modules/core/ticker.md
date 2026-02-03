@@ -5,34 +5,34 @@ description: The ticker module can be used to execute a given set of commands pe
 
 The ticker module can be used to execute a given set of commands periodically in the interactive session.
 
-### Commands
+## Commands
 
-#### `ticker on`
+### `ticker on`
 
 Start the main ticker.
 
-#### `ticker off`
+### `ticker off`
 
 Stop the main ticker.
 
-#### `ticker.create NAME PERIOD COMMANDS`
+### `ticker.create NAME PERIOD COMMANDS`
 
 Create and start a named ticker called `NAME` that will execute the given `COMMANDS` every `PERIOD`.
 
-#### `ticker.destroy NAME`
+### `ticker.destroy NAME`
 
 Stop the named ticker called `NAME`.
 
-### Parameters
+## Parameters
 
 | Parameter         | Default                           | Description                                              |
 | ----------------- | --------------------------------- | -------------------------------------------------------- |
 | `ticker.commands` | `clear; net.show; events.show 20` | List of commands for the main ticker separated by a `;`. |
 | `ticker.period`   | `1`                               | Main ticker period in seconds.                           |
 
-### Examples
+## Examples
 
-#### Main ticker
+### Main ticker
 
 Start probing for hosts, clear the screen and plot discovered endpoints every second (will use default parameters):
 
@@ -46,7 +46,7 @@ Keep deauthenticating clients from the access point with BSSID `DE:AD:BE:EF:DE:A
 set ticker.period 5; set ticker.commands "wifi.deauth DE:AD:BE:EF:DE:AD"; ticker on
 ```
 
-#### Named ticker
+### Named ticker
 
 Keep deauthenticating clients from the access point with BSSID `DE:AD:BE:EF:DE:AD` every five seconds with a named ticker called `deauthenticator`:
 

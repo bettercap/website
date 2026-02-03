@@ -28,81 +28,81 @@ sudo bettercap -iface en0
 
 :::
 
-### Commands
+## Commands
 
-#### `wifi.recon on`
+### `wifi.recon on`
 
 Start 802.11 wireless base stations discovery and handshakes/PMKID capture.
 
-#### `wifi.recon off`
+### `wifi.recon off`
 
 Stop 802.11 wireless base stations discovery.
 
-#### `wifi.bruteforce on`
+### `wifi.bruteforce on`
 
 Attempts to bruteforce WiFi authentication (see **bruteforce** specific parameters).
 
-#### `wifi.bruteforce off`
+### `wifi.bruteforce off`
 
 Stop previously started bruteforcing.
 
-#### `wifi.clear`
+### `wifi.clear`
 
 Clear all access points collected by the WiFi discovery module.
 
-#### `wifi.recon BSSID`
+### `wifi.recon BSSID`
 
 Set 802.11 base station address to filter for.
 
-#### `wifi.recon clear`
+### `wifi.recon clear`
 
 Remove the 802.11 base station filter.
 
-#### `wifi.assoc BSSID`
+### `wifi.assoc BSSID`
 
 Send an association request to the selected BSSID in order to [receive a RSN PMKID](https://hashcat.net/forum/thread-7717.html) key (use `all`, `*` or `ff:ff:ff:ff:ff:ff` to iterate for every access point).
 
-#### `wifi.deauth BSSID`
+### `wifi.deauth BSSID`
 
 Start a 802.11 deauth attack, if an access point BSSID is provided, every client will be deauthenticated, otherwise only the selected client (**use `all`, `*` or `ff:ff:ff:ff:ff:ff` to deauth everything**).
 
-#### `wifi.probe BSSID ESSID`
+### `wifi.probe BSSID ESSID`
 
 Send a fake client probe with the given station BSSID, searching for ESSID.
 
-#### `wifi.show`
+### `wifi.show`
 
 Show current wireless stations list (default sorting by RSSI).
 
-#### `wifi.show.wps BSSID`
+### `wifi.show.wps BSSID`
 
 Show WPS information about a given station (use `all`, `*` or `ff:ff:ff:ff:ff:ff` to select all).
 
-#### `wifi.recon.channel CHANNEL`
+### `wifi.recon.channel CHANNEL`
 
 Comma separated list of channels to hop on.
 
-#### `wifi.recon.channel clear`
+### `wifi.recon.channel clear`
 
 Enable channel hopping on all supported channels.
 
-#### `wifi.ap`
+### `wifi.ap`
 
 Inject fake management beacons in order to create a rogue access point ( requires `wifi.recon` to run ).
 
-#### `wifi.client.probe.ap.filter FILTER`
+### `wifi.client.probe.ap.filter FILTER`
 
 Use this regular expression on the access point name to filter client probes, `clear` to reset the filter.
 
-#### `wifi.client.probe.sta.filter FILTER`
+### `wifi.client.probe.sta.filter FILTER`
 
 Use this regular expression on the station address to filter client probes, `clear` to reset the filter.
 
-#### `wifi.channel_switch_announce BSSID CHANNEL`
+### `wifi.channel_switch_announce BSSID CHANNEL`
 
 Start a 802.11 channel hop attack, all client will be forced to change the channel lead to connection down.
 
-### Parameters
+## Parameters
 
 | Parameter                             | Default                            | Description                                                                                                                                                                                     |
 | ------------------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -136,7 +136,7 @@ Start a 802.11 channel hop attack, all client will be forced to change the chann
 | `wifi.sta.ttl`                        | `300`                              | Seconds of inactivity for a client station to be considered not in range or not connected to its access point anymore.                                                                          |
 | `wifi.txpower`                        | `30`                               | Set WiFi transmission power to this value before activating the interface.                                                                                                                      |
 
-#### Bruteforce specific parameters
+### Bruteforce specific parameters
 
 | Parameter                       | Default                 | Description                                                                                                                |
 | ------------------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -147,7 +147,7 @@ Start a 802.11 channel hop attack, all client will be forced to change the chann
 | `wifi.bruteforce.wordlist`      | `/usr/share/dict/words` | Wordlist file to use for bruteforcing.                                                                                     |
 | `wifi.bruteforce.workers`       | `1`                     | How many parallel workers. WARNING: Some routers will ban multiple concurrent attempts.                                    |
 
-### Examples
+## Examples
 
 Run bettercap using `eth0` as the main interface but start the wifi module on `wlan0` instead:
 

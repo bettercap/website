@@ -7,33 +7,33 @@ sidebar:
 
 This module is responsible for periodically reading the system ARP table in order to detect new hosts on the network.
 
-### Commands
+## Commands
 
-#### `net.recon on`
+### `net.recon on`
 
 Start network hosts discovery.
 
-#### `net.recon off`
+### `net.recon off`
 
 Stop network hosts discovery.
 
-#### `net.clear`
+### `net.clear`
 
 Clear all endpoints collected by the hosts discovery module.
 
-#### `net.show`
+### `net.show`
 
 Show cache hosts list (default sorting by ip).
 
-#### `net.show ADDRESS1, ADDRESS2`
+### `net.show ADDRESS1, ADDRESS2`
 
 Show information about a specific list of addresses (by IP or MAC).
 
-#### `net.show.meta ADDRESS1, ADDRESS2`
+### `net.show.meta ADDRESS1, ADDRESS2`
 
 Show metadata (mDNS, UPnP, open ports, etc) about a specific list of addresses (by IP or MAC).
 
-### Parameters
+## Parameters
 
 | Parameter         | Default  | Description                                                                                                 |
 | ----------------- | -------- | ----------------------------------------------------------------------------------------------------------- |
@@ -42,7 +42,7 @@ Show metadata (mDNS, UPnP, open ports, etc) about a specific list of addresses (
 | `net.show.meta`   | `false`  | If true, the net.show command will show all metadata collected about each endpoint.                         |
 | `net.show.sort`   | `ip asc` | Defines sorting field (`ip`, `mac`, `seen`, `sent`, `rcvd`) and direction (`asc` or `desc`) for `net.show`. |
 
-### Examples
+## Examples
 
 Sort by IP and filter for MAC addresses starting with `B8`:
 

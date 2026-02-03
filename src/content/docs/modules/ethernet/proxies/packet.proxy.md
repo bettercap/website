@@ -10,17 +10,17 @@ This module is only supported on GNU/Linux.
 
 :::
 
-### Commands
+## Commands
 
-#### `packet.proxy on`
+### `packet.proxy on`
 
 Start the NFQUEUE based packet proxy.
 
-#### `packet.proxy off`
+### `packet.proxy off`
 
 Stop the NFQUEUE based packet proxy.
 
-### Parameters
+## Parameters
 
 | Parameter                | Default  | Description                                                                                  |
 | ------------------------ | -------- | -------------------------------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ Stop the NFQUEUE based packet proxy.
 | `packet.proxy.queue.num` | `0`      | NFQUEUE number to create and bind to.                                                        |
 | `packet.proxy.rule`      |          | Any additional iptables rule to make the queue more selective (ex. `--destination 8.8.8.8`). |
 
-### Plugins
+## Plugins
 
 Instead of using Javascript extensions like the HTTP and HTTPS proxies, this module requires the plugins to be natively written in Go in order to avoid adding too much overhead for each incoming packet. The `packet.proxy.plugin` parameter is mandatory and needs to be filled with the path of a shared object [built as a Go plugin](https://golang.org/pkg/plugin/) and exporting an `OnPacket` callback like the following:
 

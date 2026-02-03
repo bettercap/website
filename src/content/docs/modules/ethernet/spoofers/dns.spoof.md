@@ -10,17 +10,17 @@ In order to receive DNS queries from other hosts other than your own and be ther
 
 :::
 
-### Commands
+## Commands
 
-#### `dns.spoof on`
+### `dns.spoof on`
 
 Start the DNS spoofer in the background.
 
-#### `dns.spoof off`
+### `dns.spoof off`
 
 Stop the DNS spoofer in the background.
 
-### Parameters
+## Parameters
 
 | Parameter           | Default               | Description                                                                                                         |
 | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -30,7 +30,7 @@ Stop the DNS spoofer in the background.
 | `dns.spoof.hosts`   |                       | If not empty, this hosts file will be used to map domains to IP addresses.                                          |
 | `dns.spoof.ttl`     | `1024`                | TTL of spoofed DNS replies.                                                                                         |
 
-### Examples
+## Examples
 
 Every DNS request coming to this computer for the `example.com` domain will resolve to the address `1.2.3.4`:
 

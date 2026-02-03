@@ -5,17 +5,17 @@ description: A rogue MySQL server that can be used to exploit LOCAL INFILE and r
 
 A rogue MySQL server that can be used to exploit [LOCAL INFILE and read arbitrary files](/modules/ethernet/spoofers/introduction/) from the client.
 
-### Commands
+## Commands
 
-#### `mysql.server on`
+### `mysql.server on`
 
 Start mysql server.
 
-#### `mysql.server off`
+### `mysql.server off`
 
 Stop mysql server.
 
-### Parameters
+## Parameters
 
 | Parameter              | Default               | Description                                                                      |
 | ---------------------- | --------------------- | -------------------------------------------------------------------------------- |
@@ -24,7 +24,7 @@ Stop mysql server.
 | `mysql.server.outfile` |                       | If filled, the INFILE buffer will be saved to this path instead of being logged. |
 | `mysql.server.port`    | `3306`                | Port to bind the mysql server to.                                                |
 
-### Examples
+## Examples
 
 One liner to start the server and steal `/etc/hosts` from clients connecting to your Rogue MySQL server
 

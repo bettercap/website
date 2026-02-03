@@ -5,17 +5,17 @@ description: A simple HTTPS server, used to serve files and scripts across the n
 
 A simple HTTPS server, used to serve files and scripts across the network.
 
-### Commands
+## Commands
 
-#### `https.server on`
+### `https.server on`
 
 Start the HTTPS server in the background.
 
-#### `https.server off`
+### `https.server off`
 
 Stop the HTTPS server in the background.
 
-### Parameters
+## Parameters
 
 | Parameter                                     | Default                       | Description                                                               |
 | --------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------- |
@@ -31,7 +31,7 @@ Stop the HTTPS server in the background.
 | `https.server.path`                           | `.`                           | Server folder.                                                            |
 | `https.server.port`                           | `443`                         | Port to bind the HTTPS server to.                                         |
 
-### Examples
+## Examples
 
 One liner to serve `/var/www/html`:
 

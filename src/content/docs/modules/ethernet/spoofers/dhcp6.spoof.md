@@ -10,23 +10,23 @@ This module must be used together with [dns.spoof](/modules/ethernet/spoofers/dn
 
 :::
 
-### Commands
+## Commands
 
-#### `dhcp6.spoof on`
+### `dhcp6.spoof on`
 
 Start the DHCPv6 spoofer in the background.
 
-#### `dhcp6.spoof off`
+### `dhcp6.spoof off`
 
 Stop the DHCPv6 spoofer in the background.
 
-### Parameters
+## Parameters
 
 | Parameter             | Default                                                          | Description                                      |
 | --------------------- | ---------------------------------------------------------------- | ------------------------------------------------ |
 | `dhcp6.spoof.domains` | `microsoft.com, goole.com, facebook.com, apple.com, twitter.com` | Comma separated values of domain names to spoof. |
 
-### Examples
+## Examples
 
 The following is the [mitm6.cap](https://github.com/bettercap/caplets/blob/master/mitm6.cap) caplet performing the full DHCPv6 attack versus a Windows 10 machine which is booting:
 

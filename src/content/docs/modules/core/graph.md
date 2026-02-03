@@ -5,25 +5,25 @@ description: A module to build a graph of WiFi and LAN nodes.
 
 A module to build a graph of WiFi and LAN nodes.
 
-### Commands
+## Commands
 
-#### `graph on`
+### `graph on`
 
 Start the graph module.
 
-#### `graph off`
+### `graph off`
 
 Stop the graph module.
 
-#### `graph.to_dot MAC?`
+### `graph.to_dot MAC?`
 
 Generate a dot graph file from the current graph (filtering by an optional MAC).
 
-#### `graph.to_json MAC?`
+### `graph.to_json MAC?`
 
 Generate a JSON file from the current graph (filtering by an optional MAC).
 
-### Parameters
+## Parameters
 
 | Parameter            | Default                            | Description                                     |
 | -------------------- | ---------------------------------- | ----------------------------------------------- |

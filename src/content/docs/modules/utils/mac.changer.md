@@ -5,15 +5,17 @@ description: Change the selected interface mac address.
 
 Change the selected interface mac address.
 
-#### `mac.changer on`
+## Commands
+
+### `mac.changer on`
 
 Start the mac changer module.
 
-#### `mac.changer off`
+### `mac.changer off`
 
 Stop the mac changer module and restore the original mac address.
 
-### Parameters
+## Parameters
 
 | Parameter             | Default            | Description                                 |
 | --------------------- | ------------------ | ------------------------------------------- |

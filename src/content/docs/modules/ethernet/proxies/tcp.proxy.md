@@ -7,17 +7,17 @@ A TCP transparent proxy that can be scripted using JavaScript modules. If used t
 
 The optional `tcp.tunnel` parameter can be used to redirect the traffic from `tcp.address` to `tcp.tunnel.address`.
 
-### Commands
+## Commands
 
-#### `tcp.proxy on`
+### `tcp.proxy on`
 
 Start the TCP proxy.
 
-#### `tcp.proxy off`
+### `tcp.proxy off`
 
 Stop the TCP proxy.
 
-### Parameters
+## Parameters
 
 | Parameter            | Default               | Description                                       |
 | -------------------- | --------------------- | ------------------------------------------------- |
@@ -29,7 +29,7 @@ Stop the TCP proxy.
 | `tcp.tunnel.address` |                       | Address to redirect the TCP tunnel to (optional). |
 | `tcp.tunnel.port`    |                       | Port to redirect the TCP tunnel to (optional)     |
 
-### Modules
+## Modules
 
 The `tcp.proxy` module can be scripted using javascript files that must declare at least one of the following functions:
 
@@ -59,7 +59,7 @@ function onData(from, to, data) {
 
 Modules can change the `data` buffer and return it, signaling the proxy to override the original buffer.
 
-### Builtin Functions
+## Builtin Functions
 
 The JS interpreter is [limited to ES5](https://github.com/robertkrimen/otto?tab=readme-ov-file#caveat-emptor) (no for/of, typed arrays, classes... )
 
@@ -91,7 +91,7 @@ Modules can use the following builtin functions.
 | `removeEventListener("event.tag")`          | Remove a previously registered event listener for the given tag.              |
 | `addSessionEvent("tag", data)`              | Trigger a session event from within the script with a custom tag and payload. |
 
-### Examples
+## Examples
 
 The [rogue-mysql-server.cap](https://github.com/bettercap/caplets/blob/master/rogue-mysql-server.cap) executes an ARP spoofing attack against a single host and redirect the MySQL traffic to a [builtin rogue server](/modules/ethernet/servers/mysqlserver/):
 

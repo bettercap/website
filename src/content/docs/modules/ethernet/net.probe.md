@@ -7,17 +7,17 @@ sidebar:
 
 When activated, this module will send different types of probe packets to each IP in the current subnet in order for the [net.recon](/modules/ethernet/net.recon/) module to detect them.
 
-### Commands
+## Commands
 
-#### `net.probe on`
+### `net.probe on`
 
 Start the prober.
 
-#### `net.probe off`
+### `net.probe off`
 
 Stop the prober.
 
-### Parameters
+## Parameters
 
 | Parameter            | Default | Description                                                                       |
 | -------------------- | ------- | --------------------------------------------------------------------------------- |

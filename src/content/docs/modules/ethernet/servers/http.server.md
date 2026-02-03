@@ -5,17 +5,17 @@ description: A simple HTTP server, used to serve files and scripts across the ne
 
 A simple HTTP server, used to serve files and scripts across the network.
 
-### Commands
+## Commands
 
-#### `http.server on`
+### `http.server on`
 
 Start the HTTP server in the background.
 
-#### `http.server off`
+### `http.server off`
 
 Stop the HTTP server in the background.
 
-### Parameters
+## Parameters
 
 | Parameter             | Default               | Description                         |
 | --------------------- | --------------------- | ----------------------------------- |
@@ -23,7 +23,7 @@ Stop the HTTP server in the background.
 | `http.server.path`    | `.`                   | Server folder.                      |
 | `http.server.port`    | `80`                  | Port to bind the HTTP server to.    |
 
-### Examples
+## Examples
 
 One liner to serve `/var/www/html`:
 

@@ -5,8 +5,8 @@ description: A module to check for bettercap's updates.
 
 A module to check for bettercap's updates.
 
-### Commands
+## Commands
 
-#### `update.check on`
+### `update.check on`
 
 Check latest available stable version and compare it with the one being used.

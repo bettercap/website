@@ -7,37 +7,37 @@ sidebar:
 
 This module supports scanning, injecting and fuzzing CAN-bus frames via socketcan compatible adapters.
 
-### Commands
+## Commands
 
-#### `can.recon on`
+### `can.recon on`
 
 Start CAN-bus discovery.
 
-#### `can.recon off`
+### `can.recon off`
 
 Stop CAN-bus discovery.
 
-#### `can.clear`
+### `can.clear`
 
 Clear everything collected by the discovery module.
 
-#### `can.show`
+### `can.show`
 
 Show a list of detected CAN devices.
 
-#### `can.dbc.load NAME`
+### `can.dbc.load NAME`
 
 Load a DBC file from the list of available ones or from disk.
 
-#### `can.inject FRAME_EXPRESSION`
+### `can.inject FRAME_EXPRESSION`
 
 Parse FRAME_EXPRESSION as 'id#data' and inject it as a CAN frame.
 
-#### `can.fuzz ID_OR_NODE_NAME OPTIONAL_SIZE`
+### `can.fuzz ID_OR_NODE_NAME OPTIONAL_SIZE`
 
 If an hexadecimal frame ID is specified, create a randomized version of it and inject it. If a node name is specified, a random message for the given node will be instead used.
 
-### Parameters
+## Parameters
 
 | Parameter         | Default | Description                                                                  |
 | ----------------- | ------- | ---------------------------------------------------------------------------- |
@@ -48,9 +48,9 @@ If an hexadecimal frame ID is specified, create a randomized version of it and i
 | `can.parse.obd2`  | `false` | Enable built in OBD2 PID parsing.                                            |
 | `can.transport`   | `can`   | Network type, can be 'can' for SocketCAN or 'udp'.                           |
 
-### Examples
+## Examples
 
-#### Read, write and fuzz raw frames
+### Read, write and fuzz raw frames
 
 The very basic of CAN-bus functionalities. Set your device and enable the module to start reading raw frames:
 
@@ -86,7 +86,7 @@ And show a list of the detected ECUs:
 can.show
 ```
 
-#### Load your own DBC files, decode traffic and fuzz with them
+### Load your own DBC files, decode traffic and fuzz with them
 
 You can also use CAN-bus database files that describe a specific protocol, in which case bettercap will use it to automatically parse every frame on the bus ([css-electronics](https://www.csselectronics.com/pages/obd2-dbc-file) and [comma.ai](https://github.com/commaai/opendbc) have some very good ones):
 
@@ -110,7 +110,7 @@ To instead pick a random message from a specific ECU and generate its contents r
 can.fuzz ECU_name
 ```
 
-#### Decode OBD2 PIDs with builtin decoder
+### Decode OBD2 PIDs with builtin decoder
 
 Alternatively to using a DBC, if you work with OBD2 standard PIDs, you can just enable the builtin PID parser:
 

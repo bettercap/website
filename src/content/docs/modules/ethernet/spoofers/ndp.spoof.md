@@ -5,21 +5,21 @@ description: This module performs IPv6 neighbor spoofing by sending crafted neig
 
 This module performs [IPv6 neighbor spoofing](https://packetlife.net/blog/2009/feb/2/ipv6-neighbor-spoofing/) by sending crafted neighbor and router advertisement packets.
 
-### Commands
+## Commands
 
-#### `ndp.spoof on`
+### `ndp.spoof on`
 
 Start NDP spoofer.
 
-#### `ndp.ban on`
+### `ndp.ban on`
 
 Start NDP spoofer in ban mode, meaning the target(s) connectivity will not work.
 
-#### `ndp.spoof off` / `ndp.ban off`
+### `ndp.spoof off` / `ndp.ban off`
 
 Stop NDP spoofer.
 
-### Parameters
+## Parameters
 
 | Parameter                   | Default   | Description                                                          |
 | --------------------------- | --------- | -------------------------------------------------------------------- |

@@ -5,17 +5,17 @@ description: A mDNS server module to create multicast services or spoof existing
 
 A mDNS server module to create multicast services or spoof existing ones.
 
-### Commands
+## Commands
 
-#### `mdns.server on`
+### `mdns.server on`
 
 Start the mDNS server in the background.
 
-#### `mdns.server off`
+### `mdns.server off`
 
 Stop the mDNS server in the background.
 
-### Parameters
+## Parameters
 
 | Parameter              | Default                      | Description                                                          |
 | ---------------------- | ---------------------------- | -------------------------------------------------------------------- |

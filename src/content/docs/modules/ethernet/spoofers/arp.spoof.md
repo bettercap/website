@@ -5,21 +5,21 @@ description: This module keeps spoofing selected hosts on the network using craf
 
 This module keeps spoofing selected hosts on the network using crafted ARP packets in order to perform a [MITM attack](/modules/ethernet/spoofers/introduction/#what-is-a-mitm-attack).
 
-### Commands
+## Commands
 
-#### `arp.spoof on`
+### `arp.spoof on`
 
 Start ARP spoofer.
 
-#### `arp.ban on`
+### `arp.ban on`
 
 Start ARP spoofer in ban mode, meaning the target(s) connectivity will not work.
 
-#### `arp.spoof off` / `arp.ban off`
+### `arp.spoof off` / `arp.ban off`
 
 Stop ARP spoofer.
 
-### Parameters
+## Parameters
 
 | Parameter                | Default           | Description                                                                                                                                                                     |
 | ------------------------ | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ Stop ARP spoofer.
 | `arp.spoof.targets`      | `<entire subnet>` | A comma separated list of MAC addresses, IP addresses, IP ranges or aliases to spoof ([a list of supported range formats](https://github.com/malfunkt/iprange)).                |
 | `arp.spoof.whitelist`    |                   | A comma separated list of MAC addresses, IP addresses, IP ranges or aliases to skip while spoofing.                                                                             |
 
-### Examples
+## Examples
 
 Ban the address `192.168.1.6` from the network:
 
