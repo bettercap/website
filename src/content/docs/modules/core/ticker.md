@@ -49,7 +49,8 @@ set ticker.period 5; set ticker.commands "wifi.deauth DE:AD:BE:EF:DE:AD"; ticker
 
 ### Named ticker
 
-Keep deauthenticating clients from the access point with BSSID `DE:AD:BE:EF:DE:AD` every five seconds with a named ticker called `deauthenticator`:
+Deauth clients from BSSID `DE:AD:BE:EF:DE:AD` every 5 seconds.
+Uses a named ticker called `deauthenticator`:
 
 ```bash
 ticker.create deauthenticator 5 "wifi.deauth DE:AD:BE:EF:DE:AD"

@@ -44,8 +44,8 @@ zerogod.advertise off
 
 ### `zerogod.impersonate ADDRESS`
 
-Impersonate the specified `ADDRESS` by advertising the same services it exposes.  
-This command automatically captures service data from the target, stores it in a temporary YAML file, and starts advertising it.
+Impersonate `ADDRESS` by advertising its services.
+Captures service data, stores it in a temp YAML file, and starts advertising.
 
 To stop impersonation, use:
 
