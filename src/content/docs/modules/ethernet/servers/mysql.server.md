@@ -3,17 +3,18 @@ title: mysql.server (rogue)
 description: A rogue MySQL server that can be used to exploit LOCAL INFILE and read arbitrary files from the client.
 ---
 
-A rogue MySQL server that can be used to exploit [LOCAL INFILE and read arbitrary files](/modules/ethernet/spoofers/introduction/) from the client.
+A **rogue MySQL server** that exploits the `LOCAL INFILE` vulnerability.
+Reads **arbitrary files** from connecting clients.
 
 ## Commands
 
 ### `mysql.server on`
 
-Start mysql server.
+Start the **rogue MySQL server**.
 
 ### `mysql.server off`
 
-Stop mysql server.
+Stop the **rogue MySQL server**.
 
 ## Parameters
 

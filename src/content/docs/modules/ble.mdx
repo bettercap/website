@@ -7,40 +7,42 @@ sidebar:
 
 import { YouTube } from "astro-embed";
 
-This module is responsible for Bluetooth Low Energy devices discovery, services enumeration and characteristic writing for unauthenticated devices.
+This module handles **Bluetooth Low Energy** (BLE) devices.
+It provides device discovery, services enumeration, and characteristic writing for unauthenticated devices.
 
 :::caution
 This module is not supported on Microsoft Windows and Apple macOS [due to this bug](https://github.com/bettercap/bettercap/issues/74).
 
 :::
 
-### Commands
+## Commands
 
-#### `ble.recon on`
+### `ble.recon on`
 
-Start Bluetooth Low Energy devices discovery.
+Start **BLE device discovery**.
 
-#### `ble.recon off`
+### `ble.recon off`
 
-Stop Bluetooth Low Energy devices discovery.
+Stop **BLE device discovery**.
 
-#### `ble.clear`
+### `ble.clear`
 
-Clear all devices collected by the BLE discovery module.
+Clear all devices collected by the **BLE discovery** module.
 
-#### `ble.show`
+### `ble.show`
 
-Show discovered Bluetooth Low Energy devices.
+Show discovered **BLE devices**.
 
-#### `ble.enum MAC`
+### `ble.enum MAC`
 
-Enumerate services and characteristics for the given BLE device.
+Enumerate **services and characteristics** for the given BLE device.
 
-#### `ble.write MAC UUID HEX_DATA`
+### `ble.write MAC UUID HEX_DATA`
 
-Write the `HEX_DATA` buffer to the BLE device with the specified `MAC` address, to the characteristics with the given `UUID`. |
+Write the `HEX_DATA` buffer to the BLE device with the specified `MAC`.
+Writes to the characteristic with the given `UUID`.
 
-### Parameters
+## Parameters
 
 | Parameter         | Default    | Description                                                                                      |
 | ----------------- | ---------- | ------------------------------------------------------------------------------------------------ |
@@ -51,7 +53,7 @@ Write the `HEX_DATA` buffer to the BLE device with the specified `MAC` address, 
 | `ble.timeout`     | `5`        | Connection timeout in seconds.                                                                   |
 | `ble.ttl`         | `30`       | Seconds of inactivity for a device to be pruned.                                                 |
 
-### Examples
+## Examples
 
 Connect, enumerate and read characteristics from the BLE device `04:52:de:ad:be:ef` (requires `ble.recon on` first):
 

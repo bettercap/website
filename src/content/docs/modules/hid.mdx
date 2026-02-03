@@ -5,9 +5,11 @@ sidebar:
   order: 4
 ---
 
-This module, which is a port of [Bastille's mousejack attack](https://www.mousejack.com/), performs scanning and frames injection for HID devices on the 2.4Ghz spectrum, using Nordic Semiconductor nRF24LU1+ based USB dongles and Bastille's [RFStorm firmware](https://github.com/BastilleResearch/nrf-research-firmware).
+This module is a port of [Bastille's mousejack attack](https://www.mousejack.com/).
+It performs **scanning** and **frames injection** for HID devices on the **2.4Ghz spectrum**.
+Uses Nordic Semiconductor nRF24LU1+ based USB dongles with [RFStorm firmware](https://github.com/BastilleResearch/nrf-research-firmware).
 
-The module will work with one of the devices supported by RFStorm:
+The module works with **RFStorm-supported devices**:
 
 - CrazyRadio PA USB dongle
 - SparkFun nRF24LU1+ breakout board
@@ -45,38 +47,43 @@ The attack is known to support detection and [DuckyScript](https://github.com/ha
 - Dell KM636 Wireless Mouse and Keyboard
 - AmazonBasics MG-0975 Wireless Mouse
 
-### Commands
+## Commands
 
-#### `hid.recon on`
+### `hid.recon on`
 
-Start scanning for HID devices on the 2.4Ghz spectrum.
+Start scanning for **HID devices** on the 2.4Ghz spectrum.
 
-#### `hid.recon off`
+### `hid.recon off`
 
-Stop scanning for HID devices on the 2.4Ghz spectrum.
+Stop scanning for **HID devices** on the 2.4Ghz spectrum.
 
-#### `hid.clear`
+### `hid.clear`
 
-Clear all devices collected by the HID discovery module.
+Clear all devices collected by the **HID discovery** module.
 
-#### `hid.show`
+### `hid.show`
 
-Show a list of detected HID devices on the 2.4Ghz spectrum.
+Show a list of detected **HID devices** on the 2.4Ghz spectrum.
 
-#### `hid.sniff ADDRESS`
+### `hid.sniff ADDRESS`
 
-Start sniffing a specific ADDRESS in order to collect payloads, use 'clear' to stop collecting.
+Start **sniffing** a specific `ADDRESS` to collect payloads.
+Use `clear` to stop collecting.
 
-#### `hid.inject ADDRESS LAYOUT FILENAME`
+### `hid.inject ADDRESS LAYOUT FILENAME`
 
-Parse the DuckyScript `FILENAME` and inject it as HID frames spoofing the device `ADDRESS`, using the `LAYOUT` keyboard mapping (available layouts: `BE BR CA CH DE DK ES FI FR GB HR IT NO PT RU SI SV TR US`).
+Parse the **DuckyScript** `FILENAME` and inject it as HID frames.
+Spoofs the device at `ADDRESS` using the `LAYOUT` keyboard mapping.
+
+**Available layouts**: `BE BR CA CH DE DK ES FI FR GB HR IT NO PT RU SI SV TR US`
 
 :::note
-The command `hid.inject` does not require the HID device to be visible via the `hid.show` command. If you know the address of the dongle already, you can simply set the `hid.force.type` parameter to one among `logitech` (the default value), `amazon` or `microsoft` and run the injection _"blindly"_.
-
+The `hid.inject` command does not require the HID device to be visible via `hid.show`.
+If you know the dongle address, set `hid.force.type` to `logitech`, `amazon`, or `microsoft`.
+Then run the injection "blindly".
 :::
 
-### Parameters
+## Parameters
 
 | Parameter          | Default    | Description                                                                                                                                                                                                                    |
 | ------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -90,7 +97,7 @@ The command `hid.inject` does not require the HID device to be visible via the `
 | `hid.sniff.period` | `500`      | Time in milliseconds to automatically sniff payloads from a device, once it's detected, in order to determine its type.                                                                                                        |
 | `hid.ttl`          | `1200`     | Seconds of inactivity to consider a device as not in range.                                                                                                                                                                    |
 
-### Examples
+## Examples
 
 Enable HID discovery, use the `ticker` module to display detected devices, wait for the device `32:26:9f:a4:08` to be detected and inject the `ducky.txt` script as HID frames using the US keyboard layout:
 

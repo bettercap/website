@@ -11,33 +11,38 @@ The default credentials are:
 
 :::
 
-A RESTful API server to orchestrate and interact with the current interactive session, starts on HTTP and unauthenticated by default, can be switched to HTTPS and basic auth by using the proper parameters.
+A **RESTful API server** for orchestrating and interacting with the current interactive session.
+
+By default, it starts on **HTTP** and is **unauthenticated**.
+You can switch to **HTTPS** and enable **basic auth** using the proper parameters.
 
 ## Commands
 
 ### `api.rest on`
 
-Start the REST API server.
+Start the **REST API** server.
 
 ### `api.rest off`
 
-Stop the REST API server.
+Stop the **REST API** server.
 
 ### `api.rest.record FILENAME`
 
-Start polling the rest API periodically recording each sample in a compressed file that can be later replayed.
+Start polling the **REST API** periodically.
+Records each sample in a **compressed file** that can be replayed later.
 
 ### `api.rest.record off`
 
-Stop recording the session.
+Stop **recording** the session.
 
 ### `api.rest.replay FILENAME`
 
-Start the rest API module in replay mode using `FILENAME` as the recorded session file, will revert to normal mode once the replay is over.
+Start the REST API module in **replay mode** using `FILENAME`.
+Reverts to normal mode once the replay is over.
 
 ### `api.rest.replay off`
 
-Stop replaying the recorded session.
+Stop **replaying** the recorded session.
 
 ## Parameters
 
@@ -61,7 +66,8 @@ Stop replaying the recorded session.
 
 ## Routes
 
-Clients can authenticate using HTTP basic authentication, these are the available API routes.
+Clients can authenticate using **HTTP basic authentication**.
+These are the available API routes:
 
 ### `GET /api/file?name=FILENAME`
 
@@ -69,9 +75,9 @@ Get a file on the host
 
 ### `GET /api/events`
 
-{{% notice note %}}
-This route will be available as a websocket endpoint instead of normal HTTP if the `api.rest.websocket` parameter is set to true.
-{{% /notice %}}
+:::note
+This route becomes a **websocket endpoint** instead of normal HTTP if `api.rest.websocket` is set to `true`.
+:::
 
 Return a list of events ( the optional `n` GET parameter will limit the number ):
 

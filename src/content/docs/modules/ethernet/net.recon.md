@@ -5,33 +5,36 @@ sidebar:
   order: 2
 ---
 
-This module is responsible for periodically reading the system ARP table in order to detect new hosts on the network.
+This module periodically reads the system **ARP table** to detect new hosts on the network.
 
 ## Commands
 
 ### `net.recon on`
 
-Start network hosts discovery.
+Start **network hosts discovery**.
 
 ### `net.recon off`
 
-Stop network hosts discovery.
+Stop **network hosts discovery**.
 
 ### `net.clear`
 
-Clear all endpoints collected by the hosts discovery module.
+Clear all endpoints collected by the **hosts discovery** module.
 
 ### `net.show`
 
-Show cache hosts list (default sorting by ip).
+Show cached hosts list.
+Default sorting by IP.
 
 ### `net.show ADDRESS1, ADDRESS2`
 
-Show information about a specific list of addresses (by IP or MAC).
+Show information about specific addresses.
+Accepts IP or MAC.
 
 ### `net.show.meta ADDRESS1, ADDRESS2`
 
-Show metadata (mDNS, UPnP, open ports, etc) about a specific list of addresses (by IP or MAC).
+Show metadata about specific addresses.
+Includes mDNS, UPnP, open ports, etc.
 
 ## Parameters
 

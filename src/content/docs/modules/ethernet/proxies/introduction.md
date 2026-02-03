@@ -5,5 +5,9 @@ sidebar:
   order: 1
 ---
 
-A set of modules you can use to intercept traffic at the packet, TCP or HTTP/HTTPS level while performing a [MITM attack](/modules/ethernet/spoofers/introduction/).
-Each proxy can be either extended with the Go plugin system (when keeping high performances is important), or scripted with Javascript plugins thanks to the [Otto builtin engine](https://github.com/robertkrimen/otto).
+A set of modules for intercepting traffic during a [MITM attack](/modules/ethernet/spoofers/introduction/).
+Supports **packet**, **TCP**, and **HTTP/HTTPS** level interception.
+
+Each proxy can be extended in two ways:
+- **Go plugins**: For high-performance needs
+- **JavaScript plugins**: Using the [Otto builtin engine](https://github.com/robertkrimen/otto)

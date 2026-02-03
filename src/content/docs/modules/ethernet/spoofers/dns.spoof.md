@@ -3,29 +3,30 @@ title: dns.spoof
 description: Replies to DNS queries with spoofed responses.
 ---
 
-Replies to DNS queries with spoofed responses.
+Replies to **DNS queries** with **spoofed responses**.
 
 :::note
-In order to receive DNS queries from other hosts other than your own and be therefore able to spoof the selected domain names, you'll also need to activate either the [arp.spoof](/modules/ethernet/spoofers/arpspoof/) or the [dhcp6.spoof](/modules/ethernet/spoofers/dhcp6spoof/) module.
-
+To receive DNS queries from other hosts and spoof domain names, activate either:
+- [arp.spoof](/modules/ethernet/spoofers/arpspoof/)
+- [dhcp6.spoof](/modules/ethernet/spoofers/dhcp6spoof/)
 :::
 
 ## Commands
 
 ### `dns.spoof on`
 
-Start the DNS spoofer in the background.
+Start the **DNS spoofer** in the background.
 
 ### `dns.spoof off`
 
-Stop the DNS spoofer in the background.
+Stop the **DNS spoofer**.
 
 ## Parameters
 
 | Parameter           | Default               | Description                                                                                                         |
 | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | `dns.spoof.address` | `<interface address>` | IP address to map the domains to.                                                                                   |
-| `dns.spoof.all`     | `false`               | If true the module will reply to every DNS request, otherwise it will only reply to the one targeting the local pc. |
+| `dns.spoof.all`     | `false`               | If true, replies to **every** DNS request. Otherwise, only replies to requests targeting local PC. |
 | `dns.spoof.domains` |                       | Comma separated values of domain names to spoof.                                                                    |
 | `dns.spoof.hosts`   |                       | If not empty, this hosts file will be used to map domains to IP addresses.                                          |
 | `dns.spoof.ttl`     | `1024`                | TTL of spoofed DNS replies.                                                                                         |

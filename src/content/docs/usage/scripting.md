@@ -5,7 +5,8 @@ sidebar:
   order: 3
 ---
 
-bettercap has a builtin JavaScript engine [based on Otto](https://github.com/robertkrimen/otto) that you can use to interact with the session and automate tasks.
+bettercap has a builtin **JavaScript engine** [based on Otto](https://github.com/robertkrimen/otto).
+Use it to interact with the session and automate tasks.
 
 Session scripts can be loaded using the `-script FILENAME` command line argument:
 
@@ -74,6 +75,9 @@ if (resp.Error) {
 }
 ```
 
-and a variety of other tasks depending on your imagination :D Check the [scripts repository](http://github.com/bettercap/scripts) for some example scripts.
+Check the [scripts repository](http://github.com/bettercap/scripts) for example scripts.
 
-The JS interpreter is [limited to ES5](https://github.com/robertkrimen/otto?tab=readme-ov-file#caveat-emptor) (no for/of, typed arrays, classes... )
+:::note
+The JS interpreter is [limited to ES5](https://github.com/robertkrimen/otto?tab=readme-ov-file#caveat-emptor).
+This means **no** `for/of`, typed arrays, or classes.
+:::

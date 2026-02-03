@@ -3,21 +3,23 @@ title: arp.spoof
 description: This module keeps spoofing selected hosts on the network using crafted ARP packets in order to perform a MITM attack.
 ---
 
-This module keeps spoofing selected hosts on the network using crafted ARP packets in order to perform a [MITM attack](/modules/ethernet/spoofers/introduction/#what-is-a-mitm-attack).
+This module spoofs selected hosts on the network using **crafted ARP packets**.
+It enables [MITM attacks](/modules/ethernet/spoofers/introduction/#what-is-a-mitm-attack) by redirecting traffic through your machine.
 
 ## Commands
 
 ### `arp.spoof on`
 
-Start ARP spoofer.
+Start the **ARP spoofer**.
 
 ### `arp.ban on`
 
-Start ARP spoofer in ban mode, meaning the target(s) connectivity will not work.
+Start **ARP spoofer** in ban mode.
+Target connectivity will not work.
 
 ### `arp.spoof off` / `arp.ban off`
 
-Stop ARP spoofer.
+Stop the **ARP spoofer**.
 
 ## Parameters
 

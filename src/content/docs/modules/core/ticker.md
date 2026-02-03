@@ -3,21 +3,22 @@ title: ticker
 description: The ticker module can be used to execute a given set of commands periodically in the interactive session.
 ---
 
-The ticker module can be used to execute a given set of commands periodically in the interactive session.
+The **ticker module** executes a given set of commands periodically in the interactive session.
 
 ## Commands
 
 ### `ticker on`
 
-Start the main ticker.
+Start the **main ticker**.
 
 ### `ticker off`
 
-Stop the main ticker.
+Stop the **main ticker**.
 
 ### `ticker.create NAME PERIOD COMMANDS`
 
-Create and start a named ticker called `NAME` that will execute the given `COMMANDS` every `PERIOD`.
+Create and start a **named ticker** called `NAME`.
+Executes `COMMANDS` every `PERIOD` seconds.
 
 ### `ticker.destroy NAME`
 

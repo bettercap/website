@@ -5,11 +5,13 @@ sidebar:
   order: 3
 ---
 
-**bettercap supports GNU/Linux, BSD, Android, Apple macOS and the Microsoft Windows** operating systems - depending if you want to install the latest stable release or the bleeding edge from the [GitHub repository](https://github.com/bettercap/bettercap), you have several choices.
+**bettercap** supports **GNU/Linux**, **BSD**, **Android**, **Apple macOS**, and **Microsoft Windows**.
+
+You can install the latest stable release or the bleeding edge from the [GitHub repository](https://github.com/bettercap/bettercap).
 
 ## Dependencies
 
-In order to be able to use bettercap, you'll need the following dependencies on your system:
+You'll need these dependencies on your system:
 
 - pkg-config
 - libpcap
@@ -18,7 +20,8 @@ In order to be able to use bettercap, you'll need the following dependencies on 
 
 ## Using pre-built binaries
 
-Binaries are pre-built and uploaded as asset for each new [release](https://github.com/bettercap/bettercap/releases) of bettercap. It currently has binaries for the following targets:
+Pre-built binaries are available for each new [release](https://github.com/bettercap/bettercap/releases).
+Currently available for:
 
 - Darwin arm64
 - Linux amd64
@@ -39,7 +42,11 @@ Any module that does not work at the IP level and requires direct hardware acces
 
 :::
 
-bettercap is containerized using [Alpine Linux](https://alpinelinux.org/) - a security-oriented, lightweight Linux distribution based on musl libc and busybox. The resulting Docker image is relatively small and easy to manage the dependencies. Since it is using a multi-stage build, **a Docker version greater than 17.05 is required**.
+bettercap is containerized using [Alpine Linux](https://alpinelinux.org/).
+Alpine is a security-oriented, lightweight Linux distribution based on musl libc and busybox.
+The resulting Docker image is small and easy to manage.
+
+**Requires Docker version > 17.05** (uses multi-stage build).
 
 To pull latest version of the image:
 
@@ -63,11 +70,11 @@ brew install bettercap
 
 ## Compiling from sources
 
-In order to compile bettercap from sources, make sure that:
+Before compiling, ensure:
 
-- You have a correctly configured **[Go >= 1.8](https://golang.org/doc/install)** environment.
-- `$GOPATH` is defined and `$GOPATH/bin` is in `$PATH`.
-- For hardware with limited resources (like Raspberry Pi Zero boards) you might want [to increase the swap size](https://www.bitpi.co/2015/02/11/how-to-change-raspberry-pis-swapfile-size-on-rasbian/).
+- **[Go >= 1.8](https://golang.org/doc/install)** is correctly configured
+- `$GOPATH` is defined and `$GOPATH/bin` is in `$PATH`
+- For limited hardware (Raspberry Pi Zero), consider [increasing swap size](https://www.bitpi.co/2015/02/11/how-to-change-raspberry-pis-swapfile-size-on-rasbian/)
 
 You'll also need to install the dependencies:
 
@@ -76,7 +83,7 @@ You'll also need to install the dependencies:
 - libusb-1.0-0-dev (required by the [HID module](/modules/hid/))
 - libnetfilter-queue-dev (on Linux only, required by the [packet.proxy module](/modules/ethernet/proxies/packetproxy/))
 
-Once you've met this conditions, you can run the following commands to compile and install bettercap in `/usr/local/bin/bettercap`:
+Then compile and install to `/usr/local/bin/bettercap`:
 
 ```bash
 go get github.com/bettercap/bettercap
@@ -101,7 +108,8 @@ pkg install root-repo
 pkg install golang git libpcap libusb
 ```
 
-There's a [golang bug](https://github.com/bettercap/bettercap/issues/486) in termux about some hardcoded path, the fix is ugly but it works:
+There's a [golang bug](https://github.com/bettercap/bettercap/issues/486) in Termux about hardcoded paths.
+Apply this workaround:
 
 ```bash
 sudo su
@@ -112,7 +120,9 @@ ln -s `which pkg-config` /home/builder/.termux-build/_cache/18-arm-21-v2/bin/arm
 
 #### Linux Deploy Method Debian based (like Ubuntu)
 
-Install [Linux Deploy](https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy), [JuiceSSH](https://play.google.com/store/apps/details?id=com.sonelli.juicessh), in Linux Deploy install kalilinux_arm (u need the [piggy helper](https://www.google.cl/search?q=piggy+helper+apk) and enable the SSH) and type:
+Install [Linux Deploy](https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy) and [JuiceSSH](https://play.google.com/store/apps/details?id=com.sonelli.juicessh).
+In Linux Deploy, install kalilinux_arm (requires [piggy helper](https://www.google.cl/search?q=piggy+helper+apk)).
+Enable SSH, then type:
 
 ```bash
 sudo apt update

@@ -3,10 +3,14 @@ title: https.proxy
 description: A full featured HTTPS transparent proxy that can be scripted using JavaScript modules.
 ---
 
-A full featured HTTPS transparent proxy that can be scripted using javascript modules. If used together with a [spoofer](/modules/ethernet/spoofers/introduction/), all HTTPS traffic will be redirected to it and it will automatically handle port redirections as needed.
+A **transparent HTTPS proxy** with **JavaScript scripting** support.
+
+When used with a [spoofer](/modules/ethernet/spoofers/introduction/), all **HTTPS traffic** redirects to this proxy.
+Port redirections are handled automatically.
 
 :::note
-When a new TLS connection is being proxied, bettercap will fetch the original certificate from the target host and resign on the fly the full chain using its own CA.
+When proxying a new **TLS connection**, bettercap fetches the original certificate from the target host.
+It then re-signs the full chain on the fly using its own **CA**.
 
 :::
 
@@ -14,11 +18,11 @@ When a new TLS connection is being proxied, bettercap will fetch the original ce
 
 ### `https.proxy on`
 
-Start the HTTPS proxy.
+Start the **HTTPS proxy** server.
 
 ### `https.proxy off`
 
-Stop the HTTPS proxy.
+Stop the **HTTPS proxy** server.
 
 ## Parameters
 
@@ -43,7 +47,8 @@ Stop the HTTPS proxy.
 
 ## Modules
 
-The `http.proxy` and `https.proxy` modules can be scripted using javascript files that must declare at least one of the following functions:
+The `http.proxy` and `https.proxy` modules can be scripted using **JavaScript files**.
+These files must declare at least one of the following functions:
 
 ```js
 // called when the script is loaded
@@ -82,7 +87,10 @@ function onCommand(cmd) {
 }
 ```
 
-Modules can change the `req` request and `res` response objects, for instance the [web-override.cap caplet](https://github.com/bettercap/caplets/blob/master/web-override/web-override.cap) is using the `onRequest` function in order to override every request before it is executed with a fake response:
+Modules can change the `req` request and `res` response objects.
+
+For instance, the [web-override.cap caplet](https://github.com/bettercap/caplets/blob/master/web-override/web-override.cap) uses the `onRequest` function.
+It overrides every request before execution with a **fake response**:
 
 ```js
 function onRequest(req, res) {
@@ -98,7 +106,8 @@ function onRequest(req, res) {
 }
 ```
 
-The [login-man-abuse.cap caplet](https://github.com/bettercap/caplets/blob/master/login-manager-abuse/login-man-abuse.cap) instead will use the `onResponse` handler to inject its malicious javascript file in every html response:
+The [login-man-abuse.cap caplet](https://github.com/bettercap/caplets/blob/master/login-manager-abuse/login-man-abuse.cap) uses the `onResponse` handler.
+It injects a **JavaScript file** into every HTML response:
 
 ```js
 function onResponse(req, res) {
@@ -120,9 +129,10 @@ function onResponse(req, res) {
 
 ### Builtin Functions
 
-The JS interpreter is [limited to ES5](https://github.com/robertkrimen/otto?tab=readme-ov-file#caveat-emptor) (no for/of, typed arrays, classes... )
+The JS interpreter is [limited to ES5](https://github.com/robertkrimen/otto?tab=readme-ov-file#caveat-emptor).
+This means **no** `for/of`, typed arrays, or classes.
 
-Modules can use the following builtin functions.
+Modules can use the following **builtin functions**:
 
 | Function                                    | Description                                                                   |
 | ------------------------------------------- | ----------------------------------------------------------------------------- |

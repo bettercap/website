@@ -5,31 +5,32 @@ sidebar:
   order: 4
 ---
 
-This module is a network packet sniffer and fuzzer supporting both [BPF syntax](http://biot.com/capstats/bpf.html) and regular expressions for filtering.
+A **network packet sniffer** and **fuzzer** module.
+Supports both [BPF syntax](http://biot.com/capstats/bpf.html) and regular expressions for filtering.
 
-It is also able to dissect several major protocols in order to harvest credentials.
+It can also **dissect major protocols** to harvest credentials.
 
 ## Commands
 
 ### `net.sniff on`
 
-Start the packet sniffer.
+Start the **packet sniffer**.
 
 ### `net.sniff off`
 
-Stop the packet sniffer.
+Stop the **packet sniffer**.
 
 ### `net.sniff stats`
 
-Print the packet sniffer session configuration and statistics.
+Print sniffer session configuration and statistics.
 
 ### `net.fuzz on`
 
-Enable fuzzing for every sniffed packet containing the specified layers.
+Enable **fuzzing** for sniffed packets containing specified layers.
 
 ### `net.fuzz off`
 
-Disable fuzzing.
+Disable **fuzzing**.
 
 ## Parameters
 

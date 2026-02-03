@@ -5,7 +5,9 @@ sidebar:
   order: 2
 ---
 
-Once the tool started with `sudo bettercap` ([click here](#command-line-arguments) for the list of command line arguments), you'll be presented with an interactive session _a la Metasploit_ where you'll be able to run commands, enable or disable modules, get or set parameters and so on.
+Once the tool starts with `sudo bettercap`, you'll see an **interactive session** (Metasploit-style).
+Here you can run commands, enable or disable modules, and get or set parameters.
+See [command line arguments](#command-line-arguments) for all options.
 
 :::tip
 Each command can either be executed singularly, or concatenated by the `;` operator, for instance, instead of typing:
@@ -19,11 +21,16 @@ You can simply type: `clear; net.show`
 
 :::
 
-Functionalities are organized in **[core commands](#core-commands)** (basic commands you'll need to perform operations such as setting a session parameter, getting its value, clearing the screen, etc) and **session modules** (each will provide a set of feature specific sub commands and use some session parameters for its configuration).
+Functionalities are organized into:
+
+- **[Core commands](#core-commands)**: Basic operations like setting parameters, getting values, and clearing the screen
+- **Session modules**: Feature-specific sub commands that use session parameters for configuration
 
 ## Caplets
 
-Other than executing commands manually one by one, it is possible to _script_ your interactive session using **caplets**. Caplets (script files with a `.cap` extension) are a powerful way to automate your workflow: think about them as the Metasploit's `.rc` files, where each line of the file is a command that'll be executed at runtime.
+You can also **script** your interactive session using **caplets**.
+Caplets are script files with a `.cap` extension.
+Think of them like Metasploit's `.rc` files—each line is a command that executes at runtime.
 
 For instance, a simple caplet that sets the `ticker.commands` parameter and enables the [net.probe](/modules/ethernet/netprobe/) and [ticker](/modules/core/ticker/) modules would be:
 
@@ -53,7 +60,8 @@ In this case the search order will be:
 3. Any folder in the environment variable `$CAPSPATH` (values are separated by `:`, like for `$PATH`).
 4. `/usr/local/share/bettercap/caplets/example.cap` (the default path where caplets are installed).
 
-You can install (or update) the predefined caplets (hosted [in this repository](https://github.com/bettercap/caplets)) by using the [caplet module](/modules/core/caplets/), either from the command line:
+You can install or update the predefined caplets from [the caplets repository](https://github.com/bettercap/caplets).
+Use the [caplet module](/modules/core/caplets/) from the command line:
 
 ```bash
 sudo bettercap -eval "caplets.update; q"
@@ -97,11 +105,14 @@ Load a [session script](/usage/scripting/).
 
 ### `-iface INTERFACE`
 
-Network interface to bind to, if empty the default interface will be auto selected (accepts interface name, ip or mac address)
+Network interface to bind to.
+If empty, the default interface is auto-selected.
+Accepts interface name, IP, or MAC address.
 
 ### `-gateway-override ADDRESS`
 
-Use the provided IP address instead of the default gateway. If not specified or invalid, the default gateway will be auto detected and used.
+Use the provided IP address instead of the default gateway.
+If not specified or invalid, the default gateway is auto-detected.
 
 ### `-no-history`
 
@@ -113,7 +124,9 @@ Disable terminal colors and effects.
 
 ### `-env-file FILENAME`
 
-Preload the parameters values from this file if found, set to empty to disable environment persistance (default `~/bettercap.env`).
+Preload parameter values from this file if found.
+Set to empty to disable environment persistence.
+Default: `~/bettercap.env`.
 
 ### `-silent`
 
@@ -192,13 +205,17 @@ Being persisted on disk, aliases are shared across each module and bettercap ses
 
 ## Customizing the Prompt
 
-The interactive session prompt can be modified by setting the `$` variable, for instance this:
+The interactive session prompt can be modified by setting the `$` variable.
+For instance:
 
 ```bash
 set $ something
 ```
 
-Will set the prompt to the string `something`. You can also access parameters and use colors/effects by using the proper syntax and operators as you can see from the `$` parameter default value:
+This sets the prompt to the string `something`.
+
+You can also access parameters and use colors/effects with special operators.
+See the `$` parameter default value:
 
 ```
 get $
@@ -237,7 +254,11 @@ There are also other operators you can use in order to access specific informati
 | `{net.received.human}` | Number of bytes being sniffed from the tool from the network (human readable form). |
 | `{net.packets}`        | Number of packets being sniffed by the tool from the network.                       |
 
-And finally, you can access and use any variable that has been declared in the interactive session using the `{env.NAME-OF-THE-VAR}` operator, for instance, the default prompt is using `{env.iface.ipv4}` that is replaced by the `iface.ipv4` session variable contents ( you can check it using the `get iface.ipv4` command ).
+You can also access any session variable using the `{env.NAME-OF-THE-VAR}` operator.
+
+For example, the default prompt uses `{env.iface.ipv4}`.
+This is replaced by the `iface.ipv4` session variable contents.
+Check it with `get iface.ipv4`.
 
 ## Examples
 
@@ -247,7 +268,7 @@ Set the `arp.spoof.targets` parameter and enable the `arp.spoof` module:
 sudo bettercap -eval "set arp.spoof.targets 192.168.1.20; arp.spoof on"
 ```
 
-To quickly get the help menu of a module and quit bettercap (basically like a _man_ command), you can use the `-eval` argument, for example:
+To quickly get a module's help menu and quit (like a `man` command), use `-eval`:
 
 ```bash
 sudo bettercap -eval "help net.recon; q"
