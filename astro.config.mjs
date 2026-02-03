@@ -92,9 +92,7 @@ export default defineConfig({
                 "https://github.com/evilsocket",
                 "https://twitter.com/evilsocket"
               ]
-            },
-            "codeRepository": "https://github.com/bettercap/bettercap",
-            "programmingLanguage": "Go"
+            }
           }),
         },
       ],
