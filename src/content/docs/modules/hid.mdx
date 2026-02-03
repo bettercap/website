@@ -99,7 +99,8 @@ Then run the injection "blindly".
 
 ## Examples
 
-Enable HID discovery, use the `ticker` module to display detected devices, wait for the device `32:26:9f:a4:08` to be detected and inject the `ducky.txt` script as HID frames using the US keyboard layout:
+Enable **HID discovery** and use `ticker` to display detected devices.
+Wait for device `32:26:9f:a4:08` and inject `ducky.txt` with US keyboard layout:
 
 ```bash
 set ticker.commands clear; hid.show; events.show 10
@@ -109,7 +110,8 @@ ticker on
 hid.inject 32:26:9f:a4:08 US ducky.txt
 ```
 
-Send the `ducky.txt` script keystrokes to the dongle with address `32:26:9f:a4:08` forcing its type to `logitech` and without waiting for any connected device to be visible:
+Send `ducky.txt` to dongle `32:26:9f:a4:08` forcing type `logitech`.
+No need to wait for a connected device to be visible:
 
 ```bash
 set hid.force.type logitech

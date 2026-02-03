@@ -88,7 +88,10 @@ can.show
 
 ### Load your own DBC files, decode traffic and fuzz with them
 
-You can also use CAN-bus database files that describe a specific protocol, in which case bettercap will use it to automatically parse every frame on the bus ([css-electronics](https://www.csselectronics.com/pages/obd2-dbc-file) and [comma.ai](https://github.com/commaai/opendbc) have some very good ones):
+You can use **DBC files** that describe a specific protocol.
+Bettercap will parse every frame automatically.
+
+Good sources: [css-electronics](https://www.csselectronics.com/pages/obd2-dbc-file) and [comma.ai](https://github.com/commaai/opendbc).
 
 ```bash
 set can.device /dev/can0
@@ -112,7 +115,7 @@ can.fuzz ECU_name
 
 ### Decode OBD2 PIDs with builtin decoder
 
-Alternatively to using a DBC, if you work with OBD2 standard PIDs, you can just enable the builtin PID parser:
+For **OBD2 standard PIDs**, you can use the builtin parser instead of a DBC:
 
 ```bash
 set can.device /dev/can0

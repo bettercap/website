@@ -93,7 +93,8 @@ Modules can use the following builtin functions.
 
 ## Examples
 
-The [rogue-mysql-server.cap](https://github.com/bettercap/caplets/blob/master/rogue-mysql-server.cap) executes an ARP spoofing attack against a single host and redirect the MySQL traffic to a [builtin rogue server](/modules/ethernet/servers/mysqlserver/):
+The [rogue-mysql-server.cap](https://github.com/bettercap/caplets/blob/master/rogue-mysql-server.cap) spoofs a single host.
+It redirects MySQL traffic to a [rogue server](/modules/ethernet/servers/mysqlserver/):
 
 ```bash
 # set the target for arp spoofing

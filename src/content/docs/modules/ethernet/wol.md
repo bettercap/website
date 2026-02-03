@@ -15,4 +15,5 @@ Send a WOL as a raw ethernet packet of type 0x0847 (if no MAC is specified, `ff:
 
 ### `wol.udp MAC`
 
-Send a WOL as an IPv4 broadcast packet to UDP port 9 (if no MAC is specified, `ff:ff:ff:ff:ff:ff` will be used).
+Send a **WOL** as an IPv4 broadcast packet to UDP port 9.
+Default MAC: `ff:ff:ff:ff:ff:ff`.

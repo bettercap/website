@@ -3,7 +3,9 @@ title: dhcp6.spoof
 description: This module's purpose is attacking Microsoft Windows hosts by replying to DHCPv6 messages and providing the target with a link-local IPv6 address and setting the attacker host as default DNS server.
 ---
 
-This module's purpose is attacking Microsoft Windows hosts by replying to DHCPv6 messages and providing the target with a link-local IPv6 address and setting the attacker host as default DNS server (as described [here](https://blog.fox-it.com/2018/01/11/mitm6-compromising-ipv4-networks-via-ipv6/)).
+This module attacks **Windows hosts** via DHCPv6.
+It replies to DHCPv6 messages with a link-local IPv6 address.
+The attacker becomes the default DNS server ([details](https://blog.fox-it.com/2018/01/11/mitm6-compromising-ipv4-networks-via-ipv6/)).
 
 :::note
 This module must be used together with [dns.spoof](/modules/ethernet/spoofers/dnsspoof) module in order to be effective.

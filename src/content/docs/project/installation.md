@@ -38,12 +38,11 @@ go install github.com/bettercap/bettercap/v2@latest
 ## Using Docker
 
 :::note
-Any module that does not work at the IP level and requires direct hardware access, for example `wifi.recon`, will not work while running on Docker.
-
+Modules requiring direct hardware access won't work in Docker.
+Example: `wifi.recon` needs hardware access.
 :::
 
 bettercap is containerized using [Alpine Linux](https://alpinelinux.org/).
-Alpine is a security-oriented, lightweight Linux distribution based on musl libc and busybox.
 The resulting Docker image is small and easy to manage.
 
 **Requires Docker version > 17.05** (uses multi-stage build).

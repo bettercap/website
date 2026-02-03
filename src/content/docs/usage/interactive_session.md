@@ -188,7 +188,8 @@ Clear the screen.
 
 ### `include CAPLET`
 
-Load and run this caplet in the current session, the same behaviour can be achieved by just specifying the caplet name as a command.
+Load and run this caplet in the current session.
+You can also just specify the caplet name as a command.
 
 ### `!COMMAND`
 
@@ -199,7 +200,9 @@ Execute a shell command and print its output into the session.
 Assign an alias to a given endpoint given its MAC address (will be persistent on `~/bettercap.aliases`).
 
 :::tip
-Being persisted on disk, aliases are shared across each module and bettercap session. This means that if you set an alias for a computer while on the same network, the same alias will be shown and used, for instance, by the WiFi modules when resolving wireless stations BSSID (you'll see who's connecting to what).
+Aliases are persisted on disk and shared across modules and sessions.
+An alias set on one network will appear in WiFi modules when resolving wireless stations.
+You'll see who's connecting to what.
 
 :::
 

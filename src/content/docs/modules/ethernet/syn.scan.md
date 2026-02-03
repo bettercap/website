@@ -5,8 +5,10 @@ sidebar:
   order: 5
 ---
 
-A module to perform SYN port scanning, as open ports are discovered the `tcp-ports` meta field of the endpoints will be filled and it will be shown in the
-[net.show](/modules/ethernet/net.recon/#net-show) view if [net.show.meta](/modules/ethernet/net.recon/#parameters) is set to `true`.
+A module to perform **SYN port scanning**.
+
+Open ports populate the `tcp-ports` meta field of endpoints.
+View them with [net.show](/modules/ethernet/net.recon/#net-show) when [net.show.meta](/modules/ethernet/net.recon/#parameters) is `true`.
 
 ## Commands
 

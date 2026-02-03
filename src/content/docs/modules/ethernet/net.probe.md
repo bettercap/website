@@ -5,7 +5,8 @@ sidebar:
   order: 1
 ---
 
-When activated, this module will send different types of probe packets to each IP in the current subnet in order for the [net.recon](/modules/ethernet/net.recon/) module to detect them.
+Sends **probe packets** to each IP in the current subnet.
+The [net.recon](/modules/ethernet/net.recon/) module uses these to detect hosts.
 
 ## Commands
 

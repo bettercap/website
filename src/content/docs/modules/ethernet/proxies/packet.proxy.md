@@ -31,7 +31,9 @@ Stop the NFQUEUE based packet proxy.
 
 ## Plugins
 
-Instead of using Javascript extensions like the HTTP and HTTPS proxies, this module requires the plugins to be natively written in Go in order to avoid adding too much overhead for each incoming packet. The `packet.proxy.plugin` parameter is mandatory and needs to be filled with the path of a shared object [built as a Go plugin](https://golang.org/pkg/plugin/) and exporting an `OnPacket` callback like the following:
+This module requires **native Go plugins** for performance.
+The `packet.proxy.plugin` parameter is mandatory.
+Provide the path to a [Go plugin](https://golang.org/pkg/plugin/) exporting an `OnPacket` callback:
 
 ```go
 // test.go
@@ -90,6 +92,6 @@ go build -buildmode=plugin test.go
 Once the `test.so` file is generated, it can be used for the `packet.proxy.plugin` parameter.
 
 :::note
-In order to be compiled correctly, plugin `.go` files need to be copied inside bettercap's source folder and compiled from there, otherwise you might have issues compiling due to dependency conflicts with the vendor folder.
-
+Copy plugin `.go` files inside bettercap's source folder.
+Compile from there to avoid vendor folder conflicts.
 :::

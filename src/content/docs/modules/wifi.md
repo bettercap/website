@@ -15,12 +15,15 @@ The WiFi modules use a WiFi interface supporting monitor mode and packet injecti
 - perform authentication wordlist attacks.
 
 :::note
-The interface only needs to support monitor mode and packet injection, it'll be bettercap itself to switch it to the right mode, just make sure there aren't other processes using the same wifi interface.
+The interface only needs to support monitor mode and packet injection.
+Bettercap will switch it to the right mode automatically.
+Make sure no other processes are using the same wifi interface.
 
 :::
 
 :::note
-This modules are natively supported on macOS with the default interface `en0`. Just make sure the interface is not connected to any WiFi network and then start bettercap with:
+These modules are natively supported on macOS with interface `en0`.
+Make sure the interface is not connected to any WiFi network. Then start bettercap:
 
 ```bash
 sudo bettercap -iface en0
@@ -60,11 +63,14 @@ Remove the 802.11 base station filter.
 
 ### `wifi.assoc BSSID`
 
-Send an association request to the selected BSSID in order to [receive a RSN PMKID](https://hashcat.net/forum/thread-7717.html) key (use `all`, `*` or `ff:ff:ff:ff:ff:ff` to iterate for every access point).
+Send an association request to receive a [RSN PMKID](https://hashcat.net/forum/thread-7717.html) key.
+Use `all`, `*` or `ff:ff:ff:ff:ff:ff` to iterate all access points.
 
 ### `wifi.deauth BSSID`
 
-Start a 802.11 deauth attack, if an access point BSSID is provided, every client will be deauthenticated, otherwise only the selected client (**use `all`, `*` or `ff:ff:ff:ff:ff:ff` to deauth everything**).
+Start a **802.11 deauth attack**.
+If BSSID is provided, every client is deauthenticated. Otherwise only the selected client.
+Use `all`, `*` or `ff:ff:ff:ff:ff:ff` to deauth everything.
 
 ### `wifi.probe BSSID ESSID`
 

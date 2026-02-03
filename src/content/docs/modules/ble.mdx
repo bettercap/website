@@ -61,7 +61,8 @@ Connect, enumerate and read characteristics from the BLE device `04:52:de:ad:be:
 ble.enum 04:52:de:ad:be:ef
 ```
 
-Write the bytes `ff ff ff ff ff ff ff ff` to the BLE device `04:52:de:ad:be:ef` on its characteristics with UUID `234bfbd5e3b34536a3fe723620d4b78d` (requires `ble.recon on` first):
+Write bytes to the device `04:52:de:ad:be:ef` on characteristic `234bfbd5e3b34536a3fe723620d4b78d`.
+Requires `ble.recon on` first:
 
 ```bash
 ble.write 04:52:de:ad:be:ef 234bfbd5e3b34536a3fe723620d4b78d ffffffffffffffff

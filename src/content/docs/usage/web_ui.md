@@ -7,7 +7,9 @@ sidebar:
 
 ![UI](https://raw.githubusercontent.com/bettercap/media/master/ui-events.png)
 
-The easiest way to start playing with bettercap is using its official [web user interface](https://github.com/bettercap/ui), in order to install it make sure you have the [latest version of bettercap](https://github.com/bettercap/bettercap/releases), then:
+The easiest way to use bettercap is through the official **[web UI](https://github.com/bettercap/ui)**.
+
+First, install the [latest version of bettercap](https://github.com/bettercap/bettercap/releases). Then run:
 
 ```bash
 sudo bettercap -eval "ui on"
