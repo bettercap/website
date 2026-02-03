@@ -30,7 +30,7 @@ Functionalities are organized into:
 
 You can also **script** your interactive session using **caplets**.
 Caplets are script files with a `.cap` extension.
-Think of them like Metasploit's `.rc` files—each line is a command that executes at runtime.
+Think of them like Metasploit's `.rc` files. Each line is a command that executes at runtime.
 
 For instance, a simple caplet that sets the `ticker.commands` parameter and enables the [net.probe](/modules/ethernet/netprobe/) and [ticker](/modules/core/ticker/) modules would be:
 
