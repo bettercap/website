@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: 
+Disallow:
+
+Sitemap: https://www.bettercap.org/sitemap-index.xml

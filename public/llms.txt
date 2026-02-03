@@ -1,0 +1,32 @@
+# BetterCAP
+
+> BetterCAP is the Swiss Army knife for WiFi, Bluetooth Low Energy, wireless HID hijacking, CAN-bus and IPv4/IPv6 network reconnaissance and MITM attacks. It is a powerful, easily extensible and portable framework written in Go.
+
+BetterCAP provides security researchers, red teamers and reverse engineers with an easy to use, all-in-one solution for performing reconnaissance and attacks on various wireless and network protocols. The tool supports WiFi network scanning, deauthentication attacks, and automatic WPA/WPA2 handshake capture. It includes Bluetooth Low Energy device scanning with characteristics enumeration, reading and writing capabilities. For 2.4GHz wireless devices, it supports MouseJacking attacks with over-the-air HID frame injection using DuckyScript.
+
+Network capabilities include passive and active IP host probing, ARP/DNS/DHCPv6/NDP spoofers for MITM attacks on IPv4 and IPv6 networks, proxies at packet, TCP and HTTP/HTTPS levels with JavaScript plugin support, a network sniffer for credential harvesting and protocol fuzzing, and a fast port scanner.
+
+BetterCAP also provides CAN-bus support for reading, injecting, fuzzing, and OBD2 parsing. It features a REST API with websocket event notifications and an easy to use web user interface.
+
+## Supported Platforms
+
+BetterCAP runs on Linux, macOS, Windows, Android, and Docker containers.
+
+## Allowed Usage
+
+AI bots are permitted to index and analyze public documentation for educational and research purposes. This includes summarizing features, explaining usage patterns, and providing technical guidance. Usage must attribute content to the BetterCAP project and link to the official documentation at https://www.bettercap.org for complete information.
+
+## Contact Information
+
+- GitHub: https://github.com/bettercap/bettercap
+- Documentation: https://www.bettercap.org
+- Discord: https://discord.gg/btZpkp45gQ
+- Author Blog: https://www.evilsocket.net/tags/bettercap/
+
+## Related Resources
+
+- Source Code: https://github.com/bettercap/bettercap
+- Documentation: https://www.bettercap.org
+- Installation Guide: https://www.bettercap.org/project/installation/
+- Web UI Documentation: https://www.bettercap.org/usage/web_ui/
+- REST API Reference: https://www.bettercap.org/modules/core/apirest/
