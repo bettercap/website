@@ -45,6 +45,13 @@ export default defineConfig({
       plugins: [starlightAutoSidebar(), starlightFullViewMode()],
       head: [
         {
+          tag: "meta",
+          attrs: {
+            name: "keywords",
+            content: "WiFi security tool, Bluetooth hacking tool, Network reconnaissance software, MITM attack tool, Wireless HID hijacking tool, CAN-bus security tool, IPv4 network analysis tool, IPv6 network security tool",
+          },
+        },
+        {
           tag: "script",
           attrs: {
             src: "https://platform.twitter.com/widgets.js",
