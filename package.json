@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.0",
-    "@astrojs/starlight": "~0.37.6",
-    "astro": "~5.18.0",
+    "@astrojs/sitemap": "^3.7.1",
+    "@astrojs/starlight": "~0.38.1",
+    "astro": "~6.0.4",
     "astro-embed": "~0.12.0",
     "sharp": "~0.34.5",
-    "starlight-auto-sidebar": "~0.1.4",
+    "starlight-auto-sidebar": "~0.2.0",
     "starlight-contributor-list": "~0.3.2",
     "starlight-fullview-mode": "~0.2.6"
   }
