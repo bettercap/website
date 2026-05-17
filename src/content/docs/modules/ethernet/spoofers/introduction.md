@@ -34,15 +34,15 @@ The network then considers our device as the router.
 Once positioned, all network traffic flows through your computer.
 This enables:
 
-- **[Sniffing](/modules/ethernet/net.sniff/)**: Capture emails, passwords, cookies
-- **[Proxying](/modules/ethernet/proxies/)**: Intercept and modify HTTP/HTTPS requests
+- **[Sniffing](/modules/ethernet/netsniff/)**: Capture emails, passwords, cookies
+- **[Proxying](/modules/ethernet/proxies/introduction/)**: Intercept and modify HTTP/HTTPS requests
 - **Injection**: Replace content, kill connections, redirect traffic
 
 ## Available Spoofing Modules
 
 | Module | Protocol | Description |
 |--------|----------|-------------|
-| **[arp.spoof](/modules/ethernet/spoofers/arp.spoof/)** | ARP/IPv4 | Spoof ARP replies to intercept IPv4 traffic |
-| **[ndp.spoof](/modules/ethernet/spoofers/ndp.spoof/)** | NDP/IPv6 | Spoof neighbor advertisements for IPv6 networks |
-| **[dns.spoof](/modules/ethernet/spoofers/dns.spoof/)** | DNS | Reply to DNS queries with spoofed responses |
-| **[dhcp6.spoof](/modules/ethernet/spoofers/dhcp6.spoof/)** | DHCPv6 | Attack Windows hosts via DHCPv6 responses |
+| **[arp.spoof](/modules/ethernet/spoofers/arpspoof/)** | ARP/IPv4 | Spoof ARP replies to intercept IPv4 traffic |
+| **[ndp.spoof](/modules/ethernet/spoofers/ndpspoof/)** | NDP/IPv6 | Spoof neighbor advertisements for IPv6 networks |
+| **[dns.spoof](/modules/ethernet/spoofers/dnsspoof/)** | DNS | Reply to DNS queries with spoofed responses |
+| **[dhcp6.spoof](/modules/ethernet/spoofers/dhcp6spoof/)** | DHCPv6 | Attack Windows hosts via DHCPv6 responses |

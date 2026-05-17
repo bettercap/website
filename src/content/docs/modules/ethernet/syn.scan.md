@@ -8,7 +8,7 @@ sidebar:
 A module to perform **SYN port scanning**.
 
 Open ports populate the `tcp-ports` meta field of endpoints.
-View them with [net.show](/modules/ethernet/net.recon/#net-show) when [net.show.meta](/modules/ethernet/net.recon/#parameters) is `true`.
+View them with [net.show](/modules/ethernet/netrecon/#net-show) when [net.show.meta](/modules/ethernet/netrecon/#parameters) is `true`.
 
 ## Commands
 

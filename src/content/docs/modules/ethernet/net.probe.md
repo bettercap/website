@@ -6,7 +6,7 @@ sidebar:
 ---
 
 Sends **probe packets** to each IP in the current subnet.
-The [net.recon](/modules/ethernet/net.recon/) module uses these to detect hosts.
+The [net.recon](/modules/ethernet/netrecon/) module uses these to detect hosts.
 
 ## Commands
 
