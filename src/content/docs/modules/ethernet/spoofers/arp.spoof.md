@@ -26,8 +26,11 @@ Stop the **ARP spoofer**.
 | Parameter                | Default           | Description                                                                                                                                                                     |
 | ------------------------ | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `arp.spoof.fullduplex`   | `false`           | If true, both the targets and the gateway will be attacked, otherwise only the target (**if the router has ARP spoofing protections in place this will make the attack fail**). |
+| `arp.spoof.forwarding`   | `true`            | If true, IP forwarding will be enabled while spoofing is active. Set to false to disable forwarding (e.g. for traffic analysis without relaying). In ban mode, forwarding is always disabled regardless of this setting. |
 | `arp.spoof.internal`     | `false`           | If true, local connections among computers of the network will be spoofed as well, otherwise only connections going to and coming from the external network.                    |
+| `arp.spoof.interval`     | `1000`            | Milliseconds between each ARP spoofing broadcast.                                                                                                                               |
 | `arp.spoof.skip_restore` | `false`           | If set to true, targets arp cache won't be restored when spoofing is stopped.                                                                                                   |
+| `arp.spoof.spoofed`      | `<gateway IP>`    | A comma separated list of IP addresses or IP ranges (nmap style) to impersonate. Defaults to the gateway address.                                                               |
 | `arp.spoof.targets`      | `<entire subnet>` | A comma separated list of MAC addresses, IP addresses, IP ranges or aliases to spoof ([a list of supported range formats](https://github.com/malfunkt/iprange)).                |
 | `arp.spoof.whitelist`    |                   | A comma separated list of MAC addresses, IP addresses, IP ranges or aliases to skip while spoofing.                                                                             |
 
