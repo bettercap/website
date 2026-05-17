@@ -23,14 +23,14 @@ Stop the SSH MITM proxy.
 
 | Parameter           | Default               | Description                                                                                                                               |
 | ------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `ssh.address`       |                       | Remote address to forward SSH connections to. Leave empty to auto-detect the original destination from the NAT table (Linux only).        |
+| `ssh.address`       |                       | Remote address to forward SSH connections to. Leave empty to auto-detect the original destination from the NAT table (Linux via `SO_ORIGINAL_DST`, macOS via `pf` state table). |
 | `ssh.port`          | `22`                  | Remote SSH port to intercept.                                                                                                             |
 | `ssh.proxy.address` | `<interface address>` | Address to bind the SSH proxy to.                                                                                                         |
 | `ssh.proxy.port`    | `2222`                | Port to bind the SSH proxy to.                                                                                                            |
 | `ssh.proxy.hostkey` |                       | Path to a PEM-encoded private key used as the proxy host key. If empty, an ephemeral ECDSA P-256 key is generated automatically.         |
 | `ssh.proxy.script`  |                       | Path of a SSH proxy JS script.                                                                                                            |
 
-## Modules
+## Scripting
 
 The `ssh.proxy` module can be scripted using JavaScript files that may declare the following functions:
 
