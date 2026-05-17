@@ -1,7 +1,8 @@
 ---
-title: Introduction
-description: Introduction
+title: Ethernet Servers
+description: A set of server modules for serving files on a network and intercepting credentials via rogue services.
 sidebar:
+  label: Introduction
   order: 1
 ---
 

@@ -1,7 +1,8 @@
 ---
-title: Introduction
+title: Ethernet Spoofers
 description: Spoofing modules used to perform Man-in-the-Middle attacks.
 sidebar:
+  label: Introduction
   order: 1
 ---
 

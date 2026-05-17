@@ -1,7 +1,8 @@
 ---
-title: Introduction
+title: Ethernet Proxies
 description: A set of modules you can use to intercept traffic at the packet, TCP or HTTP/HTTPS level while performing a MITM attack.
 sidebar:
+  label: Introduction
   order: 1
 ---
 
