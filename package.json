@@ -10,13 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.1",
-    "@astrojs/starlight": "~0.38.1",
-    "astro": "~6.0.4",
-    "astro-embed": "~0.12.0",
-    "sharp": "~0.34.5",
-    "starlight-auto-sidebar": "~0.2.0",
-    "starlight-contributor-list": "~0.3.2",
-    "starlight-fullview-mode": "~0.2.6"
+    "@astrojs/sitemap": "3.7.2",
+    "@astrojs/starlight": "0.39.2",
+    "astro": "6.3.3",
+    "astro-contributors": "0.8.0",
+    "astro-embed": "0.13.0",
+    "sharp": "0.34.5",
+    "starlight-auto-sidebar": "0.4.0",
+    "starlight-fullview-mode": "0.2.6"
   }
 }
