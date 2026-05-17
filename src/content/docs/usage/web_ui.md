@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-![UI](https://raw.githubusercontent.com/bettercap/media/master/ui-events.png)
+<img src="https://raw.githubusercontent.com/bettercap/media/master/ui-events.png" alt="Bettercap web UI showing the events panel with a list of network events captured during a session" />
 
 The easiest way to use bettercap is through the official **[web UI](https://github.com/bettercap/ui)**.
 
