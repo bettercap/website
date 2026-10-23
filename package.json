@@ -10,13 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "3.7.3",
-    "@astrojs/starlight": "0.41.7",
-    "astro": "7.2.4",
-    "astro-contributors": "0.9.0",
-    "astro-embed": "0.13.1",
-    "sharp": "0.35.3",
-    "starlight-auto-sidebar": "0.4.0",
+    "@astrojs/sitemap": "3.7.4",
+    "@astrojs/starlight": "0.42.7",
+    "astro": "7.4.2",
+    "astro-contributors": "0.10.0",
+    "astro-embed": "0.14.0",
+    "sharp": "0.35.5",
+    "starlight-auto-sidebar": "0.4.1",
     "starlight-fullview-mode": "0.2.6"
   }
 }
